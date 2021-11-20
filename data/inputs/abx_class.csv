@@ -1,0 +1,62 @@
+Drug.protein,Linked antibiotic
+Amikacin,Aminoglycosides
+Gentamicin,Aminoglycosides
+Kanamycin,Aminoglycosides
+Neomycin,Aminoglycosides
+Netilmicin,Aminoglycosides
+Tobramycin,Aminoglycosides
+Paromomycin,Aminoglycosides
+Streptomycin,Aminoglycosides
+Spectinomycin(Bs),Aminoglycosides
+Ertapenem,Carbapenems
+Doripenem,Carbapenems
+Imipenem,Carbapenems
+Cilastatin,Carbapenems
+Meropenem,Carbapenems
+Cefixime,3G Cephalosporins
+Cefdinir,3G Cephalosporins
+Cefditoren,3G Cephalosporins
+Cefoperazone,3G Cephalosporins
+Cefotaxime,3G Cephalosporins
+Cefpodoxime,3G Cephalosporins
+Ceftazidime,3G Cephalosporins
+Ceftibuten,3G Cephalosporins
+Ceftizoxime,3G Cephalosporins
+Moxalactam,3G Cephalosporins
+Ceftriaxone,3G Cephalosporins
+Teicoplanin,Glycopeptides
+Vancomycin,Glycopeptides
+Telavancin,Glycopeptides
+Dalbavancin,Glycopeptides
+Oritavancin,Glycopeptides
+Amoxicillin,Penicillins
+Ampicillin,Penicillins
+Azlocillin,Penicillins
+Dicloxacillin,Penicillins
+Flucloxacillin,Penicillins
+Mezlocillin,Penicillins
+Methicillin,Penicillins
+Nafcillin,Penicillins
+Oxacillin,Penicillins
+Penicillin G,Penicillins
+Penicillin V,Penicillins
+Piperacillin,Penicillins
+Penicillin G,Penicillins
+Temocillin,Penicillins
+Ticarcillin,Penicillins
+Amoxicillin/clavulanate,Penicillin combinations
+Ampicillin/sulbactam,Penicillin combinations
+Piperacillin/tazobactam,Penicillin combinations
+Ticarcillin/clavulanate,Penicillin combinations
+ESBL,3G Cephalosporins
+ESBL,Penicillins
+carbapenemase,Carbapenems
+MBL,3G Cephalosporins
+MBL,Penicillins
+general,general
+MDR,MDR
+XDR,XDR
+co-amoxiclav,Penicillins
+MBL,3G Cephalosporins
+MBL,Penicillins
+ceftriaxone,3G Cephalosporins

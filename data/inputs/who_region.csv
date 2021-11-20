@@ -1,0 +1,195 @@
+Country,Region Number,Region Name
+Afghanistan,7,EMRO
+Albania,9,EURO
+Algeria,1,AFRO
+Andorra,8,EURO
+Angola,1,AFRO
+Antigua And Barbuda,4,PAHO
+Argentina,4,PAHO
+Armenia,9,EURO
+Australia,13,WPRO
+Austria,8,EURO
+Azerbaijan,9,EURO
+Bahamas,4,PAHO
+Bahrain,6,EMRO
+Bangladesh,12,SEARO
+Barbados,4,PAHO
+Belarus,10,EURO
+Belgium,8,EURO
+Belize,4,PAHO
+Benin,1,AFRO
+Bhutan,12,SEARO
+Bolivia,5,PAHO
+Bosnia and Herzegovina,9,EURO
+Botswana,2,AFRO
+Brazil,4,PAHO
+Brunei Darussalam,13,WPRO
+Bulgaria,9,EURO
+Burkina Faso,1,AFRO
+Burundi,2,AFRO
+Cambodia,14,WPRO
+Cameroon,1,AFRO
+Canada,3,PAHO
+Cape Verde,1,AFRO
+Central African Republic,2,AFRO
+Chad,1,AFRO
+Chile,4,PAHO
+China,14,WPRO
+Colombia,4,PAHO
+Comoros,1,AFRO
+Congo,2,AFRO
+Cook Islands,14,WPRO
+Costa Rica,4,PAHO
+Côte d'Ivoire,2,AFRO
+Croatia,8,EURO
+Cuba,3,PAHO
+Cyprus,6,EURO
+Czech Republic,8,EURO
+Democratic Peoples Republic of Korea,12,SEARO
+Democratic Republic of the Congo,2,AFRO
+Denmark,8,EURO
+Djibouti,7,EMRO
+Dominica,4,PAHO
+Dominican Republic,4,PAHO
+Ecuador,5,PAHO
+Egypt,7,EMRO
+El Salvador,4,PAHO
+Equatorial Guinea,1,AFRO
+Eritrea,2,AFRO
+Estonia,10,EURO
+Ethiopia,2,AFRO
+Fiji,14,WPRO
+Finland,8,EURO
+France,8,EURO
+Gabon,1,AFRO
+Gambia,1,AFRO
+Georgia,9,EURO
+Germany,8,EURO
+Ghana,1,AFRO
+Greece,8,EURO
+Grenada,4,PAHO
+Guatemala,5,PAHO
+Guinea,1,AFRO
+Guinea-Bissau,1,AFRO
+Guyana,4,PAHO
+Haiti,5,PAHO
+Honduras,4,PAHO
+Hungary,10,EURO
+Iceland,8,EURO
+India,12,SEARO
+Indonesia,11,SEARO
+"Iran, Islamic Republic of",6,EMRO
+Iraq,7,EMRO
+Ireland,8,EURO
+Israel,8,EURO
+Italy,8,EURO
+Jamaica,4,PAHO
+Japan,13,WPRO
+Jordan,6,EMRO
+Kazakhstan,10,EURO
+Kenya,2,AFRO
+Kiribati,14,WPRO
+"Korea, Republic of",14,WPRO
+Kuwait,6,EMRO
+Kyrgyzstan,9,EURO
+Lao People's Democratic Republic,14,WPRO
+Latvia,10,EURO
+Lebanon,6,EMRO
+Lesotho,2,AFRO
+Liberia,1,AFRO
+Libya,6,EMRO
+Lithuania,10,EURO
+Luxembourg,8,EURO
+"Macedonia, the former Yugoslav Republic of",9,EURO
+Madagascar,1,AFRO
+Malawi,2,AFRO
+Malaysia,14,WPRO
+Maldives,12,SEARO
+Mali,1,AFRO
+Malta,8,EURO
+Marshall Islands,14,WPRO
+Mauritania,1,AFRO
+Mauritius,1,AFRO
+Mexico,4,PAHO
+"Micronesia, Federated States of",14,WPRO
+"Moldova, Republic of",10,EURO
+Monaco,8,EURO
+Mongolia,14,WPRO
+Montenegro,8,EURO
+Morocco,7,EMRO
+Mozambique,2,AFRO
+Myanmar,12,SEARO
+Namibia,2,AFRO
+Nauru,14,WPRO
+Nepal,12,SEARO
+Netherlands,8,EURO
+New Zealand,13,WPRO
+Nicaragua,5,PAHO
+Niger,1,AFRO
+Nigeria,1,AFRO
+Niue,14,WPRO
+Norway,8,EURO
+Oman,6,EMRO
+Pakistan,7,EMRO
+Palau,14,WPRO
+Panama,4,PAHO
+Papua New Guinea,14,WPRO
+Paraguay,4,PAHO
+Peru,5,PAHO
+Philippines,14,WPRO
+Poland,9,EURO
+Portugal,8,EURO
+Qatar,6,EMRO
+Romania,9,EURO
+Russian Federation,10,EURO
+Rwanda,2,AFRO
+Saint Kitts and Nevis,4,PAHO
+Saint Lucia,4,PAHO
+Saint Vincent and the Grenadines,4,PAHO
+Samoa,14,WPRO
+San Marino,8,EURO
+Sao Tome And Principe,1,AFRO
+Saudi Arabia,6,EMRO
+Senegal,1,AFRO
+Serbia,8,EURO
+Seychelles,1,AFRO
+Sierra Leone,1,AFRO
+Singapore,13,WPRO
+Slovakia,9,EURO
+Slovenia,8,EURO
+Somalia,7,EMRO
+Solomon Islands,14,WPRO
+South Africa,2,AFRO
+Spain,8,EURO
+Sri Lanka,11,SEARO
+Sudan,7,EMRO
+South Sudan,7,EMRO
+Suriname,4,PAHO
+Swaziland,2,AFRO
+Sweden,8,EURO
+Switzerland,8,EURO
+Syrian Arab Republic,6,EMRO
+"Tanzania, United Republic of",2,AFRO
+Tajikistan,9,EURO
+Thailand,11,SEARO
+Timor-Leste,11,SEARO
+Togo,1,AFRO
+Tonga,14,WPRO
+Trinidad and Tobago,4,PAHO
+Tunisia,6,EMRO
+Turkey,9,EURO
+Turkmenistan,9,EURO
+Tuvalu,14,WPRO
+Uganda,2,AFRO
+Ukraine,10,EURO
+United Arab Emirates,6,EMRO
+United Kingdom,8,EURO
+United States of America,3,PAHO
+Uruguay,4,PAHO
+Uzbekistan,9,EURO
+Vanuatu,14,WPRO
+Venezuela,4,PAHO
+Viet Nam,14,WPRO
+Yemen,7,EMRO
+Zambia,2,AFRO
+Zimbabwe,2,AFRO
