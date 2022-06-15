@@ -12,6 +12,9 @@ library(openxlsx)
 
 lit <- read.csv("cost_per_case/inputs/lit_input_all.csv")  ## literature review DET
 
+## REMOVE JUST COLONISED FOR NOW
+lit <- subset(lit, lit$syndrome!="COL")
+
 ## filter by AMR
 lit <- subset(lit, review_marker=="AMR")
 
