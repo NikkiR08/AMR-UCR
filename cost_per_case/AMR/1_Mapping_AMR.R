@@ -159,6 +159,8 @@ EuSA <- EuSA[Income.group!="Lower middle income"]
 ## set whoc regions to NA as not specifically targetting an individual WHOC region (e.g. EURO B) but rather the whole of Europe
 EuSA <- EuSA[ , whoc.region := NA]
 
+save(EuSA, file="cost_per_case/outputs/eusa.RData")
+
 bug_class_region <- bug_class_region[!is.na(iso3c)]
 
 bug_class_region <- bug_class_region %>% 
