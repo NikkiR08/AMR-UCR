@@ -1,192 +1,194 @@
-Subgroup,Country
-AFRO D,Algeria
-AFRO D,Angola
-AFRO D,Benin
-AFRO D,Burkina Faso
-AFRO D,Cameroon
-AFRO D,Cape Verde
-AFRO D,Chad
-AFRO D,Equatorial Guinea
-AFRO D,Gabon
-AFRO D,Gambia
-AFRO D,Ghana
-AFRO D,Guinea
-AFRO D,Guinea-Bissau
-AFRO D,Liberia
-AFRO D,Madagascar
-AFRO D,Mali
-AFRO D,Mauritania
-AFRO D,Mauritius
-AFRO D,Niger
-AFRO D,Nigeria
-AFRO D,Sao Tome and Principe
-AFRO D,Senegal
-AFRO D,Seychelles
-AFRO D,Sierra Leone
-AFRO D,Togo
-AFRO E,Botswana
-AFRO E,Burundi
-AFRO E,Central African Republic
-AFRO E,Congo
-AFRO E,Côte d'Ivoire
-AFRO E,Democratic Republic of Congo
-AFRO E,Eritrea
-AFRO E,Ethiopia
-AFRO E,Kenya
-AFRO E,Lesotho
-AFRO E,Malawi
-AFRO E,Mozambique
-AFRO E,Namibia
-AFRO E,Rwanda
-AFRO E,South Africa
-AFRO E,Swaziland
-AFRO E,Uganda
-AFRO E,United Republic of Tanzania
-AFRO E,Zambia
-AFRO E,Zimbabwe
-EMRO E,Bahrain
-EMRO E,Cyprus
-EMRO E,"Iran, Islamic Republic of"
-EMRO E,Jordan
-EMRO E,Kuwait
-EMRO E,Lebanon
-EMRO E,Libyan Arab Jamahiriya
-EMRO E,Oman
-EMRO E,Qatar
-EMRO E,Saudi Arabia
-EMRO E,Syrian Arab Republic
-EMRO E,Tunisia
-EMRO E,United Arab Emirates
-EMRO D,Afghanistan
-EMRO D,Djibouti
-EMRO D,Egypt
-EMRO D,Iraq
-EMRO D,Morocco
-EMRO D,Pakistan
-EMRO D,Somalia
-EMRO D,Sudan
-EMRO D,Yemen
-EURO A,Andorra
-EURO A,Austria
-EURO A,Belgium
-EURO A,Croatia
-EURO A,Czech Republic
-EURO A,Denmark
-EURO A,Finland
-EURO A,France
-EURO A,Germany
-EURO A,Greece
-EURO A,Iceland
-EURO A,Ireland
-EURO A,Israel
-EURO A,Italy
-EURO A,Luxembourg
-EURO A,Malta
-EURO A,Monaco
-EURO A,Netherlands
-EURO A,Norway
-EURO A,Portugal
-EURO A,San Marino
-EURO A,Slovenia
-EURO A,Spain
-EURO A,Sweden
-EURO A,Switzerland
-EURO A,United Kingdom
-EURO B,Albania
-EURO B,Armenia
-EURO B,Azerbaijan
-EURO B,Bosnia and Herzegovina
-EURO B,Bulgaria
-EURO B,Georgia
-EURO B,Kyrgyzstan
-EURO B,Poland
-EURO B,Romania
-EURO B,Slovakia
-EURO B,Tajikistan
-EURO B,The former Yugoslav Republic of Macedonia
-EURO B,Turkey
-EURO B,Turkmenistan
-EURO B,Uzbekistan
-EURO B,Yugoslavia
-EURO C,Belarus
-EURO C,Estonia
-EURO C,Hungary
-EURO C,Kazakhstan
-EURO C,Latvia
-EURO C,Lithuania
-EURO C,Republic of Moldova
-EURO C,Russian Federation
-EURO C,Ukraine
-AMRO A,Canada
-AMRO A,Cuba
-AMRO A,United States of America
-AMRO B,Antigua and Barbuda
-AMRO B,Argentina
-AMRO B,Bahamas
-AMRO B,Barbados
-AMRO B,Belize
-AMRO B,Brazil
-AMRO B,Chile
-AMRO B,Colombia
-AMRO B,Costa Rica
-AMRO B,Dominica
-AMRO B,Dominican Republic
-AMRO B,El Salvador
-AMRO B,Grenada
-AMRO B,Guyana
-AMRO B,Honduras
-AMRO B,Jamaica
-AMRO B,Mexico
-AMRO B,Panama
-AMRO B,Paraguay
-AMRO B,Saint Kitts and Nevis
-AMRO B,Saint Lucia
-AMRO B,Saint Vincent and the Grenadines
-AMRO B,Suriname
-AMRO B,Trinidad and Tobago
-AMRO B,Uruguay
-AMRO B,"Venezuela, Bolivarian Republic of"
-AMRO D,Bolivia
-AMRO D,Ecuador
-AMRO D,Guatemala
-AMRO D,Haiti
-AMRO D,Nicaragua
-AMRO D,Peru
-SEARO B,Indonesia
-SEARO B,Sri Lanka
-SEARO B,Thailand
-SEARO B,Timor-Leste
-SEARO D,Bangladesh
-SEARO D,Bhutan
-SEARO D,Democratic People’s Republic of Korea
-SEARO D,India
-SEARO D,Maldives
-SEARO D,Myanmar
-SEARO D,Nepal
-WPRO A,Australia
-WPRO A,Brunei Darussalam
-WPRO A,Japan
-WPRO A,New Zealand
-WPRO A,Singapore
-WPRO B,Cambodia
-WPRO B,China
-WPRO B,Cook Islands
-WPRO B,Fiji
-WPRO B,Kiribati
-WPRO B,Lao People’s Democratic Republic
-WPRO B,Malaysia
-WPRO B,Marshall Islands
-WPRO B,"Micronesia, Federated States of"
-WPRO B,Mongolia
-WPRO B,Nauru
-WPRO B,Niue
-WPRO B,Palau
-WPRO B,Papua New Guinea
-WPRO B,Philippines
-WPRO B,Republic of Korea
-WPRO B,Samoa
-WPRO B,Solomon Islands
-WPRO B,Tonga
-WPRO B,Tuvalu
-WPRO B,Vanuatu
-WPRO B,Viet Nam
+Subgroup,Country,Reference
+AFRO D,Algeria,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Angola,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Benin,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Burkina Faso,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Cameroon,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Cape Verde,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Chad,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Equatorial Guinea,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Gabon,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Gambia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Ghana,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Guinea,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Guinea-Bissau,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Liberia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Madagascar,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Mali,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Mauritania,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Mauritius,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Niger,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Nigeria,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Sao Tome and Principe,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Senegal,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Seychelles,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Sierra Leone,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO D,Togo,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Botswana,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Burundi,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Central African Republic,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Congo,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Côte d'Ivoire,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Democratic Republic of Congo,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Eritrea,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Ethiopia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Kenya,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Lesotho,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Malawi,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Mozambique,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Namibia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Rwanda,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,South Africa,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Swaziland,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Uganda,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,United Republic of Tanzania,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Zambia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AFRO E,Zimbabwe,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO E,Bahrain,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO E,Cyprus,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO E,"Iran, Islamic Republic of","World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO E,Jordan,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO E,Kuwait,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO E,Lebanon,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO E,Libyan Arab Jamahiriya,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO E,Oman,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO E,Qatar,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO E,Saudi Arabia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO E,Syrian Arab Republic,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO E,Tunisia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO E,United Arab Emirates,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO D,Afghanistan,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO D,Djibouti,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO D,Egypt,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO D,Iraq,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO D,Morocco,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO D,Pakistan,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO D,Somalia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO D,Sudan,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EMRO D,Yemen,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Andorra,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Austria,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Belgium,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Croatia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Czech Republic,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Denmark,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Finland,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,France,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Germany,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Greece,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Iceland,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Ireland,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Israel,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Italy,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Luxembourg,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Malta,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Monaco,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Netherlands,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Norway,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Portugal,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,San Marino,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Slovenia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Spain,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Sweden,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,Switzerland,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO A,United Kingdom,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Albania,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Armenia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Azerbaijan,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Bosnia and Herzegovina,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Bulgaria,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Georgia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Kyrgyzstan,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Poland,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Romania,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Slovakia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Tajikistan,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,The former Yugoslav Republic of Macedonia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Turkey,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Turkmenistan,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Uzbekistan,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Yugoslavia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO C,Belarus,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO C,Estonia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO C,Hungary,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO C,Kazakhstan,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO C,Latvia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO C,Lithuania,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO C,Republic of Moldova,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO C,Russian Federation,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO C,Ukraine,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO A,Canada,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO A,Cuba,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO A,United States of America,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Antigua and Barbuda,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Argentina,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Bahamas,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Barbados,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Belize,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Brazil,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Chile,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Colombia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Costa Rica,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Dominica,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Dominican Republic,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,El Salvador,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Grenada,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Guyana,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Honduras,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Jamaica,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Mexico,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Panama,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Paraguay,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Saint Kitts and Nevis,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Saint Lucia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Saint Vincent and the Grenadines,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Suriname,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Trinidad and Tobago,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,Uruguay,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO B,"Venezuela, Bolivarian Republic of","World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO D,Bolivia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO D,Ecuador,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO D,Guatemala,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO D,Haiti,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO D,Nicaragua,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+AMRO D,Peru,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+SEARO B,Indonesia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+SEARO B,Sri Lanka,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+SEARO B,Thailand,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+SEARO B,Timor-Leste,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+SEARO D,Bangladesh,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+SEARO D,Bhutan,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+SEARO D,Democratic People’s Republic of Korea,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+SEARO D,India,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+SEARO D,Maldives,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+SEARO D,Myanmar,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+SEARO D,Nepal,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO A,Australia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO A,Brunei Darussalam,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO A,Japan,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO A,New Zealand,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO A,Singapore,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Cambodia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,China,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Cook Islands,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Fiji,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Kiribati,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Lao People’s Democratic Republic,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Malaysia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Marshall Islands,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,"Micronesia, Federated States of","World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Mongolia,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Nauru,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Niue,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Palau,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Papua New Guinea,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Philippines,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Republic of Korea,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Samoa,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Solomon Islands,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Tonga,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Tuvalu,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Vanuatu,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+WPRO B,Viet Nam,"World Health Organization. Cost effectiveness strategic planning (WHO-CHOICE). Geneva: Alphabetical list of WHO member states, 2016. http://www.who.int/choice/demography/by_country/en/ "
+EURO B,Serbia,"Hutubessy, R., Chisholm, D. and Edejer, T.T.T., 2003. Generalized cost-effectiveness analysis for national-level priority-setting in the health sector. Cost effectiveness and resource allocation, 1(1), pp.1-13."
+EURO B,Montenegro,"Hutubessy, R., Chisholm, D. and Edejer, T.T.T., 2003. Generalized cost-effectiveness analysis for national-level priority-setting in the health sector. Cost effectiveness and resource allocation, 1(1), pp.1-13."
