@@ -6,20 +6,28 @@ library(dplyr)
 library(data.table)
 library(countrycode)
 library(wbstats)
-library(xlsx)
+library(openxlsx)
+
 ############ READ IN FILES ##############
 
-lit <- read.csv("Data/lit_input.csv")  ## literature review DET
+lit <- read.csv("cost_per_case/inputs/lit_input_all.csv")  ## literature review DET
+
+## filter by AMR
+lit <- subset(lit, review_marker=="AMR")
 
 lit$row_id <- c(1:nrow(lit))
-## WHO and WHOC regions hand copied from WHO website
-dic_who <- read.csv("Data/who_region.csv")
-dic_whoc <- read.csv("Data/who_choice_region.csv")
 
-### download World bank classifications from WB stats
-dic_wb <- read.csv("Data/wb_region_income.csv")
-dic_bug <- read.csv("Data/bug_gram.csv") ## bacteria dictionary
-dic_drug <- read.csv("Data/abx_class_project.csv") ## antibiotic dictionary
+## WHO and WHOC regions hand copied from WHO website
+dic_who <- read.csv("data_all/inputs/who_region.csv")
+dic_whoc <- read.csv("data_all/inputs/who_choice_region.csv")
+
+### World bank classifications from WB stats
+dic_wb <- read.csv("data_all/inputs/wb_region_income.csv")
+
+### Drug and Bug mapping (Note only for our exposures of interest)
+### !! would need to be expanded out if updated with other bacteria and drugs of interest
+dic_bug <- read.csv("data_all/inputs/bug_gram.csv") ## bacteria dictionary
+dic_drug <- read.csv("data_all/inputs/abx_class.csv") ## antibiotic dictionary
 
 #######**** MAPPING REGION ****#####
 # ## remove na rows from wb dictionary csv
@@ -55,15 +63,12 @@ dic_drug <- read.csv("Data/abx_class_project.csv") ## antibiotic dictionary
 # 
 # no_match <- subset(who_whoc_wb, is.na(who.region)| is.na(whoc.region) | is.na(wb.region))
 # no_match$country <- countrycode(no_match$iso3c, origin="iso3c", destination="country.name")
-# # ## drop for now but otherwise can be added by hand
-# # write.csv(no_match, file="data/no_match_countries.csv")
-# 
-# ## drop non-matched countries
+# # ## drop for now but !! otherwise can be added by hand
 # who_whoc_wb <- subset(who_whoc_wb, !is.na(who.region) & !is.na(whoc.region) & !is.na(wb.region))
 # # ## output linked csv
-# write.csv(who_whoc_wb, file = "Data/who_whoc_wb.csv")
-# # save(who_whoc_wb, file = "Data/who_whoc_wb.RData")
-load("Data/who_whoc_wb.RData")
+# write.csv(who_whoc_wb, file = "data_all/who_whoc_wb.csv")
+# save(who_whoc_wb, file = "data_all/who_whoc_wb.RData")
+load("data_all/who_whoc_wb.RData")
 
 
 #######**** MAPPING BACTERIA ****####
