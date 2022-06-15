@@ -132,12 +132,13 @@ bug_class <- bug_class[(gram.stain=="gp" & (class=="penicillins"|class=="glycope
 ## convert input country to iso3c code using country code package
 bug_class$iso3c <-countrycode(bug_class$country, origin="country.name", destination="iso3c") 
 
+bug_class[country=="England",iso3c := "GBR"] ## otherwise unmatches
 bug_class_region <- merge(bug_class, who_whoc_wb, by.x="iso3c", by.y="iso3c",all.x=TRUE)
 
-## !!! currently it's just Europe but would need to update this bit of code if also had e.g. 
+## !!! currently it's just Europe & England not matched on this data
+##  but would need to update this bit of code if also had e.g. 
 ## "Middle East & North Africa" or another region results extracted had similar issues
 
-### NOTE FOR ME NOW _ ADD ENGLAND LINKER TO UK AS WELL
 EuSA <- bug_class_region[country=="Europe"]
 EuSA[ , wb.region := "Europe & Central Asia"]
 EuSA <- merge(EuSA, who_whoc_wb, by="wb.region", allow.cartesian = TRUE)
@@ -158,12 +159,13 @@ EuSA <- EuSA[Income.group!="Lower middle income"]
 ## set whoc regions to NA as not specifically targetting an individual WHOC region (e.g. EURO B) but rather the whole of Europe
 EuSA <- EuSA[ , whoc.region := NA]
 
-save(EuSA, file="Data/EUSA.RData")
-
 bug_class_region <- bug_class_region[!is.na(iso3c)]
-bug_class_region <- rbind(bug_class_region, EuSA)
 
-save(bug_class_region, file ="Data/bug_class_region.RData")
+bug_class_region <- bug_class_region %>% 
+  select(!ends_with(".x")) %>% ## removing unneeded columns to match EuSA
+ as.data.table()
+
+bug_class_region <- rbind(bug_class_region, EuSA)
 
 ## clean up to only keep key columns
 bug_class_region <- bug_class_region[ , c("row_id","iso3c", "bacteria.code",
@@ -176,12 +178,12 @@ bug_class_region <- bug_class_region[ , c("row_id","iso3c", "bacteria.code",
                                           "both_los_cost","gram.stain",
                                           "class","who.region","whoc.region","wb.region",
                                           "Income.group","minexp","maxexp",
-                                          "minnon","maxnon", "unique_id")]
+                                          "minnon","maxnon", "unique_id_4both")]
 
 los.est <- subset(bug_class_region, los==1)
 costing.est <- subset(bug_class_region, los==0)
 
-# ## !!! check which ones are still missing data 
+# # ## !!! check which ones are still missing data - need to do this by hand and check
 # test <- los.est[is.na(who.region)|is.na(whoc.region)|is.na(Income.group)]
 # test
 # ## Taiwan is missing regional data as not listed as WHO country when list downloaded, merging in for this case for income level meta-analysis
@@ -189,20 +191,18 @@ costing.est <- subset(bug_class_region, los==0)
 
 los.est[iso3c=="TWN", wb.region:="East Asia & Pacific"]
 los.est[iso3c=="TWN", Income.group:="High income"]
-
+# 
 # test2 <- costing.est[is.na(who.region)|is.na(whoc.region)|is.na(Income.group)]
 # test2
-# subset(dic_wb, Code=="TWN") ##Taiwan
+# unique(test2$iso3c)
 # subset(dic_wb, Code=="HKG") ## Hong Kong
 # 
 
-costing.est[iso3c=="TWN", wb.region:="East Asia & Pacific"]
-costing.est[iso3c=="TWN", Income.group:="High income"]
 costing.est[iso3c=="HKG", wb.region:="East Asia & Pacific"]
 costing.est[iso3c=="HKG", Income.group:="High income"]
 
 # #save data
-save(los.est, file="Data/los_est.RData")
-save(costing.est, file="Data/costing_est.RData")
+save(los.est, file="cost_per_case/outputs/los_est_AMR.RData")
+save(costing.est, file="cost_per_case/outputs/costing_est_AMR.RData")
 
 
