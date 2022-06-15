@@ -7,7 +7,7 @@ library(stringr)
 library(dplyr)
 library(data.table)
 library(meta)
-library(tabulizer)
+library(tabulizer) ## used with a previous version of R
 library(tidyr)
 
 ########## SEPARATE FUNCTIONS #########
