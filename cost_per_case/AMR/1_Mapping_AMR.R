@@ -25,7 +25,7 @@ dic_whoc <- read.csv("data_all/inputs/who_choice_region.csv")
 dic_wb <- read.csv("data_all/inputs/wb_region_income.csv")
 
 ### Drug and Bug mapping (Note only for our exposures of interest)
-### !! would need to be expanded out if updated with other bacteria and drugs of interest
+### !!! would need to be expanded out if updated with other bacteria and drugs of interest
 dic_bug <- read.csv("data_all/inputs/bug_gram.csv") ## bacteria dictionary
 dic_drug <- read.csv("data_all/inputs/abx_class.csv") ## antibiotic dictionary
 
@@ -63,18 +63,17 @@ dic_drug <- read.csv("data_all/inputs/abx_class.csv") ## antibiotic dictionary
 # 
 # no_match <- subset(who_whoc_wb, is.na(who.region)| is.na(whoc.region) | is.na(wb.region))
 # no_match$country <- countrycode(no_match$iso3c, origin="iso3c", destination="country.name")
-# # ## drop for now but !! otherwise can be added by hand
+# # ## drop for now but !!! otherwise can be added by hand
 # who_whoc_wb <- subset(who_whoc_wb, !is.na(who.region) & !is.na(whoc.region) & !is.na(wb.region))
 # # ## output linked csv
 # write.csv(who_whoc_wb, file = "data_all/who_whoc_wb.csv")
 # save(who_whoc_wb, file = "data_all/who_whoc_wb.RData")
 load("data_all/who_whoc_wb.RData")
 
-
 #######**** MAPPING BACTERIA ****####
 # combine them 
 bug <- merge(lit, dic_bug, by.x="bacteria.code", by.y="bacteria.code")
-### can check here whether anything from the literature
+### !!! you can check here whether anything from the literature
 # gets dropped by adding "all.x=TRUE" and seeing if difference in nrows(bug)
 
 ## change formatting to all lower-case
@@ -82,7 +81,6 @@ bug <- bug  %>%
   mutate_at(vars(c("exposed.R")), ~ str_to_lower(.))
 
 #######**** MAPPING ANTIBIOTICS ****####
-
 ## make all lower case
 dic_drug <- dic_drug %>% 
   mutate_at(vars(c("Drug.protein","Linked.antibiotic")), ~ str_to_lower(.))
@@ -92,11 +90,9 @@ dic_drug <- dic_drug %>%
 classy <- unique(dic_drug$Linked.antibiotic)
 classy <- paste(classy,collapse="|")
 
-
-table.input <- as.data.table(bug)
-table.input[ , chf:= 0L]
+table.input <- as.data.table(bug) ## make bug data.table
+table.input[ , chf:= 0L] ## class flag (whether already class not abx)
 table.input[grepl(classy,table.input$exposed.R), chf := 1]
-
 
 ### split into those by class and those not
 class.y <- subset(table.input, chf==1)
@@ -105,6 +101,7 @@ class.n <- subset(table.input, chf==0)
 ## match the ones currently not at a class level
 class.nm <- merge(class.n, dic_drug, by.x="exposed.R", by.y="Drug.protein",all=FALSE)
 ## !!! can check here by changing all.x=TRUE to see if any are being dropped because they don't match
+## note e.g. penicillins has to be plural/match exactly or will be dropped here
 
 ## rename columns to match (adding an extra column in class.y so they match in terms of width)
 class.y$class <- class.y$exposed.R
@@ -115,7 +112,6 @@ bug_class <- union(class.y, class.nm)
 ### !!! can check additional numbers (likely from proteins --> multiple antibiotics)
 # gn <- subset(bug_class, gram.stain=="gn")
 # unique(gn$class) ## do the same for gram poisitive
-## removing combinations not interested in/extracted for (e.g. penicillin resistance for GN mapped from ESBL)
 # ## checking ones not matched 
 # test <- bug_class[(gram.stain=="gp" & (class=="penicillins"|class=="glycopeptides"))|
 #                          (gram.stain=="gn" & (class=="3g cephalosporins"|class=="carbapenems"))|
@@ -123,13 +119,14 @@ bug_class <- union(class.y, class.nm)
 # explorar <- merge(test,lit, by="row_id",all.y=TRUE)
 # subset(explorar, is.na(bacteria.code.x))
 
+## removing combinations not interested in/extracted for (e.g. penicillin resistance for GN mapped from ESBL)
 bug_class <- bug_class[(gram.stain=="gp" & (class=="penicillins"|class=="glycopeptides"))|
                          (gram.stain=="gn" & (class=="3g cephalosporins"|class=="carbapenems"))|
                     gram.stain=="tb"]
 
 # # ## save dictionaries for bugs and drugs as RData
-# save(dic_bug, file="Data/dic_bug.RData")
-# save(dic_drug, file="Data/dic_drug.RData")
+# save(dic_bug, file="data_all/inputs/dic_bug.RData")
+# save(dic_drug, file="data_all/inputs/dic_drug.RData")
 
 #########**** COMBINING ALL OF THE ABOVE ****#####
 ## convert input country to iso3c code using country code package
@@ -138,7 +135,9 @@ bug_class$iso3c <-countrycode(bug_class$country, origin="country.name", destinat
 bug_class_region <- merge(bug_class, who_whoc_wb, by.x="iso3c", by.y="iso3c",all.x=TRUE)
 
 ## !!! currently it's just Europe but would need to update this bit of code if also had e.g. 
-## "Middle East & North Africa" or another region results extracted
+## "Middle East & North Africa" or another region results extracted had similar issues
+
+### NOTE FOR ME NOW _ ADD ENGLAND LINKER TO UK AS WELL
 EuSA <- bug_class_region[country=="Europe"]
 EuSA[ , wb.region := "Europe & Central Asia"]
 EuSA <- merge(EuSA, who_whoc_wb, by="wb.region", allow.cartesian = TRUE)
