@@ -18,16 +18,16 @@ lit <- subset(lit, review_marker=="AMR")
 lit$row_id <- c(1:nrow(lit))
 
 ## WHO and WHOC regions hand copied from WHO website
-dic_who <- read.csv("data_all/inputs/who_region.csv")
-dic_whoc <- read.csv("data_all/inputs/who_choice_region.csv")
+dic_who <- read.csv("data_all/who_region.csv")
+dic_whoc <- read.csv("data_all/who_choice_region.csv")
 
 ### World bank classifications from WB stats
-dic_wb <- read.csv("data_all/inputs/wb_region_income.csv")
+dic_wb <- read.csv("data_all/wb_region_income.csv")
 
 ### Drug and Bug mapping (Note only for our exposures of interest)
 ### !!! would need to be expanded out if updated with other bacteria and drugs of interest
-dic_bug <- read.csv("data_all/inputs/bug_gram.csv") ## bacteria dictionary
-dic_drug <- read.csv("data_all/inputs/abx_class.csv") ## antibiotic dictionary
+dic_bug <- read.csv("data_all/bug_gram.csv") ## bacteria dictionary
+dic_drug <- read.csv("data_all/abx_class.csv") ## antibiotic dictionary
 
 #######**** MAPPING REGION ****#####
 # ## remove na rows from wb dictionary csv
@@ -125,8 +125,8 @@ bug_class <- bug_class[(gram.stain=="gp" & (class=="penicillins"|class=="glycope
                     gram.stain=="tb"]
 
 # # ## save dictionaries for bugs and drugs as RData
-# save(dic_bug, file="data_all/inputs/dic_bug.RData")
-# save(dic_drug, file="data_all/inputs/dic_drug.RData")
+# save(dic_bug, file="data_all/dic_bug.RData")
+# save(dic_drug, file="data_all/dic_drug.RData")
 
 #########**** COMBINING ALL OF THE ABOVE ****#####
 ## convert input country to iso3c code using country code package
