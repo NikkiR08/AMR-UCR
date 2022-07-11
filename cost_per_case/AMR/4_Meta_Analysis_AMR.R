@@ -38,12 +38,15 @@ who_whoc_wb <- who_whoc_wb[!is.na(iso3c)] ## although none got dropped in last r
 as.numeric.factor <- function(x) {as.numeric(as.character(x))}
 
 ## set the number of sample runs 
-n.samples <- 10000
+n.samples <- 5000
 
 pb = txtProgressBar(min = 0, max = n.samples, initial = 0, style = 3)
 
 meta.grouping <- function(x){
-  # x is either "los.TE" or "costing.TE" from the previous scripts
+
+ # x <- los.TE ## use when testing function changes (REMEMBER TO NOT USE IN MAIN FUNCTION)
+
+  # x is either "los.TE" or "costing.TE.adj" from the previous scripts
   # output is a data.table with estimates for the groupings which we have
   # atleast global estimates for
 
@@ -137,18 +140,26 @@ colnames(temp.EuSA)[colnames(temp.EuSA) == 'Income.group.y'] <- 'Income.group'
 dt.all <- dt.all[iso3c!="EUSA"]
 dt.all <- rbind(dt.all, temp.EuSA)
 
+### !!! note because of this - for who region (not used), WB region 
+## and global groupings, you need to remove duplicate rows from EUSA 
+## manip before counting otherwise will double count/use studies
+## not needed for income groups as that's the duplication
 
-#### grouping information by WHOC regions ######
 dt.all[ , group_whoc := .GRP, by =.(whoc.region, syndrome, class, gram.stain)]
 dt.all[ , group_income := .GRP, by =.(Income.group,syndrome, class, gram.stain)]
 dt.all[ , group_wbregion := .GRP, by =.(wb.region,syndrome, class, gram.stain)]
 dt.all[ , group_global := .GRP, by =.(syndrome, class, gram.stain)]
 
-# test <- dt.all[is.na(Income.group)]
-dt.all <- dt.all[!is.na(Income.group)] ## none dropped currently
+
+#### grouping information by WHOC regions ######
 
 n.studies <- dt.all %>%
-  group_by(group_whoc) %>%
+  filter(!is.na(whoc.region)) %>% ## remove NA values otherwise grouped into own group
+  as.data.table()
+## have to break pipe to use data.table unique
+  n.studies <- unique(n.studies,by=c("group_whoc","row_id"))  ## removing duplicate studies from region mapping
+  n.studies <- n.studies %>% 
+    group_by(group_whoc) %>% 
   count(!is.na(TE)) 
 
 n.studies <- as.data.table(n.studies)
@@ -181,6 +192,7 @@ if (t>0){
 n.2  <- merge(n.studies.2, dt.all, c("group_whoc"))
 n.2  <- n.2[!is.na(TE)]
 n.2[ , group_ID := .GRP, by =.(whoc.region, syndrome, class, gram.stain)]
+n.2 <- unique(n.2, by=c("group_whoc","row_id"))
 
 # output for preallocation
 output.meta <- data.table(TE = rep(0,max(unique(n.2$group_ID))),
@@ -230,7 +242,12 @@ dt.na.whoc <- dt.output[is.na(dt.output$TE.x)]
 
 ######## grouping by WB Income Classification ########
 n.studies <- dt.all %>%
-  group_by(group_income) %>%
+  filter(!is.na(Income.group)) %>% ## remove NA values otherwise grouped into own group
+  as.data.table()
+## have to break pipe to use data.table unique
+n.studies <- unique(n.studies,by=c("group_income","row_id"))  ## removing duplicate studies from region mapping
+n.studies <- n.studies %>% 
+  group_by(group_income) %>% 
   count(!is.na(TE)) 
 
 n.studies <- as.data.table(n.studies)
@@ -260,6 +277,7 @@ if (t>0){
 n.2  <- merge(n.studies.2, dt.all, by="group_income")
 n.2 <- n.2[!is.na(TE)]
 n.2[ , group_ID := .GRP, by =.(Income.group, syndrome, class, gram.stain)]
+n.2 <- unique(n.2, by=c("group_income","row_id"))
 
 # output for preallocation
 output.meta <- data.table(TE = rep(0,max(unique(n.2$group_ID))),
@@ -309,7 +327,12 @@ dt.na.income <- dt.output.income[is.na(dt.output.income$TE.x)]
 ###### grouping by WB regional estimates ###################
 
 n.studies <- dt.all %>%
-  group_by(group_wbregion) %>%
+  filter(!is.na(wb.region)) %>% ## remove NA values otherwise grouped into own group
+  as.data.table()
+## have to break pipe to use data.table unique
+n.studies <- unique(n.studies,by=c("group_wbregion","row_id"))  ## removing duplicate studies from region mapping
+n.studies <- n.studies %>% 
+  group_by(group_wbregion) %>% 
   count(!is.na(TE)) 
 
 n.studies <- as.data.table(n.studies)
@@ -339,6 +362,7 @@ if (t>0){
   n.2  <- merge(n.studies.2, dt.all, by="group_wbregion")
   n.2 <- n.2[!is.na(TE)]
   n.2[ , group_ID := .GRP, by =.(wb.region, syndrome, class, gram.stain)]
+  n.2 <- unique(n.2, by=c("group_wbregion","row_id"))
   
   # output for preallocation
   output.meta <- data.table(TE = rep(0,max(unique(n.2$group_ID))),
@@ -387,9 +411,12 @@ dt.na.wbregion <- dt.output.wbregion[is.na(dt.output.wbregion$TE.x)]
 
 ###### grouping by global estimates ###################
 
-n.studies <- dt.all %>%
-  group_by(group_global) %>%
+## have to break pipe to use data.table unique
+n.studies <- unique(dt.all,by=c("row_id"))  ## removing duplicate studies from region mapping
+n.studies <- n.studies %>% 
+  group_by(group_global) %>% 
   count(!is.na(TE)) 
+
 
 n.studies <- as.data.table(n.studies)
 colnames(n.studies)[colnames(n.studies) == '!is.na(TE)'] <- 'any'
@@ -421,6 +448,7 @@ if (t>0){
 n.2  <- merge(n.studies.2, dt.all, by="group_global")
 n.2 <- n.2[!is.na(TE)]
 n.2[ , group_ID := .GRP, by =.(syndrome, class, gram.stain)]
+n.2 <- unique(n.2, by=c("row_id"))
 
 # output for preallocation
 output.meta <- data.table(TE = rep(0,max(unique(n.2$group_ID))),
@@ -467,7 +495,7 @@ dt.output.global <- dt.output.global[ , -c("TE","seT","n.y")]
 
 dt.na.global <- dt.output.global[is.na(dt.output.global$TE.x)]
 dt.na.global <- dt.na.global[ , c("syndrome","class","gram.stain")]
-write.csv(dt.na.global, "cost_per_case/outputs/missing_global_combinations.csv")
+# write.csv(dt.na.global, "cost_per_case/outputs/missing_global_combinations.csv")
 
 ### combining altogether
 dt.output <- dt.output[ ,c("iso3c","whoc.region","syndrome","class","gram.stain",
@@ -521,7 +549,8 @@ dt.output.all2 <- merge(dt.output.all, dt.output.wbregion, by=c("wb.region",
 
 dt.output.all3 <- merge(dt.output.all2, dt.output.global, by=c("syndrome",
                                                          "class",
-                                                         "gram.stain"))
+                                                         "gram.stain"), 
+                        allow.cartesian = TRUE)
 ## if whoc available
 dt.output.all3[ , TE.final := TE.whoc]
 dt.output.all3[TE.final==TE.whoc, level := "whoc"]
@@ -529,17 +558,20 @@ dt.output.all3[TE.final==TE.whoc, no.studies := n.whoc]
 
 ## if income available
 dt.output.all3[is.na(TE.final), TE.final := TE.income ]
-dt.output.all3[TE.final==TE.income, level := "income"]
+## have to add in extra is.na() in case all income are in one whoc region
+dt.output.all3[TE.final==TE.income & is.na(TE.whoc), level := "income"]
 dt.output.all3[TE.final==TE.income, no.studies := n.income ]
 
 ## if wb region available
 dt.output.all3[is.na(TE.final), TE.final := TE.wbregion]
-dt.output.all3[TE.final==TE.wbregion, level := "wbregion"]
+dt.output.all3[TE.final==TE.wbregion & is.na(TE.whoc)
+               & is.na(TE.income), level := "wbregion"]
 dt.output.all3[TE.final==TE.wbregion, no.studies := n.wbregion ]
 
 ## if global available
 dt.output.all3[is.na(TE.final), TE.final := TE.global ]
-dt.output.all3[TE.final==TE.global, level := "global"]
+dt.output.all3[TE.final==TE.global & is.na(TE.whoc)
+               & is.na(TE.income) & is.na(TE.wbregion) , level := "global"]
 dt.output.all3[TE.final==TE.global, no.studies := n.global ]
 
 ## setting the standard error accordingly
