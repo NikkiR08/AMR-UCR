@@ -38,7 +38,7 @@ who_whoc_wb <- who_whoc_wb[!is.na(iso3c)] ## although none got dropped in last r
 as.numeric.factor <- function(x) {as.numeric(as.character(x))}
 
 ## set the number of sample runs 
-n.samples <- 5000
+n.samples <- 1000
 
 pb = txtProgressBar(min = 0, max = n.samples, initial = 0, style = 3)
 
