@@ -6,6 +6,7 @@ Cholera,cho,gn,
 Clostridium difficile,cdif,gp,
 Enterococcus faecium,efa,gp,
 Enterococcus,efa,gp,Included other Enteroccocus also but coded as one
+Enterococcus faecalis and faecium,efa,gp,Included other Enteroccocus also but coded as one
 Enterobacteriaceae,ent,gn,
 Escherichia coli,eco,gn,
 Group A Streptococcus,gas,gp,
