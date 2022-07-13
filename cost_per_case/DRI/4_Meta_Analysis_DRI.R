@@ -11,8 +11,8 @@ remotes::install_github("guido-s/meta", ref = "R-book-first-edition")
 library(meta)
 
 ########### DATA ########################
-load("cost_per_case/outputs/los_TE.RData")
-load("cost_per_case/outputs/costing_TE_AMR_2019USD.RData")
+load("cost_per_case/outputs/los_TE_DRI.RData")
+load("cost_per_case/outputs/costing_TE_DRI_2019USD.RData")
 load("cost_per_case/outputs/whoc_cc_2019USD.RData")
 
 ## load data dictionaries
@@ -38,7 +38,7 @@ who_whoc_wb <- who_whoc_wb[!is.na(iso3c)] ## although none got dropped in last r
 as.numeric.factor <- function(x) {as.numeric(as.character(x))}
 
 ## set the number of sample runs 
-n.samples <- 1000
+n.samples <- 2
 
 pb = txtProgressBar(min = 0, max = n.samples, initial = 0, style = 3)
 
@@ -595,8 +595,8 @@ return(los.output.cc)
 
 ################******** META ANALYSIS LOS ********############
 los.output.cc <- meta.grouping(los.TE)
-write.csv(los.output.cc, file="cost_per_case/outputs/los_meta.csv")
-save(los.output.cc, file="cost_per_case/outputs/los_output_cc.RData")
+write.csv(los.output.cc, file="cost_per_case/outputs/los_meta_DRI.csv")
+save(los.output.cc, file="cost_per_case/outputs/los_output_cc_DRI.RData")
 
 ##############******** META ANALYSIS COSTING ***********##########
 
@@ -605,8 +605,8 @@ costing.TE.adj[ , TE := TE.adj]
 costing.TE.adj[ , seTE := TE.adj]
 
 costing.output.cc <- meta.grouping(costing.TE.adj)
-write.csv(costing.output.cc, file="cost_per_case/outputs/costing_meta.csv")
-save(costing.output.cc, file="cost_per_case/outputs/costing_output_cc.RData")
+write.csv(costing.output.cc, file="cost_per_case/outputs/costing_meta_DRI.csv")
+save(costing.output.cc, file="cost_per_case/outputs/costing_output_cc_DRI.RData")
 
 ##############******** SAMPLING WHO CHOICE ***********##########
 whoc.cc <- as.data.table(whoc.cc.2019)
@@ -682,7 +682,7 @@ for (i in 1:n.samples){
   list.whoc.cc[[i]] <- temp
 }
 
-save(list.whoc.cc, file="cost_per_case/outputs/list.whoc.cc.RData")
+save(list.whoc.cc, file="cost_per_case/outputs/list.whoc.cc_DRI.RData")
 
 ##############******** SAMPLING LOS ***********##########
 
@@ -724,7 +724,7 @@ for (i in 1:n.samples){
   setTxtProgressBar(pb,i)  
 }
 
-save(list.los.cc, file="cost_per_case/outputs/list.los.cc.RData")
+save(list.los.cc, file="cost_per_case/outputs/list.los.cc_DRI.RData")
 
 ##############******** ESTIMATING TOTAL COST ***********##########
 
@@ -785,7 +785,7 @@ for (i in 1:n.samples){
 }
 
 
-save(list.costing.cc, file="cost_per_case/outputs/list.costing.cc.RData")
+save(list.costing.cc, file="cost_per_case/outputs/list.costing.cc_DRI.RData")
 
 total.costing <- rbindlist(list.costing.cc)
 total.costing<- as.data.table(total.costing)
@@ -803,23 +803,19 @@ setnames(total.los.cost, "level", "los.level")
 total.los.cost <- total.los.cost[ , -c("ID.x","ID.y","mean_i")]
 total.costing <- total.costing[ , -c("ID")]
 
-save(total.costing, file="cost_per_case/outputs/total_costing.RData")
-save(total.los.cost, file="cost_per_case/outputs/total_los_cost.RData")
+save(total.costing, file="cost_per_case/outputs/total_costing_DRI.RData")
+save(total.los.cost, file="cost_per_case/outputs/total_los_cost_DRI.RData")
 ### saving samples directly in case needed & cleaning space
-save(sample.costing.cc, file="cost_per_case/outputs/sample_costing_cc.RData")
-save(sample.los.cc, file="cost_per_case/outputs/sample_los_cc.RData")
-save(sample.whoc.cc, file="cost_per_case/outputs/sample_whoc_cc.RData")
-
-# ### had to exit and reload for memory purposes
-# load("cost_per_case/outputs/total_los_cost.RData")
-# load("cost_per_case/outputs/total_costing.RData")
+save(sample.costing.cc, file="cost_per_case/outputs/sample_costing_cc_DRI.RData")
+save(sample.los.cc, file="cost_per_case/outputs/sample_los_cc_DRI.RData")
+save(sample.whoc.cc, file="cost_per_case/outputs/sample_whoc_cc_DRI.RData")
 
 l = list(total.los.cost, total.costing)
 
 ##!! add list ID in here if poss
 dt.final <- rbindlist(l, use.names=TRUE, fill=TRUE)
 
-save(dt.final, file="cost_per_case/outputs/dtfinal.RData")
+save(dt.final, file="cost_per_case/outputs/dtfinal_DRI.RData")
 
 ### creating averages for (1) LOS based cost, (2) direct based cost and (3) combination of both
 
@@ -906,7 +902,7 @@ setcolorder(results, c("iso3c.x","whoc.region",
                             "high.cost_extractedC" ,
                             "mean.cost" ,"low.cost", "high.cost"))
 
-save(results, file="cost_per_case/outputs/AMR_Results_Table_AMR_nolabels.RData")
+save(results, file="cost_per_case/outputs/AMR_Results_Table_DRI_nolabels.RData")
 
 results <- results %>% rename("Country (ISO3 Code)"="iso3c.x",
                                         "WHO-CHOICE Region"= "whoc.region",
@@ -933,12 +929,12 @@ results <- results %>% rename("Country (ISO3 Code)"="iso3c.x",
 ## rounding to the nearest numeric
 results <- results %>%  mutate_if(is.numeric, round, digits=0)
 
-save(results, file="cost_per_case/outputs/AMR_Results_Table.RData")
-write.csv(results, file="cost_per_case/outputs/AMR_Results_Table.csv")
+save(results, file="cost_per_case/outputs/DRI_Results_Table.RData")
+write.csv(results, file="cost_per_case/outputs/DRI_Results_Table.csv")
 
 
 ##### FORMATTING LOS ESTIMATES FOR RESULTS TABLES ######
-load("cost_per_case/outputs/list.los.cc.RData")
+load("cost_per_case/outputs/list.los.cc_DRI.RData")
 total.los <- rbindlist(list.los.cc)
 
 ## (1) los estimates (in days)
@@ -983,5 +979,5 @@ los.country <- los.country %>% rename("Country (ISO3 Code)"="iso3c.x",
                                        "Mean Excess LOS"="mean_los",
                                        "Low 95% UI Bound Excess LOS"="low_los" ,
                                        "High 95% UI Bound Excess LOS"="high_los")       
-save(los.country, file="cost_per_case/outputs/AMR_Results_LOS.RData")
-write.csv(los.country, file="cost_per_case/outputs/AMR_Results_LOS.csv")
+save(los.country, file="cost_per_case/outputs/DRI_Results_LOS.RData")
+write.csv(los.country, file="cost_per_case/outputs/DRI_Results_LOS.csv")
