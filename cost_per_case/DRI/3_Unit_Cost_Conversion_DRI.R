@@ -13,7 +13,7 @@ library(countrycode)
 
 ## previous datasets
 load("data_all/who_whoc_wb.RData")
-load("cost_per_case/outputs/costing_TE.RData")
+load("cost_per_case/outputs/costing_TE_DRI.RData")
 
 #######**** Exchange
 source("general_functions/inflation.R")
@@ -109,4 +109,4 @@ costing.TE.adj[ , cost_year := 2019]
 costing.TE.adj[ , cost_currency:= "USD"]
 costing.TE.adj <- costing.TE.adj[ , -c("currency_name","currency_code")]
 
-save(costing.TE.adj, file="cost_per_case/outputs/costing_TE_AMR_2019USD.RData")
+save(costing.TE.adj, file="cost_per_case/outputs/costing_TE_DRI_2019USD.RData")
