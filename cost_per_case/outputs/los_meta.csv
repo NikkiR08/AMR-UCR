@@ -191,14 +191,14 @@
 "190","B-J","penicillins","gp","BWA","AFRO E","Upper middle income","Sub-Saharan Africa",13,14.2315833032427,"income",1
 "191","B-J","penicillins","gp","NAM","AFRO E","Upper middle income","Sub-Saharan Africa",13,14.2315833032427,"income",1
 "192","B-J","penicillins","gp","ZAF","AFRO E","Upper middle income","Sub-Saharan Africa",13,14.2315833032427,"income",1
-"193","BSI","3g cephalosporins","gn","STP","AFRO D",NA,NA,4.95032513460338,0.953477936626152,"global",29
+"193","BSI","3g cephalosporins","gn","STP","AFRO D",NA,NA,4.99098132739785,0.982210214201372,"global",29
 "194","BSI","3g cephalosporins","gn","COK","WPRO B",NA,NA,9.82501102249719,1.82076014350221,"whoc",3
 "195","BSI","3g cephalosporins","gn","NIU","WPRO B",NA,NA,9.82501102249719,1.82076014350221,"whoc",3
-"196","BSI","3g cephalosporins","gn","AUS","WPRO A","High income","East Asia & Pacific",4.24942361801441,1.0336050648416,"income",24
-"197","BSI","3g cephalosporins","gn","BRN","WPRO A","High income","East Asia & Pacific",4.24942361801441,1.0336050648416,"income",24
-"198","BSI","3g cephalosporins","gn","JPN","WPRO A","High income","East Asia & Pacific",4.24942361801441,1.0336050648416,"income",24
-"199","BSI","3g cephalosporins","gn","NZL","WPRO A","High income","East Asia & Pacific",4.24942361801441,1.0336050648416,"income",24
-"200","BSI","3g cephalosporins","gn","SGP","WPRO A","High income","East Asia & Pacific",4.24942361801441,1.0336050648416,"income",24
+"196","BSI","3g cephalosporins","gn","AUS","WPRO A","High income","East Asia & Pacific",4.2860373131296,1.06680320853885,"income",24
+"197","BSI","3g cephalosporins","gn","BRN","WPRO A","High income","East Asia & Pacific",4.2860373131296,1.06680320853885,"income",24
+"198","BSI","3g cephalosporins","gn","JPN","WPRO A","High income","East Asia & Pacific",4.2860373131296,1.06680320853885,"income",24
+"199","BSI","3g cephalosporins","gn","NZL","WPRO A","High income","East Asia & Pacific",4.2860373131296,1.06680320853885,"income",24
+"200","BSI","3g cephalosporins","gn","SGP","WPRO A","High income","East Asia & Pacific",4.2860373131296,1.06680320853885,"income",24
 "201","BSI","3g cephalosporins","gn","KOR","WPRO B","High income","East Asia & Pacific",9.82501102249719,1.82076014350221,"whoc",3
 "202","BSI","3g cephalosporins","gn","KOR","WPRO B","High income","East Asia & Pacific",9.82501102249719,1.82076014350221,"whoc",3
 "203","BSI","3g cephalosporins","gn","PLW","WPRO B","High income","East Asia & Pacific",9.82501102249719,1.82076014350221,"whoc",3
@@ -226,48 +226,48 @@
 "225","BSI","3g cephalosporins","gn","TON","WPRO B","Upper middle income","East Asia & Pacific",9.82501102249719,1.82076014350221,"whoc",3
 "226","BSI","3g cephalosporins","gn","TUV","WPRO B","Upper middle income","East Asia & Pacific",9.82501102249719,1.82076014350221,"whoc",3
 "227","BSI","3g cephalosporins","gn","WSM","WPRO B","Upper middle income","East Asia & Pacific",9.82501102249719,1.82076014350221,"whoc",3
-"228","BSI","3g cephalosporins","gn","CYP","EMRO E","High income","Europe & Central Asia",4.24942361801441,1.0336050648416,"income",24
-"229","BSI","3g cephalosporins","gn","AND","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"230","BSI","3g cephalosporins","gn","AUT","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"231","BSI","3g cephalosporins","gn","BEL","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"232","BSI","3g cephalosporins","gn","CHE","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"233","BSI","3g cephalosporins","gn","CHE","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"234","BSI","3g cephalosporins","gn","CZE","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"235","BSI","3g cephalosporins","gn","DEU","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"236","BSI","3g cephalosporins","gn","DEU","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"237","BSI","3g cephalosporins","gn","DEU","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"238","BSI","3g cephalosporins","gn","DEU","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"239","BSI","3g cephalosporins","gn","DNK","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"240","BSI","3g cephalosporins","gn","ESP","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"241","BSI","3g cephalosporins","gn","FIN","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"242","BSI","3g cephalosporins","gn","FRA","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"243","BSI","3g cephalosporins","gn","GBR","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"244","BSI","3g cephalosporins","gn","GBR","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"245","BSI","3g cephalosporins","gn","GRC","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"246","BSI","3g cephalosporins","gn","HRV","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"247","BSI","3g cephalosporins","gn","IRL","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"248","BSI","3g cephalosporins","gn","ISL","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"249","BSI","3g cephalosporins","gn","ITA","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"250","BSI","3g cephalosporins","gn","ITA","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"251","BSI","3g cephalosporins","gn","LUX","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"252","BSI","3g cephalosporins","gn","MCO","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"253","BSI","3g cephalosporins","gn","NLD","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"254","BSI","3g cephalosporins","gn","NOR","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"255","BSI","3g cephalosporins","gn","PRT","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"256","BSI","3g cephalosporins","gn","SMR","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"257","BSI","3g cephalosporins","gn","SVN","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"258","BSI","3g cephalosporins","gn","SWE","EURO A","High income","Europe & Central Asia",4.29517329899132,1.36912287411149,"whoc",13
-"259","BSI","3g cephalosporins","gn","POL","EURO B","High income","Europe & Central Asia",4.24942361801441,1.0336050648416,"income",24
-"260","BSI","3g cephalosporins","gn","SVK","EURO B","High income","Europe & Central Asia",4.24942361801441,1.0336050648416,"income",24
-"261","BSI","3g cephalosporins","gn","EST","EURO C","High income","Europe & Central Asia",4.24942361801441,1.0336050648416,"income",24
-"262","BSI","3g cephalosporins","gn","HUN","EURO C","High income","Europe & Central Asia",4.24942361801441,1.0336050648416,"income",24
-"263","BSI","3g cephalosporins","gn","LTU","EURO C","High income","Europe & Central Asia",4.24942361801441,1.0336050648416,"income",24
-"264","BSI","3g cephalosporins","gn","LVA","EURO C","High income","Europe & Central Asia",4.24942361801441,1.0336050648416,"income",24
-"265","BSI","3g cephalosporins","gn","TJK","EURO B","Low income","Europe & Central Asia",3.86787860389483,1.0833271712296,"wbregion",21
-"266","BSI","3g cephalosporins","gn","KGZ","EURO B","Lower middle income","Europe & Central Asia",3.86787860389483,1.0833271712296,"wbregion",21
-"267","BSI","3g cephalosporins","gn","UZB","EURO B","Lower middle income","Europe & Central Asia",3.86787860389483,1.0833271712296,"wbregion",21
-"268","BSI","3g cephalosporins","gn","MDA","EURO C","Lower middle income","Europe & Central Asia",3.86787860389483,1.0833271712296,"wbregion",21
-"269","BSI","3g cephalosporins","gn","UKR","EURO C","Lower middle income","Europe & Central Asia",3.86787860389483,1.0833271712296,"wbregion",21
+"228","BSI","3g cephalosporins","gn","CYP","EMRO E","High income","Europe & Central Asia",4.2860373131296,1.06680320853885,"income",24
+"229","BSI","3g cephalosporins","gn","AND","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"230","BSI","3g cephalosporins","gn","AUT","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"231","BSI","3g cephalosporins","gn","BEL","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"232","BSI","3g cephalosporins","gn","CHE","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"233","BSI","3g cephalosporins","gn","CHE","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"234","BSI","3g cephalosporins","gn","CZE","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"235","BSI","3g cephalosporins","gn","DEU","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"236","BSI","3g cephalosporins","gn","DEU","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"237","BSI","3g cephalosporins","gn","DEU","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"238","BSI","3g cephalosporins","gn","DEU","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"239","BSI","3g cephalosporins","gn","DNK","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"240","BSI","3g cephalosporins","gn","ESP","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"241","BSI","3g cephalosporins","gn","FIN","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"242","BSI","3g cephalosporins","gn","FRA","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"243","BSI","3g cephalosporins","gn","GBR","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"244","BSI","3g cephalosporins","gn","GBR","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"245","BSI","3g cephalosporins","gn","GRC","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"246","BSI","3g cephalosporins","gn","HRV","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"247","BSI","3g cephalosporins","gn","IRL","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"248","BSI","3g cephalosporins","gn","ISL","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"249","BSI","3g cephalosporins","gn","ITA","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"250","BSI","3g cephalosporins","gn","ITA","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"251","BSI","3g cephalosporins","gn","LUX","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"252","BSI","3g cephalosporins","gn","MCO","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"253","BSI","3g cephalosporins","gn","NLD","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"254","BSI","3g cephalosporins","gn","NOR","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"255","BSI","3g cephalosporins","gn","PRT","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"256","BSI","3g cephalosporins","gn","SMR","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"257","BSI","3g cephalosporins","gn","SVN","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"258","BSI","3g cephalosporins","gn","SWE","EURO A","High income","Europe & Central Asia",4.33078822692228,1.41969915709147,"whoc",13
+"259","BSI","3g cephalosporins","gn","POL","EURO B","High income","Europe & Central Asia",4.2860373131296,1.06680320853885,"income",24
+"260","BSI","3g cephalosporins","gn","SVK","EURO B","High income","Europe & Central Asia",4.2860373131296,1.06680320853885,"income",24
+"261","BSI","3g cephalosporins","gn","EST","EURO C","High income","Europe & Central Asia",4.2860373131296,1.06680320853885,"income",24
+"262","BSI","3g cephalosporins","gn","HUN","EURO C","High income","Europe & Central Asia",4.2860373131296,1.06680320853885,"income",24
+"263","BSI","3g cephalosporins","gn","LTU","EURO C","High income","Europe & Central Asia",4.2860373131296,1.06680320853885,"income",24
+"264","BSI","3g cephalosporins","gn","LVA","EURO C","High income","Europe & Central Asia",4.2860373131296,1.06680320853885,"income",24
+"265","BSI","3g cephalosporins","gn","TJK","EURO B","Low income","Europe & Central Asia",3.895089850023,1.11936417176041,"wbregion",21
+"266","BSI","3g cephalosporins","gn","KGZ","EURO B","Lower middle income","Europe & Central Asia",3.895089850023,1.11936417176041,"wbregion",21
+"267","BSI","3g cephalosporins","gn","UZB","EURO B","Lower middle income","Europe & Central Asia",3.895089850023,1.11936417176041,"wbregion",21
+"268","BSI","3g cephalosporins","gn","MDA","EURO C","Lower middle income","Europe & Central Asia",3.895089850023,1.11936417176041,"wbregion",21
+"269","BSI","3g cephalosporins","gn","UKR","EURO C","Lower middle income","Europe & Central Asia",3.895089850023,1.11936417176041,"wbregion",21
 "270","BSI","3g cephalosporins","gn","ALB","EURO B","Upper middle income","Europe & Central Asia",5.05297510559209,1.35380056008073,"income",13
 "271","BSI","3g cephalosporins","gn","ARM","EURO B","Upper middle income","Europe & Central Asia",5.05297510559209,1.35380056008073,"income",13
 "272","BSI","3g cephalosporins","gn","AZE","EURO B","Upper middle income","Europe & Central Asia",5.05297510559209,1.35380056008073,"income",13
@@ -316,20 +316,20 @@
 "315","BSI","3g cephalosporins","gn","ECU","AMRO D","Upper middle income","Latin America & Caribbean",5.05297510559209,1.35380056008073,"income",13
 "316","BSI","3g cephalosporins","gn","GTM","AMRO D","Upper middle income","Latin America & Caribbean",5.05297510559209,1.35380056008073,"income",13
 "317","BSI","3g cephalosporins","gn","PER","AMRO D","Upper middle income","Latin America & Caribbean",5.05297510559209,1.35380056008073,"income",13
-"318","BSI","3g cephalosporins","gn","ARE","EMRO E","High income","Middle East & North Africa",4.24942361801441,1.0336050648416,"income",24
-"319","BSI","3g cephalosporins","gn","BHR","EMRO E","High income","Middle East & North Africa",4.24942361801441,1.0336050648416,"income",24
-"320","BSI","3g cephalosporins","gn","KWT","EMRO E","High income","Middle East & North Africa",4.24942361801441,1.0336050648416,"income",24
-"321","BSI","3g cephalosporins","gn","OMN","EMRO E","High income","Middle East & North Africa",4.24942361801441,1.0336050648416,"income",24
-"322","BSI","3g cephalosporins","gn","QAT","EMRO E","High income","Middle East & North Africa",4.24942361801441,1.0336050648416,"income",24
-"323","BSI","3g cephalosporins","gn","SAU","EMRO E","High income","Middle East & North Africa",4.24942361801441,1.0336050648416,"income",24
-"324","BSI","3g cephalosporins","gn","ISR","EURO A","High income","Middle East & North Africa",4.29517329899132,1.36912287411149,"whoc",13
-"325","BSI","3g cephalosporins","gn","MLT","EURO A","High income","Middle East & North Africa",4.29517329899132,1.36912287411149,"whoc",13
-"326","BSI","3g cephalosporins","gn","YEM","EMRO D","Low income","Middle East & North Africa",4.95032513460338,0.953477936626152,"global",29
-"327","BSI","3g cephalosporins","gn","SYR","EMRO E","Low income","Middle East & North Africa",4.95032513460338,0.953477936626152,"global",29
-"328","BSI","3g cephalosporins","gn","DJI","EMRO D","Lower middle income","Middle East & North Africa",4.95032513460338,0.953477936626152,"global",29
-"329","BSI","3g cephalosporins","gn","EGY","EMRO D","Lower middle income","Middle East & North Africa",4.95032513460338,0.953477936626152,"global",29
-"330","BSI","3g cephalosporins","gn","MAR","EMRO D","Lower middle income","Middle East & North Africa",4.95032513460338,0.953477936626152,"global",29
-"331","BSI","3g cephalosporins","gn","TUN","EMRO E","Lower middle income","Middle East & North Africa",4.95032513460338,0.953477936626152,"global",29
+"318","BSI","3g cephalosporins","gn","ARE","EMRO E","High income","Middle East & North Africa",4.2860373131296,1.06680320853885,"income",24
+"319","BSI","3g cephalosporins","gn","BHR","EMRO E","High income","Middle East & North Africa",4.2860373131296,1.06680320853885,"income",24
+"320","BSI","3g cephalosporins","gn","KWT","EMRO E","High income","Middle East & North Africa",4.2860373131296,1.06680320853885,"income",24
+"321","BSI","3g cephalosporins","gn","OMN","EMRO E","High income","Middle East & North Africa",4.2860373131296,1.06680320853885,"income",24
+"322","BSI","3g cephalosporins","gn","QAT","EMRO E","High income","Middle East & North Africa",4.2860373131296,1.06680320853885,"income",24
+"323","BSI","3g cephalosporins","gn","SAU","EMRO E","High income","Middle East & North Africa",4.2860373131296,1.06680320853885,"income",24
+"324","BSI","3g cephalosporins","gn","ISR","EURO A","High income","Middle East & North Africa",4.33078822692228,1.41969915709147,"whoc",13
+"325","BSI","3g cephalosporins","gn","MLT","EURO A","High income","Middle East & North Africa",4.33078822692228,1.41969915709147,"whoc",13
+"326","BSI","3g cephalosporins","gn","YEM","EMRO D","Low income","Middle East & North Africa",4.99098132739785,0.982210214201372,"global",29
+"327","BSI","3g cephalosporins","gn","SYR","EMRO E","Low income","Middle East & North Africa",4.99098132739785,0.982210214201372,"global",29
+"328","BSI","3g cephalosporins","gn","DJI","EMRO D","Lower middle income","Middle East & North Africa",4.99098132739785,0.982210214201372,"global",29
+"329","BSI","3g cephalosporins","gn","EGY","EMRO D","Lower middle income","Middle East & North Africa",4.99098132739785,0.982210214201372,"global",29
+"330","BSI","3g cephalosporins","gn","MAR","EMRO D","Lower middle income","Middle East & North Africa",4.99098132739785,0.982210214201372,"global",29
+"331","BSI","3g cephalosporins","gn","TUN","EMRO E","Lower middle income","Middle East & North Africa",4.99098132739785,0.982210214201372,"global",29
 "332","BSI","3g cephalosporins","gn","DZA","AFRO D","Upper middle income","Middle East & North Africa",5.05297510559209,1.35380056008073,"income",13
 "333","BSI","3g cephalosporins","gn","IRQ","EMRO D","Upper middle income","Middle East & North Africa",5.05297510559209,1.35380056008073,"income",13
 "334","BSI","3g cephalosporins","gn","IRN","EMRO E","Upper middle income","Middle East & North Africa",5.05297510559209,1.35380056008073,"income",13
@@ -338,53 +338,53 @@
 "337","BSI","3g cephalosporins","gn","LBY","EMRO E","Upper middle income","Middle East & North Africa",5.05297510559209,1.35380056008073,"income",13
 "338","BSI","3g cephalosporins","gn","CAN","AMRO A","High income","North America",6,3.06128074154792,"whoc",1
 "339","BSI","3g cephalosporins","gn","USA","AMRO A","High income","North America",6,3.06128074154792,"whoc",1
-"340","BSI","3g cephalosporins","gn","AFG","EMRO D","Low income","South Asia",4.95032513460338,0.953477936626152,"global",29
-"341","BSI","3g cephalosporins","gn","NPL","SEARO D","Low income","South Asia",4.95032513460338,0.953477936626152,"global",29
-"342","BSI","3g cephalosporins","gn","PAK","EMRO D","Lower middle income","South Asia",4.95032513460338,0.953477936626152,"global",29
-"343","BSI","3g cephalosporins","gn","BGD","SEARO D","Lower middle income","South Asia",4.95032513460338,0.953477936626152,"global",29
-"344","BSI","3g cephalosporins","gn","BTN","SEARO D","Lower middle income","South Asia",4.95032513460338,0.953477936626152,"global",29
-"345","BSI","3g cephalosporins","gn","IND","SEARO D","Lower middle income","South Asia",4.95032513460338,0.953477936626152,"global",29
+"340","BSI","3g cephalosporins","gn","AFG","EMRO D","Low income","South Asia",4.99098132739785,0.982210214201372,"global",29
+"341","BSI","3g cephalosporins","gn","NPL","SEARO D","Low income","South Asia",4.99098132739785,0.982210214201372,"global",29
+"342","BSI","3g cephalosporins","gn","PAK","EMRO D","Lower middle income","South Asia",4.99098132739785,0.982210214201372,"global",29
+"343","BSI","3g cephalosporins","gn","BGD","SEARO D","Lower middle income","South Asia",4.99098132739785,0.982210214201372,"global",29
+"344","BSI","3g cephalosporins","gn","BTN","SEARO D","Lower middle income","South Asia",4.99098132739785,0.982210214201372,"global",29
+"345","BSI","3g cephalosporins","gn","IND","SEARO D","Lower middle income","South Asia",4.99098132739785,0.982210214201372,"global",29
 "346","BSI","3g cephalosporins","gn","LKA","SEARO B","Upper middle income","South Asia",9.37709039804193,2.78007067096679,"whoc",2
 "347","BSI","3g cephalosporins","gn","MDV","SEARO D","Upper middle income","South Asia",5.05297510559209,1.35380056008073,"income",13
-"348","BSI","3g cephalosporins","gn","SYC","AFRO D","High income","Sub-Saharan Africa",4.24942361801441,1.0336050648416,"income",24
-"349","BSI","3g cephalosporins","gn","BEN","AFRO D","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"350","BSI","3g cephalosporins","gn","BFA","AFRO D","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"351","BSI","3g cephalosporins","gn","GIN","AFRO D","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"352","BSI","3g cephalosporins","gn","GMB","AFRO D","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"353","BSI","3g cephalosporins","gn","GNB","AFRO D","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"354","BSI","3g cephalosporins","gn","LBR","AFRO D","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"355","BSI","3g cephalosporins","gn","MDG","AFRO D","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"356","BSI","3g cephalosporins","gn","MLI","AFRO D","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"357","BSI","3g cephalosporins","gn","NER","AFRO D","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"358","BSI","3g cephalosporins","gn","SLE","AFRO D","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"359","BSI","3g cephalosporins","gn","TCD","AFRO D","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"360","BSI","3g cephalosporins","gn","TGO","AFRO D","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"361","BSI","3g cephalosporins","gn","BDI","AFRO E","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"362","BSI","3g cephalosporins","gn","CAF","AFRO E","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"363","BSI","3g cephalosporins","gn","COD","AFRO E","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"364","BSI","3g cephalosporins","gn","ERI","AFRO E","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"365","BSI","3g cephalosporins","gn","ETH","AFRO E","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"366","BSI","3g cephalosporins","gn","MOZ","AFRO E","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"367","BSI","3g cephalosporins","gn","MWI","AFRO E","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"368","BSI","3g cephalosporins","gn","RWA","AFRO E","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"369","BSI","3g cephalosporins","gn","TZA","AFRO E","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"370","BSI","3g cephalosporins","gn","UGA","AFRO E","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"371","BSI","3g cephalosporins","gn","SOM","EMRO D","Low income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"372","BSI","3g cephalosporins","gn","AGO","AFRO D","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"373","BSI","3g cephalosporins","gn","CMR","AFRO D","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"374","BSI","3g cephalosporins","gn","CPV","AFRO D","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"375","BSI","3g cephalosporins","gn","GHA","AFRO D","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"376","BSI","3g cephalosporins","gn","MRT","AFRO D","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"377","BSI","3g cephalosporins","gn","NGA","AFRO D","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"378","BSI","3g cephalosporins","gn","SEN","AFRO D","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"379","BSI","3g cephalosporins","gn","CIV","AFRO E","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"380","BSI","3g cephalosporins","gn","COG","AFRO E","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"381","BSI","3g cephalosporins","gn","KEN","AFRO E","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"382","BSI","3g cephalosporins","gn","LSO","AFRO E","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"383","BSI","3g cephalosporins","gn","SWZ","AFRO E","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"384","BSI","3g cephalosporins","gn","ZMB","AFRO E","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"385","BSI","3g cephalosporins","gn","ZWE","AFRO E","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
-"386","BSI","3g cephalosporins","gn","SDN","EMRO D","Lower middle income","Sub-Saharan Africa",4.95032513460338,0.953477936626152,"global",29
+"348","BSI","3g cephalosporins","gn","SYC","AFRO D","High income","Sub-Saharan Africa",4.2860373131296,1.06680320853885,"income",24
+"349","BSI","3g cephalosporins","gn","BEN","AFRO D","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"350","BSI","3g cephalosporins","gn","BFA","AFRO D","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"351","BSI","3g cephalosporins","gn","GIN","AFRO D","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"352","BSI","3g cephalosporins","gn","GMB","AFRO D","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"353","BSI","3g cephalosporins","gn","GNB","AFRO D","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"354","BSI","3g cephalosporins","gn","LBR","AFRO D","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"355","BSI","3g cephalosporins","gn","MDG","AFRO D","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"356","BSI","3g cephalosporins","gn","MLI","AFRO D","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"357","BSI","3g cephalosporins","gn","NER","AFRO D","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"358","BSI","3g cephalosporins","gn","SLE","AFRO D","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"359","BSI","3g cephalosporins","gn","TCD","AFRO D","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"360","BSI","3g cephalosporins","gn","TGO","AFRO D","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"361","BSI","3g cephalosporins","gn","BDI","AFRO E","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"362","BSI","3g cephalosporins","gn","CAF","AFRO E","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"363","BSI","3g cephalosporins","gn","COD","AFRO E","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"364","BSI","3g cephalosporins","gn","ERI","AFRO E","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"365","BSI","3g cephalosporins","gn","ETH","AFRO E","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"366","BSI","3g cephalosporins","gn","MOZ","AFRO E","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"367","BSI","3g cephalosporins","gn","MWI","AFRO E","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"368","BSI","3g cephalosporins","gn","RWA","AFRO E","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"369","BSI","3g cephalosporins","gn","TZA","AFRO E","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"370","BSI","3g cephalosporins","gn","UGA","AFRO E","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"371","BSI","3g cephalosporins","gn","SOM","EMRO D","Low income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"372","BSI","3g cephalosporins","gn","AGO","AFRO D","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"373","BSI","3g cephalosporins","gn","CMR","AFRO D","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"374","BSI","3g cephalosporins","gn","CPV","AFRO D","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"375","BSI","3g cephalosporins","gn","GHA","AFRO D","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"376","BSI","3g cephalosporins","gn","MRT","AFRO D","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"377","BSI","3g cephalosporins","gn","NGA","AFRO D","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"378","BSI","3g cephalosporins","gn","SEN","AFRO D","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"379","BSI","3g cephalosporins","gn","CIV","AFRO E","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"380","BSI","3g cephalosporins","gn","COG","AFRO E","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"381","BSI","3g cephalosporins","gn","KEN","AFRO E","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"382","BSI","3g cephalosporins","gn","LSO","AFRO E","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"383","BSI","3g cephalosporins","gn","SWZ","AFRO E","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"384","BSI","3g cephalosporins","gn","ZMB","AFRO E","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"385","BSI","3g cephalosporins","gn","ZWE","AFRO E","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
+"386","BSI","3g cephalosporins","gn","SDN","EMRO D","Lower middle income","Sub-Saharan Africa",4.99098132739785,0.982210214201372,"global",29
 "387","BSI","3g cephalosporins","gn","GAB","AFRO D","Upper middle income","Sub-Saharan Africa",5.05297510559209,1.35380056008073,"income",13
 "388","BSI","3g cephalosporins","gn","GNQ","AFRO D","Upper middle income","Sub-Saharan Africa",5.05297510559209,1.35380056008073,"income",13
 "389","BSI","3g cephalosporins","gn","MUS","AFRO D","Upper middle income","Sub-Saharan Africa",5.05297510559209,1.35380056008073,"income",13
