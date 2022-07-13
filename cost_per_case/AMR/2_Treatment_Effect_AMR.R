@@ -140,6 +140,7 @@ excess[se.measure=="95ci", seTE := (highexp-lowexp) / 3.92]
 excess[se.measure=="sd", seTE := otherexp/sqrt(n.t)] ## if SD given
 
 ## median + IRQ + range ## no rows as of yet
+#### want to make sure it's just median in future?!!!
 excess[se.measure=="IQR.range", LB := ((minexp+lowexp+avexp+highexp)/4)+(((4*maxexp)-minexp-lowexp-avexp-highexp)/(4*n.t))]
 excess[se.measure=="IQR.range", UB := ((lowexp+avexp+highexp+maxexp)/4)+(((4*minexp)-lowexp-avexp-highexp-maxexp)/(4*n.t))]
 excess[se.measure=="IQR.range", TE := (LB+UB)/2]
@@ -160,8 +161,8 @@ excess[se.measure=="IQR" & n.t >50,
        sdTE := (highexp-lowexp)/2*(qnorm(((0.75*n.t)-0.125)/
                                              (n.t+0.25)))]
 # ## median + range
-excess[measure=="excess_median"|se.measure=="range", TE := ((lowexp+(2*avexp)+highexp)/4)+((lowexp-(2*avexp)+highexp)/(4*n.t))]
-excess[measure=="excess"|se.measure=="range", TE := avexp]
+excess[measure=="excess_median"& se.measure=="range", TE := ((lowexp+(2*avexp)+highexp)/4)+((lowexp-(2*avexp)+highexp)/(4*n.t))]
+excess[measure=="excess" & se.measure=="range", TE := avexp]
 # ## mean + range (SE calculation same for mean or median + range)
 excess[se.measure=="range" & n.t <= 50,
        sdTE := (highexp - lowexp)/table1]
