@@ -17,8 +17,8 @@ as.numeric.factor <- function(x) {as.numeric(as.character(x))}
 load("cost_per_case/inputs/wan_table1.RData")
 load("cost_per_case/inputs/wan_table2.RData")
 
-load("cost_per_case/outputs/los_est_AMR.RData")
-load("cost_per_case/outputs/costing_est_AMR.RData")
+load("cost_per_case/outputs/los_est_DRI.RData")
+load("cost_per_case/outputs/costing_est_DRI.RData")
 
 
 ######## PREVIOUS READ IN AND CONVERSION#######
@@ -160,8 +160,9 @@ excess[se.measure=="IQR" & n.t >50,
        sdTE := (highexp-lowexp)/2*(qnorm(((0.75*n.t)-0.125)/
                                              (n.t+0.25)))]
 # ## median + range
-excess[measure=="excess_median"|se.measure=="range", TE := ((lowexp+(2*avexp)+highexp)/4)+((lowexp-(2*avexp)+highexp)/(4*n.t))]
-excess[measure=="excess"|se.measure=="range", TE := avexp]
+excess[measure=="excess_median" & se.measure=="range", TE := ((lowexp+(2*avexp)+highexp)/4)+((lowexp-(2*avexp)+highexp)/(4*n.t))]
+excess[measure=="excess" & se.measure=="range", TE := avexp]
+
 # ## mean + range (SE calculation same for mean or median + range)
 excess[se.measure=="range" & n.t <= 50,
        sdTE := (highexp - lowexp)/table1]
@@ -306,17 +307,16 @@ los.TE <- TE_creator(los.est)
 # ##!!! testing TE creation
 # test <- subset(los.TE, is.na(TE))
 
-save(los.TE, file="cost_per_case/outputs/los_TE.RData")
+save(los.TE, file="cost_per_case/outputs/los_TE_DRI.RData")
 
 ######******CREATING COSTING TE ESTIMATES******######
 
 costing.TE <- TE_creator(costing.est)
-## naylor_151 is na for n_exposed and n_nonexposed because there are no sample sizes extracted
 
 # ##!!! testing TE creation
 # test <- subset(costing.TE, is.na(TE))
 
-save(costing.TE, file="cost_per_case/outputs/costing_TE.RData")
+save(costing.TE, file="cost_per_case/outputs/costing_TE_DRI.RData")
 
 
 
