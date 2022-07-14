@@ -42,9 +42,9 @@ n.samples <- 1000
 
 pb = txtProgressBar(min = 0, max = n.samples, initial = 0, style = 3)
 # 
-# meta.grouping <- function(x){
+meta.grouping <- function(x){
 
- x <- los.TE ## use when testing function changes (REMEMBER TO NOT USE IN MAIN FUNCTION)
+ # x <- los.TE ## use when testing function changes (REMEMBER TO NOT USE IN MAIN FUNCTION)
 
   # x is either "los.TE" or "costing.TE.adj" from the previous scripts
   # output is a data.table with estimates for the groupings which we have
