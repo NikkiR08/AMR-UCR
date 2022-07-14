@@ -19,7 +19,7 @@ load("cost_per_case/outputs/whoc_cc_2019USD.RData")
 load("data_all/who_whoc_wb.RData")
 load("data_all/dic_bug.RData")
 load("data_all/dic_drug.RData")
-load("cost_per_case/outputs/eusa.RData")
+load("cost_per_case/outputs/eusa_DRI.RData")
 
 #### grouping syndromes
 

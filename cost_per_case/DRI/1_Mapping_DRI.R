@@ -172,7 +172,7 @@ EuSA <- EuSA[ , whoc.region := NA]
 ## deduplicate (!!! next iteration try to figure out why duplicates earlier)
 EuSA <- unique(EuSA)
 
-# save(EuSA, file="cost_per_case/outputs/eusa.RData")
+save(EuSA, file="cost_per_case/outputs/eusa_DRI.RData")
 
 bug_class_region <- bug_class_region[!is.na(iso3c)]
 

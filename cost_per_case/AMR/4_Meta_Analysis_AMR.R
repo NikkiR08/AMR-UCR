@@ -19,7 +19,7 @@ load("cost_per_case/outputs/whoc_cc_2019USD.RData")
 load("data_all/who_whoc_wb.RData")
 load("data_all/dic_bug.RData")
 load("data_all/dic_drug.RData")
-load("cost_per_case/outputs/eusa.RData")
+load("cost_per_case/outputs/eusa_AMR.RData")
 
 #### grouping syndromes
 
@@ -41,10 +41,10 @@ as.numeric.factor <- function(x) {as.numeric(as.character(x))}
 n.samples <- 1000
 
 pb = txtProgressBar(min = 0, max = n.samples, initial = 0, style = 3)
+# 
+# meta.grouping <- function(x){
 
-meta.grouping <- function(x){
-
- # x <- los.TE ## use when testing function changes (REMEMBER TO NOT USE IN MAIN FUNCTION)
+ x <- los.TE ## use when testing function changes (REMEMBER TO NOT USE IN MAIN FUNCTION)
 
   # x is either "los.TE" or "costing.TE.adj" from the previous scripts
   # output is a data.table with estimates for the groupings which we have
