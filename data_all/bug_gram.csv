@@ -1,28 +1,28 @@
-bacteria,bacteria.code,gram.stain,notes
-Acinetobacter baumannii,aba,gn,
-Campylobacter,cam,gn,
-Chlamydia,chl,gn,
-Cholera,cho,gn,
-Clostridium difficile,cdif,gp,
-Enterococcus faecium,efa,gp,
-Enterococcus,efa,gp,Included other Enteroccocus also but coded as one
-Enterococcus faecalis and faecium,efa,gp,Included other Enteroccocus also but coded as one
-Enterobacteriaceae,ent,gn,
-Escherichia coli,eco,gn,
-Group A Streptococcus,gas,gp,
-Group B Streptococcus,gbs,gp,
-"Haemophilus influenzae nt, b",hib,gn,
-Helicobacter pylori,hpy,gn,
-Klebsiella pneumoniae,kpn,gn,
-Neisseria meningitidis,men,gn,
-Mycobacterium tuberculosis,tb,tb,
-Neisseria gonorrhoeae,ngo,gn,
-Pseudomonas aeruginosa,pae,gn,
-Salmonella typhi,sty,gn,
-Salmonella paratyphi,spa,gn,
-"Salmonella, non-typhoid",snt,gn,
-Shigella spp,shi,gn,
-Staphylococcus aureus,sau,gp,
-Streptococcus pneumoniae,spn,gp,
-Gram-negative,gn,gn,
-Gram-positive,gp,gp,
+bacteria,bacteria.code,gram.stain
+Acinetobacter baumannii,aba,gn
+Campylobacter,cam,gn
+Chlamydia,chl,gn
+Cholera,cho,gn
+Clostridium difficile,cdif,gp
+Enterococcus faecium,efa,gp
+Enterococcus,efa,gp
+Enterococcus faecalis and faecium,efa,gp
+Enterobacteriaceae,ent,gn
+Escherichia coli,eco,gn
+Group A Streptococcus,gas,gp
+Group B Streptococcus,gbs,gp
+"Haemophilus influenzae nt, b",hib,gn
+Helicobacter pylori,hpy,gn
+Klebsiella pneumoniae,kpn,gn
+Neisseria meningitidis,men,gn
+Mycobacterium tuberculosis,tb,tb
+Neisseria gonorrhoeae,ngo,gn
+Pseudomonas aeruginosa,pae,gn
+Salmonella typhi,sty,gn
+Salmonella paratyphi,spa,gn
+"Salmonella, non-typhoid",snt,gn
+Shigella spp,shi,gn
+Staphylococcus aureus,sau,gp
+Streptococcus pneumoniae,spn,gp
+Gram-negative,gn,gn
+Gram-positive,gp,gp
