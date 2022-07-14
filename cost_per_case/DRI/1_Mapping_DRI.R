@@ -79,6 +79,13 @@ bug <- merge(lit, dic_bug, by.x="bacteria.code", by.y="bacteria.code")
 ### !!! you can check here whether anything from the literature
 # gets dropped by adding "all.x=TRUE" and seeing if difference in nrows(bug)
 
+## remove duplicates where e.g. efa coded multiple times
+## remove bacteria
+bug <- as.data.table(bug)
+bug[bacteria=="Enterococcus faecalis and faecium", bacteria:="Enterococcus"]
+bug[bacteria=="Enterococcus faecium", bacteria:="Enterococcus"]
+bug <- unique(bug)
+
 ## change formatting to all lower-case
 bug <- bug  %>% 
   mutate_at(vars(c("exposed.R")), ~ str_to_lower(.))
@@ -142,29 +149,30 @@ bug_class_region <- merge(bug_class, who_whoc_wb, by.x="iso3c", by.y="iso3c",all
 ##  but would need to update this bit of code if also had e.g. 
 ## "Middle East & North Africa" or another region results extracted had similar issues
 
-######## IF HAVE RUN ON AMR THEN JUST LOAD IN, IF NOT RERUN THIS PART
-# EuSA <- bug_class_region[country=="Europe"]
-# EuSA[ , wb.region := "Europe & Central Asia"]
-# EuSA <- merge(EuSA, who_whoc_wb, by="wb.region", allow.cartesian = TRUE)
-# EuSA <- EuSA %>% 
-#   select(!ends_with(".x")) %>% ## removing unneeded columns
-#   group_by(retrieval, microbe, exposed.R, avexp, who.region.y,whoc.region.y,Income.group.y) %>%
-#   filter(row_number() == 1)%>% ## take just 1 per study + who.region/region combination
-#   as.data.table()
-# EuSA[ , iso3c.y := "EUSA"] ## put country code to NA so don't mistake evidence maps later
-# colnames(EuSA)[colnames(EuSA) == 'who.region.y'] <- 'who.region' ## match column names to data.table with main results
-# colnames(EuSA)[colnames(EuSA) == 'whoc.region.y'] <- 'whoc.region'
-# colnames(EuSA)[colnames(EuSA) == 'Income.group.y'] <- 'Income.group'
-# colnames(EuSA)[colnames(EuSA) == 'iso3c.y'] <- 'iso3c'
-# 
-# ## remove "Low income" group as only 1/51 so might skew low income group results if all Europe results mapped to low income countries
-# EuSA <- EuSA[Income.group!="Low income"]
-# EuSA <- EuSA[Income.group!="Lower middle income"]
-# ## set whoc regions to NA as not specifically targetting an individual WHOC region (e.g. EURO B) but rather the whole of Europe
-# EuSA <- EuSA[ , whoc.region := NA]
-# 
+EuSA <- bug_class_region[country=="Europe"]
+EuSA[ , wb.region := "Europe & Central Asia"]
+EuSA <- merge(EuSA, who_whoc_wb, by="wb.region", allow.cartesian = TRUE)
+EuSA <- EuSA %>%
+  select(!ends_with(".x")) %>% ## removing unneeded columns
+  group_by(retrieval, microbe, exposed.R, avexp, who.region.y,whoc.region.y,Income.group.y) %>%
+  filter(row_number() == 1)%>% ## take just 1 per study + who.region/region combination
+  as.data.table()
+EuSA[ , iso3c.y := "EUSA"] ## put country code to NA so don't mistake evidence maps later
+colnames(EuSA)[colnames(EuSA) == 'who.region.y'] <- 'who.region' ## match column names to data.table with main results
+colnames(EuSA)[colnames(EuSA) == 'whoc.region.y'] <- 'whoc.region'
+colnames(EuSA)[colnames(EuSA) == 'Income.group.y'] <- 'Income.group'
+colnames(EuSA)[colnames(EuSA) == 'iso3c.y'] <- 'iso3c'
+
+## remove "Low income" group as only 1/51 so might skew low income group results if all Europe results mapped to low income countries
+EuSA <- EuSA[Income.group!="Low income"]
+EuSA <- EuSA[Income.group!="Lower middle income"]
+## set whoc regions to NA as not specifically targetting an individual WHOC region (e.g. EURO B) but rather the whole of Europe
+EuSA <- EuSA[ , whoc.region := NA]
+
+## deduplicate (!!! next iteration try to figure out why duplicates earlier)
+EuSA <- unique(EuSA)
+
 # save(EuSA, file="cost_per_case/outputs/eusa.RData")
-load("cost_per_case/outputs/eusa.RData")
 
 bug_class_region <- bug_class_region[!is.na(iso3c)]
 

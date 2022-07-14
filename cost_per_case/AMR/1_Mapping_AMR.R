@@ -79,6 +79,13 @@ bug <- merge(lit, dic_bug, by.x="bacteria.code", by.y="bacteria.code")
 ### !!! you can check here whether anything from the literature
 # gets dropped by adding "all.x=TRUE" and seeing if difference in nrows(bug)
 
+## remove duplicates where e.g. efa coded multiple times
+## remove bacteria
+bug <- as.data.table(bug)
+bug[bacteria=="Enterococcus faecalis and faecium", bacteria:="Enterococcus"]
+bug[bacteria=="Enterococcus faecium", bacteria:="Enterococcus"]
+bug <- unique(bug)
+
 ## change formatting to all lower-case
 bug <- bug  %>% 
   mutate_at(vars(c("exposed.R")), ~ str_to_lower(.))
@@ -162,7 +169,10 @@ EuSA <- EuSA[Income.group!="Lower middle income"]
 ## set whoc regions to NA as not specifically targetting an individual WHOC region (e.g. EURO B) but rather the whole of Europe
 EuSA <- EuSA[ , whoc.region := NA]
 
-save(EuSA, file="cost_per_case/outputs/eusa.RData")
+## deduplicate (!!! next iteration try to figure out why duplicates earlier)
+EuSA <- unique(EuSA)
+
+# save(EuSA, file="cost_per_case/outputs/eusa.RData")
 
 bug_class_region <- bug_class_region[!is.na(iso3c)]
 
