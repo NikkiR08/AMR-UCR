@@ -29,8 +29,8 @@ results.all.gram <- merge(results.long, sc2, by= c("Country (ISO3 Code)" ,
                              "Gram stain",
                              "Antibiotic Class", 
                              "Syndrome", "AMR_or_DRI" ), all.x=TRUE)
-# 
-# save(results.all.gram,file="cost_per_case/outputs/Results_Table_Gram_Country.RData")
+
+save(results.all.gram,file="cost_per_case/outputs/Results_Table_Gram_Country.RData")
 
 ######## BY BUG #################
 bug_sydrome_matcher <- read_excel("cost_per_case/inputs/bug_sydrome_matcher.xlsx",
@@ -93,7 +93,7 @@ bug_matched <- merge(syndrome_matched, results.all.gram, by.x=c("syndrome",
 
 bug_matched <-bug_matched[order(bug_matched$`AMR_or_DRI`),]
 
-
+write.csv(bug_matched, file="cost_per_case/outputs/Results_Table_Bug_Country.RData")
 
 ###### BY REGION ###############
 
@@ -107,3 +107,102 @@ N <- N[ , c("Country.Code","X2019")]
 setnames(N, "X2019", "npop")
 
 ### sample results table 
+bug_matched <- as.data.table(bug_matched)
+
+#### for LOS associated costs
+
+
+
+#### for total cost (across types)
+bug_matched[ , cost.se.both := (`High 95% UI Bound - Across Both`-
+                             `Low 95% UI Bound - Across Both`)/3.92]
+
+bug_matched[ , cost.te.both := `Mean Cost - Across Both`]
+##### for Sceanrio 2 adjusted costs
+
+
+##### sampling
+bug_matched[ , Country.Code := `Country (ISO3 Code)`]
+
+load("data_all/who_whoc_wb.RData")
+who <- who_whoc_wb[ , c("iso3c","who.region")]
+
+combo <- merge(bug_matched, N, by="Country.Code")
+combo <- merge(combo, who, by.x="Country.Code", by.y="iso3c" )
+
+costing.cc <- as.data.table(combo)
+costing.cc <- costing.cc[!is.na(npop)]
+
+#### breaking down by country for sampling ######
+costing.cc[ , ID := c(1:nrow(costing.cc))]
+
+sample.costing.cc <- list()
+
+for (i in 1:max(unique(costing.cc$ID))){
+  
+  ## go by each id
+  dt.temp <- costing.cc[ID == i]
+  
+  ## sample
+  rnorm.sample.los <- rnorm(n=n.samples, mean=dt.temp$mean.cost, sd=dt.temp$cost.se)
+  
+  # ## extracting out the variables
+  # sample.costing.cc[ , i] <- rnorm.sample
+  # colnames(sample.costing.cc)[i] <- dt.temp$ID
+  sample.costing.cc[[i]]<- dt.temp$ID
+  sample.costing.cc[[i]][1:n.samples] <- rnorm.sample.los
+  
+}
+
+costing.cc.thin <- costing.cc[ , c("iso3c.x","whoc.region", "syndrome","class","gram.stain","mean.cost","ID")]
+list.costing.cc <- rep(list(costing.cc.thin),n.samples)
+
+## for J represents ID (so each country,drug, bug, syndrome group) and i represents the run
+
+for (i in 1:n.samples){
+  temp <- as.data.table(list.costing.cc[[i]])
+  for (j in 1:max(costing.cc$ID)){
+    temp[ID==j, mean.cost := sample.costing.cc[[j]][i]]
+  }
+  list.costing.cc[[i]] <- temp
+}
+
+##### breaking down by region for averages #####
+## !! currently inefficient but does the job in terms of getting the averages
+## likely a faster way using piping and/or apply() functions
+
+regional.averages <- list()
+
+for (i in 1:n.samples){
+  temp <- list.costing.cc[[i]]
+  combo <- merge(temp, N, by.x="iso3c.x", by.y="Country.Code")
+  combo <- merge(combo, who, by.x="iso3c.x", by.y="iso3c" )
+  
+  ### filter and average
+  combo <- combo %>%
+    filter(!is.na(npop)) %>%
+    group_by(who.region, syndrome, class, gram.stain) %>% 
+    summarise(weighted_TE = weighted.mean(mean.cost, npop)) 
+  
+  regional.averages[[i]] <- combo
+  
+}
+
+## bind to one data.table
+regional.output <- rbindlist(regional.averages)
+
+regional.output <- as.data.table(regional.output)
+
+## (1) los-based cost
+mean.valuesL <- regional.output[,.(mean_costing = mean(weighted_TE, na.rm = TRUE)),
+                                by=c("who.region","syndrome", "class", "gram.stain")] 
+
+lowL <- regional.output[,.(low_costing = quantile(weighted_TE,0.025, na.rm = TRUE)), 
+                        by=c("who.region","syndrome", "class", "gram.stain")] 
+
+highL <- regional.output[,.(high_costing = quantile(weighted_TE,0.975, na.rm = TRUE)), 
+                         by=c("who.region","syndrome", "class", "gram.stain")] 
+
+costing.region <- merge(mean.valuesL, lowL, by = c("who.region","syndrome", "class", "gram.stain"))
+
+costing.region <- merge(costing.region, highL, by = c("who.region","syndrome", "class", "gram.stain"))
