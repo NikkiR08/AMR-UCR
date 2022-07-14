@@ -31,6 +31,7 @@ costing.TE.adj[syndrome=="J", syndrome := "B-J"]
 los.TE[syndrome=="INF", syndrome := "COL/INF"]
 costing.TE.adj[syndrome=="INF", syndrome := "COL/INF"]
 
+
 ######### FUNCTIONS ###########
 who_whoc_wb <- as.data.table(who_whoc_wb)
 who_whoc_wb <- who_whoc_wb[!is.na(iso3c)] ## although none got dropped in last run just for running purposes
@@ -41,7 +42,7 @@ as.numeric.factor <- function(x) {as.numeric(as.character(x))}
 n.samples <- 1000
 
 pb = txtProgressBar(min = 0, max = n.samples, initial = 0, style = 3)
-
+# 
 meta.grouping <- function(x){
 
  # x <- los.TE ## use when testing function changes (REMEMBER TO NOT USE IN MAIN FUNCTION)
