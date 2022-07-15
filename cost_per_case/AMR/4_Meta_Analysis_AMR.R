@@ -5,8 +5,8 @@
 library(stringr)
 library(dplyr)
 library(data.table)
-# library(meta) used older version of meta
-install.packages("remotes")
+# # library(meta) used older version of meta
+# install.packages("remotes")
 remotes::install_github("guido-s/meta", ref = "R-book-first-edition")
 library(meta)
 
