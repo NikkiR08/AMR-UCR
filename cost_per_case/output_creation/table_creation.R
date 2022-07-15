@@ -1,7 +1,11 @@
 #### TABLE CREATION ######
+
+#### general data and packages ####
 library(tidyverse)
 library(data.table)
 library(readxl)
+
+load("data_all/who_whoc_wb.RData")
 
 #### ALL OF THE RESULTS BY COUNTRY ######
 
@@ -93,7 +97,8 @@ bug_matched <- merge(syndrome_matched, results.all.gram, by.x=c("syndrome",
 
 bug_matched <-bug_matched[order(bug_matched$`AMR_or_DRI`),]
 
-write.csv(bug_matched, file="cost_per_case/outputs/Results_Table_Bug_Country.RData")
+save(bug_matched, file="cost_per_case/outputs/Results_Table_Bug_Country.RData")
+write.csv(bug_matched, file="cost_per_case/outputs/Results_Table_Bug_Country.csv")
 
 ###### BY REGION ###############
 
@@ -110,7 +115,10 @@ setnames(N, "X2019", "npop")
 bug_matched <- as.data.table(bug_matched)
 
 #### for LOS associated costs
+bug_matched[ , cost.se.los := (`High 95% UI Bound - from Excess LOS`-
+                                  `Low 95% UI Bound - from Excess LOS`)/3.92]
 
+bug_matched[ , cost.te.los := `Mean Cost - from Excess LOS`]
 
 
 #### for total cost (across types)
@@ -118,13 +126,13 @@ bug_matched[ , cost.se.both := (`High 95% UI Bound - Across Both`-
                              `Low 95% UI Bound - Across Both`)/3.92]
 
 bug_matched[ , cost.te.both := `Mean Cost - Across Both`]
-##### for Sceanrio 2 adjusted costs
 
+##### for Sceanrio 2 adjusted costs
+bug_matched[ , cost.te.sc2 := `Scenario 2 Mean Cost`]
 
 ##### sampling
 bug_matched[ , Country.Code := `Country (ISO3 Code)`]
 
-load("data_all/who_whoc_wb.RData")
 who <- who_whoc_wb[ , c("iso3c","who.region")]
 
 combo <- merge(bug_matched, N, by="Country.Code")
@@ -136,6 +144,8 @@ costing.cc <- costing.cc[!is.na(npop)]
 #### breaking down by country for sampling ######
 costing.cc[ , ID := c(1:nrow(costing.cc))]
 
+n.samples <- 2
+
 sample.costing.cc <- list()
 
 for (i in 1:max(unique(costing.cc$ID))){
@@ -144,65 +154,41 @@ for (i in 1:max(unique(costing.cc$ID))){
   dt.temp <- costing.cc[ID == i]
   
   ## sample
-  rnorm.sample.los <- rnorm(n=n.samples, mean=dt.temp$mean.cost, sd=dt.temp$cost.se)
+  sample.los <- rnorm(n=n.samples, mean=dt.temp$cost.te.los, sd=dt.temp$cost.se.los)
+  sample.both <- rnorm(n=n.samples, mean=dt.temp$cost.te.both, sd=dt.temp$cost.se.both)
   
   # ## extracting out the variables
-  # sample.costing.cc[ , i] <- rnorm.sample
-  # colnames(sample.costing.cc)[i] <- dt.temp$ID
-  sample.costing.cc[[i]]<- dt.temp$ID
-  sample.costing.cc[[i]][1:n.samples] <- rnorm.sample.los
+  sample.costing.cc[[i]] <- dt.temp$ID
+  sample.costing.cc[[i]]$costing.los <- sample.los
+  sample.costing.cc[[i]]$costing.both <- sample.both
+  sample.costing.cc[[i]]$costing.sc2  <- dt.temp$cost.te.sc2
+  names(sample.costing.cc)[[i]][1] <- "ID"
+  sample.costing.cc[[i]]$npop <- dt.temp$npop
+  sample.costing.cc[[i]]$who.region <- dt.temp$who.region
+  sample.costing.cc[[i]]$Country.Code <- dt.temp$Country.Code                            
+  sample.costing.cc[[i]]$syndrome <- dt.temp$syndrome                                
+  sample.costing.cc[[i]]$gram.stain <- dt.temp$gram.stain                                
+  sample.costing.cc[[i]]$class <-  dt.temp$class                                     
+  sample.costing.cc[[i]]$bacteria <- dt.temp$bacteria                                  
+  sample.costing.cc[[i]]$AMR_or_DRI  <- dt.temp$AMR_or_DRI                             
+
   
 }
 
-costing.cc.thin <- costing.cc[ , c("iso3c.x","whoc.region", "syndrome","class","gram.stain","mean.cost","ID")]
-list.costing.cc <- rep(list(costing.cc.thin),n.samples)
+costing.sample <- rbindlist(sample.costing.cc)
 
-## for J represents ID (so each country,drug, bug, syndrome group) and i represents the run
+save(costing.sample, file="costing.sample.RData")
 
-for (i in 1:n.samples){
-  temp <- as.data.table(list.costing.cc[[i]])
-  for (j in 1:max(costing.cc$ID)){
-    temp[ID==j, mean.cost := sample.costing.cc[[j]][i]]
-  }
-  list.costing.cc[[i]] <- temp
-}
-
-##### breaking down by region for averages #####
-## !! currently inefficient but does the job in terms of getting the averages
-## likely a faster way using piping and/or apply() functions
-
-regional.averages <- list()
-
-for (i in 1:n.samples){
-  temp <- list.costing.cc[[i]]
-  combo <- merge(temp, N, by.x="iso3c.x", by.y="Country.Code")
-  combo <- merge(combo, who, by.x="iso3c.x", by.y="iso3c" )
-  
   ### filter and average
-  combo <- combo %>%
+  costing.average <- costing.sample %>%
     filter(!is.na(npop)) %>%
-    group_by(who.region, syndrome, class, gram.stain) %>% 
-    summarise(weighted_TE = weighted.mean(mean.cost, npop)) 
-  
-  regional.averages[[i]] <- combo
-  
-}
+    group_by(V1, who.region, syndrome, gram.stain, AMR_or_DRI, bacteria) %>% 
+    summarise(weighted_costing.both = weighted.mean(costing.both, npop),
+              weighted_costing.los = weighted.mean(costing.los,npop),
+              weighted_sc2 = weighted.mean(costing.sc2, npop))
 
-## bind to one data.table
-regional.output <- rbindlist(regional.averages)
-
-regional.output <- as.data.table(regional.output)
-
-## (1) los-based cost
-mean.valuesL <- regional.output[,.(mean_costing = mean(weighted_TE, na.rm = TRUE)),
-                                by=c("who.region","syndrome", "class", "gram.stain")] 
-
-lowL <- regional.output[,.(low_costing = quantile(weighted_TE,0.025, na.rm = TRUE)), 
-                        by=c("who.region","syndrome", "class", "gram.stain")] 
-
-highL <- regional.output[,.(high_costing = quantile(weighted_TE,0.975, na.rm = TRUE)), 
-                         by=c("who.region","syndrome", "class", "gram.stain")] 
-
-costing.region <- merge(mean.valuesL, lowL, by = c("who.region","syndrome", "class", "gram.stain"))
-
-costing.region <- merge(costing.region, highL, by = c("who.region","syndrome", "class", "gram.stain"))
+  ### !!! need to finish this code to get lower and upper bounds for all the outcomes of interest
+  ### AND Need to do copy this section at Gram-stain level for manuscript
+  test <- costing.average %>%
+    group_by(who.region, syndrome, gram.stain, AMR_or_DRI, bacteria) %>% 
+    summarise(MED_weighted_costing.both = median(weighted_costing.both))
