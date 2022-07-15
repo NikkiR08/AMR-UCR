@@ -186,4 +186,4 @@ sc2.results.long <- sc2.results.long[!is.na(`Mean Cost - from Excess LOS`)]
 length(which(is.na(sc2.results.long$`Scenario 2 Mean Cost`))) ## should be 0 
 
 save(sc2.results.long, file="cost_per_case/outputs/scenario2.results.RData")
-# write.csv(sc2.results.long, file="cost_per_case/outputs/scenario2.results.csv")
+write.csv(sc2.results.long, file="cost_per_case/outputs/scenario2.results.csv")
