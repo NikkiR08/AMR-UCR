@@ -187,3 +187,7 @@ length(which(is.na(sc2.results.long$`Scenario 2 Mean Cost`))) ## should be 0
 
 save(sc2.results.long, file="cost_per_case/outputs/scenario2.results.RData")
 write.csv(sc2.results.long, file="cost_per_case/outputs/scenario2.results.csv")
+
+########### !!! in future iterations you could incorporate this with
+## the "table_creation" R script to calculate adjusted cost for each sample
+## to get mean and range/percentile based on those 
