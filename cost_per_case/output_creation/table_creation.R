@@ -153,6 +153,7 @@ costing.cc <- costing.cc[!is.na(npop)]
 #### breaking down by country for sampling ######
 costing.cc[ , ID := c(1:nrow(costing.cc))]
 
+## no. of samples 
 n.samples <- 1000
 
 sample.costing.cc <- list()
