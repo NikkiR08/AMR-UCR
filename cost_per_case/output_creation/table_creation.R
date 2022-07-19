@@ -109,7 +109,7 @@ save(bug_matched, file="cost_per_case/outputs/Results_Table_Bug_Country.RData")
 write.csv(bug_matched, file="cost_per_case/outputs/Results_Table_Bug_Country.csv")
 
 ###### BY REGION ###############
-
+load("cost_per_case/outputs/Results_Table_Bug_Country.RData")
 ########### populations ###################
 N <- as.data.table(read.csv("data_all/Population-EstimatesData_092020.csv"))
 
@@ -459,3 +459,36 @@ save(costing.sample, file="cost_per_case/outputs/costing.sample.RData")
   #### note I then added Joint to Bone and Joint
   write.csv(evid, file="cost_per_case/outputs/inputs_evidence_summary.csv")
   
+  
+  ######## STATS FOR PAPER ######
+  load("cost_per_case/outputs/costing.table.region.G.RData")
+  
+  outputs <- as.data.table(costing.table.region.G)
+  outputs[LOW_weighted_costing.los<=0 &
+            HIGH_weighted_costing.los<=0 , los.sig.flag:="SIG"]
+  outputs[LOW_weighted_costing.los>=0 &
+            HIGH_weighted_costing.los>=0 , los.sig.flag:="SIG"]
+  outputs[LOW_weighted_costing.los<0 &
+            HIGH_weighted_costing.los>0 , los.sig.flag := "NONSIG" ]
+  
+  outputs.los.sig <- outputs[los.sig.flag=="SIG"]
+  
+  outputs.los.sig.gram <- outputs.los.sig[gram.stain!="tb"]
+  paper.gram <- outputs.los.sig.gram %>% 
+    group_by(who.region, AMR_or_DRI) %>%
+    filter(AV_weighted_costing.los == max(AV_weighted_costing.los))
+  
+  paper.gram <- paper.gram %>% 
+    mutate_if(is.numeric, round) %>%
+    mutate_if(is.numeric,funs(prettyNum(., big.mark=",")))
+  
+  paper.gram$result <- paste0(paper.gram$AV_weighted_costing.los, " (", paper.gram$LOW_weighted_costing.both,
+                              " - ",paper.gram$HIGH_weighted_costing.both, ")")
+  
+  write.csv(paper.gram, file="cost_per_case/outputs/topcosts.csv")
+  
+  
+  t3 <- outputs.los.sig.gram  %>%                                      # Top N highest values by group
+    arrange(desc(AV_weighted_costing.los)) %>% 
+    group_by(who.region, AMR_or_DRI) %>%
+    slice(1:3)
