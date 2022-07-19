@@ -6,7 +6,7 @@ library(gcookbook) ## for colour blind friendly palette
 library(rworldmap)
 library(dplyr)
 
-##### abundance ######
+##### abundance - FIGURE 2 ######
 
 ## total across regions
 
@@ -24,296 +24,148 @@ mine.heatmap <- ggplot(data = evidence_heatmap, mapping = aes(x = Syndrome,
 
 mine.heatmap
 
-######## *****OLD***** ###########################
-load("Data/costing_region_AMR.RData")
-load("Data/AMR_Results_Table_AMR_nolabels.RData")
 
-load("Data/costing_region_DRI.RData")
-load("Data/AMR_Results_Table_DRI_nolabels.RData")
+######## REGIONAL PLOTS - FIGURE 3 ######
+load("cost_per_case/outputs/costing.table.region.G.RData")
 
-### drug syndrome all regions ####
-dat <- costing.region.AMR
+outputs <- as.data.table(costing.table.region.G)
 
-## limited syndromes
-dat <- subset(dat,syndrome=="BSI"|
-                syndrome=="UTI"|
-                syndrome=="RTI"|
-                syndrome=="SSI"|
-                syndrom=="INF")
+### there will be a more efficient way to do this 
+### in the interest of time for producing paper doing a lot by hand
+AMR <- outputs[AMR_or_DRI=="AMR"]
+AMR_GNGP <- AMR[class!="mdr"] ## put TB on separate plots
 
-##removing XDR whilst using old data
-dat <- subset(dat,dat$class!="xdr")
-dat$Syndrome_Class <- paste(dat$syndrome,dat$gram.stain,dat$class)
+LOS.plots <- function(EURO){
+  name.reg <- EURO$who.region[1]
+x <- ggplot(EURO, aes(x=interaction(class), y=AV_weighted_costing.los, fill=syndrome)) + 
+  geom_bar(position=position_dodge(preserve="single"), stat="identity",
+           colour="black", # Use black outlines,
+           size=.3) +      # Thinner lines
+  geom_errorbar(aes(ymin=LOW_weighted_costing.los, ymax=HIGH_weighted_costing.los),
+                size=.3,    # Thinner lines
+                width=.2,
+                position = position_dodge(width = 0.9, preserve = "single")) +
+  xlab("Resistance Exposure") +
+  ylab("LOS-associated Cost (2019 USD)") +
+  scale_fill_viridis_d()+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  coord_cartesian(ylim=c(-5000, 35000), expand = FALSE)+
+  ggtitle(name.reg)
+  return(x)
+}
 
-
-
-all_mean <- ggplot() + geom_point(data = dat, aes(x = who.region, y = mean_costing, 
-                                      color = Syndrome_Class)) + scale_fill_viridis_d()+
-  xlab("Region (WHO)") +
-  ylab("Healthcare System Cost (2019 USD)") 
-
-all_mean
-
-datD <- subset(costing.region.DRI,syndrome=="BSI"|
-                syndrome=="UTI"|
-                syndrome=="RTI"|
-                syndrome=="SSI"|
-                syndrome=="INF")
-
-datD$Syndrome_Class <- paste(datD$syndrome,datD$gram.stain,datD$class)
-
-##removing XDR whilst using old data
-datD <- subset(datD,datD$class!="xdr")
-
-all_meanD <- ggplot() + geom_point(data = datD, aes(x = who.region, y = mean_costing, 
-                                                  color = Syndrome_Class)) + scale_fill_viridis_d()+
-  xlab("Region (WHO)") +
-  ylab("Healthcare System Cost (2019 USD)") 
-
-all_meanD
+AFRO <- AMR_GNGP[who.region=="AFRO"]
+EMRO <- AMR_GNGP[who.region=="EMRO"]
+EURO <- AMR_GNGP[who.region=="EURO"]
+PAHO <- AMR_GNGP[who.region=="PAHO"]
+SEARO <- AMR_GNGP[who.region=="SEARO"]
+WPRO <- AMR_GNGP[who.region=="WPRO"]
 
 
-### heatmap of info ####
-combo <- rbind(results, results.long)
-datall <- subset(combo, syndrome=="BSI"|
-                   syndrome=="UTI"|
-                   syndrome=="RTI"|
-                   syndrome=="SSI"|
-                   syndrome=="INF")
-
-## create numerics for level of meta-analysis
-datall <- as.data.table(datall)
-datall$los.level.N <- 0
-datall[los.level=="global",los.level.N := 1]
-datall[los.level=="wbregion" ,los.level.N := 2]
-datall[los.level=="income" ,los.level.N := 3]
-datall[los.level=="whoc",los.level.N  := 4]
-
-datall$cost.level.N <- 0
-datall[extracted.cost.level=="global",cost.level.N := 1]
-datall[extracted.cost.level=="wbregion" ,cost.level.N := 2]
-datall[extracted.cost.level=="income" ,cost.level.N := 3]
-datall[extracted.cost.level=="whoc",cost.level.N  := 4]
-
-## replace NA number of studies so that summation doesn't produce NA later on
-datall[is.na(los.no.studies), los.no.studies := 0]
-datall[is.na(extracted.cost.no.studies), extracted.cost.no.studies := 0]
-
-datall[ , evidence := (los.no.studies*los.level.N)+(extracted.cost.no.studies*
-                                                      cost.level.N)]
-
-## total across regions
-evidence_heatmap <- datall %>% 
-  group_by(`World Health Region`, syndrome) %>% 
-  summarise(Abundance = mean(evidence))
+LOS.plots(AFRO)
+LOS.plots(EMRO)
+LOS.plots(EURO)
+LOS.plots(PAHO)
+LOS.plots(SEARO)
+LOS.plots(WPRO)
 
 
-mine.heatmap <- ggplot(data = evidence_heatmap, mapping = aes(x = syndrome,
-                                                       y = who.region,
-                                                       fill = Abundance))+
-                      geom_tile() + scale_fill_viridis_c(direction=-1) 
+DRI <- outputs[AMR_or_DRI=="DRI"]
+DRI_GNGP <- DRI[class!="mdr"] ## put TB on separate plots
+
+AFRO <- DRI_GNGP[who.region=="AFRO"]
+EMRO <- DRI_GNGP[who.region=="EMRO"]
+EURO <- DRI_GNGP[who.region=="EURO"]
+PAHO <- DRI_GNGP[who.region=="PAHO"]
+SEARO <- DRI_GNGP[who.region=="SEARO"]
+WPRO <- DRI_GNGP[who.region=="WPRO"]
+
+LOS.plots(AFRO)
+LOS.plots(EMRO)
+LOS.plots(EURO)
+LOS.plots(PAHO)
+LOS.plots(SEARO)
+LOS.plots(WPRO)
+
+
+##### PLOTS OF DIFFERENT TYPES OF COST - FIGURE 4 ######
+
+load("cost_per_case/outputs/costing.table.region.G.RData")
+
+outputs <- as.data.table(costing.table.region.G)
+outputs[LOW_weighted_costing.both<=0 &
+          HIGH_weighted_costing.both<=0 , cost.sig.flag:="SIG"]
+outputs[LOW_weighted_costing.both>=0 &
+          HIGH_weighted_costing.both>=0 , cost.sig.flag:="SIG"]
+outputs[LOW_weighted_costing.both<0 &
+          HIGH_weighted_costing.both>0 , cost.sig.flag := "NONSIG" ]
+
+outputs.cost.sig <- outputs[cost.sig.flag=="SIG"]
+
+AMR <- outputs.cost.sig[AMR_or_DRI=="AMR"]
+
+colnames(AMR)[colnames(AMR) == 'AV_weighted_costing.both'] <- 'Scenario 1. Combined Sample'
+colnames(AMR)[colnames(AMR) == 'AV_weighted_costing.sc2'] <- 'Scenario 2. Applied Adjustment Factor'
+colnames(AMR)[colnames(AMR) == 'AV_weighted_costing.los'] <- 'LOS Cost Only'
+
+
+AMR.melt <- melt(AMR, id=c("who.region", "syndrome", "class", "AMR_or_DRI", "gram.stain"),
+                 measure=c("Scenario 1. Combined Sample","Scenario 2. Applied Adjustment Factor","LOS Cost Only"))
+  
+AMR.melt <- AMR.melt[class!="mdr"] ## remove TB to discuss separately
+
+ggplot(data = AMR.melt, aes(class, value, color=variable, shape=variable)) +
+  geom_point(position=position_jitter(h=0.1, w=0.1), alpha = 0.5, size = 2.5) +
+  facet_grid(who.region ~ syndrome)+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  xlab("Resistance Exposure") +
+  ylab("Excess Hospital Cost per Case (2019 USD)") +
+  scale_color_brewer(palette="Dark2")
+
+DRI <- outputs.cost.sig[AMR_or_DRI=="DRI"]
+
+colnames(DRI)[colnames(DRI) == 'AV_weighted_costing.both'] <- 'Scenario 1. Combined Sample'
+colnames(DRI)[colnames(DRI) == 'AV_weighted_costing.sc2'] <- 'Scenario 2. Applied Adjustment Factor'
+colnames(DRI)[colnames(DRI) == 'AV_weighted_costing.los'] <- 'LOS Cost Only'
+
+
+DRI.melt <- melt(DRI, id=c("who.region", "syndrome", "class", "AMR_or_DRI", "gram.stain"),
+                 measure=c("Scenario 1. Combined Sample","Scenario 2. Applied Adjustment Factor","LOS Cost Only"))
+
+DRI.melt <- DRI.melt[class!="mdr"] ## remove TB to discuss separately
+
+ggplot(data = DRI.melt, aes(class, value, color=variable, shape=variable)) +
+  geom_point(position=position_jitter(h=0.1, w=0.1), alpha = 0.5, size = 2.5) +
+  facet_grid(who.region ~ syndrome)+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  xlab("Resistance Exposure") +
+  ylab("Excess Hospital Cost per Case (2019 USD)") +
+  scale_color_brewer(palette="Dark2")+
+  ggtitle("DRI")
+
+##### TB Figure 5 ##########
+load("cost_per_case/outputs/costing.table.region.G.RData")
+
+outputs <- as.data.table(costing.table.region.G)
+tb <- outputs[gram.stain=="tb"]
+tb <- tb[ ,-c("syndrome", "gram.stain","class")]
+
+ggplot(tb, aes(x=who.region, y=AV_weighted_costing.los)) + 
+  geom_bar(position=position_dodge(preserve="single"), stat="identity",
+           colour="black", # Use black outlines,
+           size=.3) +      # Thinner lines
+  geom_errorbar(aes(ymin=LOW_weighted_costing.los, ymax=HIGH_weighted_costing.los),
+                size=.3,    # Thinner lines
+                width=.2,
+                position = position_dodge(width = 0.9, preserve = "single")) 
  
-mine.heatmap
-
-######## INDIVIDUAL SYNDROME/CLASS PLOTS ######
-
-temp <- costing.region.AMR
-temp <- as.data.table(temp)
-t <- dcast(temp, who.region + class +
-             gram.stain ~ syndrome, value.var ="mean_costing")
-
-low <- dcast(temp, who.region + class +
-             gram.stain ~ syndrome, value.var ="low_costing")
-high <- dcast(temp, who.region + class +
-                gram.stain ~ syndrome, value.var ="high_costing")
-
-all <- merge(low,high,by=c("who.region","class","gram.stain"))
-all <- merge(all, t)
-
-t.all <- all[complete.cases(all),]
-# x = low, y = high
-
-### 3GC BSI
-
-graph1 <- temp[class=="3g cephalosporins" & 
-                 (syndrome=="BSI"|syndrome=="UTI"|syndrome=="RTI")]
-
-
-ggplot(graph1, aes(x=who.region, y=mean_costing, fill=syndrome)) + 
-  geom_bar(position=position_dodge(), stat="identity",
+ggplot(tb, aes(x=who.region, y=AV_weighted_costing.both)) + 
+  geom_bar(position=position_dodge(preserve="single"), stat="identity",
            colour="black", # Use black outlines,
            size=.3) +      # Thinner lines
-  geom_errorbar(aes(ymin=low_costing, ymax=high_costing),
+  geom_errorbar(aes(ymin=LOW_weighted_costing.both, ymax=HIGH_weighted_costing.both),
                 size=.3,    # Thinner lines
                 width=.2,
-                position=position_dodge(.9)) +
-  xlab("Region (WHO)") +
-  ylab("Healthcare System Cost (2019 USD)") +
-  scale_fill_viridis_d()+
-  ggtitle("The Effect of 3GC Resistance") +
-  scale_y_continuous() +
-  ylim(-1000,4000)
-
-## penicillin resistance
-graph2 <- temp[class=="penicillins" & 
-                 (syndrome=="BSI"|syndrome=="UTI"|syndrome=="RTI"|syndrome=="SSI")]
-
-ggplot(graph2, aes(x=who.region, y=mean_costing, fill=syndrome)) + 
-  geom_bar(position=position_dodge(), stat="identity",
-           colour="black", # Use black outlines,
-           size=.3) +      # Thinner lines
-  geom_errorbar(aes(ymin=low_costing, ymax=high_costing),
-                size=.3,    # Thinner lines
-                width=.2,
-                position=position_dodge(.9)) +
-  xlab("Region (WHO)") +
-  ylab("Healthcare System Cost (2019 USD)") +
-   scale_fill_viridis_d()+
-  ggtitle("The Effect of Penicillin Resistance") +
-  scale_y_continuous() +
-  ylim(-10000,40000)
-
-### PAHO variation
-
-paho_bsi <- results[who.region=="PAHO" &
-                      syndrome=="BSI"]
-
-
-paho_bsi_g <- paho_bsi %>% 
-  group_by(whoc.region, class) %>% 
-  summarise(mean_cost = mean(mean.cost)) %>%
-  as.data.table()
-
-paho_bsi_g$mean_cost <- round(paho_bsi_g$mean_cost,0)
-paho_bsi_g[class=="3g cephalosporins", class := "3GC"]
-
-ggplot(paho_bsi_g, aes(x=class, y=mean_cost, fill=whoc.region)) + 
-  geom_bar( position=position_dodge(),stat="identity",
-           colour="black", # Use black outlines,
-           size=.3) +      # Thinner lines
-  xlab("Antibiotic Class") +
-  ylab("Healthcare System Cost (2019 USD)") +  scale_fill_brewer(palette="Paired")+
-  theme_minimal()+
-  geom_text(aes(label=mean_cost), position=position_dodge(width=0.9), vjust=-0.25)
-
-### useful info
-mdr_tb <- results[syndrome=="RTI"& class=="mdr"]
-length(which(mdr_tb$low.cost<0))
-ssi <- results[syndrome=="SSI"]
-length(which(ssi$low.cost<0))
-
-##### input descriptive statistics #####
-microbes <- table(lit_amr$microbe)
-write.csv(microbes, file="Data/microbes_des_stat.csv")
-
-microbes <- table(lit_dri$microbe)
-write.csv(microbes, file="Data/microbes_des_stat_Dri.csv")
-
-
-##### plots
-library(xlsx)
-
-# temp_slides_global <- read.xlsx("Data/global_matched_temp.xlsx",1)
-
-# temp_slides_global[ , Exposure := paste(class, bacteria)]
-# 
-# ggplot(temp_slides_global, aes(x=Exposure, y=mean_cost, fill=syndrome)) + 
-#   geom_bar(position=position_dodge(), stat="identity",
-#            colour="black", # Use black outlines,
-#            size=.3) +      # Thinner lines
-#   geom_errorbar(aes(ymin=low_cost, ymax=high_cost),
-#                 size=.3,    # Thinner lines
-#                 width=.2,
-#                 position=position_dodge(.9)) +
-#   xlab("Resistance & Bacterial Exposure") +
-#   ylab("Healthcare System Cost (2019 USD)") +
-#   scale_fill_viridis_d()+
-#   ggtitle("Global Averages") +
-#   scale_y_continuous() +
-#    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
-
-
-### reordering by 
-
-# temp_slides_global$Exposure_Group <- factor(temp_slides_global$Exposure,
-#                                             levels =c( "3GCs E. coli",
-#                                             "carbapenems E. coli",
-#                                             "3GCs K. pnuemoniae",
-#                                             "carbapenems K. pnuemoniae",
-#                                             "3GCs P. aeruginosa" ,
-# "carbapenems P. aeruginosa"  , "3GCs A. baumannii" ,
-# "carbapenems A. baumannii"  , "penicillins S. aureus"  ,
-# "glycopeptides S. aureus"  ,    "penicillins S. pneumoniae" ,
-# "glycopeptides S. pneumoniae", "penicillins E. faecium"    ,
-# "glycopeptides E. faecium"   ))
-
-
-ggplot(df1, aes(x=Exposure_Group, y=mean_cost, fill=syndrome)) + 
-  geom_bar(position=position_dodge(), stat="identity",
-           colour="black", # Use black outlines,
-           size=.3) +      # Thinner lines
-  geom_errorbar(aes(ymin=low_cost, ymax=high_cost),
-                size=.3,    # Thinner lines
-                width=.2,
-                position=position_dodge(.9)) +
-  xlab("Resistance & Bacterial Exposure") +
-  ylab("Healthcare System Cost (2019 USD)") +
-  ggtitle("Global Averages") +
-  scale_fill_viridis_d()+
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
-
-
-## remove nonsig
-temp_slides_global_new <- temp_slides_global[Significance=="Significant"]
-
-
-ggplot(temp_slides_global_new, aes(x=Exposure_Group, y=mean_cost, fill=syndrome)) + 
-  geom_bar(position=position_dodge(), stat="identity",
-           colour="black", # Use black outlines,
-           size=.3) +      # Thinner lines
-  geom_errorbar(aes(ymin=low_cost, ymax=high_cost),
-                size=.3,    # Thinner lines
-                width=.2,
-                position=position_dodge(.9)) +
-  xlab("Resistance & Bacterial Exposure") +
-  ylab("Healthcare System Cost (2019 USD)") +
-  ggtitle("Global Averages") +
-  scale_fill_viridis_d()+
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
-  scale_y_log10()
-
-## remove SSI top scale
-
-ggplot(temp_slides_global, aes(x=interaction(Exposure_Group), y=mean_cost, fill=syndrome)) + 
-  geom_bar(position=position_dodge(), stat="identity",
-           colour="black", # Use black outlines,
-           size=.3) +      # Thinner lines
-  geom_errorbar(aes(ymin=low_cost, ymax=high_cost),
-                size=.3,    # Thinner lines
-                width=.2,
-                position=position_dodge(.9)) +
-  xlab("Resistance & Bacterial Exposure") +
-  ylab("Healthcare System Cost (2019 USD)") +
-  ggtitle("Global Averages") +
-  scale_fill_viridis_d()+
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
-  coord_cartesian(ylim=c(NA, 21000), expand = FALSE)
-
-## testing
-
-temp_slides_global2 <- subset(temp_slides_global,Significance=="Significant")
-temp_slides_global2 <- temp_slides_global2 %>% complete(Exposure_Group, nesting(syndrome))
-ggplot(temp_slides_global2, aes(x=interaction(Exposure_Group), y=mean_cost, fill=syndrome)) + 
-  geom_bar(position=position_dodge(), stat="identity",
-           colour="black", # Use black outlines,
-           size=.3) +      # Thinner lines
-  geom_errorbar(aes(ymin=low_cost, ymax=high_cost),
-                size=.3,    # Thinner lines
-                width=.2,
-                position=position_dodge(.9)) +
-  xlab("Resistance & Bacterial Exposure") +
-  ylab("Healthcare System Cost (2019 USD)") +
-  ggtitle("Global Averages") +
-  scale_fill_viridis_d()+
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
-  coord_cartesian(ylim=c(NA, 21000), expand = FALSE)
+                position = position_dodge(width = 0.9, preserve = "single")) +
+  xlab("WHO Region")+
+  ylab("Excess Hospital Cost per Case (Scenario 1)")
