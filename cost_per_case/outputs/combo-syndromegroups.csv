@@ -1,0 +1,20 @@
+"","syndrome","class","gram.stain","AMR","DRI"
+"1","Bone & Joint","penicillins","Gram-positive","AMR Values Estimated",NA
+"2","Blood Stream","3g cephalosporins","Gram-negative","AMR Values Estimated","DRI Values Estimated"
+"3","Blood Stream","carbapenems","Gram-negative","AMR Values Estimated","DRI Values Estimated"
+"4","Blood Stream","glycopeptides","Gram-positive","AMR Values Estimated","DRI Values Estimated"
+"5","Blood Stream","penicillins","Gram-positive","AMR Values Estimated","DRI Values Estimated"
+"6","Colonization and Infection OR Infection","3g cephalosporins","Gram-negative","AMR Values Estimated","DRI Values Estimated"
+"7","Colonization and Infection OR Infection","carbapenems","Gram-negative","AMR Values Estimated","DRI Values Estimated"
+"8","Colonization and Infection OR Infection","glycopeptides","Gram-positive","AMR Values Estimated","DRI Values Estimated"
+"9","Colonization and Infection OR Infection","penicillins","Gram-positive","AMR Values Estimated","DRI Values Estimated"
+"10","Intra-abdominal","glycopeptides","Gram-positive",NA,"DRI Values Estimated"
+"11","Respiratory Tract","3g cephalosporins","Gram-negative","AMR Values Estimated",NA
+"12","Respiratory Tract","carbapenems","Gram-negative","AMR Values Estimated","DRI Values Estimated"
+"13","Respiratory Tract","mdr","Tuberculosis","AMR Values Estimated",NA
+"14","Respiratory Tract","penicillins","Gram-positive","AMR Values Estimated",NA
+"15","Surgical Site","penicillins","Gram-positive","AMR Values Estimated","DRI Values Estimated"
+"16","Skin and Soft Tissue","penicillins","Gram-positive","AMR Values Estimated","DRI Values Estimated"
+"17","Urinary Tract Infection","3g cephalosporins","Gram-negative","AMR Values Estimated",NA
+"18","Urinary Tract Infection","carbapenems","Gram-negative","AMR Values Estimated",NA
+"19","Urinary Tract Infection","glycopeptides","Gram-positive","AMR Values Estimated","DRI Values Estimated"
