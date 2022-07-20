@@ -264,6 +264,7 @@ inflation_exchange_PPP <- function(from_year,
 ## IN THE INFLATION DATASETS (can't be used for literature as not all base costs USD)
 ## so would need more adapting
 
+### !!! think can remove the EUSA portions as not an issue here? left in for now
 cost_adj_abx <- function(to_year,
                          cost_dt_row,
                          column_ref_cost,
@@ -274,11 +275,7 @@ cost_adj_abx <- function(to_year,
   ## column_ref_cost the column with the "to_cost" to be adjusted
   ## inf_xch_dt is the exchange rate and inflation dataset created above
   ## needs currency_country dataset preloaded to run (see above in this script)
-  
-  #### !!! note if you have other currencies with other regions not listed in this function
-  ## (e.g. CAD for a non-Canadian country)
-  # would need to add more code in here to account for this
-  
+
   #### first pulling out the data we need for conversions
   iso <- as.character(cost_dt_row$iso3c) ## country of study 
   from_cost <- cost_dt_row[[column_ref_cost]] ## cost to be adapted
