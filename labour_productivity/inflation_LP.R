@@ -2,15 +2,21 @@
 library(wbstats)
 library(data.table)
 
+#### !!! next iteration would be good to combine with other 
+### inflation script in general_functions
+
+
 ## loading in data from wbstats 
 # gdpdeflator_data <- wb_data(indicator = "NY.GDP.DEFL.ZS")
-# # save(gdpdeflator_data, file="data/wb_GDP_deflator.RData")
-load("Data/macro/wb_GDP_deflator.RData")
-## merge in with mapping of countries to get regional averages
-inflation_source <- merge(gdpdeflator_data, data_input, by="iso3c")
-inflation_source <- as.data.table(inflation_source)
-inflation_source <- inflation_source[, country_flag:=.GRP,by=iso3c]
-# save(inflation_source, file="Data/macro/inflation_source.RData")
+# # # save(gdpdeflator_data, file="data_all/wb_GDP_deflator.RData")
+# load("data_all/wb_GDP_deflator.RData")
+# ## merge in with mapping of countries to get regional averages
+# inflation_source <- merge(gdpdeflator_data, data_input, by="iso3c")
+# inflation_source <- as.data.table(inflation_source)
+# inflation_source <- inflation_source[, country_flag:=.GRP,by=iso3c]
+# save(inflation_source, file="data_all/inflation_source.RData")
+
+load("data_all/inflation_source.RData")
 
 inflation_adjust_cost_custom <- function(from_year,
                                          to_year,
