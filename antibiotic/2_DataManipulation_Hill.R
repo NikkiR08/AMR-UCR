@@ -108,4 +108,4 @@ for (i in 1:nrow(costing.abx.hill)){
   setTxtProgressBar(pb,i)  
 }
 
-save(costing.abx.hill, file="Data/antibiotics/costing_abx_HILL.RData")
+save(costing.abx.hill, file="antibiotic/outputs/costing_abx_HILL.RData")
