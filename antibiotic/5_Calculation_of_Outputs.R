@@ -211,11 +211,13 @@ oral.250 <-aware.plot.df[`MSH Form`=="tab-cap"&
                            `MSH Dose`=="250mg"]
 unique(oral.250$Antibiotic)
 ggplot(oral.250, aes(x=Category, y=value, fill=variable)) +
-  geom_boxplot()
+  geom_boxplot()+
+  xlab("AWARE Group")+ylab("Cost per Unit (2019 USD)")
 ### zoom without dropping data
 ggplot(oral.250, aes(x=Category, y=value, fill=variable)) +
   geom_boxplot()+
-  coord_cartesian(ylim = c(0, 1))
+  coord_cartesian(ylim = c(0, 1))+
+  xlab("AWARE Group")+ylab("Cost per Unit (2019 USD)")
 
 
 ### 1000 mg vial
@@ -224,9 +226,10 @@ vial.1000 <-aware.plot.df[`MSH Form`=="vial"&
 unique(vial.1000$Antibiotic)
 
 ggplot(vial.1000, aes(x=Category, y=value, fill=variable)) +
-  geom_boxplot()
+  geom_boxplot()+
+  xlab("AWARE Group")+ylab("Cost per Unit (2019 USD)")
 ### zoom without dropping data
 ggplot(vial.1000, aes(x=Category, y=value, fill=variable)) +
   geom_boxplot()+
-  coord_cartesian(ylim = c(0, 3))
-
+  coord_cartesian(ylim = c(0, 3))+
+  xlab("AWARE Group")+ylab("Cost per Unit (2019 USD)")
