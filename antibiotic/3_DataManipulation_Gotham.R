@@ -4,8 +4,8 @@ library(tidyverse)
 library(fuzzyjoin)
 
 ## loading files and functions
-load("Data/who_whoc_wb.RData") ## who_whoc_wb groupings
-source("inflation.R") ## sourcing inflation code and data files
+load("data_all/who_whoc_wb.RData") ## who_whoc_wb groupings
+source("general_functions/inflation.R") ## sourcing inflation code and data files
 
 # ### scraping & sorting the Gotham et al 2018 data
 # PATH = "Data/antibiotics/Gotham_Appendix_2019.pdf"
@@ -58,12 +58,10 @@ source("inflation.R") ## sourcing inflation code and data files
 # 
 # ## to do the rest of the manipulations by hand and check numbers against pdf
 # # !!! so note the read back in will not update automatically if other code above changed
-# write.csv(Gotham_all, file="Data/antibiotics/Gotham_PRE.csv" )
+# write.csv(Gotham_all, file="antibiotic/outputs/Gotham_PRE.csv" )
 ## compared in excel against antibiotics from AWARE/MSH csv file for inclusion 
 
-###!! gentamicin sulfate has turned into gentamicin, would need adapting
-## if want to add this back in
-Gotham_post <- read.csv("Data/antibiotics/Gotham_POST.csv")
+Gotham_post <- read.csv("antibiotic/outputs/Gotham_POST.csv")
 
 ## remove non-antibiotics of interest
 Gotham_post <- subset(Gotham_post, hand.flag.keep=="y")
@@ -83,13 +81,9 @@ abx_all <- cbind(who_whoc_wb_all,abx_all)
 ## getting the same columns to use in the inflation function
 abx_all[ , cost_year := 2016]
 abx_all[ , cost_currency := "USD"]
+
 ## get local currency units matched
 costing.abx.Gotham <- merge(abx_all, currency_country, by="iso3c", all.x=TRUE, all.y=FALSE)
-
-## update Eurozone
-costing.abx.Gotham <- costing.abx.Gotham[iso3c=="EUSA", currency_code := "EUR"]
-costing.abx.Gotham <- costing.abx.Gotham[iso3c=="EUSA", number := 978]
-costing.abx.Gotham <- costing.abx.Gotham[iso3c=="EUSA", currency_name := "Euro"]
 
 pb = txtProgressBar(min = 1, max = nrow(costing.abx.Gotham), initial = 0, style = 3)
 
