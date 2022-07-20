@@ -265,6 +265,8 @@ inflation_exchange_PPP <- function(from_year,
 ## so would need more adapting
 
 ### !!! think can remove the EUSA portions as not an issue here? left in for now
+### !!! could do with generally tidying up if had time
+
 cost_adj_abx <- function(to_year,
                          cost_dt_row,
                          column_ref_cost,
