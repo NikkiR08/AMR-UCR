@@ -3,11 +3,11 @@ library(tabulizer)
 library(tidyverse) 
 
 ## loading files and functions
-load("Data/who_whoc_wb.RData") ## who_whoc_wb groupings
-source("inflation.R") ## sourcing inflation code and data files
+load("data_all/who_whoc_wb.RData") ## who_whoc_wb groupings
+source("general_functions/inflation.R") ## sourcing inflation code and data files
 
 # ### scraping & sorting the Hill et al 2018 data
-# PATH = "Data/antibiotics/Hill_Appendix_2018.pdf"
+# PATH = "antibiotic/inputs/Hill_Appendix_2018.pdf"
 # 
 # lst_hill_scrape <- extract_tables(PATH, pages = 3:5, output="data.frame",method="stream" )
 # 
@@ -61,9 +61,9 @@ source("inflation.R") ## sourcing inflation code and data files
 # 
 # ## to do the rest of the manipulations by hand and check numbers against pdf
 # # !!! so note the read back in will not update automatically if other code above changed
-# write.csv(hill, file="Data/antibiotics/Hill_PRE.csv" )
+# write.csv(hill, file="antibiotic/outputs/Hill_PRE.csv" )
 
-hill_post <- read.csv("Data/antibiotics/Hill_POST.csv")
+hill_post <- read.csv("antibiotic/outputs/Hill_POST.csv")
 
 ## make dollar not cents
 hill_post$UK.unit.price <- hill_post$UK.unit.price/100
@@ -74,6 +74,7 @@ hill_post$generic.price <- hill_post$generic.price/100
 ## inflation
 who_whoc_wb <- as.data.table(who_whoc_wb)
 hill_post <- as.data.table(hill_post)
+
 ## need each country to have each antibiotic
 who_whoc_wb_all <- who_whoc_wb[rep(who_whoc_wb[,.I],nrow(hill_post))]
 abx_all <- hill_post[rep(hill_post[,.I],nrow(who_whoc_wb))]
@@ -88,11 +89,6 @@ abx_all[ , cost_year := 2016]
 abx_all[ , cost_currency := "USD"]
 ## get local currency units matched
 costing.abx.hill <- merge(abx_all, currency_country, by="iso3c", all.x=TRUE, all.y=FALSE)
-
-## update Eurozone
-costing.abx.hill <- costing.abx.hill[iso3c=="EUSA", currency_code := "EUR"]
-costing.abx.hill <- costing.abx.hill[iso3c=="EUSA", number := 978]
-costing.abx.hill <- costing.abx.hill[iso3c=="EUSA", currency_name := "Euro"]
 
 pb = txtProgressBar(min = 1, max = nrow(costing.abx.hill), initial = 0, style = 3)
 
