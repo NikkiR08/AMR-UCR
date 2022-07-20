@@ -1,0 +1,67 @@
+Medicine,Unit,UK.unit.price,SA.unit.price,India.unit.price,generic.price
+amoxicillin,SODF 250 mg,1.8,2.7,1,2.1
+amoxicillin,SODF 500 mg,3.2,4.1,2,3.1
+amoxicillin/clavulanic acid,tablet 500mg/125mg,12.9,NA,31.5,NA
+azithromycin,capsule 250 mg,58.8,23.8,1.7,6.7
+azithromycin,capsule 500 mg,117.7,47.6,1.1,12.3
+bedaquiline,tablet 100 mg,12930.9,NA,NA,NA
+cefalexin,SODF 250 mg,3.4,NA,1.6,2.7
+cefixime,capsule 400 mg,491.4,NA,22.4,9.6
+chloramphenicol,capsule 250 mg,816.8,NA,1.3,7.9
+ciprofloxacin,tablet 250 mg,2.4,3.6,0.8,2.1
+clarithromycin,SODF 500 mg,14.8,35.9,3.3,15.5
+clindamycin,capsule 150 mg,7,24.4,22.5,5.1
+clofazimine,capsule 50 mg,NA,NA,1.6,2.5
+clofazimine,capsule 100 mg,NA,NA,2.9,3.9
+cloxacillin,capsule 500 mg,NA,NA,2.5,2.9
+cloxacillin,capsule 1000 mg,NA,NA,5,4.6
+cycloserine,SODF 250 mg,523.4,NA,61.9,24
+dapsone,tablet 25 mg,37.4,NA,0.05,1.2
+dapsone,tablet 50 mg,74.8,NA,0.1,1.3
+dapsone,tablet 100 mg,132.7,NA,0.5,1.5
+delamanid,tablet 50 mg,3385.4,NA,NA,NA
+doxycycline,SODF 50 mg,3.4,NA,2.3,2.1
+doxycycline,SODF 100 mg,4.6,2.4,0.8,3.1
+erythromycin,SODF 250 mg,9.5,NA,1.6,3
+ethambutol,tablet 100 mg,8,NA,0.3,1.9
+ethambutol,tablet 200 mg,16.1,2.3,0.6,2.6
+ethambutol,tablet 300 mg,24.1,NA,1.7,3.3
+ethambutol,tablet 400 mg,23.1,4.6,1,4
+ethambutol/isoniazid,tablet 400mg/150mg,NA,NA,NA,4.3
+ethambutol/isoniazid/pyrazinamide/rifampicin,tablet 275mg /75mg/400mg/150mg,85.6,10.1,5.1,6.5
+ethambutol/isoniazid/rifampicin,tablet 275mg /75mg/150mg,NA,NA,NA,5.2
+ethionamide,tablet 125 mg,NA,4.7,4.5,NA
+ethionamide,tablet 250 mg,NA,9.5,9,NA
+isoniazid,tablet 50 mg,44.7,0.9,0.04,1.2
+isoniazid,tablet 100 mg,89.3,1.7,0.1,1.4
+isoniazid,tablet 200 mg,178.7,3.4,0.2,1.6
+isoniazid,tablet 300 mg,268,5.1,0.7,1.8
+isoniazid/pyrazinamide/rifampicin,tablet 75mg/400mg/150mg,NA,NA,4.4,4.5
+isoniazid/pyrazinamide/rifampicin,tablet 150mg/500mg/150mg,NA,NA,5.6,5
+isoniazid/rifampicin,tablet 60mg/60mg,NA,4.5,NA,2.1
+isoniazid/rifampicin,tablet 75mg/150mg,NA,4.1,2.3,3.3
+isoniazid/rifampicin,tablet 150mg/150mg,NA,NA,NA,3.5
+isoniazid/rifampicin,tablet 150mg/300mg,58.5,8.1,5.8,5.4
+levofloxacin,tablet 250 mg,15.9,14.7,1.3,5.3
+levofloxacin,tablet 500 mg,21.5,27.6,2.6,9.4
+levofloxacin,tablet 750 mg,47.6,44.1,4,13.5
+linezolid,tablet 400 mg,NA,NA,52.5,32.5
+linezolid,tablet 600 mg,2975.2,741.3,44.9,48.1
+metronidazole,tablet 200 mg,2.4,0.7,0.4,1.5
+metronidazole,tablet 300 mg,3.6,1.1,0.6,1.7
+metronidazole,tablet 400 mg,2.5,1.2,0.8,1.9
+metronidazole,tablet 500 mg,6,1.8,1,2.1
+nitrofurantoin,tablet 100 mg,11.9,23.7,1.5,4.5
+phenoxymethylpenicillin,tablet 250 mg,1.9,NA,1.3,NA
+pyrazinamide,tablet 400 mg,NA,NA,NA,2.4
+pyrazinamide,tablet 150 mg,NA,NA,2.7,1.6
+rifabutin,capsule 150 mg,391.6,NA,63,36.3
+rifampicin,capsule 150 mg,8.9,7.8,2.1,3.1
+rifampicin,capsue 300 mg,14.8,15.6,4.1,5.1
+rifampicin,SODF 150 mg,8.9,7.8,2.1,3.1
+rifampicin,SODF 300 mg,14.8,15.6,4.1,5.1
+sulfamethoxazole/trimethoprim,tablet 100mg/20mg,NA,NA,0.3,1.4
+sulfamethoxazole/trimethoprim,tablet 400mg/80mg,10.7,NA,0.5,2.2
+sulfamethoxazole/trimethoprim,tablet 800mg/150mg,30.4,NA,1.4,3.2
+trimethoprim,tablet 100 mg,1.2,NA,NA,1.5
+trimethoprim,tablet 200 mg,8.3,NA,NA,1.9

@@ -1,0 +1,136 @@
+"","Medicine","Unit","UK.unit.price","SA.unit.price","India.unit.price","generic.price"
+"1","amoxicillin","SODF 250 mg",0.8,2.7,1,2.1
+"2","",NA,3.2,NA,NA,NA
+"3","amoxicillin","SODF 500 mg",1,4.1,2,3.1
+"4","amoxicillin","+ clavulanic tablet",NA,NA,NA,NA
+"5","acid","500 mg+125mg",12.9,NA,31.5,NA
+"6","",NA,58.8,NA,NA,NA
+"7","azithromycin","capsule 250 mg",8.8,23.8,1.7,6.7
+"8","",NA,117.7,NA,NA,NA
+"9","azithromycin","capsule 500 mg",9.6,47.6,1.1,12.3
+"10","bedaquiline","tablet 100 mg",12930.9,NA,NA,NA
+"11","",NA,3.4,NA,NA,NA
+"12","cefalexin","SODF 250 mg",1.2,NA,1.6,2.7
+"13","",NA,491.4,NA,NA,NA
+"14","cefixime","capsule 400 mg",51.3,NA,22.4,9.6
+"15","",NA,816.8,NA,NA,NA
+"16","chloramphenicol","capsule 250 mg",103.7,NA,1.3,7.9
+"17","",NA,2.4,NA,NA,NA
+"18","ciprofloxacin","tablet 250 mg",1.1,3.6,0.8,2.1
+"19","",NA,14.8,NA,NA,NA
+"20","clarithromycin","SODF 500 mg",1,35.9,3.3,15.5
+"21","",NA,7,NA,NA,NA
+"22","clindamycin","capsule 150 mg",1.4,24.4,22.5,5.1
+"23","clofazimine","capsule 50 mg",NA,NA,1.6,2.5
+"24","clofazimine","capsule 100 mg",NA,NA,2.9,3.9
+"25","cloxacillin","capsule 500 mg",NA,NA,2.5,2.9
+"26","cloxacillin","capsule 1000 mg",NA,NA,5,4.6
+"27","","",523.4,NA,NA,NA
+"28","cycloserine","SODF 250 mg",21.8,NA,61.9,24
+"29","","",37.4,NA,NA,NA
+"30","dapsone","tablet 25 mg",30.5,NA,0.05,1.2
+"31","","",74.8,NA,NA,NA
+"32","dapsone","tablet 50 mg",56.5,NA,0.1,1.3
+"33","","",132.7,NA,NA,NA
+"34","dapsone","tablet 100 mg",87.2,NA,0.5,1.5
+"35","delamanid","tablet 50 mg",3385.4,NA,NA,NA
+"36","","",3.4,NA,NA,NA
+"37","doxycycline","SODF 50 mg",1.6,NA,2.3,2.1
+"38","","",4.6,NA,NA,NA
+"39","doxycycline","SODF 100 mg",1.5,2.4,0.8,3.1
+"40","","",9.5,NA,NA,NA
+"41","erythromycin","SODF 250 mg",3.2,NA,1.6,3
+"42","","",8,NA,NA,NA
+"43","ethambutol","tablet 100 mg",4.3,NA,0.3,1.9
+"44","","",16.1,NA,NA,NA
+"45","ethambutol","tablet 200 mg",6.2,2.3,0.6,2.6
+"46","","",24.1,NA,NA,NA
+"47","ethambutol","tablet 300 mg",7.3,NA,1.7,3.3
+"48","","",23.1,NA,NA,NA
+"49","ethambutol","tablet 400 mg",5.7,4.6,1,4
+"50","","tablet 400 mg +",NA,NA,NA,NA
+"51","ethambutol + isoniazid","150 mg",NA,NA,NA,4.3
+"52","ethambutol + isoniazid","tablet",NA,NA,NA,NA
+"53","+ pyrazinamide +","275 /75/400/150mg",85.6,NA,NA,NA
+"54","rifampicin","FDC",13.2,10.1,5.1,6.5
+"55","","tablet",NA,NA,NA,NA
+"56","ethambutol + isoniazid","275 /75/150mg",NA,NA,NA,NA
+"57","+ rifampicin","FDC",NA,NA,NA,5.2
+"58","ethionamide","tablet 125 mg",NA,4.7,4.5,NA
+"59","ethionamide","tablet 250 mg",NA,9.5,9,NA
+"60","","",44.7,NA,NA,NA
+"61","isoniazid","tablet 50 mg",35.8,0.9,0.04,1.2
+"62","","",89.3,NA,NA,NA
+"63","isoniazid","tablet 100 mg",65.3,1.7,0.1,1.4
+"64","","",178.7,NA,NA,NA
+"65","isoniazid","tablet 200 mg",111.1,3.4,0.2,1.6
+"66","","",268,NA,NA,NA
+"67","isoniazid","tablet 300 mg",145,5.1,0.7,1.8
+"68","isoniazid +","tablet",NA,NA,NA,NA
+"69","pyrazinamide +","75 /400/150mg",NA,NA,NA,NA
+"70","rifampicin","FDC",NA,NA,4.4,4.5
+"71","isoniazid +","tablet",NA,NA,NA,NA
+"72","pyrazinamide +","150 /500/150mg",NA,NA,NA,NA
+"73","rifampicin","FDC",NA,NA,5.6,5
+"74","","tablet 60 /60mg",NA,NA,NA,NA
+"75","isoniazid + rifampicin","FDC",NA,4.5,NA,2.1
+"76","","tablet 75 /150mg",NA,NA,NA,NA
+"77","isoniazid + rifampicin","FDC",NA,4.1,2.3,3.3
+"78","","tablet 150 /150mg",NA,NA,NA,NA
+"79","isoniazid + rifampicin","FDC",NA,NA,NA,3.5
+"80","","tablet 150 /300mg",58.5,NA,NA,NA
+"81","isoniazid + rifampicin","FDC",10.8,8.1,5.8,5.4
+"82",NA,NA,15.9,NA,NA,NA
+"83","levofloxacin","tablet 250 mg",3,14.7,1.3,5.3
+"84","","",21.5,NA,NA,NA
+"85","levofloxacin","tablet 500 mg",2.3,27.6,2.6,9.4
+"86","","",47.6,NA,NA,NA
+"87","levofloxacin","tablet 750 mg",3.5,44.1,4,13.5
+"88","linezolid","tablet 400 mg",NA,NA,52.5,32.5
+"89","","",2975.2,NA,NA,NA
+"90","linezolid","tablet 600 mg",61.8,741.3,44.9,48.1
+"91","","",2.4,NA,NA,NA
+"92","metronidazole","tablet 200 mg",1.6,0.7,0.4,1.5
+"93","","",3.6,NA,NA,NA
+"94","metronidazole","tablet 300 mg",2.1,1.1,0.6,1.7
+"95","","",2.5,NA,NA,NA
+"96","metronidazole","tablet 400 mg",1.3,1.2,0.8,1.9
+"97","","",6,NA,NA,NA
+"98","metronidazole","tablet 500 mg",2.9,1.8,1,2.1
+"99","","",11.9,NA,NA,NA
+"100","nitrofurantoin","tablet 100 mg",2.6,23.7,1.5,4.5
+"101","p-aminosalicylic acid","tablet 500 mg",NA,NA,NA,NA
+"102","phenoxymethylpenicillin","tablet 250 mg",1.9,NA,1.3,NA
+"103","pyrazinamide","tablet 400 mg",NA,NA,NA,2.4
+"104","pyrazinamide","tablet 150 mg",NA,NA,2.7,1.6
+"105","","",391.6,NA,NA,NA
+"106","rifabutin","capsule 150 mg",10.8,NA,63,36.3
+"107","","",8.9,NA,NA,NA
+"108","rifampicin","capsule 150 mg",2.9,7.8,2.1,3.1
+"109","","",14.8,NA,NA,NA
+"110","rifampicin","capsue 300 mg",2.9,15.6,4.1,5.1
+"111","","",8.9,NA,NA,NA
+"112","rifampicin","SODF 150 mg",2.9,7.8,2.1,3.1
+"113","","",14.8,NA,NA,NA
+"114","rifampicin","SODF 300 mg",2.9,15.6,4.1,5.1
+"115","rifapentine","tablet 150 mg",NA,NA,NA,NA
+"116","sulfamethoxazole +","tablet",NA,NA,NA,NA
+"117","trimethoprim","100 mg+20mg",NA,NA,0.3,1.4
+"118","sulfamethoxazole +","tablet",10.7,NA,NA,NA
+"119","trimethoprim","400 mg+80mg",5,NA,0.5,2.2
+"120","sulfamethoxazole +","tablet",30.4,NA,NA,NA
+"121","trimethoprim","800 mg+150mg",9.6,NA,1.4,3.2
+"122","","",1.2,NA,NA,NA
+"123","trimethoprim","tablet 100 mg",0.8,NA,NA,1.5
+"124","","",8.3,NA,NA,NA
+"125","trimethoprim","tablet 200 mg",4.3,NA,NA,1.9
+"126","Antifungal medicines","",NA,NA,NA,NA
+"127","","",3.9,NA,NA,NA
+"128","fluconazole","capsule 50 mg",2,4.7,0.9,2
+"129","flucytosine","capsule 250 mg",NA,NA,NA,40.1
+"130","","",125.7,NA,NA,NA
+"131","griseofulvin","tablet 125 mg",44.6,NA,1.2,2.8
+"132","","",251.3,NA,NA,NA
+"133","griseofulvin","tablet 250 mg",55.8,NA,2.4,4.5
+"134","nystatin","tablet 20 mg",NA,NA,NA,NA
+"135","nystatin","tablet 100 mg",NA,NA,NA,NA
