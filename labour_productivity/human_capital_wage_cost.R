@@ -9,6 +9,7 @@ library(tabulizer)
 library(dplyr)
 library(countrycode)
 library(ggplot2)
+
 # #### testing to check outliers - when running below
 # upper_bound <- quantile(employ$employ, 0.975)
 # lower_bound <- quantile(employ$employ, 0.025)
@@ -20,20 +21,23 @@ library(ggplot2)
 
 ########### DATA ###################
 
-load("Data/who_whoc_wb.RData")
+load("data_all/who_whoc_wb.RData")
 
 # dat <- get_ilostat(id = 'EAR_4MTH__CUR_NB_A SEX_ECO', segment = 'indicator')
 # save(dat, file="Data/ILO_wage.RData")
 # load("Data/ILO_wage.RData")
 ##!! updated data with bulk download from # https://www.ilo.org/shinyapps/bulkexplorer47/ - last accessed May 2021
 # filtered Sex - Total, Economic activity - Total, currency - ppp
-dat <- read.csv("Data/EAR_4MTH_SEX_ECO_CUR_NB_A-filtered.csv")
+dat <- read.csv("data_all/EAR_4MTH_SEX_ECO_CUR_NB_A-filtered.csv")
 
-load("Data/ILO_emp_ratio.RData") ## see blow for saving
-load("Data/ilo_dic.RData")
+# employ <- get_ilostat(id = 'EMP_DWAP_SEX_AGE_RT_A', segment = 'indicator')
+# save(employ, file="data_all/ILO_employ_ratio.RData")
+### !!! although note this was saved as employ_rate and have not double checked same when copying over code
+load("data_all/ILO_emp_ratio.RData") ## see blow for saving
+load("data_all/ilo_dic.RData")
 
 #######**** Exchange
-source("inflation.R")
+source("general_functions/inflation.R")
 
 #########***** LABOUR PRODUCTIVITY COSTS *****#####
 # ## to see table of contents
@@ -47,25 +51,23 @@ dat[ , time := as.numeric(time)]
 
 # dat <- dat[order(-time),head(.SD, 1) , by = ref_area] # if wanted latest year but keeping all for now
 wage <- dat %>%
-  group_by(ï..ref_area.label) %>%
+  group_by(ref_area.label) %>%
   filter(sex.label=="Sex: Total", classif2.label=="Currency: U.S. dollars",
          grepl('Total',classif1.label),time>=1990 & time<=2019) %>%
-  select(ï..ref_area.label,time, obs_value, classif1.label) %>%
+  select(ref_area.label,time, obs_value, classif1.label) %>%
   setNames(., c(c("country","year","wage","classif1"))) %>%
   as.data.table()
-## remember that all values are 2017 PPP even if year is e.g. 2010
 
 ## add back iso3c codes:
 wage$iso3c <- countrycode(wage$country, origin="country.name", destination="iso3c") 
-# !!! NOTE -  Some values were not matched unambiguously: CuraÃ§ao, Kosovo, RÃ©union
+# !!! NOTE -  Some values were not matched unambiguously: Kosovo
 
-
-### convert to LCUs (use these instead of ILO as some countries have multiple currencies and our definitions might not align)
+### used USD to then convert to LCUs 
+### (use these instead of ILO LCUs as some countries have multiple currencies and our definitions might not align)
 
 who_whoc_wb <- as.data.table(who_whoc_wb)
 ## combine to get the abx data for each country
 wage_all <- merge(wage,who_whoc_wb, by="iso3c")
-
 
 wage_all[ , cost_year := year]
 wage_all[ , cost_currency := "USD"]
@@ -80,10 +82,7 @@ for (i in 1:nrow(wage_all)){
                             "wage",inf_xch_4function)]
 }
 
-
 # ## employ rates
-# employ <- get_ilostat(id = 'EMP_DWAP_SEX_AGE_RT_A', segment = 'indicator')
-# save(employ, file="Data/ILO_employ_rate.RData")
 employ <- as.data.table(employ)
 employ[ , time := as.numeric(time)]
 employ <- employ %>% filter(sex=="SEX_T",
@@ -102,15 +101,17 @@ emply <- employ[employ>=10]
 ### just taking the latest available data and assuming no growth
 wage_latest <- wage_all %>% group_by(iso3c) %>%
   slice_max(year, n = 1) %>% ## get the latest year available
-  slice(1) %>% ## if there are more than 1 for each take 1 (i.e. if both classif1 totals are present)
+  slice(1) %>% ## if there are more than 1 for each take max value 1 (i.e. if both classif1 totals are present & are slightly different)
   as.data.table()
-## since now calculate 2019 first don't need the above code
 
-### just taking the latest available data and assuming no growth
 employ_latest <- employ %>% group_by(iso3c) %>%
   slice_max(year, n = 1) %>% ## get the latest year available
   slice(1) %>%  ## take just one employment rate from the classif1
   as.data.table()
+
+#### !!! might want to deal with multiple classif1 but slightly differing values
+### if use distinct() need to add back in the types and pick preference here
+### just taking based on how ordered in this
 
 ## merge:
 both_latest <- merge(wage_latest, employ_latest, by =c("iso3c"), all.x=TRUE, all.y=TRUE)
@@ -121,11 +122,12 @@ both_latest$country<- countrycode(both_latest$iso3c, origin="iso3c", destination
 
 ## need both values to calculate adjusted wage
 ## note of missing values:
-x <- both_latest[is.na(wage_all)] 
-x$country
+x <- both_latest[is.na(wage_2019usd)] 
+x$country ## quite a lot of countries
 
 x <- both_latest[is.na(employ)]
-x$country
+x$country ## Djibouti
+
 # load("Data/ILO_emp_ratio.RData")
 # x <- as.data.table(employ)
 # x <- x[ref_area=="CHN"|ref_area=="DJI"|ref_area=="KWT"]
@@ -144,6 +146,7 @@ employ_trend <- employ %>% group_by(iso3c,year) %>%
   slice(1) %>%  ## take just one employment rate from the classif1
   as.data.table()
 
+#### !!! note
 # employ_trend2 <- distinct(employ)
 # setdiff(employ_trend2, employ_trend)
 # ## employ_trend2 this has more rows per year for countries with multiple values
@@ -162,7 +165,7 @@ lwage <- list() ## create an empty list to fill
 for (i in 1:max(wage_trend$ID)){ ## for each country 
   temp <- wage_trend[ID==i] ## filter by that country
   if (nrow(temp)==1){
-    ## assume no growth as no data - n.b. all in 2017 PPP values 
+    ## assume no growth as no data 
     temp[ , wage_2019 := wage_2019usd]
     temp <- temp[ , c("iso3c","wage_2019")]
     lwage[[i]] <- temp
@@ -192,7 +195,7 @@ lemploy <- list() ## create an empty list to fill
 for (i in 1:max(employ_trend$ID)){
   temp <- employ_trend[ID==i]
   if (nrow(temp)==1){
-    ## assume no growth as no data - all in 2017 PPP values anyway
+    ## assume no growth as no data 
     temp[ , employ_2019 := employ]
     temp <- temp[ , c("iso3c","employ_2019")]
     lemploy[[i]] <- temp
@@ -293,8 +296,8 @@ labour_productivity_all <- rbind(flag_yes_m, flag_no)
 labour_productivity_all <- labour_productivity_all[ , -c("Scenario 2 - 2019 USD",
                                                          "Scenario 1 - 2019 USD", "Missing_Data_Flag" )]
 
-# save(labour_productivity_all, file="Data/labour_wage_2019USD.RData")
-# write.csv(labour_productivity_all, file="Data/labour_wage_2019USD.csv")
+save(labour_productivity_all, file="labour_productivity/outputs/labour_wage_2019USD.RData")
+write.csv(labour_productivity_all, file="labour_productivity/outputs/labour_wage_2019USD.csv")
 
 #### PLOTS AFTER REGIONAL AVERAGES SCRIPT ####
 load("Data/regional_labour.RData")
