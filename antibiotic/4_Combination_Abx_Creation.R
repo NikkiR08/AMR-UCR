@@ -3,17 +3,17 @@ library(tidyverse)
 library(data.table)
 
 ### reading in data
-load("Data/antibiotics/costing_abx_MSH.RData")
-load("Data/antibiotics/costing_abx_HILL.RData")
-load("Data/antibiotics/costing_abx_Gotham.RData")
+load("antibiotic/outputs/costing_abx_MSH.RData")
+load("antibiotic/outputs/costing_abx_HILL.RData")
+load("antibiotic/outputs/costing_abx_Gotham.RData")
 
-### !! in future iterations, would be more efficient to match 
-## then apply to the different countries and inflat
+### !!! in future iterations, would be more efficient to match 
+## then apply to the different countries and inflate
 
 costing.abx.currency <- costing.abx.currency [,c("iso3c" ,"who.region",
                                                  "whoc.region", "wb.region" ,
                                                  "Income.group", "MSH_antibiotic","Formulation",
-                                                 "abx.adj","Route.of.Admin")] 
+                                                 "abx.adj","Route.of.Admin","Category","Class")] 
 
 costing.abx.hill <- costing.abx.hill[ ,c("iso3c", "Medicine", "Unit",
                                          "generic.adj", "UK.adj" , "SA.adj",          
@@ -28,7 +28,7 @@ costing.abx.Gotham <- costing.abx.Gotham[ ,c("iso3c", "Medicine", "Unit",
 costing.abx.currency <- costing.abx.currency %>%
        mutate(Formulation = str_replace(Formulation, "\\s", "|")) %>% 
        separate(Formulation, into = c("Form", "Dose"), sep = "\\|") %>%
-       filter(Form!="DISC",Form!="OTIC",Form!="OPHT", Form!="SUSPEN") %>% ## removed non-oral/injectable - although should already be removed from earlier code for MSH
+       filter(Form!="DISC",Form!="OTIC",Form!="OPHT", Form!="SUSPEN") %>% ## removed non-oral/injectable 
         as.data.table() ## note no suspen for injection in MSH so removing suspen for oral in above code
   
 costing.abx.hill <- costing.abx.hill %>% 
@@ -60,13 +60,13 @@ costing.abx.Gotham[ , Dose := gsub(" ", "", Dose, fixed = TRUE)]
 costing.abx.Gotham[ , Medicine := tolower(Medicine)]
 
 # ## Gotham a bit more complicated splits so will go through by hand to split
-# write.csv(costing.abx.Gotham, file="Data/antibiotics/temp_midclean_Gotham_PRE.csv")
+# write.csv(costing.abx.Gotham, file="antibiotic/outputs/temp_midclean_Gotham_PRE.csv")
 
 ## just corrected first "batch" for first country
-# !! note this wont update if update the above code as did some cleaning by hand
+# !!! note this wont update if update the above code as did some cleaning by hand
 # as it wasn't consistent over different rows
 # can copy over the formulation/dose/names from latest "post" csv and resave 
-costing.abx.Gotham.NEW <- read.csv("Data/antibiotics/temp_midclean_Gotham_POST.csv")
+costing.abx.Gotham.NEW <- read.csv("antibiotic/outputs/temp_midclean_Gotham_POST.csv")
 
 ## remove one that slipped through first hand checks (dactinomycin - not an antibiotic):
 costing.abx.Gotham.NEW <- as.data.table(costing.abx.Gotham.NEW)
@@ -90,6 +90,7 @@ costing.abx.Gotham.NEW[ , Form := rep(temp.form,n.uniqueiso) ]
 costing.abx.Gotham.NEW[ , Dose := rep(temp.dose,n.uniqueiso) ]
 
 ## !!! assumption oral (Hill) equivalent to TAB-CAP (MSH)
+#### so note we are converting e.g SODF to tab-cap here to match
 costing.abx.hill[ , Form := "tab-cap"]
 ## assumptions for Gotham mapping
 costing.abx.Gotham.NEW[Form=="powder", Form := "suspen"]
@@ -132,7 +133,8 @@ costing.abx <- merge(costing.abx.currency, costing.abx.hill,
 # # mis <- mis[iso3c=="USA"]  ## any country will do
 # # mis <- mis[ , c("MSH_antibiotic","Form","Dose")]
 # rm(costing.abxT)
-### going through by hand and checking mis compared to MSH list
+### going through by hand and checking 'mis' compared to MSH list
+### note e.g. 
 # 	clindamycin injection (Gotham) to match MSH vial
 costing.abx.Gotham.NEW[Medicine=="clindamycin", Form := "vial"]
 
@@ -155,7 +157,7 @@ dose.oral.nonconf <- dose.oral[Dose.x!=Dose.y]
 length(which(is.na(dose.oral$generic.adj.x)))
 ## by visual inspection of dose.oral.nonconf, they are all actually different
 # in dose so can be removed 
-# !!! need to check this if updating code/data
+# !!! need to check this if updating code/data/reruning
 dose.oral <- costing.abx[Route.of.Admin.x=="po" & Dose.x==Dose.y]
 rm(dose.oral.conf)
 rm(dose.oral.nonconf)
@@ -185,4 +187,4 @@ rm(dose.inj.nonconf)
 abx_combo_inputs<- rbind(dose.oral, dose.inj) ## note this just leaves tab-cap and vials
 # other versions of the calculations after this might need adapting if there are other forms included (e.g. ampoule)
 
-save(abx_combo_inputs, file="Data/antibiotics/abx_combo_inputs.RData")
+save(abx_combo_inputs, file="antibiotic/outputs/abx_combo_inputs.RData")
