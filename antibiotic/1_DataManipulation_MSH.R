@@ -88,6 +88,9 @@ for (i in 1:nrow(costing.abx.currency)){
                                                   "MSH_cost",inf_xch_4function)]
 }
 
+### !!! would be nice in any future iterations to see how often USA rather than 
+### own country GDP differences were used in the calculations
+
 ## save
-save(costing.abx.currency, file="Data/antibiotics/costing_abx_MSH.RData")
+save(costing.abx.currency, file="antibiotic/outputs/costing_abx_MSH.RData")
 
