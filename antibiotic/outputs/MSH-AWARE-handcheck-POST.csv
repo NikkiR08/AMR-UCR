@@ -1,0 +1,461 @@
+,Antibiotic.x,Class,ATC.code,Category,Listed.on.EML.2019,hand-flag,Antibiotic.y,Supplementary.Info,Strength,Dosage.Form,Route.of.Admin,WHO.Status,DDD,DDD.Unit,ATC.Code,Buyer.Median..US..,Supplier.Median..US..,Comparison.Unit,fuzzy.no
+1,Amikacin,Aminoglycosides,J01GB06,Access,Yes,y,Amikacin Sulfate,,250 mg/ml,VIAL,INJ,P,1,g,J01GB06,0.173,0.629,ML,0.166666667
+2,Amikacin,Aminoglycosides,J01GB06,Access,Yes,y,Amikacin Sulfate,,50 mg/ml,AMPOULE,INJ,P,1,g,J01GB06,0.1399,NA,ML,0.166666667
+10,Amoxicillin,Penicillins ,J01CA04,Access,Yes,n,Amoxicillin/Clavulanic Acid,,1000/200 mg,VIAL,INJ,P,1,g,J01CR02,1.454,5.4,VIAL,0.197530864
+11,Amoxicillin,Penicillins ,J01CA04,Access,Yes,n,Amoxicillin/Clavulanic Acid,,125/31.25 mg/5ml,SUSPEN,PO,P,1,g,J01CR02,0.0113,0.0203,ML,0.197530864
+12,Amoxicillin,Penicillins ,J01CA04,Access,Yes,n,Amoxicillin/Clavulanic Acid,,250/62.5 mg/5ml,SUSPEN,PO,P,1,g,J01CR02,0.0253,0.0521,ML,0.197530864
+13,Amoxicillin,Penicillins ,J01CA04,Access,Yes,n,Amoxicillin/Clavulanic Acid,,250mg/125mg,TAB-CAP,PO,P,1,g,J01CR02,0.098,0.1476,TAB-CAP,0.197530864
+14,Amoxicillin,Penicillins ,J01CA04,Access,Yes,n,Amoxicillin/Clavulanic Acid,,500mg/100mg,VIAL,INJ,P,1,g,J01CR02,1.56,NA,VIAL,0.197530864
+15,Amoxicillin,Penicillins ,J01CA04,Access,Yes,n,Amoxicillin/Clavulanic Acid,,500mg/125mg,TAB-CAP,PO,E,1,g,J01CR02,0.117,0.1641,TAB-CAP,0.197530864
+16,Amoxicillin,Penicillins ,J01CA04,Access,Yes,n,Amoxicillin/Clavulanic Acid,,875mg/125mg,TAB-CAP,PO,P,1,g,J01CR02,0.1785,0.1575,TAB-CAP,0.197530864
+17,Amoxicillin,Penicillins ,J01CA04,Access,Yes,n,Ampicillin,,1 g,VIAL,INJ,E,2,g,J01CA01,0.1903,0.169,VIAL,0.093939394
+18,Amoxicillin,Penicillins ,J01CA04,Access,Yes,n,Ampicillin,,10 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.1512,EACH,0.093939394
+19,Amoxicillin,Penicillins ,J01CA04,Access,Yes,n,Ampicillin,,125 mg/5 ml,SUSPEN,PO,P,2,g,J01CA01,NA,0.005,ML,0.093939394
+20,Amoxicillin,Penicillins ,J01CA04,Access,Yes,n,Ampicillin,,250 mg,VIAL,INJ,P,2,g,J01CA01,0.469,0.12,VIAL,0.093939394
+21,Amoxicillin,Penicillins ,J01CA04,Access,Yes,n,Ampicillin,,250 mg,TAB-CAP,PO,P,2,g,J01CA01,NA,0.0163,TAB-CAP,0.093939394
+22,Amoxicillin,Penicillins ,J01CA04,Access,Yes,n,Ampicillin,,500 mg,VIAL,INJ,E,2,g,J01CA01,0.3696,0.1507,VIAL,0.093939394
+23,Amoxicillin,Penicillins ,J01CA04,Access,Yes,n,Ampicillin,,500 mg,TAB-CAP,PO,P,2,g,J01CA01,0.0264,0.035,TAB-CAP,0.093939394
+24,Amoxicillin/clavulanic Acid,Beta lactam - beta lactamase inhibitor,J01CR02,Access,Yes,n,Amoxicillin,Dispersible,125 MG,TAB-CAP,PO,EP,1,G,J01CA04,NA,0.0203,TAB-CAP,0.197530864
+25,Amoxicillin/clavulanic Acid,Beta lactam - beta lactamase inhibitor,J01CR02,Access,Yes,n,Amoxicillin,,125 mg/5 ml,SUSPEN,PO,E,1,g,J01CA04,0.0094,0.0046,ML,0.197530864
+26,Amoxicillin/clavulanic Acid,Beta lactam - beta lactamase inhibitor,J01CR02,Access,Yes,n,Amoxicillin,dispersible,250 mg,TAB-CAP,PO,EP,1,g,J01CA04,0.0175,0.0315,TAB-CAP,0.197530864
+27,Amoxicillin/clavulanic Acid,Beta lactam - beta lactamase inhibitor,J01CR02,Access,Yes,n,Amoxicillin,,250 mg,TAB-CAP,PO,E,1,g,J01CA04,0.0227,0.016,TAB-CAP,0.197530864
+28,Amoxicillin/clavulanic Acid,Beta lactam - beta lactamase inhibitor,J01CR02,Access,Yes,n,Amoxicillin,,250 mg/5 ml,SUSPEN,PO,P,1,g,J01CA04,0.0078,0.007,ML,0.197530864
+29,Amoxicillin/clavulanic Acid,Beta lactam - beta lactamase inhibitor,J01CR02,Access,Yes,n,Amoxicillin,dispersible,500 mg,TAB-CAP,PO,EP,1,g,J01CA04,NA,0.046,TAB-CAP,0.197530864
+30,Amoxicillin/clavulanic Acid,Beta lactam - beta lactamase inhibitor,J01CR02,Access,Yes,n,Amoxicillin,,500 mg,TAB-CAP,PO,E,1,g,J01CA04,0.0299,0.03,TAB-CAP,0.197530864
+31,Amoxicillin/clavulanic Acid,Beta lactam - beta lactamase inhibitor,J01CR02,Access,Yes,y,Amoxicillin/Clavulanic Acid,,1000/200 mg,VIAL,INJ,P,1,g,J01CR02,1.454,5.4,VIAL,0.101614435
+32,Amoxicillin/clavulanic Acid,Beta lactam - beta lactamase inhibitor,J01CR02,Access,Yes,y,Amoxicillin/Clavulanic Acid,,125/31.25 mg/5ml,SUSPEN,PO,P,1,g,J01CR02,0.0113,0.0203,ML,0.101614435
+33,Amoxicillin/clavulanic Acid,Beta lactam - beta lactamase inhibitor,J01CR02,Access,Yes,y,Amoxicillin/Clavulanic Acid,,250/62.5 mg/5ml,SUSPEN,PO,P,1,g,J01CR02,0.0253,0.0521,ML,0.101614435
+34,Amoxicillin/clavulanic Acid,Beta lactam - beta lactamase inhibitor,J01CR02,Access,Yes,y,Amoxicillin/Clavulanic Acid,,250mg/125mg,TAB-CAP,PO,P,1,g,J01CR02,0.098,0.1476,TAB-CAP,0.101614435
+35,Amoxicillin/clavulanic Acid,Beta lactam - beta lactamase inhibitor,J01CR02,Access,Yes,y,Amoxicillin/Clavulanic Acid,,500mg/100mg,VIAL,INJ,P,1,g,J01CR02,1.56,NA,VIAL,0.101614435
+36,Amoxicillin/clavulanic Acid,Beta lactam - beta lactamase inhibitor,J01CR02,Access,Yes,y,Amoxicillin/Clavulanic Acid,,500mg/125mg,TAB-CAP,PO,E,1,g,J01CR02,0.117,0.1641,TAB-CAP,0.101614435
+37,Amoxicillin/clavulanic Acid,Beta lactam - beta lactamase inhibitor,J01CR02,Access,Yes,y,Amoxicillin/Clavulanic Acid,,875mg/125mg,TAB-CAP,PO,P,1,g,J01CR02,0.1785,0.1575,TAB-CAP,0.101614435
+38,Ampicillin,Penicillins ,J01CA01 ,Access,Yes,n,Amoxicillin,Dispersible,125 MG,TAB-CAP,PO,EP,1,G,J01CA04,NA,0.0203,TAB-CAP,0.093939394
+39,Ampicillin,Penicillins ,J01CA01 ,Access,Yes,n,Amoxicillin,,125 mg/5 ml,SUSPEN,PO,E,1,g,J01CA04,0.0094,0.0046,ML,0.093939394
+40,Ampicillin,Penicillins ,J01CA01 ,Access,Yes,n,Amoxicillin,dispersible,250 mg,TAB-CAP,PO,EP,1,g,J01CA04,0.0175,0.0315,TAB-CAP,0.093939394
+41,Ampicillin,Penicillins ,J01CA01 ,Access,Yes,n,Amoxicillin,,250 mg,TAB-CAP,PO,E,1,g,J01CA04,0.0227,0.016,TAB-CAP,0.093939394
+42,Ampicillin,Penicillins ,J01CA01 ,Access,Yes,n,Amoxicillin,,250 mg/5 ml,SUSPEN,PO,P,1,g,J01CA04,0.0078,0.007,ML,0.093939394
+43,Ampicillin,Penicillins ,J01CA01 ,Access,Yes,n,Amoxicillin,dispersible,500 mg,TAB-CAP,PO,EP,1,g,J01CA04,NA,0.046,TAB-CAP,0.093939394
+44,Ampicillin,Penicillins ,J01CA01 ,Access,Yes,n,Amoxicillin,,500 mg,TAB-CAP,PO,E,1,g,J01CA04,0.0299,0.03,TAB-CAP,0.093939394
+52,Ampicillin,Penicillins ,J01CA01 ,Access,Yes,n,Ampicillin/Sulbactam,,1000mg/500mg,VIAL,INJ,N,2,g,J01CR01,0.55,NA,VIAL,0.166666667
+53,Ampicillin/sulbactam,Beta lactam - beta lactamase inhibitor,J01CR01,Access,No,n,Ampicillin,,1 g,VIAL,INJ,E,2,g,J01CA01,0.1903,0.169,VIAL,0.166666667
+54,Ampicillin/sulbactam,Beta lactam - beta lactamase inhibitor,J01CR01,Access,No,n,Ampicillin,,10 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.1512,EACH,0.166666667
+55,Ampicillin/sulbactam,Beta lactam - beta lactamase inhibitor,J01CR01,Access,No,n,Ampicillin,,125 mg/5 ml,SUSPEN,PO,P,2,g,J01CA01,NA,0.005,ML,0.166666667
+56,Ampicillin/sulbactam,Beta lactam - beta lactamase inhibitor,J01CR01,Access,No,n,Ampicillin,,250 mg,VIAL,INJ,P,2,g,J01CA01,0.469,0.12,VIAL,0.166666667
+57,Ampicillin/sulbactam,Beta lactam - beta lactamase inhibitor,J01CR01,Access,No,n,Ampicillin,,250 mg,TAB-CAP,PO,P,2,g,J01CA01,NA,0.0163,TAB-CAP,0.166666667
+58,Ampicillin/sulbactam,Beta lactam - beta lactamase inhibitor,J01CR01,Access,No,n,Ampicillin,,500 mg,VIAL,INJ,E,2,g,J01CA01,0.3696,0.1507,VIAL,0.166666667
+59,Ampicillin/sulbactam,Beta lactam - beta lactamase inhibitor,J01CR01,Access,No,n,Ampicillin,,500 mg,TAB-CAP,PO,P,2,g,J01CA01,0.0264,0.035,TAB-CAP,0.166666667
+60,Ampicillin/sulbactam,Beta lactam - beta lactamase inhibitor,J01CR01,Access,No,y,Ampicillin/Sulbactam,,1000mg/500mg,VIAL,INJ,N,2,g,J01CR01,0.55,NA,VIAL,0.033333333
+64,Azithromycin,Macrolides,J01FA10,Watch,Yes,n,Mitomycin,,5 mg,VIAL,INJ,N,NA,,L01DC03,25,NA,VIAL,0.148148148
+65,Azlocillin,Penicillins ,J01CA09,Watch,No,n,Cloxacillin,,5 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.0598,EACH,0.157575758
+66,Biapenem,Carbapenems,J01DH05,Watch,No,n,Imipenem,,11 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.166666667
+67,Carbenicillin,Carboxypenicillins,J01CA03,Watch,No,n,Penicillin G,,10 units,DISC,DIAG,N,NA,,V07AR,0.0173,0.0909,EACH,0.185897436
+68,Cefaclor,Second-generation cephalosporins,J01DC04,Watch,No,n,Cefadroxil,,250 mg/5 ml,SUSPEN,PO,N,2,g,J01DA09,0.027,NA,ML,0.189285714
+69,Cefaclor,Second-generation cephalosporins,J01DC04,Watch,No,n,Cefalotin,,1 g,VIAL,INJ,N,4,g,J01DA03,0.46,NA,ML,0.194444444
+71,Cefadroxil,First-generation cephalosporins,J01DB05,Access,No,y,Cefadroxil Monohydrate,,500 mg,TAB-CAP,PO,N,2,g,J01DA09,0.079,NA,TAB-CAP,0.181818182
+77,Cefalexin,First-generation cephalosporins,J01DB01,Access,Yes,n,Cefalotin,,1 g,VIAL,INJ,N,4,g,J01DA03,0.46,NA,ML,0.148148148
+78,Cefalexin,First-generation cephalosporins,J01DB01,Access,Yes,n,Cefazolin,,1 g,VIAL,INJ,E,3,g,J01DA04,0.4818,NA,VIAL,0.148148148
+79,Cefalexin,First-generation cephalosporins,J01DB01,Access,Yes,n,Cefazolin,,500 mg,AMPOULE,INJ,P,3,g,J01DA04,0.6273,NA,VIAL,0.148148148
+80,Cefalotin,First-generation cephalosporins,J01DB03,Access,No,n,Cefalexin,,125 mg/5 ml,SUSPEN,PO,E,2,g,J01DA01,0.0094,0.0478,ML,0.148148148
+81,Cefalotin,First-generation cephalosporins,J01DB03,Access,No,n,Cefalexin,,125 mg/ml,SUSPEN,PO,P,2,g,J01DA01,NA,0.0064,ML,0.148148148
+82,Cefalotin,First-generation cephalosporins,J01DB03,Access,No,n,Cefalexin,,250 mg,TAB-CAP,PO,E,2,g,J01DA01,0.0475,0.0425,TAB-CAP,0.148148148
+83,Cefalotin,First-generation cephalosporins,J01DB03,Access,No,n,Cefalexin,,250 mg/5 ml,SUSPEN,PO,E,2,g,J01DA01,0.0184,NA,ML,0.148148148
+84,Cefalotin,First-generation cephalosporins,J01DB03,Access,No,n,Cefalexin,,500 mg,TAB-CAP,PO,P,2,g,J01DA01,0.0628,0.0787,TAB-CAP,0.148148148
+86,Cefalotin,First-generation cephalosporins,J01DB03,Access,No,n,Cefazolin,,1 g,VIAL,INJ,E,3,g,J01DA04,0.4818,NA,VIAL,0.115740741
+87,Cefalotin,First-generation cephalosporins,J01DB03,Access,No,n,Cefazolin,,500 mg,AMPOULE,INJ,P,3,g,J01DA04,0.6273,NA,VIAL,0.115740741
+88,Cefatrizine,First-generation cephalosporins,J01DB07,Access,No,n,Cefalotin,,1 g,VIAL,INJ,N,4,g,J01DA03,0.46,NA,ML,0.195286195
+89,Cefatrizine,First-generation cephalosporins,J01DB07,Access,No,n,Ceftazidime,,1 g,VIAL,INJ,P,4,g,J01DA11,1.77,1.35,VIAL,0.195286195
+90,Cefatrizine,First-generation cephalosporins,J01DB07,Access,No,n,Ceftazidime,,250 mg,VIAL,INJ,C,4,g,J01DD02,NA,1.48,VIAL,0.195286195
+91,Cefatrizine,First-generation cephalosporins,J01DB07,Access,No,n,Ceftazidime,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.195286195
+92,Cefatrizine,First-generation cephalosporins,J01DB07,Access,No,n,Ceftriaxone,,1 g,VIAL,INJ,E,2,g,J01DA13,0.4251,0.398,VIAL,0.195286195
+93,Cefatrizine,First-generation cephalosporins,J01DB07,Access,No,n,Ceftriaxone,,250 mg,VIAL,INJ,E,2,g,J01DA13,0.59,0.3538,VIAL,0.195286195
+94,Cefatrizine,First-generation cephalosporins,J01DB07,Access,No,n,Ceftriaxone,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.195286195
+95,Cefatrizine,First-generation cephalosporins,J01DB07,Access,No,n,Ceftriaxone,,500 mg,VIAL,INJ,P,2,g,J01DA13,0.4843,0.38,VIAL,0.195286195
+96,Cefatrizine,First-generation cephalosporins,J01DB07,Access,No,n,Cetirizine,,10 mg,TAB-CAP,PO,N,10,mg,R06AE07,0.009,0.012,TAB-CAP,0.168013468
+97,Cefatrizine,First-generation cephalosporins,J01DB07,Access,No,n,Cetirizine,,5 mg/5 ml,SYRUP,PO,N,10,mg,R06AE07,0.0048,0.0135,ML,0.168013468
+98,Cefazedone,First-generation cephalosporins,J01DB06,Access,No,n,Cefazolin,,1 g,VIAL,INJ,E,3,g,J01DA04,0.4818,NA,VIAL,0.174074074
+99,Cefazedone,First-generation cephalosporins,J01DB06,Access,No,n,Cefazolin,,500 mg,AMPOULE,INJ,P,3,g,J01DA04,0.6273,NA,VIAL,0.174074074
+100,Cefazolin,First-generation cephalosporins,J01DB04,Access,Yes,n,Cefalexin,,125 mg/5 ml,SUSPEN,PO,E,2,g,J01DA01,0.0094,0.0478,ML,0.148148148
+101,Cefazolin,First-generation cephalosporins,J01DB04,Access,Yes,n,Cefalexin,,125 mg/ml,SUSPEN,PO,P,2,g,J01DA01,NA,0.0064,ML,0.148148148
+102,Cefazolin,First-generation cephalosporins,J01DB04,Access,Yes,n,Cefalexin,,250 mg,TAB-CAP,PO,E,2,g,J01DA01,0.0475,0.0425,TAB-CAP,0.148148148
+103,Cefazolin,First-generation cephalosporins,J01DB04,Access,Yes,n,Cefalexin,,250 mg/5 ml,SUSPEN,PO,E,2,g,J01DA01,0.0184,NA,ML,0.148148148
+104,Cefazolin,First-generation cephalosporins,J01DB04,Access,Yes,n,Cefalexin,,500 mg,TAB-CAP,PO,P,2,g,J01DA01,0.0628,0.0787,TAB-CAP,0.148148148
+105,Cefazolin,First-generation cephalosporins,J01DB04,Access,Yes,n,Cefalotin,,1 g,VIAL,INJ,N,4,g,J01DA03,0.46,NA,ML,0.115740741
+109,Cefepime,Fourth-generation cephalosporins,J01DE01,Watch,No,n,Cefixime,,100 mg/5 ml,SUSPEN,PO,P,0.4,g,J01DA23,0.024,0.0332,ML,0.166666667
+110,Cefepime,Fourth-generation cephalosporins,J01DE01,Watch,No,n,Cefixime,,200 mg,TAB-CAP,PO,P,0.4,g,J01DA23,NA,0.166,TAB-CAP,0.166666667
+111,Cefepime,Fourth-generation cephalosporins,J01DE01,Watch,No,n,Cefixime,,400 mg,TAB-CAP,PO,E,0.4,g,J01DA23,NA,0.275,TAB-CAP,0.166666667
+112,Cefixime,Third-generation cephalosporins,J01DD08,Watch,Yes,n,Cefepime,,1 g,VIAL,INJ,T,2,g,J01DA24,2.3042,NA,VIAL,0.166666667
+116,Cefixime,Third-generation cephalosporins,J01DD08,Watch,Yes,n,Cefotaxime,,1 g,VIAL,INJ,CP,4,g,J01DA10,0.6275,1.08,VIAL,0.189285714
+117,Cefixime,Third-generation cephalosporins,J01DD08,Watch,Yes,n,Cefotaxime,,500 mg,VIAL,INJ,CP,4,g,J01DA10,0.5437,0.98,VIAL,0.189285714
+118,Cefixime,Third-generation cephalosporins,J01DD08,Watch,Yes,n,Ceftazidime,,1 g,VIAL,INJ,P,4,g,J01DA11,1.77,1.35,VIAL,0.162878788
+119,Cefixime,Third-generation cephalosporins,J01DD08,Watch,Yes,n,Ceftazidime,,250 mg,VIAL,INJ,C,4,g,J01DD02,NA,1.48,VIAL,0.162878788
+120,Cefixime,Third-generation cephalosporins,J01DD08,Watch,Yes,n,Ceftazidime,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.162878788
+121,Cefixime,Third-generation cephalosporins,J01DD08,Watch,Yes,n,Cefuroxime,,1.5 g,VIAL,INJ,N,3,g,J01DA06,2.08,NA,VIAL,0.189285714
+122,Cefixime,Third-generation cephalosporins,J01DD08,Watch,Yes,n,Cefuroxime,,125 mg/5 ml,SUSPEN,PO,N,0.5,g,J01DA06,0.0631,0.033,ML,0.189285714
+123,Cefixime,Third-generation cephalosporins,J01DD08,Watch,Yes,n,Cefuroxime,,250 mg,TAB-CAP,PO,N,0.5,g,J01DA06,0.1647,0.114,TAB-CAP,0.189285714
+124,Cefixime,Third-generation cephalosporins,J01DD08,Watch,Yes,n,Cefuroxime,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.189285714
+125,Cefixime,Third-generation cephalosporins,J01DD08,Watch,Yes,n,Cefuroxime,,500 mg,TAB-CAP,PO,N,0.5,g,J01DC02,0.3676,0.3911,TAB-CAP,0.189285714
+126,Cefixime,Third-generation cephalosporins,J01DD08,Watch,Yes,n,Cefuroxime,,750 mg,VIAL,INJ,N,3,g,J01DA06,1.0968,1.3364,VIAL,0.189285714
+127,Cefmenoxime,Third-generation cephalosporins,J01DD05,Watch,No,n,Cefotaxime,,1 g,VIAL,INJ,CP,4,g,J01DA10,0.6275,1.08,VIAL,0.157575758
+128,Cefmenoxime,Third-generation cephalosporins,J01DD05,Watch,No,n,Cefotaxime,,500 mg,VIAL,INJ,CP,4,g,J01DA10,0.5437,0.98,VIAL,0.157575758
+129,Cefmenoxime,Third-generation cephalosporins,J01DD05,Watch,No,n,Cefuroxime,,1.5 g,VIAL,INJ,N,3,g,J01DA06,2.08,NA,VIAL,0.157575758
+130,Cefmenoxime,Third-generation cephalosporins,J01DD05,Watch,No,n,Cefuroxime,,125 mg/5 ml,SUSPEN,PO,N,0.5,g,J01DA06,0.0631,0.033,ML,0.157575758
+131,Cefmenoxime,Third-generation cephalosporins,J01DD05,Watch,No,n,Cefuroxime,,250 mg,TAB-CAP,PO,N,0.5,g,J01DA06,0.1647,0.114,TAB-CAP,0.157575758
+132,Cefmenoxime,Third-generation cephalosporins,J01DD05,Watch,No,n,Cefuroxime,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.157575758
+133,Cefmenoxime,Third-generation cephalosporins,J01DD05,Watch,No,n,Cefuroxime,,500 mg,TAB-CAP,PO,N,0.5,g,J01DC02,0.3676,0.3911,TAB-CAP,0.157575758
+134,Cefmenoxime,Third-generation cephalosporins,J01DD05,Watch,No,n,Cefuroxime,,750 mg,VIAL,INJ,N,3,g,J01DA06,1.0968,1.3364,VIAL,0.157575758
+135,Cefmetazole,Second-generation cephalosporins,J01DC09,Watch,No,n,Cefazolin,,1 g,VIAL,INJ,E,3,g,J01DA04,0.4818,NA,VIAL,0.195286195
+136,Cefmetazole,Second-generation cephalosporins,J01DC09,Watch,No,n,Cefazolin,,500 mg,AMPOULE,INJ,P,3,g,J01DA04,0.6273,NA,VIAL,0.195286195
+137,Cefodizime,Third-generation cephalosporins,J01DD09,Watch,No,n,Cefixime,,100 mg/5 ml,SUSPEN,PO,P,0.4,g,J01DA23,0.024,0.0332,ML,0.141666667
+138,Cefodizime,Third-generation cephalosporins,J01DD09,Watch,No,n,Cefixime,,200 mg,TAB-CAP,PO,P,0.4,g,J01DA23,NA,0.166,TAB-CAP,0.141666667
+139,Cefodizime,Third-generation cephalosporins,J01DD09,Watch,No,n,Cefixime,,400 mg,TAB-CAP,PO,E,0.4,g,J01DA23,NA,0.275,TAB-CAP,0.141666667
+140,Cefodizime,Third-generation cephalosporins,J01DD09,Watch,No,n,Ceftazidime,,1 g,VIAL,INJ,P,4,g,J01DA11,1.77,1.35,VIAL,0.130976431
+141,Cefodizime,Third-generation cephalosporins,J01DD09,Watch,No,n,Ceftazidime,,250 mg,VIAL,INJ,C,4,g,J01DD02,NA,1.48,VIAL,0.130976431
+142,Cefodizime,Third-generation cephalosporins,J01DD09,Watch,No,n,Ceftazidime,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.130976431
+143,Cefotaxime,Third-generation cephalosporins,J01DD01,Watch,Yes,n,Cefixime,,100 mg/5 ml,SUSPEN,PO,P,0.4,g,J01DA23,0.024,0.0332,ML,0.189285714
+144,Cefotaxime,Third-generation cephalosporins,J01DD01,Watch,Yes,n,Cefixime,,200 mg,TAB-CAP,PO,P,0.4,g,J01DA23,NA,0.166,TAB-CAP,0.189285714
+145,Cefotaxime,Third-generation cephalosporins,J01DD01,Watch,Yes,n,Cefixime,,400 mg,TAB-CAP,PO,E,0.4,g,J01DA23,NA,0.275,TAB-CAP,0.189285714
+148,Cefotaxime,Third-generation cephalosporins,J01DD01,Watch,Yes,n,Ceftazidime,,1 g,VIAL,INJ,P,4,g,J01DA11,1.77,1.35,VIAL,0.157575758
+149,Cefotaxime,Third-generation cephalosporins,J01DD01,Watch,Yes,n,Ceftazidime,,250 mg,VIAL,INJ,C,4,g,J01DD02,NA,1.48,VIAL,0.157575758
+150,Cefotaxime,Third-generation cephalosporins,J01DD01,Watch,Yes,n,Ceftazidime,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.157575758
+151,Cefotaxime,Third-generation cephalosporins,J01DD01,Watch,Yes,n,Cefuroxime,,1.5 g,VIAL,INJ,N,3,g,J01DA06,2.08,NA,VIAL,0.133333333
+152,Cefotaxime,Third-generation cephalosporins,J01DD01,Watch,Yes,n,Cefuroxime,,125 mg/5 ml,SUSPEN,PO,N,0.5,g,J01DA06,0.0631,0.033,ML,0.133333333
+153,Cefotaxime,Third-generation cephalosporins,J01DD01,Watch,Yes,n,Cefuroxime,,250 mg,TAB-CAP,PO,N,0.5,g,J01DA06,0.1647,0.114,TAB-CAP,0.133333333
+154,Cefotaxime,Third-generation cephalosporins,J01DD01,Watch,Yes,n,Cefuroxime,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.133333333
+155,Cefotaxime,Third-generation cephalosporins,J01DD01,Watch,Yes,n,Cefuroxime,,500 mg,TAB-CAP,PO,N,0.5,g,J01DC02,0.3676,0.3911,TAB-CAP,0.133333333
+156,Cefotaxime,Third-generation cephalosporins,J01DD01,Watch,Yes,n,Cefuroxime,,750 mg,VIAL,INJ,N,3,g,J01DA06,1.0968,1.3364,VIAL,0.133333333
+157,Cefotiam,Second-generation cephalosporins,J01DC07,Watch,No,n,Cefotaxime,,1 g,VIAL,INJ,CP,4,g,J01DA10,0.6275,1.08,VIAL,0.108333333
+158,Cefotiam,Second-generation cephalosporins,J01DC07,Watch,No,n,Cefotaxime,,500 mg,VIAL,INJ,CP,4,g,J01DA10,0.5437,0.98,VIAL,0.108333333
+159,Cefoxitin,Second-generation cephalosporins,J01DC01,Watch,No,n,Cefalotin,,1 g,VIAL,INJ,N,4,g,J01DA03,0.46,NA,ML,0.195767196
+160,Cefpiramide,Third-generation cephalosporins,J01DD11,Watch,No,n,Cefepime,,1 g,VIAL,INJ,T,2,g,J01DA24,2.3042,NA,VIAL,0.162878788
+161,Cefpiramide,Third-generation cephalosporins,J01DD11,Watch,No,n,Ceftazidime,,1 g,VIAL,INJ,P,4,g,J01DA11,1.77,1.35,VIAL,0.195286195
+162,Cefpiramide,Third-generation cephalosporins,J01DD11,Watch,No,n,Ceftazidime,,250 mg,VIAL,INJ,C,4,g,J01DD02,NA,1.48,VIAL,0.195286195
+163,Cefpiramide,Third-generation cephalosporins,J01DD11,Watch,No,n,Ceftazidime,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.195286195
+164,Cefpirome,Fourth-generation cephalosporins,J01DE02,Watch,No,n,Cefepime,,1 g,VIAL,INJ,T,2,g,J01DA24,2.3042,NA,VIAL,0.115740741
+165,Cefpirome,Fourth-generation cephalosporins,J01DE02,Watch,No,n,Cefixime,,100 mg/5 ml,SUSPEN,PO,P,0.4,g,J01DA23,0.024,0.0332,ML,0.194444444
+166,Cefpirome,Fourth-generation cephalosporins,J01DE02,Watch,No,n,Cefixime,,200 mg,TAB-CAP,PO,P,0.4,g,J01DA23,NA,0.166,TAB-CAP,0.194444444
+167,Cefpirome,Fourth-generation cephalosporins,J01DE02,Watch,No,n,Cefixime,,400 mg,TAB-CAP,PO,E,0.4,g,J01DA23,NA,0.275,TAB-CAP,0.194444444
+168,Cefpirome,Fourth-generation cephalosporins,J01DE02,Watch,No,n,Cefuroxime,,1.5 g,VIAL,INJ,N,3,g,J01DA06,2.08,NA,VIAL,0.166203704
+169,Cefpirome,Fourth-generation cephalosporins,J01DE02,Watch,No,n,Cefuroxime,,125 mg/5 ml,SUSPEN,PO,N,0.5,g,J01DA06,0.0631,0.033,ML,0.166203704
+170,Cefpirome,Fourth-generation cephalosporins,J01DE02,Watch,No,n,Cefuroxime,,250 mg,TAB-CAP,PO,N,0.5,g,J01DA06,0.1647,0.114,TAB-CAP,0.166203704
+171,Cefpirome,Fourth-generation cephalosporins,J01DE02,Watch,No,n,Cefuroxime,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.166203704
+172,Cefpirome,Fourth-generation cephalosporins,J01DE02,Watch,No,n,Cefuroxime,,500 mg,TAB-CAP,PO,N,0.5,g,J01DC02,0.3676,0.3911,TAB-CAP,0.166203704
+173,Cefpirome,Fourth-generation cephalosporins,J01DE02,Watch,No,n,Cefuroxime,,750 mg,VIAL,INJ,N,3,g,J01DA06,1.0968,1.3364,VIAL,0.166203704
+174,Cefprozil,Second-generation cephalosporins,J01DC10,Watch,No,n,Cefadroxil,,250 mg/5 ml,SUSPEN,PO,N,2,g,J01DA09,0.027,NA,ML,0.174074074
+175,Cefradine,First-generation cephalosporins,J01DB09,Access,No,n,Ceftriaxone,,1 g,VIAL,INJ,E,2,g,J01DA13,0.4251,0.398,VIAL,0.169612795
+176,Cefradine,First-generation cephalosporins,J01DB09,Access,No,n,Ceftriaxone,,250 mg,VIAL,INJ,E,2,g,J01DA13,0.59,0.3538,VIAL,0.169612795
+177,Cefradine,First-generation cephalosporins,J01DB09,Access,No,n,Ceftriaxone,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.169612795
+178,Cefradine,First-generation cephalosporins,J01DB09,Access,No,n,Ceftriaxone,,500 mg,VIAL,INJ,P,2,g,J01DA13,0.4843,0.38,VIAL,0.169612795
+179,Cefroxadine,First-generation cephalosporins,J01DB11,Access,No,n,Cefadroxil,,250 mg/5 ml,SUSPEN,PO,N,2,g,J01DA09,0.027,NA,ML,0.186531987
+180,Cefroxadine,First-generation cephalosporins,J01DB11,Access,No,n,Cefotaxime,,1 g,VIAL,INJ,CP,4,g,J01DA10,0.6275,1.08,VIAL,0.199242424
+181,Cefroxadine,First-generation cephalosporins,J01DB11,Access,No,n,Cefotaxime,,500 mg,VIAL,INJ,CP,4,g,J01DA10,0.5437,0.98,VIAL,0.199242424
+182,Cefroxadine,First-generation cephalosporins,J01DB11,Access,No,n,Ceftriaxone,,1 g,VIAL,INJ,E,2,g,J01DA13,0.4251,0.398,VIAL,0.127272727
+183,Cefroxadine,First-generation cephalosporins,J01DB11,Access,No,n,Ceftriaxone,,250 mg,VIAL,INJ,E,2,g,J01DA13,0.59,0.3538,VIAL,0.127272727
+184,Cefroxadine,First-generation cephalosporins,J01DB11,Access,No,n,Ceftriaxone,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.127272727
+185,Cefroxadine,First-generation cephalosporins,J01DB11,Access,No,n,Ceftriaxone,,500 mg,VIAL,INJ,P,2,g,J01DA13,0.4843,0.38,VIAL,0.127272727
+186,Cefroxadine,First-generation cephalosporins,J01DB11,Access,No,n,Cefuroxime,,1.5 g,VIAL,INJ,N,3,g,J01DA06,2.08,NA,VIAL,0.157575758
+187,Cefroxadine,First-generation cephalosporins,J01DB11,Access,No,n,Cefuroxime,,125 mg/5 ml,SUSPEN,PO,N,0.5,g,J01DA06,0.0631,0.033,ML,0.157575758
+188,Cefroxadine,First-generation cephalosporins,J01DB11,Access,No,n,Cefuroxime,,250 mg,TAB-CAP,PO,N,0.5,g,J01DA06,0.1647,0.114,TAB-CAP,0.157575758
+189,Cefroxadine,First-generation cephalosporins,J01DB11,Access,No,n,Cefuroxime,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.157575758
+190,Cefroxadine,First-generation cephalosporins,J01DB11,Access,No,n,Cefuroxime,,500 mg,TAB-CAP,PO,N,0.5,g,J01DC02,0.3676,0.3911,TAB-CAP,0.157575758
+191,Cefroxadine,First-generation cephalosporins,J01DB11,Access,No,n,Cefuroxime,,750 mg,VIAL,INJ,N,3,g,J01DA06,1.0968,1.3364,VIAL,0.157575758
+192,Ceftazidime,Third-generation cephalosporins,J01DD02,Watch,Yes,n,Cefixime,,100 mg/5 ml,SUSPEN,PO,P,0.4,g,J01DA23,0.024,0.0332,ML,0.162878788
+193,Ceftazidime,Third-generation cephalosporins,J01DD02,Watch,Yes,n,Cefixime,,200 mg,TAB-CAP,PO,P,0.4,g,J01DA23,NA,0.166,TAB-CAP,0.162878788
+194,Ceftazidime,Third-generation cephalosporins,J01DD02,Watch,Yes,n,Cefixime,,400 mg,TAB-CAP,PO,E,0.4,g,J01DA23,NA,0.275,TAB-CAP,0.162878788
+195,Ceftazidime,Third-generation cephalosporins,J01DD02,Watch,Yes,n,Cefotaxime,,1 g,VIAL,INJ,CP,4,g,J01DA10,0.6275,1.08,VIAL,0.157575758
+196,Ceftazidime,Third-generation cephalosporins,J01DD02,Watch,Yes,n,Cefotaxime,,500 mg,VIAL,INJ,CP,4,g,J01DA10,0.5437,0.98,VIAL,0.157575758
+200,Ceftazidime-avibactam,Third-generation cephalosporins,J01DD52,Reserve,Yes,y,Ceftazidime,,1 g,VIAL,INJ,P,4,g,J01DA11,1.77,1.35,VIAL,0.158730159
+201,Ceftazidime-avibactam,Third-generation cephalosporins,J01DD52,Reserve,Yes,y,Ceftazidime,,250 mg,VIAL,INJ,C,4,g,J01DD02,NA,1.48,VIAL,0.158730159
+202,Ceftazidime-avibactam,Third-generation cephalosporins,J01DD52,Reserve,Yes,y,Ceftazidime,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.158730159
+203,Ceftizoxime,Third-generation cephalosporins,J01DD07,Watch,No,n,Cefixime,,100 mg/5 ml,SUSPEN,PO,P,0.4,g,J01DA23,0.024,0.0332,ML,0.090909091
+204,Ceftizoxime,Third-generation cephalosporins,J01DD07,Watch,No,n,Cefixime,,200 mg,TAB-CAP,PO,P,0.4,g,J01DA23,NA,0.166,TAB-CAP,0.090909091
+205,Ceftizoxime,Third-generation cephalosporins,J01DD07,Watch,No,n,Cefixime,,400 mg,TAB-CAP,PO,E,0.4,g,J01DA23,NA,0.275,TAB-CAP,0.090909091
+206,Ceftizoxime,Third-generation cephalosporins,J01DD07,Watch,No,n,Cefotaxime,,1 g,VIAL,INJ,CP,4,g,J01DA10,0.6275,1.08,VIAL,0.168013468
+207,Ceftizoxime,Third-generation cephalosporins,J01DD07,Watch,No,n,Cefotaxime,,500 mg,VIAL,INJ,CP,4,g,J01DA10,0.5437,0.98,VIAL,0.168013468
+208,Ceftizoxime,Third-generation cephalosporins,J01DD07,Watch,No,n,Ceftazidime,,1 g,VIAL,INJ,P,4,g,J01DA11,1.77,1.35,VIAL,0.158249158
+209,Ceftizoxime,Third-generation cephalosporins,J01DD07,Watch,No,n,Ceftazidime,,250 mg,VIAL,INJ,C,4,g,J01DD02,NA,1.48,VIAL,0.158249158
+210,Ceftizoxime,Third-generation cephalosporins,J01DD07,Watch,No,n,Ceftazidime,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.158249158
+215,Ceftriaxone,Third-generation cephalosporins,J01DD04,Watch,Yes,n,Cefuroxime,,1.5 g,VIAL,INJ,N,3,g,J01DA06,2.08,NA,VIAL,0.199242424
+216,Ceftriaxone,Third-generation cephalosporins,J01DD04,Watch,Yes,n,Cefuroxime,,125 mg/5 ml,SUSPEN,PO,N,0.5,g,J01DA06,0.0631,0.033,ML,0.199242424
+217,Ceftriaxone,Third-generation cephalosporins,J01DD04,Watch,Yes,n,Cefuroxime,,250 mg,TAB-CAP,PO,N,0.5,g,J01DA06,0.1647,0.114,TAB-CAP,0.199242424
+218,Ceftriaxone,Third-generation cephalosporins,J01DD04,Watch,Yes,n,Cefuroxime,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.199242424
+219,Ceftriaxone,Third-generation cephalosporins,J01DD04,Watch,Yes,n,Cefuroxime,,500 mg,TAB-CAP,PO,N,0.5,g,J01DC02,0.3676,0.3911,TAB-CAP,0.199242424
+220,Ceftriaxone,Third-generation cephalosporins,J01DD04,Watch,Yes,n,Cefuroxime,,750 mg,VIAL,INJ,N,3,g,J01DA06,1.0968,1.3364,VIAL,0.199242424
+221,Cefuroxime,Second-generation cephalosporins,J01DC02,Watch,Yes,n,Cefixime,,100 mg/5 ml,SUSPEN,PO,P,0.4,g,J01DA23,0.024,0.0332,ML,0.189285714
+222,Cefuroxime,Second-generation cephalosporins,J01DC02,Watch,Yes,n,Cefixime,,200 mg,TAB-CAP,PO,P,0.4,g,J01DA23,NA,0.166,TAB-CAP,0.189285714
+223,Cefuroxime,Second-generation cephalosporins,J01DC02,Watch,Yes,n,Cefixime,,400 mg,TAB-CAP,PO,E,0.4,g,J01DA23,NA,0.275,TAB-CAP,0.189285714
+224,Cefuroxime,Second-generation cephalosporins,J01DC02,Watch,Yes,n,Cefotaxime,,1 g,VIAL,INJ,CP,4,g,J01DA10,0.6275,1.08,VIAL,0.133333333
+225,Cefuroxime,Second-generation cephalosporins,J01DC02,Watch,Yes,n,Cefotaxime,,500 mg,VIAL,INJ,CP,4,g,J01DA10,0.5437,0.98,VIAL,0.133333333
+226,Cefuroxime,Second-generation cephalosporins,J01DC02,Watch,Yes,n,Ceftriaxone,,1 g,VIAL,INJ,E,2,g,J01DA13,0.4251,0.398,VIAL,0.199242424
+227,Cefuroxime,Second-generation cephalosporins,J01DC02,Watch,Yes,n,Ceftriaxone,,250 mg,VIAL,INJ,E,2,g,J01DA13,0.59,0.3538,VIAL,0.199242424
+228,Cefuroxime,Second-generation cephalosporins,J01DC02,Watch,Yes,n,Ceftriaxone,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.199242424
+229,Cefuroxime,Second-generation cephalosporins,J01DC02,Watch,Yes,n,Ceftriaxone,,500 mg,VIAL,INJ,P,2,g,J01DA13,0.4843,0.38,VIAL,0.199242424
+236,Chloramphenicol,Amphenicols,J01BA01,Access,Yes,n,Chloramine,,500 mg,TAB-CAP,TOP,N,NA,,,NA,0.0155,TAB-CAP,0.144444444
+246,Chloramphenicol,Amphenicols,J01BA01,Access,Yes,y,Chloramphenicol In Oil,,250 mg/ml,AMPOULE,INJ,E,3,g,J01BA01,NA,0.3302,ML,0.106060606
+247,Chloramphenicol,Amphenicols,J01BA01,Access,Yes,y,Chloramphenicol/Dexamethasone,,0.5%/0.1%,OPHT DROP,OPHT,N,NA,,S01AA20,0.0532,0.104,ML,0.16091954
+248,Chloramphenicol,Amphenicols,J01BA01,Access,Yes,y,Chlorpromazine Hcl,,50 mg,TAB-CAP,PO,C,0.3,g,N05AA01,0.0353,NA,TAB-CAP,0.191534392
+255,Ciprofloxacin,Fluoroquinolones,J01MA02,Watch,Yes,n,Levofloxacin,,250 mg,TAB-CAP,PO,T,0.5,g,J01MA12,0.1395,0.0593,TAB-CAP,0.185897436
+256,Ciprofloxacin,Fluoroquinolones,J01MA02,Watch,Yes,n,Levofloxacin,,5 mg/ml,VIAL,INJ,T,0.5,g,J01MA12,0.0071,0.0171,ML,0.185897436
+257,Ciprofloxacin,Fluoroquinolones,J01MA02,Watch,Yes,n,Levofloxacin,,500 mg,TAB-CAP,PO,C,0.5,g,J01MA12,0.0677,0.122,TAB-CAP,0.185897436
+258,Ciprofloxacin,Fluoroquinolones,J01MA02,Watch,Yes,n,Levofloxacin,,750 mg,TAB-CAP,PO,C,0.5,g,J01MA12,NA,0.4728,TAB-CAP,0.185897436
+259,Ciprofloxacin,Fluoroquinolones,J01MA02,Watch,Yes,n,Moxifloxacin,,400 mg,TAB-CAP,PO,N,0.4,g,J01MA14,1.7562,0.446,TAB-CAP,0.165811966
+260,Ciprofloxacin,Fluoroquinolones,J01MA02,Watch,Yes,n,Moxifloxacin,,5 mg/ml,SOLUTION,PO,CP,0.4,g,J01MA14,1.9036,NA,ML,0.165811966
+261,Ciprofloxacin,Fluoroquinolones,J01MA02,Watch,Yes,n,Norfloxacin,,400 mg,TAB-CAP,PO,T,0.8,g,J01MA06,NA,0.0258,TAB-CAP,0.140559441
+266,Clarithromycin,Macrolides,J01FA09,Watch,Yes,n,Mitomycin,,5 mg,VIAL,INJ,N,NA,,L01DC03,25,NA,VIAL,0.17989418
+268,Clindamycin,Lincosamides,J01FF01 ,Access,Yes,y,Clindamycin (Base),,150 mg,TAB-CAP,PO,C,0.1,g,J01FF01,0.173,0.0833,TAB-CAP,0.12962963
+269,Clindamycin,Lincosamides,J01FF01 ,Access,Yes,y,Clindamycin (Base),,150 mg/ml,VIAL,INJ,C,1.8,g,J01FF01,0.0772,0.472,ML,0.12962963
+270,Clometocillin,Penicillins ,J01CE07,Access,No,y,Cloxacillin,,5 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.0598,EACH,0.163170163
+272,Cloxacillin,Penicillins ,J01CF02,Access,Yes,y,Cloxacillin Sodium,,1 g,VIAL,INJ,T,2,g,J01CF02,NA,0.169,VIAL,0.12962963
+273,Cloxacillin,Penicillins ,J01CF02,Access,Yes,y,Cloxacillin Sodium,,125 mg/5 ml,SUSPEN,PO,T,2,g,J01CF02,0.009,0.0097,ML,0.12962963
+274,Cloxacillin,Penicillins ,J01CF02,Access,Yes,y,Cloxacillin Sodium,,250 mg,TAB-CAP,PO,T,2,g,J01CF02,0.0164,0.0204,TAB-CAP,0.12962963
+275,Cloxacillin,Penicillins ,J01CF02,Access,Yes,y,Cloxacillin Sodium,,250 mg,VIAL,INJ,T,2,g,J01CF02,0.7273,0.26,VIAL,0.12962963
+276,Cloxacillin,Penicillins ,J01CF02,Access,Yes,y,Cloxacillin Sodium,,500 mg,TAB-CAP,PO,T,2,g,J01CF02,0.0566,0.0374,TAB-CAP,0.12962963
+277,Cloxacillin,Penicillins ,J01CF02,Access,Yes,y,Cloxacillin Sodium,,500 mg,VIAL,INJ,T,2,g,J01CF02,0.6096,0.1818,VIAL,0.12962963
+278,Cloxacillin,Penicillins ,J01CF02,Access,Yes,n,Ofloxacin,,0.30%,OPHT DROP,OPHT,E,NA,,S01AX11,0.2039,NA,ML,0.195286195
+279,Cloxacillin,Penicillins ,J01CF02,Access,Yes,n,Ofloxacin,,200 mg,TAB-CAP,PO,C,0.4,g,J01MA01,NA,0.0497,TAB-CAP,0.195286195
+280,Colistin,Polymyxins,J01XB01,Reserve,Yes,n,Cisplatin,,1 mg/ml,VIAL,INJ,C,NA,,L01XA01,0.515,0.1129,ML,0.187169312
+281,Colistin,Polymyxins,J01XB01,Reserve,Yes,n,Cisplatin,,10 mg,VIAL,INJ,C,NA,,L01XA01,2.7547,0.1225,ML,0.187169312
+282,Colistin,Polymyxins,J01XB01,Reserve,Yes,n,Cisplatin,,50 mg,VIAL,INJ,C,NA,,L01XA01,7.2506,6.0465,VIAL,0.187169312
+283,Daptomycin,Lipopeptides,J01XX09,Reserve,No,n,Capreomycin,,1 g,VIAL,INJ,C,1,g,J04AB30,5.3293,4.7,VIAL,0.157575758
+284,Daptomycin,Lipopeptides,J01XX09,Reserve,No,n,Mitomycin,,5 mg,VIAL,INJ,N,NA,,L01DC03,25,NA,VIAL,0.174074074
+285,Daptomycin,Lipopeptides,J01XX09,Reserve,No,n,Natamycin,,50 mg/ml,OPHT DROP,OPHT,N,NA,,S01AA10,15.7686,NA,ML,0.174074074
+289,Dirithromycin,Macrolides,J01FA13,Watch,No,n,Azithromycin,,200 mg/5 ml,SUSPEN,PO,E,0.3,g,J01FA10,0.0314,0.06,ML,0.182478632
+290,Dirithromycin,Macrolides,J01FA13,Watch,No,n,Azithromycin,,250 mg,TAB-CAP,PO,E,0.3,g,J01FA10,0.198,0.117,TAB-CAP,0.182478632
+291,Dirithromycin,Macrolides,J01FA13,Watch,No,n,Azithromycin,,500 mg,TAB-CAP,PO,E,0.3,g,J01FA10,0.1855,0.2267,TAB-CAP,0.182478632
+292,Dirithromycin,Macrolides,J01FA13,Watch,No,n,Clarithromycin,,125 mg/5 ml,SUSPEN,PO,N,0.5,g,J01FA09,NA,0.0383,ML,0.153013653
+293,Dirithromycin,Macrolides,J01FA13,Watch,No,n,Clarithromycin,,250 mg,TAB-CAP,PO,N,0.5,g,J01FA09,0.0375,0.1429,TAB-CAP,0.153013653
+294,Dirithromycin,Macrolides,J01FA13,Watch,No,n,Clarithromycin,,250 mg/5 ml,SUSPEN,PO,N,0.5,g,J01FA09,0.0547,NA,ML,0.153013653
+295,Dirithromycin,Macrolides,J01FA13,Watch,No,n,Clarithromycin,,500 mg,TAB-CAP,PO,N,0.5,g,J01FA09,0.1393,0.255,TAB-CAP,0.153013653
+296,Dirithromycin,Macrolides,J01FA13,Watch,No,n,Erythromycin,base,125 mg/5 ml,SUSPEN,PO,E,1,g,J01FA01,NA,0.0082,ML,0.132478632
+297,Dirithromycin,Macrolides,J01FA13,Watch,No,n,Erythromycin,,15 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.06,EACH,0.132478632
+298,Dirithromycin,Macrolides,J01FA13,Watch,No,n,Erythromycin,base,250 mg,TAB-CAP,PO,E,1,g,J01FA01,0.045,0.0306,TAB-CAP,0.132478632
+299,Dirithromycin,Macrolides,J01FA13,Watch,No,n,Erythromycin,base,250 mg/5 ml,SUSPEN,PO,P,1,g,J01FA01,0.0372,0.0782,ML,0.132478632
+300,Dirithromycin,Macrolides,J01FA13,Watch,No,n,Erythromycin,,5 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.1123,EACH,0.132478632
+301,Dirithromycin,Macrolides,J01FA13,Watch,No,n,Erythromycin,base,500 mg,TAB-CAP,PO,P,1,g,J01FA01,0.0456,0.086,TAB-CAP,0.132478632
+302,Doripenem,Carbapenems,J01DH04,Watch,No,n,Imipenem,,11 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.194444444
+303,Doripenem,Carbapenems,J01DH04,Watch,No,n,Meropenem,,1 g,VIAL,INJ,N,2,g,J01DH02,8.3722,10.1,VIAL,0.195767196
+304,Doripenem,Carbapenems,J01DH04,Watch,No,n,Meropenem,,500 mg,VIAL,INJ,N,2,g,J01DH02,5.1163,NA,VIAL,0.195767196
+306,Enoxacin,Fluoroquinolones,J01MA04,Watch,No,n,Enoxaparin,,100 mg,SYRINGE,INJ,E,2,TU,B01AB05,3.4933,NA,SYRINGE,0.141666667
+307,Enoxacin,Fluoroquinolones,J01MA04,Watch,No,n,Enoxaparin,,20 mg,SYRINGE,INJ,E,2,TU,B01AB05,3.1718,NA,SYRINGE,0.141666667
+308,Enoxacin,Fluoroquinolones,J01MA04,Watch,No,n,Enoxaparin,,40 mg,SYRINGE,INJ,E,2,TU,B01AB05,2.3754,7.02,SYRINGE,0.141666667
+309,Enoxacin,Fluoroquinolones,J01MA04,Watch,No,n,Enoxaparin,,60 mg,SYRINGE,INJ,E,2,TU,B01AB05,5.2388,NA,SYRINGE,0.141666667
+310,Enoxacin,Fluoroquinolones,J01MA04,Watch,No,n,Enoxaparin,,80 mg,SYRINGE,INJ,E,2,TU,B01AB05,6.71,NA,SYRINGE,0.141666667
+311,Enoxacin,Fluoroquinolones,J01MA04,Watch,No,n,Ofloxacin,,0.30%,OPHT DROP,OPHT,E,NA,,S01AX11,0.2039,NA,ML,0.194444444
+312,Enoxacin,Fluoroquinolones,J01MA04,Watch,No,n,Ofloxacin,,200 mg,TAB-CAP,PO,C,0.4,g,J01MA01,NA,0.0497,TAB-CAP,0.194444444
+313,Eravacycline,Tetracyclines,J01AA13,Reserve,No,y,Tetracycline,,10 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.0883,EACH,0.166666667
+314,Eravacycline,Tetracyclines,J01AA13,Reserve,No,y,Tetracycline,,3%,OINTMENT,TOP,P,NA,,D06AA04,0.0137,0.0416,G,0.166666667
+321,Erythromycin,Macrolides,J01FA01,Watch,No,y,Erythromycin Lactobionate,,500 mg,VIAL,INJ,E,1,g,J01FA01,13.8,NA,VIAL,0.173333333
+322,Faropenem,Penems,J01DI03,Reserve,No,n,Meropenem,,1 g,VIAL,INJ,N,2,g,J01DH02,8.3722,10.1,VIAL,0.148148148
+323,Faropenem,Penems,J01DI03,Reserve,No,n,Meropenem,,500 mg,VIAL,INJ,N,2,g,J01DH02,5.1163,NA,VIAL,0.148148148
+324,Fleroxacin,Fluoroquinolones,J01MA08,Watch,No,n,Fluorescein,,100 mg/ml,AMPOULE,INJ,EP,NA,,S01JA01,2.2051,NA,ML,0.199242424
+325,Fleroxacin,Fluoroquinolones,J01MA08,Watch,No,n,Norfloxacin,,400 mg,TAB-CAP,PO,T,0.8,g,J01MA06,NA,0.0258,TAB-CAP,0.199242424
+326,Fleroxacin,Fluoroquinolones,J01MA08,Watch,No,n,Ofloxacin,,0.30%,OPHT DROP,OPHT,E,NA,,S01AX11,0.2039,NA,ML,0.174074074
+327,Fleroxacin,Fluoroquinolones,J01MA08,Watch,No,n,Ofloxacin,,200 mg,TAB-CAP,PO,C,0.4,g,J01MA01,NA,0.0497,TAB-CAP,0.174074074
+330,Gentamicin,Aminoglycosides,J01GB03,Access,Yes,n,Gemcitabine,,1 g,VIAL,INJ,C,NA,,L01BC05,25.2715,NA,VIAL,0.186531987
+331,Gentamicin,Aminoglycosides,J01GB03,Access,Yes,n,Gemcitabine,,200 mg,VIAL,INJ,C,NA,,L01BC05,6.2808,NA,VIAL,0.186531987
+334,Gentamicin,Aminoglycosides,J01GB03,Access,Yes,y,Gentamicin Sulfate,,10 mg/ml,AMPOULE,INJ,E,0.24,g,J01GB03,NA,0.088,ML,0.148148148
+335,Gentamicin,Aminoglycosides,J01GB03,Access,Yes,y,Gentamicin Sulfate,,40 mg/ml,AMPOULE,INJ,E,0.24,g,J01GB03,0.0616,0.06,ML,0.148148148
+336,Imipenem/cilastatin,Carbapenems,J01DH51,Watch,No,y,Imipenem,,11 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.192982456
+337,Imipenem/cilastatin,Carbapenems,J01DH51,Watch,No,y,Imipenem/Cilastatin,,500mg/500mg,VIAL,INJ,C,2,g,J01DH51,4.4177,10.22,VIAL,0.035087719
+338,Kanamycin,Aminoglycosides,J01GB04,Watch,No,y,Kanamycin Sulfate,,1 g,VIAL,INJ,C,1,g,J01GB04,1.0589,1.1714,VIAL,0.156862745
+339,Kanamycin,Aminoglycosides,J01GB04,Watch,No,n,Natamycin,,50 mg/ml,OPHT DROP,OPHT,N,NA,,S01AA10,15.7686,NA,ML,0.148148148
+340,Levofloxacin,Fluoroquinolones,J01MA12,Watch,No,n,Ciprofloxacin,,0.30%,OPHT DROP,OPHT,P,NA,,S01AX13,0.2891,0.072,ML,0.185897436
+341,Levofloxacin,Fluoroquinolones,J01MA12,Watch,No,n,Ciprofloxacin,,2 mg/ml,VIAL,INJ,P,0.5,g,J01MA02,0.0025,0.01,ML,0.185897436
+342,Levofloxacin,Fluoroquinolones,J01MA12,Watch,No,n,Ciprofloxacin,,250 mg,TAB-CAP,PO,E,1,g,J01MA02,0.026,0.0212,TAB-CAP,0.185897436
+343,Levofloxacin,Fluoroquinolones,J01MA12,Watch,No,n,Ciprofloxacin,,250 mg/5 ml,SUSPEN,PO,E,1,g,J01MA02,0.1282,NA,ML,0.185897436
+344,Levofloxacin,Fluoroquinolones,J01MA12,Watch,No,n,Ciprofloxacin,,5 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,0.0859,EACH,0.185897436
+345,Levofloxacin,Fluoroquinolones,J01MA12,Watch,No,n,Ciprofloxacin,,500 mg,TAB-CAP,PO,P,1,g,J01MA02,0.0269,0.0373,TAB-CAP,0.185897436
+350,Levofloxacin,Fluoroquinolones,J01MA12,Watch,No,n,Norfloxacin,,400 mg,TAB-CAP,PO,T,0.8,g,J01MA06,NA,0.0258,TAB-CAP,0.143939394
+351,Lincomycin,Macrolides,J01FF02,Watch,No,n,Dactinomycin,,500 mcg,VIAL,INJ,C,NA,,L01DA01,8.7021,NA,VIAL,0.172222222
+352,Lincomycin,Macrolides,J01FF02,Watch,No,n,Spectinomycin,,2 g,VIAL,INJ,E,3,g,J01XX04,NA,4.85,VIAL,0.191452991
+353,Lincomycin,Macrolides,J01FF02,Watch,No,n,Vancomycin,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.133333333
+354,Lincomycin,Macrolides,J01FF02,Watch,No,n,Vancomycin,,500 mg,VIAL,INJ,N,2,g,J01XA01,1.907,NA,VIAL,0.133333333
+357,Lomefloxacin,Fluoroquinolones,J01MA07,Watch,No,n,Ciprofloxacin,,0.30%,OPHT DROP,OPHT,P,NA,,S01AX13,0.2891,0.072,ML,0.185897436
+358,Lomefloxacin,Fluoroquinolones,J01MA07,Watch,No,n,Ciprofloxacin,,2 mg/ml,VIAL,INJ,P,0.5,g,J01MA02,0.0025,0.01,ML,0.185897436
+359,Lomefloxacin,Fluoroquinolones,J01MA07,Watch,No,n,Ciprofloxacin,,250 mg,TAB-CAP,PO,E,1,g,J01MA02,0.026,0.0212,TAB-CAP,0.185897436
+360,Lomefloxacin,Fluoroquinolones,J01MA07,Watch,No,n,Ciprofloxacin,,250 mg/5 ml,SUSPEN,PO,E,1,g,J01MA02,0.1282,NA,ML,0.185897436
+361,Lomefloxacin,Fluoroquinolones,J01MA07,Watch,No,n,Ciprofloxacin,,5 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,0.0859,EACH,0.185897436
+362,Lomefloxacin,Fluoroquinolones,J01MA07,Watch,No,n,Ciprofloxacin,,500 mg,TAB-CAP,PO,P,1,g,J01MA02,0.0269,0.0373,TAB-CAP,0.185897436
+363,Lomefloxacin,Fluoroquinolones,J01MA07,Watch,No,n,Levofloxacin,,250 mg,TAB-CAP,PO,T,0.5,g,J01MA12,0.1395,0.0593,TAB-CAP,0.085858586
+364,Lomefloxacin,Fluoroquinolones,J01MA07,Watch,No,n,Levofloxacin,,5 mg/ml,VIAL,INJ,T,0.5,g,J01MA12,0.0071,0.0171,ML,0.085858586
+365,Lomefloxacin,Fluoroquinolones,J01MA07,Watch,No,n,Levofloxacin,,500 mg,TAB-CAP,PO,C,0.5,g,J01MA12,0.0677,0.122,TAB-CAP,0.085858586
+366,Lomefloxacin,Fluoroquinolones,J01MA07,Watch,No,n,Levofloxacin,,750 mg,TAB-CAP,PO,C,0.5,g,J01MA12,NA,0.4728,TAB-CAP,0.085858586
+367,Lomefloxacin,Fluoroquinolones,J01MA07,Watch,No,n,Norfloxacin,,400 mg,TAB-CAP,PO,T,0.8,g,J01MA06,NA,0.0258,TAB-CAP,0.143939394
+368,Lymecycline,Tetracyclines,J01AA04,Watch,No,n,Doxycycline,,100 mg,TAB-CAP,PO,C,0.1,g,J01AA02,0.0192,0.0133,TAB-CAP,0.181818182
+369,Lymecycline,Tetracyclines,J01AA04,Watch,No,n,Oxytetracycline,,3%,OPHT OINT,OPHT,N,NA,,S01AA04,NA,0.0451,G,0.193939394
+372,Meropenem-vaborbactam,Carbapenems,J01DH52,Reserve,Yes,n,Meropenem,,1 g,VIAL,INJ,N,2,g,J01DH02,8.3722,10.1,VIAL,0.19047619
+373,Meropenem-vaborbactam,Carbapenems,J01DH52,Reserve,Yes,n,Meropenem,,500 mg,VIAL,INJ,N,2,g,J01DH02,5.1163,NA,VIAL,0.19047619
+374,Metacycline,Tetracyclines,J01AA05,Watch,No,n,Tetracycline,,10 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.0883,EACH,0.085858586
+375,Metacycline,Tetracyclines,J01AA05,Watch,No,n,Tetracycline,,3%,OINTMENT,TOP,P,NA,,D06AA04,0.0137,0.0416,G,0.085858586
+376,Metacycline,Tetracyclines,J01AA05,Watch,No,n,Tetracycline HCl,,1%,OPHT OINT,OPHT,E,NA,,S01AA09,0.1294,0.0457,G,0.15530303
+377,Metacycline,Tetracyclines,J01AA05,Watch,No,n,Tetracycline HCl,,1%,OINTMENT,TOP,P,NA,,D06AA04,NA,0.0512,G,0.15530303
+378,Metacycline,Tetracyclines,J01AA05,Watch,No,n,Tetracycline HCl,,250 mg,TAB-CAP,PO,P,1,g,J01AA07,0.0222,0.015,TAB-CAP,0.15530303
+379,Metronidazole (IV),Imidazoles,J01XD01,Access,Yes,n,Metronidazole,,1 g,SUPPOS,RECT,E,2,g,P01AB01,0.694,0.43,SUPP,0.092592593
+380,Metronidazole (IV),Imidazoles,J01XD01,Access,Yes,n,Metronidazole,,125 mg/5 ml,SYRUP,PO,P,1.5,g,P01AB01,NA,0.0058,ML,0.092592593
+381,Metronidazole (IV),Imidazoles,J01XD01,Access,Yes,n,Metronidazole,,200 mg/5 ml,SYRUP,PO,E,1.5,g,P01AB01,0.0103,0.0054,ML,0.092592593
+382,Metronidazole (IV),Imidazoles,J01XD01,Access,Yes,n,Metronidazole,,200-250 mg,TAB-CAP,PO,E,1.5,g,P01AB01,0.0067,0.0061,TAB-CAP,0.092592593
+383,Metronidazole (IV),Imidazoles,J01XD01,Access,Yes,n,Metronidazole,,400-500 mg,TAB-CAP,PO,E,1.5,g,P01AB01,0.0157,0.0118,TAB-CAP,0.092592593
+384,Metronidazole (IV),Imidazoles,J01XD01,Access,Yes,y,Metronidazole,,5 mg/ml,VIAL,INJ,E,1.5,g,J01XD01,0.0039,0.005,ML,0.092592593
+385,Metronidazole (IV),Imidazoles,J01XD01,Access,Yes,n,Metronidazole,,500 mg,PESSARY,VAG,P,0.5,g,G01AF01,NA,0.0334,PESS,0.092592593
+386,Metronidazole (IV),Imidazoles,J01XD01,Access,Yes,n,Metronidazole,,500 mg,SUPPOS,RECT,E,2,g,P01AB01,0.2326,NA,SUPP,0.092592593
+387,Metronidazole (oral),Imidazoles,P01AB01,Access,Yes,n,Metronidazole,,1 g,SUPPOS,RECT,E,2,g,P01AB01,0.694,0.43,SUPP,0.116666667
+388,Metronidazole (oral),Imidazoles,P01AB01,Access,Yes,n,Metronidazole,,125 mg/5 ml,SYRUP,PO,P,1.5,g,P01AB01,NA,0.0058,ML,0.116666667
+389,Metronidazole (oral),Imidazoles,P01AB01,Access,Yes,n,Metronidazole,,200 mg/5 ml,SYRUP,PO,E,1.5,g,P01AB01,0.0103,0.0054,ML,0.116666667
+390,Metronidazole (oral),Imidazoles,P01AB01,Access,Yes,y,Metronidazole,,200-250 mg,TAB-CAP,PO,E,1.5,g,P01AB01,0.0067,0.0061,TAB-CAP,0.116666667
+391,Metronidazole (oral),Imidazoles,P01AB01,Access,Yes,y,Metronidazole,,400-500 mg,TAB-CAP,PO,E,1.5,g,P01AB01,0.0157,0.0118,TAB-CAP,0.116666667
+392,Metronidazole (oral),Imidazoles,P01AB01,Access,Yes,n,Metronidazole,,5 mg/ml,VIAL,INJ,E,1.5,g,J01XD01,0.0039,0.005,ML,0.116666667
+393,Metronidazole (oral),Imidazoles,P01AB01,Access,Yes,n,Metronidazole,,500 mg,PESSARY,VAG,P,0.5,g,G01AF01,NA,0.0334,PESS,0.116666667
+394,Metronidazole (oral),Imidazoles,P01AB01,Access,Yes,n,Metronidazole,,500 mg,SUPPOS,RECT,E,2,g,P01AB01,0.2326,NA,SUPP,0.116666667
+395,Mezlocillin,Penicillins ,J01CA10,Watch,No,n,Cloxacillin,,5 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.0598,EACH,0.181818182
+396,Moxifloxacin,Fluoroquinolones,J01MA14,Watch,No,n,Ciprofloxacin,,0.30%,OPHT DROP,OPHT,P,NA,,S01AX13,0.2891,0.072,ML,0.165811966
+397,Moxifloxacin,Fluoroquinolones,J01MA14,Watch,No,n,Ciprofloxacin,,2 mg/ml,VIAL,INJ,P,0.5,g,J01MA02,0.0025,0.01,ML,0.165811966
+398,Moxifloxacin,Fluoroquinolones,J01MA14,Watch,No,n,Ciprofloxacin,,250 mg,TAB-CAP,PO,E,1,g,J01MA02,0.026,0.0212,TAB-CAP,0.165811966
+399,Moxifloxacin,Fluoroquinolones,J01MA14,Watch,No,n,Ciprofloxacin,,250 mg/5 ml,SUSPEN,PO,E,1,g,J01MA02,0.1282,NA,ML,0.165811966
+400,Moxifloxacin,Fluoroquinolones,J01MA14,Watch,No,n,Ciprofloxacin,,5 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,0.0859,EACH,0.165811966
+401,Moxifloxacin,Fluoroquinolones,J01MA14,Watch,No,n,Ciprofloxacin,,500 mg,TAB-CAP,PO,P,1,g,J01MA02,0.0269,0.0373,TAB-CAP,0.165811966
+404,Nafcillin,Penicillins ,J01CF06,Access,No,n,Oxacillin,,1 g,VIAL,INJ,T,2,g,J01CF04,0.3542,NA,VIAL,0.148148148
+405,Nafcillin,Penicillins ,J01CF06,Access,No,n,Oxacillin,,1 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,0.1336,EACH,0.148148148
+406,Nafcillin,Penicillins ,J01CF06,Access,No,n,Oxacillin,,500 mg,AMPOULE,INJ,N,2,g,J01CF04,0.2357,NA,VIAL,0.148148148
+407,Neomycin,Aminoglycosides,J01GB05,Watch,No,n,Bleomycin,,15 IU,VIAL,INJ,C,NA,,L01DC01,12.321,12.15,VIAL,0.115740741
+408,Neomycin,Aminoglycosides,J01GB05,Watch,No,n,Capreomycin,,1 g,VIAL,INJ,C,1,g,J04AB30,5.3293,4.7,VIAL,0.162878788
+409,Neomycin,Aminoglycosides,J01GB05,Watch,No,n,Mitomycin,,5 mg,VIAL,INJ,N,NA,,L01DC03,25,NA,VIAL,0.194444444
+410,Neomycin,Aminoglycosides,J01GB05,Watch,No,n,Natamycin,,50 mg/ml,OPHT DROP,OPHT,N,NA,,S01AA10,15.7686,NA,ML,0.194444444
+411,Neomycin,Aminoglycosides,J01GB05,Watch,No,y,Neomycin/Bacitracin,,5mg/500IU/g,OINTMENT,TOP,N,NA,,D06AX04,NA,0.0433,G,0.192982456
+416,Nitrofurantoin,Nitrofurantoin,J01XE01,Access,Yes,n,Nitrofurazone,,0.20%,OINTMENT,TOP,N,NA,,D08AF,0.0181,NA,G,0.153013653
+417,Norfloxacin,Fluoroquinolones,J01MA06,Watch,No,n,Ciprofloxacin,,0.30%,OPHT DROP,OPHT,P,NA,,S01AX13,0.2891,0.072,ML,0.140559441
+418,Norfloxacin,Fluoroquinolones,J01MA06,Watch,No,n,Ciprofloxacin,,2 mg/ml,VIAL,INJ,P,0.5,g,J01MA02,0.0025,0.01,ML,0.140559441
+419,Norfloxacin,Fluoroquinolones,J01MA06,Watch,No,n,Ciprofloxacin,,250 mg,TAB-CAP,PO,E,1,g,J01MA02,0.026,0.0212,TAB-CAP,0.140559441
+420,Norfloxacin,Fluoroquinolones,J01MA06,Watch,No,n,Ciprofloxacin,,250 mg/5 ml,SUSPEN,PO,E,1,g,J01MA02,0.1282,NA,ML,0.140559441
+421,Norfloxacin,Fluoroquinolones,J01MA06,Watch,No,n,Ciprofloxacin,,5 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,0.0859,EACH,0.140559441
+422,Norfloxacin,Fluoroquinolones,J01MA06,Watch,No,n,Ciprofloxacin,,500 mg,TAB-CAP,PO,P,1,g,J01MA02,0.0269,0.0373,TAB-CAP,0.140559441
+423,Norfloxacin,Fluoroquinolones,J01MA06,Watch,No,n,Levofloxacin,,250 mg,TAB-CAP,PO,T,0.5,g,J01MA12,0.1395,0.0593,TAB-CAP,0.143939394
+424,Norfloxacin,Fluoroquinolones,J01MA06,Watch,No,n,Levofloxacin,,5 mg/ml,VIAL,INJ,T,0.5,g,J01MA12,0.0071,0.0171,ML,0.143939394
+425,Norfloxacin,Fluoroquinolones,J01MA06,Watch,No,n,Levofloxacin,,500 mg,TAB-CAP,PO,C,0.5,g,J01MA12,0.0677,0.122,TAB-CAP,0.143939394
+426,Norfloxacin,Fluoroquinolones,J01MA06,Watch,No,n,Levofloxacin,,750 mg,TAB-CAP,PO,C,0.5,g,J01MA12,NA,0.4728,TAB-CAP,0.143939394
+428,Norfloxacin,Fluoroquinolones,J01MA06,Watch,No,n,Ofloxacin,,0.30%,OPHT DROP,OPHT,E,NA,,S01AX11,0.2039,NA,ML,0.190446128
+429,Norfloxacin,Fluoroquinolones,J01MA06,Watch,No,n,Ofloxacin,,200 mg,TAB-CAP,PO,C,0.4,g,J01MA01,NA,0.0497,TAB-CAP,0.190446128
+430,Ofloxacin,Fluoroquinolones,J01MA01,Watch,No,n,Cloxacillin,,5 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.0598,EACH,0.195286195
+431,Ofloxacin,Fluoroquinolones,J01MA01,Watch,No,n,Norfloxacin,,400 mg,TAB-CAP,PO,T,0.8,g,J01MA06,NA,0.0258,TAB-CAP,0.190446128
+434,Oleandomycin,Macrolides,J01FA05,Watch,No,n,Clindamycin,,300 mg,TAB-CAP,PO,P,1.2,g,J01FF01,0.0867,0.1,TAB-CAP,0.199494949
+435,Oleandomycin,Macrolides,J01FA05,Watch,No,n,Vancomycin,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.177777778
+436,Oleandomycin,Macrolides,J01FA05,Watch,No,n,Vancomycin,,500 mg,VIAL,INJ,N,2,g,J01XA01,1.907,NA,VIAL,0.177777778
+440,Oxacillin,Penicillins ,J01CF04,Access,No,n,Oxaliplatin,,100 mg,VIAL,INJ,C,NA,,L01XA03,74.7676,NA,VIAL,0.169612795
+441,Oxacillin,Penicillins ,J01CF04,Access,No,n,Oxaliplatin,,50 mg,VIAL,INJ,C,NA,,L01XA03,28.8821,NA,VIAL,0.169612795
+443,Oxytetracycline,Tetracyclines,J01AA06,Watch,No,y,Tetracycline,,10 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.0883,EACH,0.192424242
+444,Oxytetracycline,Tetracyclines,J01AA06,Watch,No,y,Tetracycline,,3%,OINTMENT,TOP,P,NA,,D06AA04,0.0137,0.0416,G,0.192424242
+445,Pefloxacin,Fluoroquinolones,J01MA03,Watch,No,n,Levofloxacin,,250 mg,TAB-CAP,PO,T,0.5,g,J01MA12,0.1395,0.0593,TAB-CAP,0.172222222
+446,Pefloxacin,Fluoroquinolones,J01MA03,Watch,No,n,Levofloxacin,,5 mg/ml,VIAL,INJ,T,0.5,g,J01MA12,0.0071,0.0171,ML,0.172222222
+447,Pefloxacin,Fluoroquinolones,J01MA03,Watch,No,n,Levofloxacin,,500 mg,TAB-CAP,PO,C,0.5,g,J01MA12,0.0677,0.122,TAB-CAP,0.172222222
+448,Pefloxacin,Fluoroquinolones,J01MA03,Watch,No,n,Levofloxacin,,750 mg,TAB-CAP,PO,C,0.5,g,J01MA12,NA,0.4728,TAB-CAP,0.172222222
+449,Pefloxacin,Fluoroquinolones,J01MA03,Watch,No,n,Ofloxacin,,0.30%,OPHT DROP,OPHT,E,NA,,S01AX11,0.2039,NA,ML,0.103703704
+450,Pefloxacin,Fluoroquinolones,J01MA03,Watch,No,n,Ofloxacin,,200 mg,TAB-CAP,PO,C,0.4,g,J01MA01,NA,0.0497,TAB-CAP,0.103703704
+451,Penamecillin,Penicillins ,J01CE06,Access,No,n,Penicillamine,,250 mg,TAB-CAP,PO,C,0.5,g,M01CC01,0.5329,NA,TAB-CAP,0.16996892
+452,Pheneticillin,Penicillins ,J01CE05,Watch,No,n,Penicillamine,,250 mg,TAB-CAP,PO,C,0.5,g,M01CC01,0.5329,NA,TAB-CAP,0.153846154
+453,Pheneticillin,Penicillins ,J01CE05,Watch,No,n,Penicillin G,,10 units,DISC,DIAG,N,NA,,V07AR,0.0173,0.0909,EACH,0.132478632
+454,Piperacillin,Penicillins ,J01CA12,Watch,No,n,Piperacillin+Tazobactam,,4 g+500 mg,VIAL,INJ,N,14,g,J01CR05,3.5268,NA,VIAL,0.15942029
+455,Piperacillin/tazobactam,Beta lactam - beta lactamase inhibitor (anti-pseudomonal),J01CR05,Watch,Yes,y,Piperacillin+Tazobactam,,4 g+500 mg,VIAL,INJ,N,14,g,J01CR05,3.5268,NA,VIAL,0.11352657
+456,Pivampicillin,Penicillins ,J01CA02,Access,No,n,Rifampicin,,100 mg/5 ml,SYRUP,PO,P,0.6,g,J04AB02,0.1119,NA,ML,0.194871795
+457,Pivampicillin,Penicillins ,J01CA02,Access,No,n,Rifampicin,,150 mg,TAB-CAP,PO,E,0.6,g,J04AB02,0.0624,0.21,TAB-CAP,0.194871795
+458,Pivampicillin,Penicillins ,J01CA02,Access,No,n,Rifampicin,,300 mg,TAB-CAP,PO,E,0.6,g,J04AB02,0.0974,0.085,TAB-CAP,0.194871795
+459,Pivmecillinam,Penicillins ,J01CA08,Access,No,n,Penicillamine,,250 mg,TAB-CAP,PO,C,0.5,g,M01CC01,0.5329,NA,TAB-CAP,0.193473193
+460,Ribostamycin,Aminoglycosides,J01GB10,Watch,No,n,Mitomycin,,5 mg,VIAL,INJ,N,NA,,L01DC03,25,NA,VIAL,0.189814815
+465,Rifampicin,Rifamycins,J04AB02,Watch,No,y,Rifampicin/Isoniazid,,150/75 mg,TAB-CAP,PO,E,NA,,J04AM02,0.0572,0.0331,TAB-CAP,0.166666667
+466,Rifampicin,Rifamycins,J04AB02,Watch,No,y,Rifampicin/Isoniazid,,150mg/150mg,TAB-CAP,PO,E,NA,,J04AM02,NA,0.0349,TAB-CAP,0.166666667
+467,Rifampicin,Rifamycins,J04AB02,Watch,No,y,Rifampicin/Isoniazid,,300/150 mg,TAB-CAP,PO,E,2,TAB,J04AM02,0.0709,0.116,TAB-CAP,0.166666667
+468,Rifampicin,Rifamycins,J04AB02,Watch,No,y,Rifampicin/Isoniazid,dispersible,60 mg/30 mg,TAB-CAP,PO,E,NA,,J04AM02,NA,0.0158,TAB-CAP,0.166666667
+469,Rifampicin,Rifamycins,J04AB02,Watch,No,y,Rifampicin/Isoniazid,dispersible,60 mg/60 mg,TAB-CAP,PO,E,NA,,J04AM02,0.0443,NA,TAB-CAP,0.166666667
+470,Rifamycin,Rifamycins,J04AB03,Watch,No,n,Clindamycin,,300 mg,TAB-CAP,PO,P,1.2,g,J01FF01,0.0867,0.1,TAB-CAP,0.195286195
+471,Rifamycin,Rifamycins,J04AB03,Watch,No,y,Rifampicin,,100 mg/5 ml,SYRUP,PO,P,0.6,g,J04AB02,0.1119,NA,ML,0.14537037
+472,Rifamycin,Rifamycins,J04AB03,Watch,No,y,Rifampicin,,150 mg,TAB-CAP,PO,E,0.6,g,J04AB02,0.0624,0.21,TAB-CAP,0.14537037
+473,Rifamycin,Rifamycins,J04AB03,Watch,No,y,Rifampicin,,300 mg,TAB-CAP,PO,E,0.6,g,J04AB02,0.0974,0.085,TAB-CAP,0.14537037
+474,Rifaximin,Rifamycins,A07AA11,Watch,No,y,Rifampicin,,100 mg/5 ml,SYRUP,PO,P,0.6,g,J04AB02,0.1119,NA,ML,0.14537037
+475,Rifaximin,Rifamycins,A07AA11,Watch,No,y,Rifampicin,,150 mg,TAB-CAP,PO,E,0.6,g,J04AB02,0.0624,0.21,TAB-CAP,0.14537037
+476,Rifaximin,Rifamycins,A07AA11,Watch,No,y,Rifampicin,,300 mg,TAB-CAP,PO,E,0.6,g,J04AB02,0.0974,0.085,TAB-CAP,0.14537037
+477,Rufloxacin,Fluoroquinolones,J01MA10,Watch,No,n,Ofloxacin,,0.30%,OPHT DROP,OPHT,E,NA,,S01AX11,0.2039,NA,ML,0.103703704
+478,Rufloxacin,Fluoroquinolones,J01MA10,Watch,No,n,Ofloxacin,,200 mg,TAB-CAP,PO,C,0.4,g,J01MA01,NA,0.0497,TAB-CAP,0.103703704
+479,Sparfloxacin,Fluoroquinolones,J01MA09,Watch,No,n,Ciprofloxacin,,0.30%,OPHT DROP,OPHT,P,NA,,S01AX13,0.2891,0.072,ML,0.182478632
+480,Sparfloxacin,Fluoroquinolones,J01MA09,Watch,No,n,Ciprofloxacin,,2 mg/ml,VIAL,INJ,P,0.5,g,J01MA02,0.0025,0.01,ML,0.182478632
+481,Sparfloxacin,Fluoroquinolones,J01MA09,Watch,No,n,Ciprofloxacin,,250 mg,TAB-CAP,PO,E,1,g,J01MA02,0.026,0.0212,TAB-CAP,0.182478632
+482,Sparfloxacin,Fluoroquinolones,J01MA09,Watch,No,n,Ciprofloxacin,,250 mg/5 ml,SUSPEN,PO,E,1,g,J01MA02,0.1282,NA,ML,0.182478632
+483,Sparfloxacin,Fluoroquinolones,J01MA09,Watch,No,n,Ciprofloxacin,,5 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,0.0859,EACH,0.182478632
+484,Sparfloxacin,Fluoroquinolones,J01MA09,Watch,No,n,Ciprofloxacin,,500 mg,TAB-CAP,PO,P,1,g,J01MA02,0.0269,0.0373,TAB-CAP,0.182478632
+485,Sparfloxacin,Fluoroquinolones,J01MA09,Watch,No,n,Norfloxacin,,400 mg,TAB-CAP,PO,T,0.8,g,J01MA06,NA,0.0258,TAB-CAP,0.199494949
+486,Spectinomycin,Aminocyclitols,J01XX04,Access,Yes,n,Dactinomycin,,500 mcg,VIAL,INJ,C,NA,,L01DA01,8.7021,NA,VIAL,0.132478632
+488,Streptomycin,Aminoglycosides,J01GA01,Watch,No,n,Capreomycin,,1 g,VIAL,INJ,C,1,g,J04AB30,5.3293,4.7,VIAL,0.199494949
+489,Streptomycin,Aminoglycosides,J01GA01,Watch,No,n,Streptokinase,powder,"1,500,000 IU",VIAL,INJ,C,1.5,MU,B01AD01,38.5596,NA,VIAL,0.185897436
+490,Streptomycin,Aminoglycosides,J01GA01,Watch,No,y,Streptomycin Sulfate,,1 g,VIAL,INJ,E,1,g,J01GA01,0.2916,0.3514,VIAL,0.133333333
+491,Streptomycin,Aminoglycosides,J01GA01,Watch,No,y,Streptomycin Sulfate,,5 g,VIAL,INJ,P,1,g,J01GA01,1.8384,NA,VIAL,0.133333333
+492,Sulfadiazine/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE02,Access,No,n,Sulfadiazine,,500 mg,TAB-CAP,PO,E,0.6,g,J01EC02,0.18,0.0537,TAB-CAP,0.173333333
+493,Sulfamethizole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EB02,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,100 mg/20 mg,TAB-CAP,PO,E,NA,,J01EE01,NA,0.0049,TAB-CAP,0.13066837
+494,Sulfamethizole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EB02,Access,No,y,Sulfamethoxazole/Trimethoprim,dispersible,100 mg/20 mg,TAB-CAP,PO,E,NA,,J01EE01,NA,0.0087,TAB-CAP,0.13066837
+495,Sulfamethizole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EB02,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,200 mg/40 mg,TAB-CAP,PO,P,NA,,J01EE01,NA,0.0117,TAB-CAP,0.13066837
+496,Sulfamethizole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EB02,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,200/40mg/5ml,SUSPEN,PO,E,NA,,J01EE01,0.0042,0.0048,ML,0.13066837
+497,Sulfamethizole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EB02,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,25 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.0934,EACH,0.13066837
+498,Sulfamethizole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EB02,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,400 mg/80 mg,TAB-CAP,PO,E,NA,,J01EE01,0.0116,0.012,TAB-CAP,0.13066837
+499,Sulfamethizole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EB02,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,80/16 mg/ml,AMPOULE,INJ,E,NA,,J01EE01,NA,0.3825,ML,0.13066837
+500,Sulfamethizole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EB02,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,800 mg/160mg,TAB-CAP,PO,P,NA,,J01EE01,0.0314,0.0241,TAB-CAP,0.13066837
+501,Sulfamethoxazole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE01,Access,Yes,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,100 mg/20 mg,TAB-CAP,PO,E,NA,,J01EE01,NA,0.0049,TAB-CAP,0.052750411
+502,Sulfamethoxazole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE01,Access,Yes,y,Sulfamethoxazole/Trimethoprim,dispersible,100 mg/20 mg,TAB-CAP,PO,E,NA,,J01EE01,NA,0.0087,TAB-CAP,0.052750411
+503,Sulfamethoxazole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE01,Access,Yes,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,200 mg/40 mg,TAB-CAP,PO,P,NA,,J01EE01,NA,0.0117,TAB-CAP,0.052750411
+504,Sulfamethoxazole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE01,Access,Yes,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,200/40mg/5ml,SUSPEN,PO,E,NA,,J01EE01,0.0042,0.0048,ML,0.052750411
+505,Sulfamethoxazole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE01,Access,Yes,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,25 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.0934,EACH,0.052750411
+506,Sulfamethoxazole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE01,Access,Yes,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,400 mg/80 mg,TAB-CAP,PO,E,NA,,J01EE01,0.0116,0.012,TAB-CAP,0.052750411
+507,Sulfamethoxazole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE01,Access,Yes,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,80/16 mg/ml,AMPOULE,INJ,E,NA,,J01EE01,NA,0.3825,ML,0.052750411
+508,Sulfamethoxazole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE01,Access,Yes,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,800 mg/160mg,TAB-CAP,PO,P,NA,,J01EE01,0.0314,0.0241,TAB-CAP,0.052750411
+509,Sulfametrole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE03,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,100 mg/20 mg,TAB-CAP,PO,E,NA,,J01EE01,NA,0.0049,TAB-CAP,0.153603198
+510,Sulfametrole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE03,Access,No,y,Sulfamethoxazole/Trimethoprim,dispersible,100 mg/20 mg,TAB-CAP,PO,E,NA,,J01EE01,NA,0.0087,TAB-CAP,0.153603198
+511,Sulfametrole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE03,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,200 mg/40 mg,TAB-CAP,PO,P,NA,,J01EE01,NA,0.0117,TAB-CAP,0.153603198
+512,Sulfametrole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE03,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,200/40mg/5ml,SUSPEN,PO,E,NA,,J01EE01,0.0042,0.0048,ML,0.153603198
+513,Sulfametrole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE03,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,25 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.0934,EACH,0.153603198
+514,Sulfametrole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE03,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,400 mg/80 mg,TAB-CAP,PO,E,NA,,J01EE01,0.0116,0.012,TAB-CAP,0.153603198
+515,Sulfametrole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE03,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,80/16 mg/ml,AMPOULE,INJ,E,NA,,J01EE01,NA,0.3825,ML,0.153603198
+516,Sulfametrole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE03,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,800 mg/160mg,TAB-CAP,PO,P,NA,,J01EE01,0.0314,0.0241,TAB-CAP,0.153603198
+517,Sulfamoxole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE04,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,100 mg/20 mg,TAB-CAP,PO,E,NA,,J01EE01,NA,0.0049,TAB-CAP,0.147749042
+518,Sulfamoxole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE04,Access,No,y,Sulfamethoxazole/Trimethoprim,dispersible,100 mg/20 mg,TAB-CAP,PO,E,NA,,J01EE01,NA,0.0087,TAB-CAP,0.147749042
+519,Sulfamoxole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE04,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,200 mg/40 mg,TAB-CAP,PO,P,NA,,J01EE01,NA,0.0117,TAB-CAP,0.147749042
+520,Sulfamoxole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE04,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,200/40mg/5ml,SUSPEN,PO,E,NA,,J01EE01,0.0042,0.0048,ML,0.147749042
+521,Sulfamoxole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE04,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,25 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.0934,EACH,0.147749042
+522,Sulfamoxole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE04,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,400 mg/80 mg,TAB-CAP,PO,E,NA,,J01EE01,0.0116,0.012,TAB-CAP,0.147749042
+523,Sulfamoxole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE04,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,80/16 mg/ml,AMPOULE,INJ,E,NA,,J01EE01,NA,0.3825,ML,0.147749042
+524,Sulfamoxole/trimethoprim,Trimethoprim - sulfonamide combinations,J01EE04,Access,No,y,Sulfamethoxazole/Trimethoprim,co-trimoxazole,800 mg/160mg,TAB-CAP,PO,P,NA,,J01EE01,0.0314,0.0241,TAB-CAP,0.147749042
+525,Tedizolid,Oxazolidinones,J01XX11,Reserve,No,n,Linezolid,,2 mg/ml,VIAL,INJ,C,1.2,g,J01XX08,0.7943,NA,ML,0.195767196
+526,Tedizolid,Oxazolidinones,J01XX11,Reserve,No,n,Linezolid,,600 mg,TAB-CAP,PO,C,1.2,g,J01XX08,NA,5.48,TAB-CAP,0.195767196
+527,Telithromycin,Macrolides,J01FA15,Watch,No,n,Azithromycin,,200 mg/5 ml,SUSPEN,PO,E,0.3,g,J01FA10,0.0314,0.06,ML,0.132478632
+528,Telithromycin,Macrolides,J01FA15,Watch,No,n,Azithromycin,,250 mg,TAB-CAP,PO,E,0.3,g,J01FA10,0.198,0.117,TAB-CAP,0.132478632
+529,Telithromycin,Macrolides,J01FA15,Watch,No,n,Azithromycin,,500 mg,TAB-CAP,PO,E,0.3,g,J01FA10,0.1855,0.2267,TAB-CAP,0.132478632
+530,Telithromycin,Macrolides,J01FA15,Watch,No,n,Clarithromycin,,125 mg/5 ml,SUSPEN,PO,N,0.5,g,J01FA09,NA,0.0383,ML,0.183316683
+531,Telithromycin,Macrolides,J01FA15,Watch,No,n,Clarithromycin,,250 mg,TAB-CAP,PO,N,0.5,g,J01FA09,0.0375,0.1429,TAB-CAP,0.183316683
+532,Telithromycin,Macrolides,J01FA15,Watch,No,n,Clarithromycin,,250 mg/5 ml,SUSPEN,PO,N,0.5,g,J01FA09,0.0547,NA,ML,0.183316683
+533,Telithromycin,Macrolides,J01FA15,Watch,No,n,Clarithromycin,,500 mg,TAB-CAP,PO,N,0.5,g,J01FA09,0.1393,0.255,TAB-CAP,0.183316683
+534,Telithromycin,Macrolides,J01FA15,Watch,No,n,Mitomycin,,5 mg,VIAL,INJ,N,NA,,L01DC03,25,NA,VIAL,0.165242165
+535,Tetracycline,Tetracyclines,J01AA07,Access,No,n,Oxytetracycline,,3%,OPHT OINT,OPHT,N,NA,,S01AA04,NA,0.0451,G,0.192424242
+536,Tetracycline,Tetracyclines,J01AA07,Access,No,n,Tetracaine,,0.50%,OPHT DROP,OPHT,E,NA,,S01HA03,NA,0.1413,ML,0.116666667
+539,Tetracycline,Tetracyclines,J01AA07,Access,No,y,Tetracycline HCl,,1%,OPHT OINT,OPHT,E,NA,,S01AA09,0.1294,0.0457,G,0.083333333
+540,Tetracycline,Tetracyclines,J01AA07,Access,No,y,Tetracycline HCl,,1%,OINTMENT,TOP,P,NA,,D06AA04,NA,0.0512,G,0.083333333
+541,Tetracycline,Tetracyclines,J01AA07,Access,No,y,Tetracycline HCl,,250 mg,TAB-CAP,PO,P,1,g,J01AA07,0.0222,0.015,TAB-CAP,0.083333333
+542,Thiamphenicol,Amphenicols,J01BA02,Access,No,n,Chloramphenicol,,0.50%,OPHT DROP,OPHT,P,NA,,S01AA01,0.0555,0.065,ML,0.14017094
+543,Thiamphenicol,Amphenicols,J01BA02,Access,No,n,Chloramphenicol,base,1 g,VIAL,INJ,E,3,g,J01BA01,0.5846,0.4661,VIAL,0.14017094
+544,Thiamphenicol,Amphenicols,J01BA02,Access,No,n,Chloramphenicol,,1%,OPHT OINT,OPHT,P,NA,,S01AA01,0.1574,0.0457,G,0.14017094
+545,Thiamphenicol,Amphenicols,J01BA02,Access,No,n,Chloramphenicol,,10 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.0695,EACH,0.14017094
+546,Thiamphenicol,Amphenicols,J01BA02,Access,No,n,Chloramphenicol,,125 mg/5 ml,SUSPEN,PO,P,3,g,J01BA01,NA,0.0078,ML,0.14017094
+547,Thiamphenicol,Amphenicols,J01BA02,Access,No,n,Chloramphenicol,,250 mg,TAB-CAP,PO,E,3,g,J01BA01,0.09,0.0264,TAB-CAP,0.14017094
+548,Thiamphenicol,Amphenicols,J01BA02,Access,No,n,Chloramphenicol,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.14017094
+549,Thiamphenicol,Amphenicols,J01BA02,Access,No,n,Chloramphenicol,,5%,OTIC DROP,OTIC,P,NA,,S02AA01,0.1417,0.044,ML,0.14017094
+550,Thiamphenicol,Amphenicols,J01BA02,Access,No,n,Chloramphenicol,,500 mg,TAB-CAP,PO,P,3,g,J01BA01,0.0666,NA,TAB-CAP,0.14017094
+551,Tigecycline,Glycylcyclines,J01AA12,Reserve,No,n,Tetracycline,,10 mcg,DISC,DIAG,N,NA,,V07AR,NA,0.0883,EACH,0.143939394
+552,Tigecycline,Glycylcyclines,J01AA12,Reserve,No,n,Tetracycline,,3%,OINTMENT,TOP,P,NA,,D06AA04,0.0137,0.0416,G,0.143939394
+553,Tobramycin,Aminoglycosides,J01GB01,Watch,No,n,Capreomycin,,1 g,VIAL,INJ,C,1,g,J04AB30,5.3293,4.7,VIAL,0.199242424
+554,Tosufloxacin,Fluoroquinolones,J01MA22,Watch,No,n,Ciprofloxacin,,0.30%,OPHT DROP,OPHT,P,NA,,S01AX13,0.2891,0.072,ML,0.185897436
+555,Tosufloxacin,Fluoroquinolones,J01MA22,Watch,No,n,Ciprofloxacin,,2 mg/ml,VIAL,INJ,P,0.5,g,J01MA02,0.0025,0.01,ML,0.185897436
+556,Tosufloxacin,Fluoroquinolones,J01MA22,Watch,No,n,Ciprofloxacin,,250 mg,TAB-CAP,PO,E,1,g,J01MA02,0.026,0.0212,TAB-CAP,0.185897436
+557,Tosufloxacin,Fluoroquinolones,J01MA22,Watch,No,n,Ciprofloxacin,,250 mg/5 ml,SUSPEN,PO,E,1,g,J01MA02,0.1282,NA,ML,0.185897436
+558,Tosufloxacin,Fluoroquinolones,J01MA22,Watch,No,n,Ciprofloxacin,,5 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,0.0859,EACH,0.185897436
+559,Tosufloxacin,Fluoroquinolones,J01MA22,Watch,No,n,Ciprofloxacin,,500 mg,TAB-CAP,PO,P,1,g,J01MA02,0.0269,0.0373,TAB-CAP,0.185897436
+560,Tosufloxacin,Fluoroquinolones,J01MA22,Watch,No,n,Levofloxacin,,250 mg,TAB-CAP,PO,T,0.5,g,J01MA12,0.1395,0.0593,TAB-CAP,0.166666667
+561,Tosufloxacin,Fluoroquinolones,J01MA22,Watch,No,n,Levofloxacin,,5 mg/ml,VIAL,INJ,T,0.5,g,J01MA12,0.0071,0.0171,ML,0.166666667
+562,Tosufloxacin,Fluoroquinolones,J01MA22,Watch,No,n,Levofloxacin,,500 mg,TAB-CAP,PO,C,0.5,g,J01MA12,0.0677,0.122,TAB-CAP,0.166666667
+563,Tosufloxacin,Fluoroquinolones,J01MA22,Watch,No,n,Levofloxacin,powder,750 mg,TAB-CAP,PO,C,0.5,g,J01MA12,NA,0.4728,TAB-CAP,0.166666667
+564,Tosufloxacin,Fluoroquinolones,J01MA22,Watch,No,n,Norfloxacin,,400 mg,TAB-CAP,PO,T,0.8,g,J01MA06,NA,0.0258,TAB-CAP,0.143939394
+565,Vancomycin (IV),Glycopeptides,J01XA01,Watch ,Yes,n,Vancomycin,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.111111111
+566,Vancomycin (IV),Glycopeptides,J01XA01,Watch ,Yes,y,Vancomycin,,500 mg,VIAL,INJ,N,2,g,J01XA01,1.907,NA,VIAL,0.111111111
+567,Vancomycin (oral),Glycopeptides,A07AA09,Watch ,Yes,n,Vancomycin,,30 mcg,DISC,DIAG,N,NA,,V07AR,0.0173,NA,EACH,0.137254902
+568,Vancomycin (oral),Glycopeptides,A07AA09,Watch ,Yes,n,Vancomycin,,500 mg,VIAL,INJ,N,2,g,J01XA01,1.907,NA,VIAL,0.137254902
