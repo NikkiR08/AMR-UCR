@@ -62,7 +62,7 @@ all.post <- all.post %>% filter(Route.of.Admin=="PO"|
                         distinct(MSH_antibiotic, Strength, Dosage.Form,
                                  Route.of.Admin, Buyer.Median..US..,.keep_all = TRUE) %>%  ##remove duplicate matches of MSH (since that's what we're using as our antibiotic definitions)
                         select(WHO_antibiotic, Class, MSH_antibiotic, MSH_cost,
-                        Formulation, Route.of.Admin) %>%
+                        Formulation, Route.of.Admin, Category) %>%
                          as.data.table(all.post)
 ## inflate 
 who_whoc_wb <- as.data.table(who_whoc_wb)
