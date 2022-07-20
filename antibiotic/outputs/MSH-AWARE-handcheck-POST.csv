@@ -191,7 +191,7 @@
 229,Cefuroxime,Second-generation cephalosporins,J01DC02,Watch,Yes,n,Ceftriaxone,,500 mg,VIAL,INJ,P,2,g,J01DA13,0.4843,0.38,VIAL,0.199242424
 236,Chloramphenicol,Amphenicols,J01BA01,Access,Yes,n,Chloramine,,500 mg,TAB-CAP,TOP,N,NA,,,NA,0.0155,TAB-CAP,0.144444444
 246,Chloramphenicol,Amphenicols,J01BA01,Access,Yes,y,Chloramphenicol In Oil,,250 mg/ml,AMPOULE,INJ,E,3,g,J01BA01,NA,0.3302,ML,0.106060606
-247,Chloramphenicol,Amphenicols,J01BA01,Access,Yes,y,Chloramphenicol/Dexamethasone,,0.5%/0.1%,OPHT DROP,OPHT,N,NA,,S01AA20,0.0532,0.104,ML,0.16091954
+247,Chloramphenicol,Amphenicols,J01BA01,Access,Yes,n,Chloramphenicol/Dexamethasone,,0.5%/0.1%,OPHT DROP,OPHT,N,NA,,S01AA20,0.0532,0.104,ML,0.16091954
 248,Chloramphenicol,Amphenicols,J01BA01,Access,Yes,y,Chlorpromazine Hcl,,50 mg,TAB-CAP,PO,C,0.3,g,N05AA01,0.0353,NA,TAB-CAP,0.191534392
 255,Ciprofloxacin,Fluoroquinolones,J01MA02,Watch,Yes,n,Levofloxacin,,250 mg,TAB-CAP,PO,T,0.5,g,J01MA12,0.1395,0.0593,TAB-CAP,0.185897436
 256,Ciprofloxacin,Fluoroquinolones,J01MA02,Watch,Yes,n,Levofloxacin,,5 mg/ml,VIAL,INJ,T,0.5,g,J01MA12,0.0071,0.0171,ML,0.185897436
@@ -358,11 +358,11 @@
 458,Pivampicillin,Penicillins ,J01CA02,Access,No,n,Rifampicin,,300 mg,TAB-CAP,PO,E,0.6,g,J04AB02,0.0974,0.085,TAB-CAP,0.194871795
 459,Pivmecillinam,Penicillins ,J01CA08,Access,No,n,Penicillamine,,250 mg,TAB-CAP,PO,C,0.5,g,M01CC01,0.5329,NA,TAB-CAP,0.193473193
 460,Ribostamycin,Aminoglycosides,J01GB10,Watch,No,n,Mitomycin,,5 mg,VIAL,INJ,N,NA,,L01DC03,25,NA,VIAL,0.189814815
-465,Rifampicin,Rifamycins,J04AB02,Watch,No,y,Rifampicin/Isoniazid,,150/75 mg,TAB-CAP,PO,E,NA,,J04AM02,0.0572,0.0331,TAB-CAP,0.166666667
-466,Rifampicin,Rifamycins,J04AB02,Watch,No,y,Rifampicin/Isoniazid,,150mg/150mg,TAB-CAP,PO,E,NA,,J04AM02,NA,0.0349,TAB-CAP,0.166666667
-467,Rifampicin,Rifamycins,J04AB02,Watch,No,y,Rifampicin/Isoniazid,,300/150 mg,TAB-CAP,PO,E,2,TAB,J04AM02,0.0709,0.116,TAB-CAP,0.166666667
-468,Rifampicin,Rifamycins,J04AB02,Watch,No,y,Rifampicin/Isoniazid,dispersible,60 mg/30 mg,TAB-CAP,PO,E,NA,,J04AM02,NA,0.0158,TAB-CAP,0.166666667
-469,Rifampicin,Rifamycins,J04AB02,Watch,No,y,Rifampicin/Isoniazid,dispersible,60 mg/60 mg,TAB-CAP,PO,E,NA,,J04AM02,0.0443,NA,TAB-CAP,0.166666667
+465,Rifampicin,Rifamycins,J04AB02,Watch,No,n,Rifampicin/Isoniazid,,150/75 mg,TAB-CAP,PO,E,NA,,J04AM02,0.0572,0.0331,TAB-CAP,0.166666667
+466,Rifampicin,Rifamycins,J04AB02,Watch,No,n,Rifampicin/Isoniazid,,150mg/150mg,TAB-CAP,PO,E,NA,,J04AM02,NA,0.0349,TAB-CAP,0.166666667
+467,Rifampicin,Rifamycins,J04AB02,Watch,No,n,Rifampicin/Isoniazid,,300/150 mg,TAB-CAP,PO,E,2,TAB,J04AM02,0.0709,0.116,TAB-CAP,0.166666667
+468,Rifampicin,Rifamycins,J04AB02,Watch,No,n,Rifampicin/Isoniazid,dispersible,60 mg/30 mg,TAB-CAP,PO,E,NA,,J04AM02,NA,0.0158,TAB-CAP,0.166666667
+469,Rifampicin,Rifamycins,J04AB02,Watch,No,n,Rifampicin/Isoniazid,dispersible,60 mg/60 mg,TAB-CAP,PO,E,NA,,J04AM02,0.0443,NA,TAB-CAP,0.166666667
 470,Rifamycin,Rifamycins,J04AB03,Watch,No,n,Clindamycin,,300 mg,TAB-CAP,PO,P,1.2,g,J01FF01,0.0867,0.1,TAB-CAP,0.195286195
 471,Rifamycin,Rifamycins,J04AB03,Watch,No,y,Rifampicin,,100 mg/5 ml,SYRUP,PO,P,0.6,g,J04AB02,0.1119,NA,ML,0.14537037
 472,Rifamycin,Rifamycins,J04AB03,Watch,No,y,Rifampicin,,150 mg,TAB-CAP,PO,E,0.6,g,J04AB02,0.0624,0.21,TAB-CAP,0.14537037
