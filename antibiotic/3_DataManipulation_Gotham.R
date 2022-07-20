@@ -103,4 +103,4 @@ for (i in 1:nrow(costing.abx.Gotham)){
   setTxtProgressBar(pb,i)  
 }
 
-save(costing.abx.Gotham, file="Data/antibiotics/costing_abx_Gotham.RData")
+save(costing.abx.Gotham, file="antibiotic/outputs/costing_abx_Gotham.RData")
