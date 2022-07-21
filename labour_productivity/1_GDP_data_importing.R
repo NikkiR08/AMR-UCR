@@ -14,7 +14,7 @@ library(data.table)
 # ilodic <-  get_ilostat_toc()
 
 ####### base table
-data_input <- read.csv("Data/macro/who_whoc_wb.csv") ## getting list of all countries
+data_input <- read.csv("data_all/who_whoc_wb.csv") ## getting list of all countries
 
 # #### Penn World Tabel data #####
 # data("pwt9.1")
@@ -25,11 +25,11 @@ data_input <- read.csv("Data/macro/who_whoc_wb.csv") ## getting list of all coun
 #          year <= 2020) %>%
 #   na.omit() %>%
 #   as.data.table()
-# save(pwt_data, file="Data/macro/pwt.RData")
+# save(pwt_data, file="labour_productivity/inputs/pwt.RData")
 
 ######## ILO data  #########
 # LFP <- get_ilostat(id = 'EAP_2WAP_SEX_AGE_RT_A', segment = 'indicator')
-# save(LFP, file="Data/macro/ilo.RData")
+# save(LFP, file="labour_productivity/inputs/ilo.RData")
 
 
 ####### World Bank Data ##########
@@ -38,7 +38,7 @@ data_input <- read.csv("Data/macro/who_whoc_wb.csv") ## getting list of all coun
 #   select(iso3c, country, date, NE.GDI.FTOT.KD, NY.GDP.MKTP.KD) %>%
 #   na.omit() %>%
 #   as.data.table()
-# save(I0, file="Data/macro/I0.RData")
+# save(I0, file="labour_productivity/inputs/I0.RData")
 
 #### GDP per capita - just to check values 
 # ypc <- wb_data(indicator = c("NY.GDP.PCAP.KD"))
@@ -46,10 +46,10 @@ data_input <- read.csv("Data/macro/who_whoc_wb.csv") ## getting list of all coun
 #   select(iso3c, country, date, "NY.GDP.PCAP.KD") %>%
 #   na.omit() %>%
 #   as.data.table()
-# save(ypc, file="Data/macro/ypc.RData")
+# save(ypc, file="labour_productivity/inputs/ypc.RData")
 
 ########### Labour Data ###################
-N <- as.data.table(read.csv("Data/macro/Population-EstimatesData_092020.csv"))
+N <- as.data.table(read.csv("data_all/Population-EstimatesData_092020.csv"))
 
 N <- N[Indicator.Code=="SP.POP.TOTL"| ## total population
            Indicator.Code=="SP.POP.1564.TO.ZS"] ## working age % of whole population
@@ -74,7 +74,7 @@ N <- N %>%
 N <- N[ , -c("SP.POP.1564.TO.ZS")]  
 colnames(N) <- c("country","year","N","g_n","g_wn","W_N")
 
-load("Data/macro/ilo.RData")
+load("labour_productivity/inputs/ilo.RData")
 LFP <- as.data.table(LFP)
 LFP <- LFP[classif1=="AGE_5YRBANDS_TOTAL"& sex=="SEX_T"]
 LFP[ , LFP := obs_value/100]
@@ -89,7 +89,7 @@ LFP <- LFP[ ,c("ref_area","time","LFP","g_lfp_av")]
 colnames(LFP) <- c("country","year","LFP","g_lfp_av")
 
 ###### Investment & Capital #########
-load("Data/macro/pwt.RData")
+load("labour_productivity/inputs/pwt.RData")
 PWT <- pwt_data %>% 
   group_by(isocode) %>% # For each country calculate...
   mutate(K_Y = rnna/rgdpna, ## capital to output ratio
@@ -110,12 +110,12 @@ rm(temp)
 
 ## I/Y
 # get the latest year available
-load("Data/macro/I0.RData")
+load("labour_productivity/inputs/I0.RData")
 I0 <- I0 %>% 
   group_by(iso3c) %>%
   as.data.table()
  
-I0[ , I_Y := NE.GDI.FTOT.KD/NY.GDP.MKTP.KD]
+I0[ , I_Y := NE.GDI.FTOT.KD/NY.GDP.MKTP.KD] ##Base level Gross Fixed capital formation to GDP ratio
 I0 <- I0[ ,-c("NE.GDI.FTOT.KD","country")]
 colnames(I0) <- c("country","year","GDP","I_Y")
 
@@ -142,9 +142,11 @@ temp_l <- list()
 for (i in 1:length(countries)){
   iso <- countries[[i]]
   temp_l[[i]] <- I0_old[country==iso]
-  for (j in 2:10){
+  years <- as.data.frame(temp_l[[i]])
+  years <- length(years$year)
+  for (j in 2:years){
     temp_l[[i]]$I_Y[j] <-(temp_l[[i]]$I_Y[j-1]+
-                            (temp_l[[i]]$I_Y[j-1]*temp_l[[i]]$g_IY_av))
+                            (temp_l[[i]]$I_Y[j-1]*temp_l[[i]]$g_IY_av[[j]]))
     temp_l[[i]]$year[j] <-(temp_l[[i]]$year[j-1])+1
   }
 }
@@ -159,4 +161,4 @@ macro_data <- merge(macro_data,PWT, by="country")
 macro_data <- macro_data[ , -c("year")]
 macro_data <- merge(macro_data, N, by="country")
 
-# save(macro_data, file="Data/macro/macro_data.RData")
+save(macro_data, file="labour_productivity/outputs/macro_data.RData")
