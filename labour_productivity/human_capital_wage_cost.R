@@ -10,12 +10,6 @@ library(dplyr)
 library(countrycode)
 library(ggplot2)
 
-# #### testing to check outliers - when running below
-# upper_bound <- quantile(employ$employ, 0.975)
-# lower_bound <- quantile(employ$employ, 0.025)
-# employ_check <- employ[employ<20]
-
-
 ########### USING LOCAL CURRENCY UNITS ####################
 
 
@@ -58,6 +52,15 @@ wage <- dat %>%
   setNames(., c(c("country","year","wage","classif1"))) %>%
   as.data.table()
 
+upper_bound <- quantile(wage$wage, 0.975)
+lower_bound <- quantile(wage$wage, 0.025)
+wage_check <- wage[wage<lower_bound]
+wage_check <- wage[wage>upper_bound]
+
+## remove values <10, seemingly erroneous 
+##!!! note might need to check here if using other data with esp low values
+wage <- wage[wage>10]
+
 ## add back iso3c codes:
 wage$iso3c <- countrycode(wage$country, origin="country.name", destination="iso3c") 
 # !!! NOTE -  Some values were not matched unambiguously: Kosovo
@@ -94,9 +97,14 @@ employ <- employ %>% filter(sex=="SEX_T",
   setNames(., c(c("iso3c","year","employ"))) %>%
   as.data.table()
 
+upper_bound <- quantile(employ$employ, 0.975)
+lower_bound <- quantile(employ$employ, 0.025)
+employ_check<- employ[employ<lower_bound]
+employ_check <- employ[employ>upper_bound]
+
 ## remove MLI value as think mistake
 ##!!! note might need to check here if using other data with esp low values
-emply <- employ[employ>=10]
+emply <- employ[employ>10]
 
 ### just taking the latest available data and assuming no growth
 wage_latest <- wage_all %>% group_by(iso3c) %>%
@@ -215,7 +223,8 @@ for (i in 1:max(employ_trend$ID)){
 
 employ_2019 <- rbindlist(lemploy)
 
-employ_2019[employ_2019>=100, employ_2019 := 99.9]
+employ_2019[employ_2019>=100, employ_2019 := 99.9] ##capping employment rates
+## did this for Falkland Islands and Solomon Islands
 
 ### merge by year to get those with same cost year & employ rate year
 both_trend <- merge(wage_2019, employ_2019, by =c("iso3c"), all.x=TRUE, all.y=FALSE)
@@ -294,22 +303,39 @@ flag_yes_m <- flag_yes_m[ , -c("BaseCase_2019USD.x" ,"Scenario2_2019USD.x",
 labour_productivity_all <- rbind(flag_yes_m, flag_no)
 
 labour_productivity_all <- labour_productivity_all[ , -c("Scenario 2 - 2019 USD",
-                                                         "Scenario 1 - 2019 USD", "Missing_Data_Flag" )]
+                                                         "Scenario 1 - 2019 USD" )]
 
 save(labour_productivity_all, file="labour_productivity/outputs/labour_wage_2019USD.RData")
 write.csv(labour_productivity_all, file="labour_productivity/outputs/labour_wage_2019USD.csv")
 
-#### PLOTS AFTER REGIONAL AVERAGES SCRIPT ####
-load("Data/regional_labour.RData")
-
-hc_region <- melt(regional.labour, id=c("who.region"))
-ggplot(data=hc_region, aes(x=who.region, y=value, fill=`variable`)) +
-  geom_bar(stat="identity", color="black", position=position_dodge())+
-  theme_minimal()
-
-## income group averages
-Y_av <- merge(av.adjwage1, av.adjwage2, by="Income.group")
-
-## missing data
+## missing data descriptive stats
 length(which(labour_productivity$Missing_Data_Flag=="yes"))
 length(which(labour_productivity$Missing_Data_Flag=="no"))
+
+#### PLOTS AFTER REGIONAL AVERAGES SCRIPT ####
+
+N <- as.data.table(read.csv("data_all/Population-EstimatesData_092020.csv"))
+N <- N[Indicator.Code=="SP.POP.TOTL"]
+
+### keep 2019 values
+N <- N[ , c("Country.Code","X2019")]
+setnames(N, "X2019", "npop")
+
+
+combo <- merge(labour_productivity_all, N, by.x="iso3c", by.y="Country.Code")
+
+
+regional.labour <- combo %>%
+  filter(!is.na(npop)) %>%
+  group_by(who.region) %>% 
+  summarise(average_scenario1 = weighted.mean(BaseCase_2019USD, npop, na.rm=TRUE),
+            average_scenario2 = weighted.mean(Scenario2_2019USD, npop, na.rm=TRUE)) %>%
+  mutate_if(is.numeric, round, 0) %>%
+  as.data.table()
+  
+
+save(regional.labour, file="labour_productivity/outputs/regional_labour.RData")
+write.csv(regional.labour, file="labour_productivity/outputs/regional_labour.csv")
+
+
+
