@@ -1,195 +1,195 @@
-"","Income.group","iso3c","who.region","whoc.region","wb.region","BaseCase_2019USD","Scenario2_2019USD"
-"1",NA,"COK","WPRO","WPRO B",NA,NA,NA
-"2",NA,"NIU","WPRO","WPRO B",NA,NA,NA
-"3",NA,"STP","AFRO","AFRO D",NA,NA,NA
-"4","High income","AND","EURO","EURO A","Europe & Central Asia",1685.39875,1620.313125
-"5","High income","ARE","EMRO","EMRO E","Middle East & North Africa",1685.39875,1620.313125
-"6","High income","ATG","PAHO","AMRO B","Latin America & Caribbean",1685.39875,1620.313125
-"7","High income","BHS","PAHO","AMRO B","Latin America & Caribbean",1685.39875,1620.313125
-"8","High income","KNA","PAHO","AMRO B","Latin America & Caribbean",1685.39875,1620.313125
-"9","High income","MCO","EURO","EURO A","Europe & Central Asia",1685.39875,1620.313125
-"10","High income","NLD","EURO","EURO A","Europe & Central Asia",1685.39875,1620.313125
-"11","High income","OMN","EMRO","EMRO E","Middle East & North Africa",1685.39875,1620.313125
-"12","High income","PLW","WPRO","WPRO B","East Asia & Pacific",1685.39875,1620.313125
-"13","Low income","CAF","AFRO","AFRO E","Sub-Saharan Africa",322.895,79.3559090909091
-"14","Low income","ERI","AFRO","AFRO E","Sub-Saharan Africa",322.895,79.3559090909091
-"15","Low income","GIN","AFRO","AFRO D","Sub-Saharan Africa",322.895,79.3559090909091
-"16","Low income","GNB","AFRO","AFRO D","Sub-Saharan Africa",322.895,79.3559090909091
-"17","Low income","MOZ","AFRO","AFRO E","Sub-Saharan Africa",322.895,79.3559090909091
-"18","Low income","PRK","SEARO","SEARO D","East Asia & Pacific",322.895,79.3559090909091
-"19","Low income","SLE","AFRO","AFRO D","Sub-Saharan Africa",322.895,79.3559090909091
-"20","Low income","SOM","EMRO","EMRO D","Sub-Saharan Africa",322.895,79.3559090909091
-"21","Low income","SSD","EMRO",NA,"Sub-Saharan Africa",322.895,79.3559090909091
-"22","Lower middle income","BTN","SEARO","SEARO D","South Asia",311.3040625,229.1384375
-"23","Lower middle income","COG","AFRO","AFRO E","Sub-Saharan Africa",311.3040625,229.1384375
-"24","Lower middle income","DJI","EMRO","EMRO D","Middle East & North Africa",311.3040625,229.1384375
-"25","Lower middle income","FSM","WPRO","WPRO B","East Asia & Pacific",311.3040625,229.1384375
-"26","Lower middle income","IND","SEARO","SEARO D","South Asia",311.3040625,229.1384375
-"27","Lower middle income","KIR","WPRO","WPRO B","East Asia & Pacific",311.3040625,229.1384375
-"28","Lower middle income","MAR","EMRO","EMRO D","Middle East & North Africa",311.3040625,229.1384375
-"29","Lower middle income","MRT","AFRO","AFRO D","Sub-Saharan Africa",311.3040625,229.1384375
-"30","Lower middle income","PNG","WPRO","WPRO B","East Asia & Pacific",311.3040625,229.1384375
-"31","Lower middle income","SEN","AFRO","AFRO D","Sub-Saharan Africa",311.3040625,229.1384375
-"32","Lower middle income","SLB","WPRO","WPRO B","East Asia & Pacific",311.3040625,229.1384375
-"33","Lower middle income","TUN","EMRO","EMRO E","Middle East & North Africa",311.3040625,229.1384375
-"34","Lower middle income","ZWE","AFRO","AFRO E","Sub-Saharan Africa",311.3040625,229.1384375
-"35","Upper middle income","CUB","PAHO","AMRO A","Latin America & Caribbean",312.853571428571,308.65119047619
-"36","Upper middle income","DMA","PAHO","AMRO B","Latin America & Caribbean",312.853571428571,308.65119047619
-"37","Upper middle income","DZA","AFRO","AFRO D","Middle East & North Africa",312.853571428571,308.65119047619
-"38","Upper middle income","GAB","AFRO","AFRO D","Sub-Saharan Africa",312.853571428571,308.65119047619
-"39","Upper middle income","GNQ","AFRO","AFRO D","Sub-Saharan Africa",312.853571428571,308.65119047619
-"40","Upper middle income","GRD","PAHO","AMRO B","Latin America & Caribbean",312.853571428571,308.65119047619
-"41","Upper middle income","IRN","EMRO","EMRO E","Middle East & North Africa",312.853571428571,308.65119047619
-"42","Upper middle income","IRQ","EMRO","EMRO D","Middle East & North Africa",312.853571428571,308.65119047619
-"43","Upper middle income","LBY","EMRO","EMRO E","Middle East & North Africa",312.853571428571,308.65119047619
-"44","Upper middle income","LCA","PAHO","AMRO B","Latin America & Caribbean",312.853571428571,308.65119047619
-"45","Upper middle income","NRU","WPRO","WPRO B","East Asia & Pacific",312.853571428571,308.65119047619
-"46","Upper middle income","SUR","PAHO","AMRO B","Latin America & Caribbean",312.853571428571,308.65119047619
-"47","Upper middle income","TKM","EURO","EURO B","Europe & Central Asia",312.853571428571,308.65119047619
-"48","Upper middle income","TUV","WPRO","WPRO B","East Asia & Pacific",312.853571428571,308.65119047619
-"49","Upper middle income","VCT","PAHO","AMRO B","Latin America & Caribbean",312.853571428571,308.65119047619
-"50","Upper middle income","VEN","PAHO","AMRO B","Latin America & Caribbean",312.853571428571,308.65119047619
-"51","Low income","AFG","EMRO","EMRO D","South Asia",50.76,54.13
-"52","Lower middle income","AGO","AFRO","AFRO D","Sub-Saharan Africa",170.04,175.22
-"53","Upper middle income","ALB","EURO","EURO B","Europe & Central Asia",254.59,254.59
-"54","Upper middle income","ARG","PAHO","AMRO B","Latin America & Caribbean",288.58,288.58
-"55","Upper middle income","ARM","EURO","EURO B","Europe & Central Asia",112.76,112.02
-"56","High income","AUS","WPRO","WPRO A","East Asia & Pacific",2722.04,2685.89
-"57","High income","AUT","EURO","EURO A","Europe & Central Asia",1868,1868
-"58","Upper middle income","AZE","EURO","EURO B","Europe & Central Asia",236,236
-"59","Low income","BDI","AFRO","AFRO E","Sub-Saharan Africa",36.03,36.19
-"60","High income","BEL","EURO","EURO A","Europe & Central Asia",1880.15,1879.11
-"61","Low income","BEN","AFRO","AFRO D","Sub-Saharan Africa",0.09,0.11
-"62","Low income","BFA","AFRO","AFRO D","Sub-Saharan Africa",73.07,75.82
-"63","Lower middle income","BGD","SEARO","SEARO D","South Asia",65.11,87.54
-"64","Upper middle income","BGR","EURO","EURO B","Europe & Central Asia",389.79,372.01
-"65","High income","BHR","EMRO","EMRO E","Middle East & North Africa",1931.9,1619.06
-"66","Upper middle income","BIH","EURO","EURO B","Europe & Central Asia",167.24,167.24
-"67","Upper middle income","BLR","EURO","EURO C","Europe & Central Asia",391.9,391.9
-"68","Upper middle income","BLZ","PAHO","AMRO B","Latin America & Caribbean",347.94,364.9
-"69","Lower middle income","BOL","PAHO","AMRO D","Latin America & Caribbean",671.46,671.46
-"70","Upper middle income","BRA","PAHO","AMRO B","Latin America & Caribbean",332.74,332.74
-"71","High income","BRB","PAHO","AMRO B","Latin America & Caribbean",874.84,869.37
-"72","High income","BRN","WPRO","WPRO A","East Asia & Pacific",762.39,762.39
-"73","Upper middle income","BWA","AFRO","AFRO E","Sub-Saharan Africa",264.94,265.33
-"74","High income","CAN","PAHO","AMRO A","North America",2054.66,2054.66
-"75","High income","CHE","EURO","EURO A","Europe & Central Asia",5148.91,4919.68
-"76","High income","CHL","PAHO","AMRO B","Latin America & Caribbean",636.02,636.02
-"77","Upper middle income","CHN","WPRO","WPRO B","East Asia & Pacific",760.5,601.56
-"78","Lower middle income","CIV","AFRO","AFRO E","Sub-Saharan Africa",149.53,102.94
-"79","Lower middle income","CMR","AFRO","AFRO D","Sub-Saharan Africa",170.35,172.15
-"80","Low income","COD","AFRO","AFRO E","Sub-Saharan Africa",60.39,67.45
-"81","Upper middle income","COL","PAHO","AMRO B","Latin America & Caribbean",241.86,241.86
-"82","Lower middle income","COM","AFRO",NA,"Sub-Saharan Africa",102.64,100.92
-"83","Lower middle income","CPV","AFRO","AFRO D","Sub-Saharan Africa",170.62,170.62
-"84","Upper middle income","CRI","PAHO","AMRO B","Latin America & Caribbean",512.59,512.59
-"85","High income","CYP","EURO","EMRO E","Europe & Central Asia",3117.6,1277.14
-"86","High income","CZE","EURO","EURO A","Europe & Central Asia",912.4,899.64
-"87","High income","DEU","EURO","EURO A","Europe & Central Asia",2953.98,2953.98
-"88","High income","DNK","EURO","EURO A","Europe & Central Asia",2879.73,2879.73
-"89","Upper middle income","DOM","PAHO","AMRO B","Latin America & Caribbean",193.54,193.54
-"90","Upper middle income","ECU","PAHO","AMRO D","Latin America & Caribbean",326.12,326.12
-"91","Lower middle income","EGY","EMRO","EMRO D","Middle East & North Africa",60.35,60.5
-"92","High income","ESP","EURO","EURO A","Europe & Central Asia",1139.28,1131.97
-"93","High income","EST","EURO","EURO C","Europe & Central Asia",957.96,957.96
-"94","Low income","ETH","AFRO","AFRO E","Sub-Saharan Africa",75.7,67.91
-"95","High income","FIN","EURO","EURO A","Europe & Central Asia",1950.89,1950.89
-"96","Upper middle income","FJI","WPRO","WPRO B","East Asia & Pacific",341.51,299.26
-"97","High income","FRA","EURO","EURO A","Europe & Central Asia",1814.38,1755.98
-"98","High income","GBR","EURO","EURO A","Europe & Central Asia",1927.88,1927.88
-"99","Upper middle income","GEO","EURO","EURO B","Europe & Central Asia",223.05,223.05
-"100","Lower middle income","GHA","AFRO","AFRO D","Sub-Saharan Africa",69.18,86.65
-"101","Low income","GMB","AFRO","AFRO D","Sub-Saharan Africa",23.63,28.37
-"102","High income","GRC","EURO","EURO A","Europe & Central Asia",426.17,426.17
-"103","Upper middle income","GTM","PAHO","AMRO D","Latin America & Caribbean",212.52,212.44
-"104","Upper middle income","GUY","PAHO","AMRO B","Latin America & Caribbean",224.61,225.64
-"105","Lower middle income","HND","PAHO","AMRO B","Latin America & Caribbean",178.39,178.39
-"106","High income","HRV","EURO","EURO A","Europe & Central Asia",608.95,607.78
-"107","Low income","HTI","PAHO","AMRO D","Latin America & Caribbean",65.94,61.44
-"108","High income","HUN","EURO","EURO C","Europe & Central Asia",712.85,674.9
-"109","Lower middle income","IDN","SEARO","SEARO B","East Asia & Pacific",120.58,120.58
-"110","High income","IRL","EURO","EURO A","Europe & Central Asia",2262.86,2262.86
-"111","High income","ISL","EURO","EURO A","Europe & Central Asia",4852.76,4852.76
-"112","High income","ISR","EURO","EURO A","Middle East & North Africa",1879.33,1854.63
-"113","High income","ITA","EURO","EURO A","Europe & Central Asia",1102.5,1102.5
-"114","Upper middle income","JAM","PAHO","AMRO B","Latin America & Caribbean",573.5,558.05
-"115","Upper middle income","JOR","EMRO","EMRO E","Middle East & North Africa",148.28,148.28
-"116","High income","JPN","WPRO","WPRO A","East Asia & Pacific",142.59,142.59
-"117","Upper middle income","KAZ","EURO","EURO C","Europe & Central Asia",309.81,306.48
-"118","Lower middle income","KEN","AFRO","AFRO E","Sub-Saharan Africa",102.04,98.84
-"119","Lower middle income","KGZ","EURO","EURO B","Europe & Central Asia",10.88,10.92
-"120","Lower middle income","KHM","WPRO","WPRO B","East Asia & Pacific",265.11,204.11
-"121","High income","KOR","WPRO","WPRO B","East Asia & Pacific",1953.24,1953.24
-"122","High income","KWT","EMRO","EMRO E","Middle East & North Africa",1318.34,1073.12
-"123","Lower middle income","LAO","WPRO","WPRO B","East Asia & Pacific",95.79,104.61
-"124","Upper middle income","LBN","EMRO","EMRO E","Middle East & North Africa",278.52,308.13
-"125","Low income","LBR","AFRO","AFRO D","Sub-Saharan Africa",4047.52,36.95
-"126","Upper middle income","LKA","SEARO","SEARO B","South Asia",95.43,89.86
-"127","Lower middle income","LSO","AFRO","AFRO E","Sub-Saharan Africa",204.35,97.98
-"128","High income","LTU","EURO","EURO C","Europe & Central Asia",844.7,844.7
-"129","High income","LUX","EURO","EURO A","Europe & Central Asia",3410.5,3344.81
-"130","High income","LVA","EURO","EURO C","Europe & Central Asia",662.72,662.72
-"131","Lower middle income","MDA","EURO","EURO C","Europe & Central Asia",165.09,165.09
-"132","Low income","MDG","AFRO","AFRO D","Sub-Saharan Africa",91.44,63.6
-"133","Upper middle income","MDV","SEARO","SEARO D","South Asia",390.6,406.18
-"134","Upper middle income","MEX","PAHO","AMRO B","Latin America & Caribbean",199.14,199.14
-"135","Upper middle income","MHL","WPRO","WPRO B","East Asia & Pacific",337.16,313.96
-"136","Upper middle income","MKD","EURO","EURO B","Europe & Central Asia",258.59,292.45
-"137","Low income","MLI","AFRO","AFRO D","Sub-Saharan Africa",121.89,80.26
-"138","High income","MLT","EURO","EURO A","Middle East & North Africa",1388.25,1269.36
-"139","Lower middle income","MMR","SEARO","SEARO D","East Asia & Pacific",81.76,81.76
-"140","Upper middle income","MNE","EURO","EURO B","Europe & Central Asia",421.67,421.67
-"141","Lower middle income","MNG","WPRO","WPRO B","East Asia & Pacific",229.72,229.72
-"142","Upper middle income","MUS","AFRO","AFRO D","Sub-Saharan Africa",317.98,317.64
-"143","Low income","MWI","AFRO","AFRO E","Sub-Saharan Africa",23.57,26.11
-"144","Upper middle income","MYS","WPRO","WPRO B","East Asia & Pacific",526.44,494.91
-"145","Upper middle income","NAM","AFRO","AFRO E","Sub-Saharan Africa",240.62,239.72
-"146","Low income","NER","AFRO","AFRO D","Sub-Saharan Africa",1367.29,34.58
-"147","Lower middle income","NGA","AFRO","AFRO D","Sub-Saharan Africa",172.03,1128.43
-"148","Lower middle income","NIC","PAHO","AMRO D","Latin America & Caribbean",3609.81,192.48
-"149","High income","NOR","EURO","EURO A","Europe & Central Asia",3321.95,3321.95
-"150","Low income","NPL","SEARO","SEARO D","South Asia",57.98,61.19
-"151","High income","NZL","WPRO","WPRO A","East Asia & Pacific",2274.59,2274.59
-"152","Lower middle income","PAK","EMRO","EMRO D","South Asia",70.17,68.24
-"153","High income","PAN","PAHO","AMRO B","Latin America & Caribbean",553.51,553.51
-"154","Upper middle income","PER","PAHO","AMRO D","Latin America & Caribbean",350.26,350.26
-"155","Lower middle income","PHL","WPRO","WPRO B","East Asia & Pacific",164.85,164.85
-"156","High income","POL","EURO","EURO B","Europe & Central Asia",58.03,58.03
-"157","High income","PRT","EURO","EURO A","Europe & Central Asia",538.86,560.51
-"158","Upper middle income","PRY","PAHO","AMRO B","Latin America & Caribbean",264.64,264.64
-"159","High income","QAT","EMRO","EMRO E","Middle East & North Africa",2758.37,2732.25
-"160","Upper middle income","ROU","EURO","EURO B","Europe & Central Asia",606.72,606.72
-"161","Upper middle income","RUS","EURO","EURO C","Europe & Central Asia",410.54,410.54
-"162","Low income","RWA","AFRO","AFRO E","Sub-Saharan Africa",22.68,27.48
-"163","High income","SAU","EMRO","EMRO E","Middle East & North Africa",885.62,883.49
-"164","Lower middle income","SDN","EMRO","EMRO D","Sub-Saharan Africa",1334.06,1349.55
-"165","High income","SGP","WPRO","WPRO A","East Asia & Pacific",2179.88,2179.88
-"166","Lower middle income","SLV","PAHO","AMRO B","Latin America & Caribbean",202.16,202.16
-"167","High income","SMR","EURO","EURO A","Europe & Central Asia",2294.11,2294.11
-"168","Upper middle income","SRB","EURO","EURO B","Europe & Central Asia",344.93,344.93
-"169","High income","SVK","EURO","EURO B","Europe & Central Asia",794.82,794.82
-"170","High income","SVN","EURO","EURO A","Europe & Central Asia",1155.22,1131.19
-"171","High income","SWE","EURO","EURO A","Europe & Central Asia",2550.7,2550.7
-"172","Lower middle income","SWZ","AFRO","AFRO E","Sub-Saharan Africa",132.6,134.57
-"173","High income","SYC","AFRO","AFRO D","Sub-Saharan Africa",678.37,678.37
-"174","Low income","SYR","EMRO","EMRO E","Middle East & North Africa",394.61,461.26
-"175","Low income","TCD","AFRO","AFRO D","Sub-Saharan Africa",125.74,126.58
-"176","Low income","TGO","AFRO","AFRO D","Sub-Saharan Africa",68.95,88.13
-"177","Upper middle income","THA","SEARO","SEARO B","East Asia & Pacific",325.49,325.49
-"178","Low income","TJK","EURO","EURO B","Europe & Central Asia",64.26,52.31
-"179","Lower middle income","TLS","SEARO","SEARO B","East Asia & Pacific",327.51,210.71
-"180","Upper middle income","TON","WPRO","WPRO B","East Asia & Pacific",320.55,316.97
-"181","High income","TTO","PAHO","AMRO B","Latin America & Caribbean",645.97,549.77
-"182","Upper middle income","TUR","EURO","EURO B","Europe & Central Asia",335.45,335.45
-"183","Low income","TZA","AFRO","AFRO E","Sub-Saharan Africa",74,142.3
-"184","Low income","UGA","AFRO","AFRO E","Sub-Saharan Africa",51.61,47.98
-"185","Lower middle income","UKR","EURO","EURO C","Europe & Central Asia",209.99,209.99
-"186","High income","URY","PAHO","AMRO B","Latin America & Caribbean",537.32,537.32
-"187","High income","USA","PAHO","AMRO A","North America",2573.05,2573.05
-"188","Lower middle income","UZB","EURO","EURO B","Europe & Central Asia",181.66,177.22
-"189","Lower middle income","VNM","WPRO","WPRO B","East Asia & Pacific",198.98,198.98
-"190","Lower middle income","VUT","WPRO","WPRO B","East Asia & Pacific",222.8,300.71
-"191","Upper middle income","WSM","WPRO","WPRO B","East Asia & Pacific",156.78,186.54
-"192","Low income","YEM","EMRO","EMRO D","Middle East & North Africa",206.54,105.68
-"193","Upper middle income","ZAF","AFRO","AFRO E","Sub-Saharan Africa",103.97,103.97
-"194","Lower middle income","ZMB","AFRO","AFRO E","Sub-Saharan Africa",52.12,74.54
+"","Income.group","iso3c","who.region","whoc.region","wb.region","Missing_Data_Flag","BaseCase_2019USD","Scenario2_2019USD"
+"1",NA,"COK","WPRO","WPRO B",NA,"yes",NA,NA
+"2",NA,"NIU","WPRO","WPRO B",NA,"yes",NA,NA
+"3",NA,"STP","AFRO","AFRO D",NA,"yes",NA,NA
+"4","High income","AND","EURO","EURO A","Europe & Central Asia","yes",1685.39875,1620.313125
+"5","High income","ARE","EMRO","EMRO E","Middle East & North Africa","yes",1685.39875,1620.313125
+"6","High income","ATG","PAHO","AMRO B","Latin America & Caribbean","yes",1685.39875,1620.313125
+"7","High income","BHS","PAHO","AMRO B","Latin America & Caribbean","yes",1685.39875,1620.313125
+"8","High income","KNA","PAHO","AMRO B","Latin America & Caribbean","yes",1685.39875,1620.313125
+"9","High income","MCO","EURO","EURO A","Europe & Central Asia","yes",1685.39875,1620.313125
+"10","High income","NLD","EURO","EURO A","Europe & Central Asia","yes",1685.39875,1620.313125
+"11","High income","OMN","EMRO","EMRO E","Middle East & North Africa","yes",1685.39875,1620.313125
+"12","High income","PLW","WPRO","WPRO B","East Asia & Pacific","yes",1685.39875,1620.313125
+"13","Low income","BEN","AFRO","AFRO D","Sub-Saharan Africa","yes",151.6,83.1295238095238
+"14","Low income","CAF","AFRO","AFRO E","Sub-Saharan Africa","yes",151.6,83.1295238095238
+"15","Low income","ERI","AFRO","AFRO E","Sub-Saharan Africa","yes",151.6,83.1295238095238
+"16","Low income","GIN","AFRO","AFRO D","Sub-Saharan Africa","yes",151.6,83.1295238095238
+"17","Low income","GNB","AFRO","AFRO D","Sub-Saharan Africa","yes",151.6,83.1295238095238
+"18","Low income","MOZ","AFRO","AFRO E","Sub-Saharan Africa","yes",151.6,83.1295238095238
+"19","Low income","PRK","SEARO","SEARO D","East Asia & Pacific","yes",151.6,83.1295238095238
+"20","Low income","SLE","AFRO","AFRO D","Sub-Saharan Africa","yes",151.6,83.1295238095238
+"21","Low income","SOM","EMRO","EMRO D","Sub-Saharan Africa","yes",151.6,83.1295238095238
+"22","Low income","SSD","EMRO",NA,"Sub-Saharan Africa","yes",151.6,83.1295238095238
+"23","Lower middle income","BTN","SEARO","SEARO D","South Asia","yes",311.3040625,229.1384375
+"24","Lower middle income","COG","AFRO","AFRO E","Sub-Saharan Africa","yes",311.3040625,229.1384375
+"25","Lower middle income","DJI","EMRO","EMRO D","Middle East & North Africa","yes",311.3040625,229.1384375
+"26","Lower middle income","FSM","WPRO","WPRO B","East Asia & Pacific","yes",311.3040625,229.1384375
+"27","Lower middle income","IND","SEARO","SEARO D","South Asia","yes",311.3040625,229.1384375
+"28","Lower middle income","KIR","WPRO","WPRO B","East Asia & Pacific","yes",311.3040625,229.1384375
+"29","Lower middle income","MAR","EMRO","EMRO D","Middle East & North Africa","yes",311.3040625,229.1384375
+"30","Lower middle income","MRT","AFRO","AFRO D","Sub-Saharan Africa","yes",311.3040625,229.1384375
+"31","Lower middle income","PNG","WPRO","WPRO B","East Asia & Pacific","yes",311.3040625,229.1384375
+"32","Lower middle income","SEN","AFRO","AFRO D","Sub-Saharan Africa","yes",311.3040625,229.1384375
+"33","Lower middle income","SLB","WPRO","WPRO B","East Asia & Pacific","yes",311.3040625,229.1384375
+"34","Lower middle income","TUN","EMRO","EMRO E","Middle East & North Africa","yes",311.3040625,229.1384375
+"35","Lower middle income","ZWE","AFRO","AFRO E","Sub-Saharan Africa","yes",311.3040625,229.1384375
+"36","Upper middle income","CUB","PAHO","AMRO A","Latin America & Caribbean","yes",312.853571428571,308.65119047619
+"37","Upper middle income","DMA","PAHO","AMRO B","Latin America & Caribbean","yes",312.853571428571,308.65119047619
+"38","Upper middle income","DZA","AFRO","AFRO D","Middle East & North Africa","yes",312.853571428571,308.65119047619
+"39","Upper middle income","GAB","AFRO","AFRO D","Sub-Saharan Africa","yes",312.853571428571,308.65119047619
+"40","Upper middle income","GNQ","AFRO","AFRO D","Sub-Saharan Africa","yes",312.853571428571,308.65119047619
+"41","Upper middle income","GRD","PAHO","AMRO B","Latin America & Caribbean","yes",312.853571428571,308.65119047619
+"42","Upper middle income","IRN","EMRO","EMRO E","Middle East & North Africa","yes",312.853571428571,308.65119047619
+"43","Upper middle income","IRQ","EMRO","EMRO D","Middle East & North Africa","yes",312.853571428571,308.65119047619
+"44","Upper middle income","LBY","EMRO","EMRO E","Middle East & North Africa","yes",312.853571428571,308.65119047619
+"45","Upper middle income","LCA","PAHO","AMRO B","Latin America & Caribbean","yes",312.853571428571,308.65119047619
+"46","Upper middle income","NRU","WPRO","WPRO B","East Asia & Pacific","yes",312.853571428571,308.65119047619
+"47","Upper middle income","SUR","PAHO","AMRO B","Latin America & Caribbean","yes",312.853571428571,308.65119047619
+"48","Upper middle income","TKM","EURO","EURO B","Europe & Central Asia","yes",312.853571428571,308.65119047619
+"49","Upper middle income","TUV","WPRO","WPRO B","East Asia & Pacific","yes",312.853571428571,308.65119047619
+"50","Upper middle income","VCT","PAHO","AMRO B","Latin America & Caribbean","yes",312.853571428571,308.65119047619
+"51","Upper middle income","VEN","PAHO","AMRO B","Latin America & Caribbean","yes",312.853571428571,308.65119047619
+"52","Low income","AFG","EMRO","EMRO D","South Asia","no",50.76,54.13
+"53","Lower middle income","AGO","AFRO","AFRO D","Sub-Saharan Africa","no",170.04,175.22
+"54","Upper middle income","ALB","EURO","EURO B","Europe & Central Asia","no",254.59,254.59
+"55","Upper middle income","ARG","PAHO","AMRO B","Latin America & Caribbean","no",288.58,288.58
+"56","Upper middle income","ARM","EURO","EURO B","Europe & Central Asia","no",112.76,112.02
+"57","High income","AUS","WPRO","WPRO A","East Asia & Pacific","no",2722.04,2685.89
+"58","High income","AUT","EURO","EURO A","Europe & Central Asia","no",1868,1868
+"59","Upper middle income","AZE","EURO","EURO B","Europe & Central Asia","no",236,236
+"60","Low income","BDI","AFRO","AFRO E","Sub-Saharan Africa","no",36.03,36.19
+"61","High income","BEL","EURO","EURO A","Europe & Central Asia","no",1880.15,1879.11
+"62","Low income","BFA","AFRO","AFRO D","Sub-Saharan Africa","no",73.07,75.82
+"63","Lower middle income","BGD","SEARO","SEARO D","South Asia","no",65.11,87.54
+"64","Upper middle income","BGR","EURO","EURO B","Europe & Central Asia","no",389.79,372.01
+"65","High income","BHR","EMRO","EMRO E","Middle East & North Africa","no",1931.9,1619.06
+"66","Upper middle income","BIH","EURO","EURO B","Europe & Central Asia","no",167.24,167.24
+"67","Upper middle income","BLR","EURO","EURO C","Europe & Central Asia","no",391.9,391.9
+"68","Upper middle income","BLZ","PAHO","AMRO B","Latin America & Caribbean","no",347.94,364.9
+"69","Lower middle income","BOL","PAHO","AMRO D","Latin America & Caribbean","no",671.46,671.46
+"70","Upper middle income","BRA","PAHO","AMRO B","Latin America & Caribbean","no",332.74,332.74
+"71","High income","BRB","PAHO","AMRO B","Latin America & Caribbean","no",874.84,869.37
+"72","High income","BRN","WPRO","WPRO A","East Asia & Pacific","no",762.39,762.39
+"73","Upper middle income","BWA","AFRO","AFRO E","Sub-Saharan Africa","no",264.94,265.33
+"74","High income","CAN","PAHO","AMRO A","North America","no",2054.66,2054.66
+"75","High income","CHE","EURO","EURO A","Europe & Central Asia","no",5148.91,4919.68
+"76","High income","CHL","PAHO","AMRO B","Latin America & Caribbean","no",636.02,636.02
+"77","Upper middle income","CHN","WPRO","WPRO B","East Asia & Pacific","no",760.5,601.56
+"78","Lower middle income","CIV","AFRO","AFRO E","Sub-Saharan Africa","no",149.53,102.94
+"79","Lower middle income","CMR","AFRO","AFRO D","Sub-Saharan Africa","no",170.35,172.15
+"80","Low income","COD","AFRO","AFRO E","Sub-Saharan Africa","no",60.39,67.45
+"81","Upper middle income","COL","PAHO","AMRO B","Latin America & Caribbean","no",241.86,241.86
+"82","Lower middle income","COM","AFRO",NA,"Sub-Saharan Africa","no",102.64,100.92
+"83","Lower middle income","CPV","AFRO","AFRO D","Sub-Saharan Africa","no",170.62,170.62
+"84","Upper middle income","CRI","PAHO","AMRO B","Latin America & Caribbean","no",512.59,512.59
+"85","High income","CYP","EURO","EMRO E","Europe & Central Asia","no",3117.6,1277.14
+"86","High income","CZE","EURO","EURO A","Europe & Central Asia","no",912.4,899.64
+"87","High income","DEU","EURO","EURO A","Europe & Central Asia","no",2953.98,2953.98
+"88","High income","DNK","EURO","EURO A","Europe & Central Asia","no",2879.73,2879.73
+"89","Upper middle income","DOM","PAHO","AMRO B","Latin America & Caribbean","no",193.54,193.54
+"90","Upper middle income","ECU","PAHO","AMRO D","Latin America & Caribbean","no",326.12,326.12
+"91","Lower middle income","EGY","EMRO","EMRO D","Middle East & North Africa","no",60.35,60.5
+"92","High income","ESP","EURO","EURO A","Europe & Central Asia","no",1139.28,1131.97
+"93","High income","EST","EURO","EURO C","Europe & Central Asia","no",957.96,957.96
+"94","Low income","ETH","AFRO","AFRO E","Sub-Saharan Africa","no",75.7,67.91
+"95","High income","FIN","EURO","EURO A","Europe & Central Asia","no",1950.89,1950.89
+"96","Upper middle income","FJI","WPRO","WPRO B","East Asia & Pacific","no",341.51,299.26
+"97","High income","FRA","EURO","EURO A","Europe & Central Asia","no",1814.38,1755.98
+"98","High income","GBR","EURO","EURO A","Europe & Central Asia","no",1927.88,1927.88
+"99","Upper middle income","GEO","EURO","EURO B","Europe & Central Asia","no",223.05,223.05
+"100","Lower middle income","GHA","AFRO","AFRO D","Sub-Saharan Africa","no",69.18,86.65
+"101","Low income","GMB","AFRO","AFRO D","Sub-Saharan Africa","no",23.63,28.37
+"102","High income","GRC","EURO","EURO A","Europe & Central Asia","no",426.17,426.17
+"103","Upper middle income","GTM","PAHO","AMRO D","Latin America & Caribbean","no",212.52,212.44
+"104","Upper middle income","GUY","PAHO","AMRO B","Latin America & Caribbean","no",224.61,225.64
+"105","Lower middle income","HND","PAHO","AMRO B","Latin America & Caribbean","no",178.39,178.39
+"106","High income","HRV","EURO","EURO A","Europe & Central Asia","no",608.95,607.78
+"107","Low income","HTI","PAHO","AMRO D","Latin America & Caribbean","no",65.94,61.44
+"108","High income","HUN","EURO","EURO C","Europe & Central Asia","no",712.85,674.9
+"109","Lower middle income","IDN","SEARO","SEARO B","East Asia & Pacific","no",120.58,120.58
+"110","High income","IRL","EURO","EURO A","Europe & Central Asia","no",2262.86,2262.86
+"111","High income","ISL","EURO","EURO A","Europe & Central Asia","no",4852.76,4852.76
+"112","High income","ISR","EURO","EURO A","Middle East & North Africa","no",1879.33,1854.63
+"113","High income","ITA","EURO","EURO A","Europe & Central Asia","no",1102.5,1102.5
+"114","Upper middle income","JAM","PAHO","AMRO B","Latin America & Caribbean","no",573.5,558.05
+"115","Upper middle income","JOR","EMRO","EMRO E","Middle East & North Africa","no",148.28,148.28
+"116","High income","JPN","WPRO","WPRO A","East Asia & Pacific","no",142.59,142.59
+"117","Upper middle income","KAZ","EURO","EURO C","Europe & Central Asia","no",309.81,306.48
+"118","Lower middle income","KEN","AFRO","AFRO E","Sub-Saharan Africa","no",102.04,98.84
+"119","Lower middle income","KGZ","EURO","EURO B","Europe & Central Asia","no",10.88,10.92
+"120","Lower middle income","KHM","WPRO","WPRO B","East Asia & Pacific","no",265.11,204.11
+"121","High income","KOR","WPRO","WPRO B","East Asia & Pacific","no",1953.24,1953.24
+"122","High income","KWT","EMRO","EMRO E","Middle East & North Africa","no",1318.34,1073.12
+"123","Lower middle income","LAO","WPRO","WPRO B","East Asia & Pacific","no",95.79,104.61
+"124","Upper middle income","LBN","EMRO","EMRO E","Middle East & North Africa","no",278.52,308.13
+"125","Low income","LBR","AFRO","AFRO D","Sub-Saharan Africa","no",127.52,36.95
+"126","Upper middle income","LKA","SEARO","SEARO B","South Asia","no",95.43,89.86
+"127","Lower middle income","LSO","AFRO","AFRO E","Sub-Saharan Africa","no",204.35,97.98
+"128","High income","LTU","EURO","EURO C","Europe & Central Asia","no",844.7,844.7
+"129","High income","LUX","EURO","EURO A","Europe & Central Asia","no",3410.5,3344.81
+"130","High income","LVA","EURO","EURO C","Europe & Central Asia","no",662.72,662.72
+"131","Lower middle income","MDA","EURO","EURO C","Europe & Central Asia","no",165.09,165.09
+"132","Low income","MDG","AFRO","AFRO D","Sub-Saharan Africa","no",91.44,63.6
+"133","Upper middle income","MDV","SEARO","SEARO D","South Asia","no",390.6,406.18
+"134","Upper middle income","MEX","PAHO","AMRO B","Latin America & Caribbean","no",199.14,199.14
+"135","Upper middle income","MHL","WPRO","WPRO B","East Asia & Pacific","no",337.16,313.96
+"136","Upper middle income","MKD","EURO","EURO B","Europe & Central Asia","no",258.59,292.45
+"137","Low income","MLI","AFRO","AFRO D","Sub-Saharan Africa","no",121.89,80.26
+"138","High income","MLT","EURO","EURO A","Middle East & North Africa","no",1388.25,1269.36
+"139","Lower middle income","MMR","SEARO","SEARO D","East Asia & Pacific","no",81.76,81.76
+"140","Upper middle income","MNE","EURO","EURO B","Europe & Central Asia","no",421.67,421.67
+"141","Lower middle income","MNG","WPRO","WPRO B","East Asia & Pacific","no",229.72,229.72
+"142","Upper middle income","MUS","AFRO","AFRO D","Sub-Saharan Africa","no",317.98,317.64
+"143","Low income","MWI","AFRO","AFRO E","Sub-Saharan Africa","no",23.57,26.11
+"144","Upper middle income","MYS","WPRO","WPRO B","East Asia & Pacific","no",526.44,494.91
+"145","Upper middle income","NAM","AFRO","AFRO E","Sub-Saharan Africa","no",240.62,239.72
+"146","Low income","NER","AFRO","AFRO D","Sub-Saharan Africa","no",1367.29,34.58
+"147","Lower middle income","NGA","AFRO","AFRO D","Sub-Saharan Africa","no",172.03,1128.43
+"148","Lower middle income","NIC","PAHO","AMRO D","Latin America & Caribbean","no",3609.81,192.48
+"149","High income","NOR","EURO","EURO A","Europe & Central Asia","no",3321.95,3321.95
+"150","Low income","NPL","SEARO","SEARO D","South Asia","no",57.98,61.19
+"151","High income","NZL","WPRO","WPRO A","East Asia & Pacific","no",2274.59,2274.59
+"152","Lower middle income","PAK","EMRO","EMRO D","South Asia","no",70.17,68.24
+"153","High income","PAN","PAHO","AMRO B","Latin America & Caribbean","no",553.51,553.51
+"154","Upper middle income","PER","PAHO","AMRO D","Latin America & Caribbean","no",350.26,350.26
+"155","Lower middle income","PHL","WPRO","WPRO B","East Asia & Pacific","no",164.85,164.85
+"156","High income","POL","EURO","EURO B","Europe & Central Asia","no",58.03,58.03
+"157","High income","PRT","EURO","EURO A","Europe & Central Asia","no",538.86,560.51
+"158","Upper middle income","PRY","PAHO","AMRO B","Latin America & Caribbean","no",264.64,264.64
+"159","High income","QAT","EMRO","EMRO E","Middle East & North Africa","no",2758.37,2732.25
+"160","Upper middle income","ROU","EURO","EURO B","Europe & Central Asia","no",606.72,606.72
+"161","Upper middle income","RUS","EURO","EURO C","Europe & Central Asia","no",410.54,410.54
+"162","Low income","RWA","AFRO","AFRO E","Sub-Saharan Africa","no",22.68,27.48
+"163","High income","SAU","EMRO","EMRO E","Middle East & North Africa","no",885.62,883.49
+"164","Lower middle income","SDN","EMRO","EMRO D","Sub-Saharan Africa","no",1334.06,1349.55
+"165","High income","SGP","WPRO","WPRO A","East Asia & Pacific","no",2179.88,2179.88
+"166","Lower middle income","SLV","PAHO","AMRO B","Latin America & Caribbean","no",202.16,202.16
+"167","High income","SMR","EURO","EURO A","Europe & Central Asia","no",2294.11,2294.11
+"168","Upper middle income","SRB","EURO","EURO B","Europe & Central Asia","no",344.93,344.93
+"169","High income","SVK","EURO","EURO B","Europe & Central Asia","no",794.82,794.82
+"170","High income","SVN","EURO","EURO A","Europe & Central Asia","no",1155.22,1131.19
+"171","High income","SWE","EURO","EURO A","Europe & Central Asia","no",2550.7,2550.7
+"172","Lower middle income","SWZ","AFRO","AFRO E","Sub-Saharan Africa","no",132.6,134.57
+"173","High income","SYC","AFRO","AFRO D","Sub-Saharan Africa","no",678.37,678.37
+"174","Low income","SYR","EMRO","EMRO E","Middle East & North Africa","no",394.61,461.26
+"175","Low income","TCD","AFRO","AFRO D","Sub-Saharan Africa","no",125.74,126.58
+"176","Low income","TGO","AFRO","AFRO D","Sub-Saharan Africa","no",68.95,88.13
+"177","Upper middle income","THA","SEARO","SEARO B","East Asia & Pacific","no",325.49,325.49
+"178","Low income","TJK","EURO","EURO B","Europe & Central Asia","no",64.26,52.31
+"179","Lower middle income","TLS","SEARO","SEARO B","East Asia & Pacific","no",327.51,210.71
+"180","Upper middle income","TON","WPRO","WPRO B","East Asia & Pacific","no",320.55,316.97
+"181","High income","TTO","PAHO","AMRO B","Latin America & Caribbean","no",645.97,549.77
+"182","Upper middle income","TUR","EURO","EURO B","Europe & Central Asia","no",335.45,335.45
+"183","Low income","TZA","AFRO","AFRO E","Sub-Saharan Africa","no",74,142.3
+"184","Low income","UGA","AFRO","AFRO E","Sub-Saharan Africa","no",51.61,47.98
+"185","Lower middle income","UKR","EURO","EURO C","Europe & Central Asia","no",209.99,209.99
+"186","High income","URY","PAHO","AMRO B","Latin America & Caribbean","no",537.32,537.32
+"187","High income","USA","PAHO","AMRO A","North America","no",2573.05,2573.05
+"188","Lower middle income","UZB","EURO","EURO B","Europe & Central Asia","no",181.66,177.22
+"189","Lower middle income","VNM","WPRO","WPRO B","East Asia & Pacific","no",198.98,198.98
+"190","Lower middle income","VUT","WPRO","WPRO B","East Asia & Pacific","no",222.8,300.71
+"191","Upper middle income","WSM","WPRO","WPRO B","East Asia & Pacific","no",156.78,186.54
+"192","Low income","YEM","EMRO","EMRO D","Middle East & North Africa","no",206.54,105.68
+"193","Upper middle income","ZAF","AFRO","AFRO E","Sub-Saharan Africa","no",103.97,103.97
+"194","Lower middle income","ZMB","AFRO","AFRO E","Sub-Saharan Africa","no",52.12,74.54
