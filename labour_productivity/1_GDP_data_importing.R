@@ -101,10 +101,10 @@ PWT <- pwt_data %>%
 
 temp <- PWT[ , -c("labsh","delta")]
 beta_delta <- PWT[year==as.numeric(max(PWT$year))] ## get latest year (the all have last year 2017 otherwise would have to use other code)
-beta_delta <- beta_delta[ , c("isocode","labsh","delta")] ## keep columns needed
+beta_delta <- beta_delta[ , c("isocode","labsh","delta")] ## keep columns needed,  note these are rates/shares
 PWT <- merge(temp, beta_delta, by="isocode")
 names(PWT)[names(PWT)=="isocode"] <- "country"
-PWT <- PWT[year==2017]
+PWT <- PWT[year==as.numeric(max(PWT$year))] ## latest year available !!! would want to update with new data
 rm(beta_delta)
 rm(temp)
 
@@ -160,5 +160,11 @@ macro_data <- macro_data[ , -c("year.x","year.y")] ## removing these as constant
 macro_data <- merge(macro_data,PWT, by="country")
 macro_data <- macro_data[ , -c("year")]
 macro_data <- merge(macro_data, N, by="country")
+
+### REMOVE NON 2010 ABSOLUTE VALUES TO REDUCE LIKELIHOOD OF USAGE
+### AS GDP ETC IN CONSTANT 2010 USD$
+
+macro_data <- macro_data[ ,-c("rgdpna" ,  "rtfpna"  , "rnna"  ,"hc" ,
+                              "LFP")]
 
 save(macro_data, file="labour_productivity/outputs/macro_data.RData")
