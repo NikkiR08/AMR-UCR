@@ -16,7 +16,7 @@ results_GDP_difference <- results %>%
          sc2_ecoli_loss = (basecase_Y.2019usd-sc2_ecoli_Y.2019usd),
          sc1_saureus_loss = (basecase_Y.2019usd-sc1_saureus_Y.2019usd),
          sc2_saureus_loss = (basecase_Y.2019usd-sc2_saureus_Y.2019usd)) %>%
-  group_by(iso3c) %>%
+  group_by(iso3c, year) %>%
     mutate(sc1_ecoli_MAD = median(sc1_ecoli_loss, na.rm=TRUE), ## MAD = median absolute difference (Annual)
            sc1_ecoli_MPD = median((sc1_ecoli_loss/basecase_Y.2019usd),na.rm=TRUE),## MPD = median percentage difference (Annual)
            sc2_ecoli_MAD = median(sc2_ecoli_loss, na.rm=TRUE),
@@ -43,6 +43,6 @@ results_GDP_difference <- results %>%
            "sc2_ecoli_TAD" ,"sc2_ecoli_TPD",
            "sc1_saureus_TAD","sc1_saureus_TPD",
            "sc2_saureus_TAD","sc2_saureus_TPD" )) %>%
-  group_by(iso3c) %>% 
-  slice_max(year, n = 1) %>%
+  # group_by(iso3c) %>% 
+  # slice_max(year, n = 1) %>%
   as.data.table()
