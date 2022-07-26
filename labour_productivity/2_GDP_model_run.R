@@ -1,10 +1,12 @@
 ############ RUNNING THE GDP MODELS
 
+
 ## LOADING THE PACKAGES
 library(tidyverse)
 library(dplyr)
 library(data.table)
 library(rworldmap)
+library(zoo)
 
 ## LOADING THE DATA
 
@@ -34,28 +36,6 @@ converting.2019usd.nominal <- function(basecase_forecast){
   return(all)
 }
 
-###### FUNCTIONS AND DATA TO CONVERT TO 2019 USD ######
-source("general_functions/inflation.R")
-load("data_all/who_whoc_wb.RData")
-
-converting.2019usd.nominal <- function(basecase_forecast){
-  all <- as.data.table(basecase_forecast)
-  
-  all[ , cost_year := 2010]
-  all[ , cost_currency := "USD"]
-  
-  ## get local currency units matched
-  all <- merge(all, currency_country, by="iso3c", all.x=TRUE, all.y=FALSE)
-  
-  # converting costs
-  for (i in 1:nrow(all)){
-    all[i, Y.2019usd := cost_adj_abx(2019,all[i],"Y",
-                                     inf_xch_4function)]
-    all[i, Y_PC.2019usd := cost_adj_abx(2019,all[i],"Y_PC",
-                                        inf_xch_4function)]
-  }
-  return(all)
-}
 
 ##### FUNCTIONS AND DATA TO HELP FILL IN MISSING DATA LATER #####
 ## first repeat all the rows for the who data set
@@ -105,7 +85,8 @@ mrsa.100.dp <- 0.0000575424
 #### RUNNING THE MODEL ###################
 macro_data[ , Y_PC := GDP/N]
 macro_data[ , Y := GDP]
-# macro_data[ , g_a_av := 0.01] ## set to moderate for now
+# macro_data[ , g_a_av := 0.01] ## currently use macro_data values 
+
 ### this is the initial 2019 value
 ## remove GDP column to avoid confusion, should use Y
 macro_data <- macro_data[ , -c("GDP")]
@@ -162,25 +143,38 @@ temp_all <- merge(macro_data_all, N, by.x=c("iso3c","year"),
                   by.y=c("country","year"))
 temp_all <- as.data.table(temp_all)
 
-temp_all[ is.na(Y_PC), WAP := W_N.y*N.y]
-temp_all[ is.na(Y_PC), DAP := N.y-WAP]
-temp_all[ is.na(Y_PC), WAP2 := WAP-((ecoli.base.wk)*WAP)]
-temp_all[ is.na(Y_PC), DAP2 := DAP-((ecoli.base.dp)*DAP) ]
-temp_all[ is.na(Y_PC), N.x := WAP2+DAP2]
-temp_all[ is.na(Y_PC), W_N.x := WAP2/N.x]
+## add a flag for which ones are the imputs ones
+temp_all[ , missing_flag := 0]
+temp_all[is.na(Y_PC), missing_flag := 1]
+
+temp_all[ missing_flag==1, WAP := W_N.y*N.y]
+temp_all[ missing_flag==1, DAP := N.y-WAP]
+temp_all[ missing_flag==1, WAP2 := WAP-((ecoli.base.wk)*WAP)]
+temp_all[ missing_flag==1, DAP2 := DAP-((ecoli.base.dp)*DAP) ]
+temp_all[ missing_flag==1, N.x := WAP2+DAP2]
+temp_all[ missing_flag==1, W_N.x := WAP2/N.x]
+
+## if WAP is na remove from analysis
+temp_all <- temp_all[!is.na(WAP)|missing_flag==0]
+### currently removed: "AND" "DMA" "ERI" "KNA" "MCO" "MHL" "NRU" "PLW" "SMR" "TUV"
 
 ## replace missing Y per capita values by income group averages for that year
-macro_data <- temp_all %>% group_by(Income.group,year) %>%
-  mutate(Y_PC=ifelse(is.na(Y_PC),mean(Y_PC,na.rm=TRUE),Y_PC)) %>%
+macro_data2 <- temp_all %>% group_by(Income.group,year) %>%
+  mutate_at("Y_PC", na.aggregate)%>%
   as.data.table()
 
+## checking doing the right calc
+# test <- temp_all[Income.group=="Low income"&year==2020]
+# mean(test$Y_PC,na.rm=TRUE) ## checked against a missing low income and matches
+
 ## update Y as a function on N and Y_PC
-macro_data[is.na(Y),Y := Y_PC*N.x]
+macro_data2[is.na(Y) & year==2019,Y := Y_PC*N.y] ## as model starts from 2019 onwards
+macro_data2[is.na(Y) & year!=2019,Y := Y_PC*N.x] 
 
 ## relabelling and getting rid of non-need cols
-macro_data <- macro_data[, -c( "N.y", "W_N.y","WAP" , "DAP" ,"WAP2" ,"DAP2" )]
+macro_data2 <- macro_data2[, -c( "N.y", "W_N.y","WAP" , "DAP" ,"WAP2" ,"DAP2" )]
 
-return(macro_data)
+return(macro_data2)
 }
 
 basecase_forecast <- completing.cases.who(wholist, basecase_forecast,0,0)
