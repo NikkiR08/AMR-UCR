@@ -60,6 +60,7 @@ N <- melt(N, measure.vars = dput(as.character(yearsreshape)),
 N$year = as.numeric(gsub("\\X", "", N$year)) ## remove x value across them and turn numeric
 N <- N[year %in% c(2019:2035)]  ### get the years we want
 N <- N[ , c("Country.Code","Indicator.Code","year","value")]
+save(N, file="labour_productivity/inputs/N_adapted.RData")
 
 ### creation of the growth rates
 N <-  dcast(N, Country.Code + year ~ Indicator.Code, value.var="value", fill=0)
