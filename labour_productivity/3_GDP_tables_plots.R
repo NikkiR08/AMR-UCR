@@ -80,26 +80,69 @@ regional.gdp <- combo %>%
 mutate_if(is.numeric, round, 6) %>% ## !!! remove this if want to use values further and keep accuracy
   as.data.table() 
   ### !!! add code to format table so % for PD and 0 dp for AD columns
-  ### for now do in excel post
+  ### for now I do in excel post
 write.csv(regional.gdp, file="labour_productivity/outputs/regional_GDP_impacts.csv")
 
 ###### PLOTS ################
 
 #### add code to log numerical columns for plots
 
-test <- results_GDP[ , test := log(sc1_ecoli_TAD)]
+map_data <- results_GDP %>% 
+  mutate_at(vars(ends_with("TAD")|ends_with("TPD")), list(lg = ~log(.)))
+
+joinData <- joinCountryData2Map( map_data,
+                                 joinCode = "ISO3",
+                                 nameJoinColumn = "iso3c")
+
+mapping_function <- function(x, y){
+##!!!
+  ## doing alot by hand for now but next time try to integrate labels
+  ## e.g. adding back transformed scale numbers and titles
+theMap <- mapCountryData( x, nameColumnToPlot=y, addLegend=FALSE ,
+                          colourPalette = "terrain", mapTitle = y)
+
+labs <- theMap$cutVector %>% 
+  exp() %>%
+  round(-2)
+
+do.call( addMapLegend, c(theMap,
+                         legendWidth=1, legendMar = 2,
+                         legendIntervals='data',
+                         legendLabels='all'))
+
+print(labs)
+}
+
+mapping_function(joinData, "sc1_ecoli_TAD_lg")
+mapping_function(joinData, "sc2_ecoli_TAD_lg")
+
+## remove log for % diff maps
+mapping_function_nolog <- function(x, y){
+  ##!!!
+  ## doing alot by hand for now but next time try to integrate labels
+  ## e.g. adding back transformed scale numbers and titles
+  theMap <- mapCountryData( x, nameColumnToPlot=y, addLegend=FALSE ,
+                            colourPalette = "terrain", mapTitle = y)
+  
+  labs <- theMap$cutVector
+  labs <- format(labs, scientific=FALSE)
+  
+  do.call( addMapLegend, c(theMap,
+                           legendWidth=1, legendMar = 2,
+                           legendIntervals='data',
+                           legendLabels='all'))
+  
+  print(labs)
+}
 
 joinData <- joinCountryData2Map( results_GDP,
                                  joinCode = "ISO3",
                                  nameJoinColumn = "iso3c")
+mapping_function_nolog(joinData, "sc1_ecoli_TPD")
+mapping_function_nolog(joinData, "sc2_ecoli_TPD")
 
-theMap <- mapCountryData( joinData, nameColumnToPlot="test", addLegend=FALSE ,
-                          colourPalette = "terrain", mapTitle = "E. coli vs BaseLine: Scenario 1")
-do.call( addMapLegend, c(theMap,
-                         legendWidth=1, legendMar = 2,
-                         legendIntervals='data',
-                         legendLabels="all"))
+##### some calculations for paper #####
+sum(results_GDP$sc2_ecoli_TAD)
+sum(results_GDP$sc2_saureus_TAD)
 
-## doing by hand for now but next time try to integrate labels
-x <- c(exp(11.7),exp(14.2),exp(15.5),exp(16.9),exp(18),exp(19),exp(22.5))
-round(x, -2)
+0.005*6
