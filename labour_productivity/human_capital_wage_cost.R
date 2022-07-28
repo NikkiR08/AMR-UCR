@@ -410,3 +410,7 @@ regional.gdp <- combo %>%
 
 comparison.dt <- merge(regional.HC, regional.gdp, by="who.region")
 write.csv(comparison.dt, file="labour_productivity/outputs/comparison_casestudy.csv")
+
+## comparing difference
+comparison.dt[ , ecoli.diff := Ecoli/sc2_ecoli_loss]
+comparison.dt[ , sa.diff := Saureus/sc2_saureus_loss]
