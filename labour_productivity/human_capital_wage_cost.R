@@ -338,4 +338,75 @@ save(regional.labour, file="labour_productivity/outputs/regional_labour.RData")
 write.csv(regional.labour, file="labour_productivity/outputs/regional_labour.csv")
 
 
+##### cast study comparison #########
+ 
+load("labour_productivity/outputs/macro_data.Rdata")
+load("labour_productivity/outputs/labour_wage_2019USD.RData")
 
+HC_basecase <- merge(labour_productivity_all,macro_data,
+                     by.x="iso3c", by.y="country")
+
+## for now just 2020
+HC <- HC_basecase[year==2020]
+HC[ , WAP := W_N*N]
+HC[ , WAP_HC_BC := WAP*BaseCase_2019USD]
+
+## E. coli 100%
+ecoli.100.wk <- 0.0000346752
+
+HC[, WAP_EC := WAP-((ecoli.100.wk)*WAP)]
+HC[ , WAP_HC_EC := WAP_EC*BaseCase_2019USD]
+HC[ , LOSS_HC_EC := WAP_HC_BC - WAP_HC_EC]
+
+## S. aureus 100%
+mrsa.100.wk <- 0.000022464
+
+HC[, WAP_SA := WAP-((mrsa.100.wk)*WAP)]
+HC[ , WAP_HC_SA := WAP_SA*BaseCase_2019USD]
+HC[ , LOSS_HC_SA := WAP_HC_BC - WAP_HC_SA]
+
+#### !!! note for this I did not go through and calculate regional
+### averages to impute missing values, it's just regional based on the ones we have
+
+## calculate regional averages
+regional.HC <- HC %>%
+  filter(!is.na(N)) %>%
+  group_by(who.region) %>% 
+  summarise(Ecoli_HC = weighted.mean(LOSS_HC_EC, N, na.rm=TRUE),
+            Saureus_HC = weighted.mean(LOSS_HC_SA, N, na.rm=TRUE)) %>%
+  mutate_if(is.numeric, round, 0) %>%
+  as.data.table()
+
+## to compare to 2020 result from GDP model
+load("labour_productivity/outputs/gdp_results_all.RData")
+
+gdp <- results[year==2020]
+
+gdp <- gdp %>%
+  mutate(sc2_ecoli_loss = (basecase_Y.2019usd-sc2_ecoli_Y.2019usd),
+         sc2_saureus_loss = (basecase_Y.2019usd-sc2_saureus_Y.2019usd)) %>%
+  as.data.table()
+
+##### for regional averages ######
+load("labour_productivity/inputs/N_adapted.RData")
+
+## just get 2020 population weighting
+N <- N[year==2020 & 	
+         Indicator.Code == "SP.POP.TOTL"]
+names(N)[names(N) == 'value'] <- 'npop'
+N <- N[ ,-c("year")]
+## in future iterations could build into the weighting over years 
+## and then provide summary statistics on those regionally weighted averages ?
+
+combo <- merge(gdp, N, by.x="iso3c", by.y="Country.Code")
+
+regional.gdp <- combo %>%
+  filter(!is.na(npop)) %>%
+  group_by(who.region) %>% 
+  summarise(across(where(is.numeric), ~ weighted.mean(.x, npop, na.rm = TRUE)))%>%
+  mutate_if(is.numeric, round, 6) %>% ## !!! remove this if want to use values further and keep accuracy
+  as.data.table() %>%
+  select(c("who.region","sc2_ecoli_loss", "sc2_saureus_loss" ))
+
+comparison.dt <- merge(regional.HC, regional.gdp, by="who.region")
+write.csv(comparison.dt, file="labour_productivity/outputs/comparison_casestudy.csv")
