@@ -349,7 +349,7 @@ HC_basecase <- merge(labour_productivity_all,macro_data,
 ## for now just 2020
 HC <- HC_basecase[year==2020]
 HC[ , WAP := W_N*N]
-HC[ , WAP_HC_BC := WAP*BaseCase_2019USD]
+HC[ , WAP_HC_BC := WAP*(BaseCase_2019USD*12)] ## multiply by 12 to get annual
 
 ## E. coli 100%
 ecoli.100.wk <- 0.0000346752
@@ -412,5 +412,5 @@ comparison.dt <- merge(regional.HC, regional.gdp, by="who.region")
 write.csv(comparison.dt, file="labour_productivity/outputs/comparison_casestudy.csv")
 
 ## comparing difference
-comparison.dt[ , ecoli.diff := Ecoli/sc2_ecoli_loss]
-comparison.dt[ , sa.diff := Saureus/sc2_saureus_loss]
+comparison.dt[ , ecoli.diff := Ecoli_HC/sc2_ecoli_loss]
+comparison.dt[ , sa.diff := Saureus_HC/sc2_saureus_loss]
