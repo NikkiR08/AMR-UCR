@@ -348,21 +348,22 @@ HC_basecase <- merge(labour_productivity_all,macro_data,
 
 ## for now just 2020
 HC <- HC_basecase[year==2020]
+HC[ , annual_wage := BaseCase_2019USD*12]
 HC[ , WAP := W_N*N]
-HC[ , WAP_HC_BC := WAP*(BaseCase_2019USD*12)] ## multiply by 12 to get annual
+HC[ , WAP_HC_BC := WAP*annual_wage] ## multiply by 12 to get annual
 
 ## E. coli 100%
 ecoli.100.wk <- 0.0000346752
 
 HC[, WAP_EC := WAP-((ecoli.100.wk)*WAP)]
-HC[ , WAP_HC_EC := WAP_EC*BaseCase_2019USD]
+HC[ , WAP_HC_EC := WAP_EC*annual_wage]
 HC[ , LOSS_HC_EC := WAP_HC_BC - WAP_HC_EC]
 
 ## S. aureus 100%
 mrsa.100.wk <- 0.000022464
 
 HC[, WAP_SA := WAP-((mrsa.100.wk)*WAP)]
-HC[ , WAP_HC_SA := WAP_SA*BaseCase_2019USD]
+HC[ , WAP_HC_SA := WAP_SA*annual_wage]
 HC[ , LOSS_HC_SA := WAP_HC_BC - WAP_HC_SA]
 
 #### !!! note for this I did not go through and calculate regional
