@@ -7,20 +7,20 @@ library(gcookbook) ## for colour blind friendly palette
 library(rworldmap)
 library(dplyr)
 
-##### abundance - FIGURE 2 ######
+##### level of evidence - FIGURE 2 ######
 
 ## total across regions
 
-load("cost_per_case/outputs/datall_forabundance.RData")
+load("cost_per_case/outputs/datall_forlevel.RData")
 
 evidence_heatmap <- datall %>% 
   group_by(`World Health Organization Region`, Syndrome) %>% 
-  summarise(Abundance = median(evidence))
+  summarise(level_evidence = median(evidence))
 
 
 mine.heatmap <- ggplot(data = evidence_heatmap, mapping = aes(x = Syndrome,
                                                               y = `World Health Organization Region`,
-                                                              fill = Abundance))+
+                                                              fill = level_evidence))+
   geom_tile() + scale_fill_viridis_c(direction=-1) 
 
 mine.heatmap
