@@ -368,6 +368,10 @@ save(costing.sample, file="cost_per_case/outputs/costing.sample.RData")
   length(which(all.des$review_marker=="AMR"))
   length(which(all.des$review_marker=="DRI"))
   
+  length(which(all.des$los==1))
+  length(which(all.des$los==0))
+  
+  
   ### final combinations of syndromes + Gram-stains
   load("cost_per_case/outputs/AMR_Results_Table_AMR_nolabels.RData")
    AMR <- results
@@ -399,7 +403,7 @@ save(costing.sample, file="cost_per_case/outputs/costing.sample.RData")
 
   
   
-  #### ABUNDANCE OF EVIDENCE ####
+  #### level OF EVIDENCE ####
   
   load("cost_per_case/outputs/results_AMRandDRI.RData")
   datall <- results.long
@@ -428,7 +432,7 @@ save(costing.sample, file="cost_per_case/outputs/costing.sample.RData")
   datall[ , evidence := (los.no.studies*los.level.N)+(extracted.cost.no.studies*
                                                         cost.level.N)]
   
-  save(datall, file="cost_per_case/outputs/datall_forabundance.RData")
+  save(datall, file="cost_per_case/outputs/datall_forlevel.RData")
  
   ############## Table where has number of studies  ######
   
@@ -456,12 +460,12 @@ save(costing.sample, file="cost_per_case/outputs/costing.sample.RData")
   evid <- as.data.table(evid)
   evid <- evid[ ,flag := costing.AMR+costing.DRI+los.AMR+los.DRI]
   evid <- evid[flag!=0]
-
+  
   #### note I then added Joint to Bone and Joint
   write.csv(evid, file="cost_per_case/outputs/inputs_evidence_summary.csv")
   
   
-  ######## STATS FOR PAPER ######
+  ######## REGIONAL STATS ######
   load("cost_per_case/outputs/costing.table.region.G.RData")
   
   outputs <- as.data.table(costing.table.region.G)
