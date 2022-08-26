@@ -81,8 +81,9 @@ combo_results <- unique(results.all.gram[,c('Syndrome','Antibiotic Class','Gram 
 
 ## matching spelling/labelling
 syndrome_matched[variable == "BONE/JOINT" , variable := "B-J"]
-syndrome_matched[variable == "INTRA.ABDOMINAL" , variable := "IAI"]
+syndrome_matched[variable == "INTRA-ABDOMINAL" , variable := "IAI"]
 syndrome_matched[variable == "RTI (LRTI)" , variable := "RTI"]
+unique(syndrome_matched$variable) ## test
 
 ## split multiple antibiotics for a particular bacteria
 s <- strsplit(as.character(syndrome_matched$to_match), ',')
