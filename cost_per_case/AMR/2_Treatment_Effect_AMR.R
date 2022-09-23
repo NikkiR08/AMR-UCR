@@ -298,7 +298,7 @@ los.est[se.measure=="IQR+", highexp:=(otherexp/2)+avexp]
 los.est[se.measure=="IQR+", lownon:=avnon-(othernon/2)]
 los.est[se.measure=="IQR+", highnon:=(othernon/2)+avnon]
 los.est[se.measure=="IQR+", se.measure:="IQR"]
-
+### !!! if used in future work integrate into function
 
 los.TE <- TE_creator(los.est)
 ## naylor_151 is na for n_exposed and n_nonexposed because there are no sample sizes extracted
