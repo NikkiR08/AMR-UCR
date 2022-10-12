@@ -184,6 +184,7 @@ dt.output <- merge(dt.output, n.1, by="group_whoc", all.x=TRUE, all.y=FALSE)
 dt.output[ , TE.x := TE.y]
 dt.output[ , seTE.x := seTE.y]
 dt.output <- dt.output[ , -c("TE.y","seTE.y")]
+dt.output <- dt.output[ , -c("iso3c")] ## added to match DRI edits
 
 ## if n>1 then meta-analysis
 n.studies.2 <- subset(n.studies, n>1)
@@ -498,7 +499,7 @@ dt.na.global <- dt.na.global[ , c("syndrome","class","gram.stain")]
 # write.csv(dt.na.global, "cost_per_case/outputs/missing_global_combinations.csv")
 
 ### combining altogether
-dt.output <- dt.output[ ,c("iso3c","whoc.region","syndrome","class","gram.stain",
+dt.output <- dt.output[ ,c("whoc.region","syndrome","class","gram.stain",
                            "TE.x","seTE.x","group_whoc","n.x")]
 setnames(dt.output, "TE.x", "TE.whoc")
 setnames(dt.output, "seTE.x", "seTE.whoc")
@@ -527,6 +528,12 @@ setnames(dt.output.global, "n.x", "n.global")
 # first remove the dt.all categories we don't want to map down to
 # i.e. non-WHO-classified countries
 dt.all.merge <- dt.all[!is.na(whoc.region)]
+
+## then get unique rows per country-class-bug-syndrome etc. combination
+dt.all.merge <- dt.all.merge %>%
+  group_by(iso3c,syndrome,class,gram.stain ) %>%
+  filter(row_number() == 1)%>% 
+  as.data.table()
 
 dt.output.country <- merge(dt.all.merge, dt.output, by=c("whoc.region",
                                                    "syndrome",
@@ -585,9 +592,14 @@ dt.output.all3[is.na(seTE.final), seTE.final := seTE.global ]
 ## otherwise can use same syndrome + gram.stain - but will already
 # have those estimates in the output file & would mean a lot more code
 los.output.cc <- dt.output.all3[!is.na(TE.final)]
-los.output.cc <- los.output.cc[ ,c("syndrome","class" , "gram.stain",  "iso3c.x",
+los.output.cc <- los.output.cc[ ,c("syndrome","class" , "gram.stain",  "iso3c",
                     "whoc.region"   , "Income.group"    ,  "wb.region"    , "TE.final"     ,  
                     "seTE.final" ,   "level"    ,      "no.studies")]
+
+## rename iso3c to iso3c.x as this is what is was before edited function
+## not to repeat certain combinations - but means don't have to change iso3c.x in rest of script
+setnames(los.output.cc, "iso3c", "iso3c.x")
+
 
 return(los.output.cc)
 }
