@@ -1,0 +1,28 @@
+antibiotic_WHO_PPL,antibiotic_oxfordhandbook,to_match,bacteria,bacteria.code,gram.stain,BONE/JOINT,BSI,GI,INTRA-ABDOMINAL,URTI,RTI (LRTI),UTI,SSI,SSTI,STI,COL/INF,OTHER
+carbapenems,"3g cephalosporins, carbapenems, fluoroquinolones, aminoglycosides, or colistimethate","carbapenems, 3g cephalosporins",Acinetobacter baumannii,aba,gn,1,1,,1,,1,1,1,1,,1,"eye infections, endocarditis"
+fluroquinolones,"fluroquinolones, sulfonamides",na,Campylobacter,cam,gn,,,1,,,,,,,,,"Guillain– Barré syndrome, meningitis"
+n/a,"tetracyclines, macrolides",na,Chlamydia,chl,gn,,,,,,,,,,1,,"eye infections (trachoma), lymphadenopathy, fever, headache, myalgias, proctitis, meningitis, Neonatal pneumonia"
+n/a,"fluroquinolones, macrolides",na,Cholera/Vibrio cholerae,cho,gn,,,1,,,,,,,,,"bacteraemia, SSTI, meningitis (not matched as not main syndromes associated with Cholera)"
+n/a,"metronidazoles, glycopeptides, macrolides",na,Clostridium difficile,cdif,gp,,,1,,,,,,,,,
+glycopeptides,"penicillins, glycopeptides, oxazolidinones, tetracyclines, lipopeptides","glycopeptides, penicillins",Enterococcus faecium,efa,gp,,1,,1,,,1,1,1,,1,"endocarditis, pelvic, meningitis, RTI (rare), sepsis, and device- related infections [IAI added as extracted data indicates that syndrome from the literature review]"
+"carbapenems, 3g cephalosporins","sulfonamides, penicillins, cephalosporin (3g cephalosporins), fluoroquinolones, aminoglycosides, piperacillin–tazobactam, or carbapenems","carbapenems, 3g cephalosporins",Escherichia coli,eco,gn,,1,1,1,,1,1,1,1,,1,neonatal sepsis
+n/a,"penicillins, macrolide",na,Group A Streptococcus,gas,gp,,1,,,1,,,,1,,,"fever,meningitis, osteomyelitis, puerperal sepsis, and septic arthritis"
+n/a,penicillins,na,Group B Streptococcus,gbs,gp,,1,,,,1,1,,1,,,"mainly neonatal disease, meningitis, ""GBS infection in adults and older children, especially those with an
+underlying disease includes bacteraemia, post- partum infections,
+pneumonia, endocarditis, meningitis, arthritis, osteomyelitis, otitis media,
+conjunctivitis, UTI, skin and soft tissue infections, and meningitis."""
+penicillins,"cephalosporins (3g cephalosporins), penicillins, sulfonamides, macrolides, chloramphenicol",na,"Haemophilus influenzae nt, b",hib,gn,,1,,,1,,,1,1,,,"mainly neonatal disease, ""meningitis, epiglottitis, bacteraemia with no clear
+focus, septic arthritis, pneumonia, cellulitis."""
+macrolides,"penicillins, macrolides, or metronidazole",na,Helicobacter pylori,hpy,gn,,,1,,,,,,,,,
+"carbapenems, 3g cephalosporins","cephalosporins (3g cephalosporins), fluoroquinolones, aminoglycosides, carbapenems","carbapenems, 3g cephalosporins",Klebsiella pneumoniae,kpn,gn,,1,,1,,1,1,1,,,1,nosocomial and opportunistic infections
+n/a,"penicillins, cephalosporins (3g cephalosporins)",na,Meningococcus/Neisseria meningitidis,men,gn,,1,,,,1,,,,,,"""meningitis and septicaemia, purulent conjunctivitis (occasionally
+becomes systemic), monoarthritis, endocarditis, pericarditis and pneumonia"""
+n/a,"rifampicin, isoniazid, a quinolone, and an injectable agent (MDR, XDR)","mdr, xdr",Mycobacterium tuberculosis,tb,tb,,,,,,1,,,,,,"""TB may... affect almost any other organ (extrapulmonary TB): pleural cavity, pericardium, lymph nodes, GI tract, UTI, skin, bones and joints, and central nervous system"""
+3g cephalosporins,"3g cephalosporins, macrolides, fluroquinolones, penicillins, tetracyclines",na,Neisseria gonorrhoeae,ngo,gn,,,,,,,,,,1,,
+carbapenems,"fluroquinolones, ceftazidime, 3g cephalosporins, , penicillins, carbapenems, aminoglycosides, polymyxin, and monobactams","carbapenems, 3g cephalosporins",Pseudomonas aeruginosa,pae,gn,1,1,,,,1,1,1,,,1,"rare community infections include otitis externa, varicose ulcers, and folliculitis. Other infections include ""endocarditis (IDUs and prosthetic valves), eye infections, bone and joint infections, post- operative neurosurgical infections, and ear infections"""
+fluroquinolones,3g cephalosporins,na,Salmonella typhi,sty,gn,,,1,,,,,,,,,enteric fever
+fluroquinolones,3g cephalosporins,na,Salmonella paratyphi,spa,gn,,,1,,,,,,,,,enteric fever
+fluroquinolones,"penicillins, fluroquinolones, sulfonamides, or chloramphenico",na,"Salmonella, non-typhoid",snt,gn,,1,1,,,,,,,,,"meningitis, endovascular"
+fluroquinolones,"fluroquionolones, penicillins, sulfonamides, tetracycline, or cephalosporins",na,Shigella spp,shi,gn,,,1,,,,,,,,,(Note: antibiotic treatment rarely indicated)
+"penicillins, glycopeptides","penicillins, glycopeptides, lipopeptides, aminoglycosides, lincosamides, oxazolidinones","penicillins, glycopeptides",Staphylococcus aureus,sau,gp,1,1,,1,,1,1,1,1,,1,"endocarditis, meningitis, prosthetic device- related [RTI added as extracted data indicates that syndrome from the literature review]"
+penicillins,"penicillins, 3g cephalosporins, glycopeptides, rifampicin, carbapenems, fluoroquinolones","penicillins, glycopeptides",Streptococcus pneumoniae,spn,gp,1,,,,1,1,,,1,,,"otitis media, sinusitis,meningitis, endocarditis"
