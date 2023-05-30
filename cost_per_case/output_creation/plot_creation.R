@@ -88,17 +88,36 @@ ggplot(data = DRI.melt, aes(class, value, color=variable, shape=variable)) +
 ###### PLOTS ################
 
 #### add code to log numerical columns for plots
-load("cost_per_case/outputs/scenario2.results.RData")
+load("cost_per_case/outputs/scenario2_results_4plot.RData")
 
-sc2.results.sum <-  sc2.results.long[, lapply(.SD, mean, na.rm=TRUE),
+sc2.results.sum <-  sc2.results.long.keep[, lapply(.SD, mean, na.rm=TRUE),
             by = c("Country (ISO3 Code)",
                    "AMR_or_DRI"),
             .SDcols=c("Mean Cost - Across Both")]
 
+### just doing AMR not DRI
+sc2.results.sum <- sc2.results.sum[AMR_or_DRI=="AMR"]
 
-joinData <- joinCountryData2Map( sc2.results.sum ,
+sc2.results.sum.los <- sc2.results.long.keep[, lapply(.SD, mean, na.rm=TRUE),
+                                             by = c("Country (ISO3 Code)",
+                                                    "AMR_or_DRI"),
+                                             .SDcols=c("Mean Cost - from Excess LOS")]
+sc2.results.sum.sc2 <- sc2.results.long.keep[, lapply(.SD, mean, na.rm=TRUE),
+                                             by = c("Country (ISO3 Code)",
+                                                    "AMR_or_DRI"),
+                                             .SDcols=c("Scenario 2 Mean Cost")]
+
+joinData1 <- joinCountryData2Map( sc2.results.sum ,
                                  joinCode = "ISO3",
                                  nameJoinColumn = "Country (ISO3 Code)")
+
+joinDatalos <- joinCountryData2Map( sc2.results.sum.los ,
+                                  joinCode = "ISO3",
+                                  nameJoinColumn = "Country (ISO3 Code)")
+
+joinData2 <- joinCountryData2Map( sc2.results.sum.sc2 ,
+                                  joinCode = "ISO3",
+                                  nameJoinColumn = "Country (ISO3 Code)")
 
 mapping_function <- function(x, y){
   ##!!!
@@ -119,122 +138,100 @@ mapping_function <- function(x, y){
   print(labs)
 }
 
+### need to separate out across AMR and DRI 
 mapping_function(joinData, "Mean Cost - Across Both")
-mapping_function(joinData, "sc2_ecoli_TAD_lg")
+mapping_function(joinDatalos, "Mean Cost - from Excess LOS")
+mapping_function(joinData2, "Scenario 2 Mean Cost")
 
-## remove log for % diff maps
-mapping_function_nolog <- function(x, y){
-  ##!!!
-  ## doing alot by hand for now but next time try to integrate labels
-  ## e.g. adding back transformed scale numbers and titles
-  theMap <- mapCountryData( x, nameColumnToPlot=y, addLegend=FALSE ,
-                            colourPalette = "terrain", mapTitle = y)
-  
-  labs <- theMap$cutVector
-  labs <- format(labs, scientific=FALSE)
-  
-  do.call( addMapLegend, c(theMap,
-                           legendWidth=1, legendMar = 2,
-                           legendIntervals='data',
-                           legendLabels='all'))
-  
-  print(labs)
-}
-
-joinData <- joinCountryData2Map( results_GDP,
-                                 joinCode = "ISO3",
-                                 nameJoinColumn = "iso3c")
-mapping_function_nolog(joinData, "sc1_ecoli_TPD")
-mapping_function_nolog(joinData, "sc2_ecoli_TPD")
 
 
 ####******************* PLots not in use currently******************** ####
-######## REGIONAL PLOTS for Hospital Costs######
-load("cost_per_case/outputs/costing.table.region.G.RData")
-
-outputs <- as.data.table(costing.table.region.G)
-
-### there will be a more efficient way to do this 
-### in the interest of time for producing paper doing a lot by hand
-AMR <- outputs[AMR_or_DRI=="AMR"]
-AMR_GNGP <- AMR[class!="mdr"] ## put TB on separate plots
-
-LOS.plots <- function(EURO){
-  name.reg <- EURO$who.region[1]
-  x <- ggplot(EURO, aes(x=interaction(class), y=AV_weighted_costing.los, fill=syndrome)) + 
-    geom_bar(position=position_dodge(preserve="single"), stat="identity",
-             colour="black", # Use black outlines,
-             size=.3) +      # Thinner lines
-    geom_errorbar(aes(ymin=LOW_weighted_costing.los, ymax=HIGH_weighted_costing.los),
-                  size=.3,    # Thinner lines
-                  width=.2,
-                  position = position_dodge(width = 0.9, preserve = "single")) +
-    xlab("Resistance Exposure") +
-    ylab("LOS-associated Cost (2019 USD)") +
-    scale_fill_viridis_d()+
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
-    coord_cartesian(ylim=c(-5000, 35000), expand = FALSE)+
-    ggtitle(name.reg)
-  return(x)
-}
-
-AFRO <- AMR_GNGP[who.region=="AFRO"]
-EMRO <- AMR_GNGP[who.region=="EMRO"]
-EURO <- AMR_GNGP[who.region=="EURO"]
-PAHO <- AMR_GNGP[who.region=="PAHO"]
-SEARO <- AMR_GNGP[who.region=="SEARO"]
-WPRO <- AMR_GNGP[who.region=="WPRO"]
-
-
-LOS.plots(AFRO)
-LOS.plots(EMRO)
-LOS.plots(EURO)
-LOS.plots(PAHO)
-LOS.plots(SEARO)
-LOS.plots(WPRO)
-
-
-DRI <- outputs[AMR_or_DRI=="DRI"]
-DRI_GNGP <- DRI[class!="mdr"] ## put TB on separate plots
-
-AFRO <- DRI_GNGP[who.region=="AFRO"]
-EMRO <- DRI_GNGP[who.region=="EMRO"]
-EURO <- DRI_GNGP[who.region=="EURO"]
-PAHO <- DRI_GNGP[who.region=="PAHO"]
-SEARO <- DRI_GNGP[who.region=="SEARO"]
-WPRO <- DRI_GNGP[who.region=="WPRO"]
-
-LOS.plots(AFRO)
-LOS.plots(EMRO)
-LOS.plots(EURO)
-LOS.plots(PAHO)
-LOS.plots(SEARO)
-LOS.plots(WPRO)
-
-
-##### TB cost per case ##########
-load("cost_per_case/outputs/costing.table.region.G.RData")
-
-outputs <- as.data.table(costing.table.region.G)
-tb <- outputs[gram.stain=="tb"]
-tb <- tb[ ,-c("syndrome", "gram.stain","class")]
-
-ggplot(tb, aes(x=who.region, y=AV_weighted_costing.los)) + 
-  geom_bar(position=position_dodge(preserve="single"), stat="identity",
-           colour="black", # Use black outlines,
-           size=.3) +      # Thinner lines
-  geom_errorbar(aes(ymin=LOW_weighted_costing.los, ymax=HIGH_weighted_costing.los),
-                size=.3,    # Thinner lines
-                width=.2,
-                position = position_dodge(width = 0.9, preserve = "single")) 
-
-ggplot(tb, aes(x=who.region, y=AV_weighted_costing.both)) + 
-  geom_bar(position=position_dodge(preserve="single"), stat="identity",
-           colour="black", # Use black outlines,
-           size=.3) +      # Thinner lines
-  geom_errorbar(aes(ymin=LOW_weighted_costing.both, ymax=HIGH_weighted_costing.both),
-                size=.3,    # Thinner lines
-                width=.2,
-                position = position_dodge(width = 0.9, preserve = "single")) +
-  xlab("WHO Region")+
-  ylab("Excess Hospital Cost per Case (Scenario 1)")
+# ######## REGIONAL PLOTS for Hospital Costs######
+# load("cost_per_case/outputs/costing.table.region.G.RData")
+# 
+# outputs <- as.data.table(costing.table.region.G)
+# 
+# ### there will be a more efficient way to do this 
+# ### in the interest of time for producing paper doing a lot by hand
+# AMR <- outputs[AMR_or_DRI=="AMR"]
+# AMR_GNGP <- AMR[class!="mdr"] ## put TB on separate plots
+# 
+# LOS.plots <- function(EURO){
+#   name.reg <- EURO$who.region[1]
+#   x <- ggplot(EURO, aes(x=interaction(class), y=AV_weighted_costing.los, fill=syndrome)) + 
+#     geom_bar(position=position_dodge(preserve="single"), stat="identity",
+#              colour="black", # Use black outlines,
+#              size=.3) +      # Thinner lines
+#     geom_errorbar(aes(ymin=LOW_weighted_costing.los, ymax=HIGH_weighted_costing.los),
+#                   size=.3,    # Thinner lines
+#                   width=.2,
+#                   position = position_dodge(width = 0.9, preserve = "single")) +
+#     xlab("Resistance Exposure") +
+#     ylab("LOS-associated Cost (2019 USD)") +
+#     scale_fill_viridis_d()+
+#     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+#     coord_cartesian(ylim=c(-5000, 35000), expand = FALSE)+
+#     ggtitle(name.reg)
+#   return(x)
+# }
+# 
+# AFRO <- AMR_GNGP[who.region=="AFRO"]
+# EMRO <- AMR_GNGP[who.region=="EMRO"]
+# EURO <- AMR_GNGP[who.region=="EURO"]
+# PAHO <- AMR_GNGP[who.region=="PAHO"]
+# SEARO <- AMR_GNGP[who.region=="SEARO"]
+# WPRO <- AMR_GNGP[who.region=="WPRO"]
+# 
+# 
+# LOS.plots(AFRO)
+# LOS.plots(EMRO)
+# LOS.plots(EURO)
+# LOS.plots(PAHO)
+# LOS.plots(SEARO)
+# LOS.plots(WPRO)
+# 
+# 
+# DRI <- outputs[AMR_or_DRI=="DRI"]
+# DRI_GNGP <- DRI[class!="mdr"] ## put TB on separate plots
+# 
+# AFRO <- DRI_GNGP[who.region=="AFRO"]
+# EMRO <- DRI_GNGP[who.region=="EMRO"]
+# EURO <- DRI_GNGP[who.region=="EURO"]
+# PAHO <- DRI_GNGP[who.region=="PAHO"]
+# SEARO <- DRI_GNGP[who.region=="SEARO"]
+# WPRO <- DRI_GNGP[who.region=="WPRO"]
+# 
+# LOS.plots(AFRO)
+# LOS.plots(EMRO)
+# LOS.plots(EURO)
+# LOS.plots(PAHO)
+# LOS.plots(SEARO)
+# LOS.plots(WPRO)
+# 
+# 
+# ##### TB cost per case ##########
+# load("cost_per_case/outputs/costing.table.region.G.RData")
+# 
+# outputs <- as.data.table(costing.table.region.G)
+# tb <- outputs[gram.stain=="tb"]
+# tb <- tb[ ,-c("syndrome", "gram.stain","class")]
+# 
+# ggplot(tb, aes(x=who.region, y=AV_weighted_costing.los)) + 
+#   geom_bar(position=position_dodge(preserve="single"), stat="identity",
+#            colour="black", # Use black outlines,
+#            size=.3) +      # Thinner lines
+#   geom_errorbar(aes(ymin=LOW_weighted_costing.los, ymax=HIGH_weighted_costing.los),
+#                 size=.3,    # Thinner lines
+#                 width=.2,
+#                 position = position_dodge(width = 0.9, preserve = "single")) 
+# 
+# ggplot(tb, aes(x=who.region, y=AV_weighted_costing.both)) + 
+#   geom_bar(position=position_dodge(preserve="single"), stat="identity",
+#            colour="black", # Use black outlines,
+#            size=.3) +      # Thinner lines
+#   geom_errorbar(aes(ymin=LOW_weighted_costing.both, ymax=HIGH_weighted_costing.both),
+#                 size=.3,    # Thinner lines
+#                 width=.2,
+#                 position = position_dodge(width = 0.9, preserve = "single")) +
+#   xlab("WHO Region")+
+#   ylab("Excess Hospital Cost per Case (Scenario 1)")
