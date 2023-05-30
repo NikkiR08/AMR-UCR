@@ -161,6 +161,7 @@ df1$Exposure_Group <- factor(df1$Exposure, levels =c( "3GCs E. coli",
 
 
 temp_slides_global2 <- df1 %>% complete(Exposure_Group, nesting(syndrome))
+
 ggplot(temp_slides_global2, aes(x=interaction(Exposure_Group), y=mean_cost, fill=syndrome)) + 
   geom_bar(position=position_dodge(), stat="identity",
            colour="black", # Use black outlines,
@@ -174,7 +175,7 @@ ggplot(temp_slides_global2, aes(x=interaction(Exposure_Group), y=mean_cost, fill
   ggtitle("Global Averages") +
   scale_fill_viridis_d()+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
-  coord_cartesian(ylim=c(NA, 50000), expand = FALSE)
+  scale_y_continuous(breaks=seq(-5000,120000,5000))
 
 ##################### AMR #################################################
 #### meta-analyses results don't have WHO region so need to extract that
@@ -349,28 +350,6 @@ ggplot(temp_slides_global2, aes(x=interaction(Exposure_Group), y=mean_cost, fill
   ggtitle("Global Averages") +
   scale_fill_viridis_d()+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
-  coord_cartesian(ylim=c(NA, 50000), expand = FALSE)
+  scale_y_continuous(breaks=seq(-5000,100000,5000))
 
 
-#### running using global unit cost from combining_cost_cases_NEW
-UNITcost_averted_global <- read.csv("outputs/unitcostresults_global_TEMP.csv")
-UNITcost_averted_global <- as.data.table(UNITcost_averted_global)
-UNITcost_averted_global[ ,Exposure_Group := paste(Antibiotic.class,Pathogen)]
-UNITcost_averted_global <- UNITcost_averted_global %>% complete(Exposure_Group, 
-                                                                nesting(Infectious.syndrome))
-ggplot(UNITcost_averted_global, aes(x=interaction(Exposure_Group), y=AV_total_UNITcosting, 
-                                    fill=Infectious.syndrome)) + 
-  geom_bar(position=position_dodge(), stat="identity",
-           colour="black", # Use black outlines,
-           size=.3) +      # Thinner lines
-  geom_errorbar(aes(ymin=LOW_total_UNITcosting, ymax=HIGH_total_UNITcosting),
-                size=.3,    # Thinner lines
-                width=.2,
-                position=position_dodge(.9)) +
-  xlab("Resistance & Bacterial Exposure") +
-  ylab("Hospital Cost per Case (2019 USD)") +
-  ggtitle("Global Averages") +
-  scale_fill_viridis_d()+
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
-  coord_cartesian(ylim=c(NA, 100000), expand = FALSE)
-options(scipen=999) 
