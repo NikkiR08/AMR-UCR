@@ -3,6 +3,9 @@ library(dplyr)
 library(data.table)
 library(ggplot2)
 
+################ PLOTTING LOS ASSOCIATED COSTS ONLY ############################
+
+
 ##################### DRI #################################################
 #### meta-analyses results don't have WHO region so need to extract that
 load("data_all/who_whoc_wb.RData")
@@ -17,6 +20,7 @@ N <- N[ , c("Country.Code","X2019")]
 setnames(N, "X2019", "npop")
 
 load("cost_per_case/outputs/dtfinal_DRI.RData")
+
 dt.final[ , cost := los.cost]
 # dt.final[is.na(cost), cost := extracted.cost]
 dt.final <- dt.final[cost==los.cost]
@@ -144,22 +148,6 @@ df1$Exposure_Group <- factor(df1$Exposure, levels =c( "3GCs E. coli",
                                                       "penicillins E. faecium"    ,
                                                       "glycopeptides E. faecium"))
 
-# ggplot(df1, aes(x=interaction(Exposure_Group), y=mean_cost, fill=syndrome)) + 
-#   geom_bar(position=position_dodge(), stat="identity",
-#            colour="black", # Use black outlines,
-#            size=.3) +      # Thinner lines
-#   geom_errorbar(aes(ymin=low_cost, ymax=high_cost),
-#                 size=.3,    # Thinner lines
-#                 width=.2,
-#                 position=position_dodge(.9)) +
-#   xlab("Resistance & Bacterial Exposure") +
-#   ylab("Healthcare System Cost (2019 USD)") +
-#   ggtitle("Global Averages") +
-#   scale_fill_viridis_d()+
-#   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
-#   coord_cartesian(ylim=c(NA, 21000), expand = FALSE)
-
-
 temp_slides_global2 <- df1 %>% complete(Exposure_Group, nesting(syndrome))
 ggplot(temp_slides_global2, aes(x=interaction(Exposure_Group), y=mean_cost, fill=syndrome)) + 
   geom_bar(position=position_dodge(), stat="identity",
@@ -170,11 +158,11 @@ ggplot(temp_slides_global2, aes(x=interaction(Exposure_Group), y=mean_cost, fill
                 width=.2,
                 position=position_dodge(.9)) +
   xlab("Resistance & Bacterial Exposure") +
-  ylab("Hospital Cost per Case (2019 USD)") +
+  ylab("Hospital Cost per Case associated with LOS (2019 USD)") +
   ggtitle("Global Averages") +
   scale_fill_viridis_d()+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
-  coord_cartesian(ylim=c(NA, 50000), expand = FALSE)
+  scale_y_continuous(breaks=seq(-5000,30000,5000))
 
 ##################### AMR #################################################
 #### meta-analyses results don't have WHO region so need to extract that
@@ -322,6 +310,7 @@ df1$Exposure_Group <- factor(df1$Exposure, levels =c( "3GCs E. coli",
 
 
 temp_slides_global2 <- df1 %>% complete(Exposure_Group, nesting(syndrome))
+
 ggplot(temp_slides_global2, aes(x=interaction(Exposure_Group), y=mean_cost, fill=syndrome)) + 
   geom_bar(position=position_dodge(), stat="identity",
            colour="black", # Use black outlines,
@@ -331,8 +320,8 @@ ggplot(temp_slides_global2, aes(x=interaction(Exposure_Group), y=mean_cost, fill
                 width=.2,
                 position=position_dodge(.9)) +
   xlab("Resistance & Bacterial Exposure") +
-  ylab("Hospital Cost per Case (2019 USD)") +
+  ylab("Hospital Cost per Case associated with LOS (2019 USD)") +
   ggtitle("Global Averages") +
   scale_fill_viridis_d()+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
-  coord_cartesian(ylim=c(NA, 50000), expand = FALSE)
+  scale_y_continuous(breaks=seq(-5000,30000,5000))
