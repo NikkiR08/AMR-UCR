@@ -181,12 +181,16 @@ sc2.results.long[ , 'Scenario 2 Mean Cost' := los.cost + (los.cost * adj.factor)
 
 ## remove those that don't have LOS costs 
 # as can't then adjust
+sc2.results.long.keep <- sc2.results.long
 sc2.results.long <- sc2.results.long[!is.na(`Mean Cost - from Excess LOS`)]
 
 length(which(is.na(sc2.results.long$`Scenario 2 Mean Cost`))) ## should be 0 
 
 save(sc2.results.long, file="cost_per_case/outputs/scenario2.results.RData")
 write.csv(sc2.results.long, file="cost_per_case/outputs/scenario2.results.csv")
+
+## for plotting
+save(sc2.results.long.keep, file="cost_per_case/outputs/scenario2_results_4plot.RData")
 
 ########### !!! in future iterations you could incorporate this with
 ## the "table_creation" R script to calculate adjusted cost for each sample
