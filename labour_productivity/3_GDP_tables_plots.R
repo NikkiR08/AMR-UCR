@@ -145,4 +145,3 @@ mapping_function_nolog(joinData, "sc2_ecoli_TPD")
 sum(results_GDP$sc2_ecoli_TAD)
 sum(results_GDP$sc2_saureus_TAD)
 
-0.005*6
