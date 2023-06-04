@@ -145,6 +145,12 @@ x$country ## Djibouti
 
 both_latest <- both_latest[!is.na(wage_2019usd) & !is.na(employ)]
 
+temp_data_quality <- both_latest
+temp_data_quality[ , flag2019 := "no"]
+temp_data_quality[year.x=="2019", flag2019 := "yes"]
+temp_data_quality[ , c("iso3c","flag2019")]
+save(temp_data_quality, file="labour_productivity/outputs/econ_latest_year.RData")
+
 #### SCENARIO 1: TREND ADJUSTMENT ######
 
 ### calculate average growth and model to get both at 2019 values
@@ -415,3 +421,44 @@ write.csv(comparison.dt, file="labour_productivity/outputs/comparison_casestudy.
 ## comparing difference
 comparison.dt[ , ecoli.diff := Ecoli_HC/sc2_ecoli_loss]
 comparison.dt[ , sa.diff := Saureus_HC/sc2_saureus_loss]
+
+
+############## PLOT FOR DATA QUALITY ###############
+
+load("labour_productivity/outputs/labour_wage_2019USD.RData")
+load("labour_productivity/outputs/econ_latest_year.RData")
+
+dt.qual <- merge(labour_productivity_all,temp_data_quality,by="iso3c",all.x=TRUE)
+dt.qual[Missing_Data_Flag=="yes" & is.na(flag2019),flag2019:="no"]
+
+dt.qual[Missing_Data_Flag=="yes", data_input := "No data available"]
+dt.qual[Missing_Data_Flag=="no" & flag2019=="no", data_input := "Data from before 2019 available"]
+dt.qual[Missing_Data_Flag=="no" & flag2019=="yes", data_input := "Data for 2019 available"]
+
+freq.missing <- count(dt.qual,`data_input`)
+freq.missing$count <- freq.missing$n
+# Compute percentages
+freq.missing$fraction <- freq.missing$count / sum(freq.missing$count)
+
+# Compute the cumulative percentages (top of each rectangle)
+freq.missing$ymax <- cumsum(freq.missing$fraction)
+
+# Compute the bottom of each rectangle
+freq.missing$ymin <- c(0, head(freq.missing$ymax, n=-1))
+
+# Compute label position
+freq.missing$labelPosition <- (freq.missing$ymax + freq.missing$ymin) / 2
+
+# Compute a good label
+freq.missing$label <- paste0(freq.missing$data_input, "\n value: ", freq.missing$count)
+
+# Make the plot
+ggplot(freq.missing, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=data_input)) +
+  geom_rect() +
+  geom_label( x=3.5, aes(y=labelPosition, label=label), size=6) +
+  scale_fill_brewer(palette=4) +
+  coord_polar(theta="y") +
+  xlim(c(2, 4)) +
+  theme_void() +
+  theme(legend.position = "none")
+
