@@ -139,7 +139,7 @@ mapping_function <- function(x, y){
 }
 
 ### need to separate out across AMR and DRI 
-mapping_function(joinData, "Mean Cost - Across Both")
+mapping_function(joinData1, "Mean Cost - Across Both")
 mapping_function(joinDatalos, "Mean Cost - from Excess LOS")
 mapping_function(joinData2, "Scenario 2 Mean Cost")
 
