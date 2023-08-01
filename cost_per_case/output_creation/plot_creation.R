@@ -90,7 +90,7 @@ ggplot(data = DRI.melt, aes(class, value, color=variable, shape=variable)) +
 #### add code to log numerical columns for plots
 load("cost_per_case/outputs/scenario2_results_4plot.RData")
 
-sc2.results.sum <-  sc2.results.long.keep[, lapply(.SD, mean, na.rm=TRUE),
+sc2.results.sum <-  sc2.results.long.keep[, lapply(.SD, median, na.rm=TRUE),
             by = c("Country (ISO3 Code)",
                    "AMR_or_DRI"),
             .SDcols=c("Mean Cost - Across Both")]
@@ -98,11 +98,11 @@ sc2.results.sum <-  sc2.results.long.keep[, lapply(.SD, mean, na.rm=TRUE),
 ### just doing AMR not DRI
 sc2.results.sum <- sc2.results.sum[AMR_or_DRI=="AMR"]
 
-sc2.results.sum.los <- sc2.results.long.keep[, lapply(.SD, mean, na.rm=TRUE),
+sc2.results.sum.los <- sc2.results.long.keep[, lapply(.SD, median, na.rm=TRUE),
                                              by = c("Country (ISO3 Code)",
                                                     "AMR_or_DRI"),
                                              .SDcols=c("Mean Cost - from Excess LOS")]
-sc2.results.sum.sc2 <- sc2.results.long.keep[, lapply(.SD, mean, na.rm=TRUE),
+sc2.results.sum.sc2 <- sc2.results.long.keep[, lapply(.SD, median, na.rm=TRUE),
                                              by = c("Country (ISO3 Code)",
                                                     "AMR_or_DRI"),
                                              .SDcols=c("Scenario 2 Mean Cost")]
@@ -142,8 +142,8 @@ mapping_function <- function(x, y){
 mapping_function(joinData1, "Mean Cost - Across Both")
 mapping_function(joinDatalos, "Mean Cost - from Excess LOS")
 mapping_function(joinData2, "Scenario 2 Mean Cost")
-
-
+### !!! note changed headers to be less confusing post-R script
+### as this is the median of means
 
 ####******************* PLots not in use currently******************** ####
 # ######## REGIONAL PLOTS for Hospital Costs######
