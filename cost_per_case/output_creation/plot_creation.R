@@ -299,7 +299,8 @@ evidence_heatmap <- evidence_heatmap[!is.na(who.region)]
                                                               fill = `Number of studies`))+
   geom_tile() + scale_fill_viridis_c(direction=-1) +
    ylab("WHO Region")+ xlab("Antibiotic class")+
-   theme(axis.text = element_text(size = 15))
+   theme(text = element_text(size = 20))
+ 
 
  ## by income group
  evidence_heatmap <- all %>% 
@@ -321,5 +322,5 @@ evidence_heatmap <- evidence_heatmap[!is.na(who.region)]
                                                fill = `Number of studies`))+
    geom_tile() + scale_fill_viridis_c(direction=-1) +
    ylab("Income group")+ xlab("Antibiotic class")+
-   theme(axis.text = element_text(size = 15))
+   theme(text = element_text(size = 20))
  
