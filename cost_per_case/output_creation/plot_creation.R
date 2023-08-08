@@ -268,3 +268,58 @@ mapping_function(joinData1, "Mean Cost - Across Both")
 #                 position = position_dodge(width = 0.9, preserve = "single")) +
 #   xlab("WHO Region")+
 #   ylab("Excess Hospital Cost per Case (Scenario 1)")
+
+###### geographical spread of inputs #####
+# #save data
+load("cost_per_case/outputs/los_est_DRI.RData")
+load("cost_per_case/outputs/costing_est_DRI.RData")
+
+dri <- costing.est
+dril <- los.est
+# #save data
+load("cost_per_case/outputs/los_est_AMR.RData")
+load("cost_per_case/outputs/costing_est_AMR.RData")
+
+all <- list(dri, dril,costing.est,los.est)
+all <- rbindlist(all)
+all[ , flag :=1]
+
+evidence_heatmap <- all %>% 
+  group_by(who.region, class) %>% 
+  summarise(`Number of studies`=sum(flag)) %>%
+  as.data.table
+
+evidence_heatmap[who.region=="PAHO",who.region:="AMRO"]
+
+## remove if no WHO region specified
+evidence_heatmap <- evidence_heatmap[!is.na(who.region)]
+
+ ggplot(data = evidence_heatmap, mapping = aes(x = class,
+                                                              y = who.region,
+                                                              fill = `Number of studies`))+
+  geom_tile() + scale_fill_viridis_c(direction=-1) +
+   ylab("WHO Region")+ xlab("Antibiotic class")+
+   theme(axis.text = element_text(size = 15))
+
+ ## by income group
+ evidence_heatmap <- all %>% 
+   group_by(Income.group, class) %>% 
+   summarise(`Number of studies`=sum(flag)) %>%
+   as.data.table
+ # make a factor variable
+ evidence_heatmap$Income.group <- as.factor(evidence_heatmap$Income.group)
+ 
+ # check the current levels
+ levels(evidence_heatmap$Income.group)
+ 
+ # reorder the levels
+ evidence_heatmap$Income.group <- factor( evidence_heatmap$Income.group, 
+                                          levels = levels(evidence_heatmap$Income.group)[c(1, 3, 2)])
+ 
+ ggplot(data = evidence_heatmap, mapping = aes(x = class,
+                                               y = Income.group,
+                                               fill = `Number of studies`))+
+   geom_tile() + scale_fill_viridis_c(direction=-1) +
+   ylab("Income group")+ xlab("Antibiotic class")+
+   theme(axis.text = element_text(size = 15))
+ 
