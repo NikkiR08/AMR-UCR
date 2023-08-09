@@ -74,9 +74,16 @@ costing.abx.Gotham.NEW <- costing.abx.Gotham.NEW[Medicine!="dactinomycin"]
 costing.abx.Gotham.NEW[ , Dose := gsub(" ", "", Dose, fixed = TRUE)] ## removing white space
 
 ## replace 0 values in prices for NA across the board (Assumed rounding issue in PDFs)
-costing.abx.currency <- na_if(costing.abx.currency,0)
-costing.abx.hill <- na_if(costing.abx.hill,0)
-costing.abx.Gotham.NEW <- na_if(costing.abx.Gotham.NEW,0)
+### was having issues running previous code which replaced based on whole data.table
+costing.abx.currency$abx.adj <- na_if(costing.abx.currency$abx.adj,as.integer(0))
+costing.abx.hill$generic.adj <- na_if(costing.abx.hill$generic.adj,0)
+costing.abx.hill$UK.adj <- na_if(costing.abx.hill$UK.adj,0)
+costing.abx.hill$SA.adj <- na_if(costing.abx.hill$SA.adj,0)
+costing.abx.hill$India.adj <- na_if(costing.abx.hill$India.adj,0)
+costing.abx.Gotham.NEW$generic.adj <- na_if(costing.abx.Gotham.NEW$generic.adj,0)
+costing.abx.Gotham.NEW$UK.adj <- na_if(costing.abx.Gotham.NEW$UK.adj,0)
+costing.abx.Gotham.NEW$SA.adj <- na_if(costing.abx.Gotham.NEW$SA.adj,0)
+costing.abx.Gotham.NEW$India.adj <- na_if(costing.abx.Gotham.NEW$India.adj,0)
 rm(costing.abx.Gotham)## removing to reduce confusion
 
 ## now need to repeat the hand-adapted new Forms and Doses for the other countries:
@@ -158,7 +165,10 @@ length(which(is.na(dose.oral$generic.adj.x)))
 ## by visual inspection of dose.oral.nonconf, they are all actually different
 # in dose so can be removed 
 # !!! need to check this if updating code/data/reruning
-dose.oral <- costing.abx[Route.of.Admin.x=="po" & Dose.x==Dose.y]
+### !!! update need to also include those not listed in the hill/gotham papers
+dose.oral <- costing.abx[(Route.of.Admin.x=="po" & Dose.x==Dose.y)|
+                           (Route.of.Admin.x=="po" & is.na(Dose.y)) ]
+
 rm(dose.oral.conf)
 rm(dose.oral.nonconf)
 
@@ -172,14 +182,15 @@ dose.inj.nonconf <- dose.inj.nonconf[, -c("generic.adj.x","UK.adj.x",
                                           "SA.adj.x","India.adj.x")]
 ### changes that need to be made to costing.abx
 ## updating 1g to match 1000mg
-costing.abx[Dose.x=="1g", Dose.x := "1000mg"]
-costing.abx[Dose=="2mg", Dose := "2mg/ml"]
-costing.abx[Dose=="1mL/150mg", Dose := "150mg/ml"]
+dose.inj[Dose.x=="1g", Dose.x := "1000mg"]
+dose.inj[Dose.x=="2mg", Dose.x := "2mg/ml"]
+dose.inj[Dose.x=="1mL/150mg", Dose.x := "150mg/ml"]
 
 ## by visual inspection of dose.oral.nonconf, they are all now actually different
 # in dose so can be removed 
 # !!! need to check this if updating code/data
-dose.inj <- costing.abx[Route.of.Admin.x=="inj" & Dose.x==Dose]
+dose.inj <- costing.abx[Route.of.Admin.x=="inj" & Dose.x==Dose|
+                        (Route.of.Admin.x=="inj" & is.na(Dose.y))]
 rm(dose.inj.conf)
 rm(dose.inj.nonconf)
 
