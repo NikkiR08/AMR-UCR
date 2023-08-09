@@ -24,8 +24,9 @@ inj_generic_av <- abx_combo_inputs %>%
   as.data.table()
 
 ## average adjustment factors across the countries:
-median(oral_generic_av$generic_adj_oral)
-median(inj_generic_av$generic_adj_inj)
+### !!! note removes some countries where there are no values
+median(oral_generic_av$generic_adj_oral,na.rm=TRUE)
+median(inj_generic_av$generic_adj_inj,na.rm=TRUE)
 
 ## merge back in
 abx_sc1 <- merge(abx_combo_inputs, oral_generic_av, by="iso3c")
@@ -38,6 +39,7 @@ abx_sc1[ , generic.cost.sc1 := generic.adj.x]
 abx_sc1[is.na(generic.cost.sc1), generic.cost.sc1 := generic.adj.y]
 
 ## DESCRIPTIVE STATS
+### !!! note this includes combinations that don't necessarily have a sc1 or2 cost, just an MSH cost
 abx_sc1_des <- abx_sc1[iso3c=="CUB"] ## chose 1 country
 length(which(abx_sc1_des$Route.of.Admin.x=="po"))
 length(which(abx_sc1_des$Route.of.Admin.x=="inj"))
@@ -53,7 +55,6 @@ summary(test$diff, na.rm=TRUE)
 ## number of matched vs estimated through adjustment factor
 length(which(is.na(abx_combo_inputs$generic.adj.y& abx_combo_inputs$Route.of.Admin.x=="inj")))/length(unique(abx_sc1$iso3c))
 length(which(is.na(test$generic.adj.y)))
-## they match (both ways of calculating the same thing)
 
 test2 <- abx_combo_inputs[Route.of.Admin.x=="po"&iso3c=="USA"]
 test2[ , diff := generic.adj.x/abx.adj]
@@ -115,7 +116,14 @@ abx_sc1_sc2_output <- abx_sc1_sc2 %>% rename("Country (ISO3 Code)"="iso3c",
                                  "Scenario 1 Generic Cost Estimate","Scenario 2 Income Cost Estimate","Class" ,
                                  "Category") %>%
                           as.data.table()
-### !!! need to add rounding 
+### !!! idelly need to add rounding to 2dp
+
+#### descriptive stats ####
+### remove those with no scenario 1 or 2 cost
+abx_sc1_sc2_complete <- abx_sc1_sc2_output[!is.na(`Scenario 1 Generic Cost Estimate`)|
+                                             !is.na(`Scenario 2 Income Cost Estimate`)]
+unique(abx_sc1_sc2_complete$Class)
+nrow(abx_sc1_sc2_complete)/nrow(abx_sc1_sc2_output)
 
 write.csv(abx_sc1_sc2_output, "antibiotic/outputs/country_abx_cost.csv")
 save(abx_sc1_sc2_output, file="antibiotic/outputs/country_abx_cost.RData")
@@ -140,7 +148,7 @@ regional.abx <- combo %>%
   filter(!is.na(npop)) %>%
   group_by(who.region, Antibiotic,`MSH Form`, `MSH Dose`) %>% 
   summarise(weighted_cost_Scenario1 = weighted.mean(`Scenario 1 Generic Cost Estimate`, npop, na.rm=TRUE),
-            weighted_cost_Scenario2 = weighted.mean(`Scenario 2 Cost Estimate`, npop, na.rm=TRUE)) %>%
+            weighted_cost_Scenario2 = weighted.mean(`Scenario 2 Income Cost Estimate`, npop, na.rm=TRUE)) %>%
   as.data.table()
 
 write.csv(regional.abx, file="antibiotic/outputs/regional_abx_cost.csv")
@@ -151,7 +159,7 @@ regional.abx.class <- combo %>%
   filter(!is.na(npop)) %>%
   group_by(who.region, Class) %>% 
   summarise(`Scenario 1 - Generic Proxy` = weighted.mean(`Scenario 1 Generic Cost Estimate`, npop, na.rm=TRUE),
-            `Scenario2 - Income Group Proxy` = weighted.mean(`Scenario 2 Cost Estimate`, npop, na.rm=TRUE)) %>%
+            `Scenario2 - Income Group Proxy` = weighted.mean(`Scenario 2 Income Cost Estimate`, npop, na.rm=TRUE)) %>%
   as.data.table()
 
 rg.abx.cls.melt <- melt(regional.abx.class, id=c("who.region","Class"),
@@ -212,24 +220,41 @@ oral.250 <-aware.plot.df[`MSH Form`=="tab-cap"&
 unique(oral.250$Antibiotic)
 ggplot(oral.250, aes(x=Category, y=value, fill=variable)) +
   geom_boxplot()+
-  xlab("AWARE Group")+ylab("Cost per Unit (2019 USD)")
+  xlab("AWARE Group")+ylab("Cost per Unit (2019 USD)")+
+  theme(text = element_text(size = 20))
 ### zoom without dropping data
 ggplot(oral.250, aes(x=Category, y=value, fill=variable)) +
   geom_boxplot()+
-  coord_cartesian(ylim = c(0, 1))+
-  xlab("AWARE Group")+ylab("Cost per Unit (2019 USD)")
+  coord_cartesian(ylim = c(0, 0.5))+
+  xlab("AWARE Group")+ylab("Cost per Unit (2019 USD)")+
+  theme(text = element_text(size = 20))
 
+o250 <- oral.250[variable=="Scenario 1 Generic Cost Estimate"]
+o250 %>% group_by(Category)%>%
+summarise(med = median(value))
 
 ### 1000 mg vial
 vial.1000 <-aware.plot.df[`MSH Form`=="vial"& 
-                           `MSH Dose`=="1000mg"]
+                           `MSH Dose`=="1g"]
 unique(vial.1000$Antibiotic)
 
 ggplot(vial.1000, aes(x=Category, y=value, fill=variable)) +
   geom_boxplot()+
-  xlab("AWARE Group")+ylab("Cost per Unit (2019 USD)")
+  xlab("AWARE Group")+ylab("Cost per Unit (2019 USD)")+
+  theme(text = element_text(size = 20))
 ### zoom without dropping data
 ggplot(vial.1000, aes(x=Category, y=value, fill=variable)) +
   geom_boxplot()+
-  coord_cartesian(ylim = c(0, 3))+
-  xlab("AWARE Group")+ylab("Cost per Unit (2019 USD)")
+  coord_cartesian(ylim = c(0, 5))+
+  xlab("AWARE Group")+ylab("Cost per Unit (2019 USD)")+
+  theme(text = element_text(size = 20))
+
+v1 <- vial.1000[variable=="Scenario 1 Generic Cost Estimate"]
+v1 %>% group_by(Category)%>%
+  summarise(med = median(value,na.rm=TRUE))
+
+oral.250 %>% group_by(Category,variable)%>%
+  summarise(med = median(value,na.rm=TRUE))
+
+vial.1000 %>% group_by(Category,variable)%>%
+  summarise(med = median(value,na.rm=TRUE))
