@@ -58,7 +58,8 @@ AMR.melt <- AMR.melt[class!="mdr"] ## remove TB to discuss separately
 ggplot(data = AMR.melt, aes(class, value, color=variable, shape=variable)) +
   geom_point(position=position_jitter(h=0.1, w=0.1), alpha = 0.5, size = 2.5) +
   facet_grid(who.region ~ syndrome)+
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        text = element_text(size = 15) )+
   xlab("Resistance Exposure") +
   ylab("Excess Hospital Cost per Case (2019 USD)") +
   scale_color_brewer(palette="Dark2")
@@ -78,11 +79,11 @@ DRI.melt <- DRI.melt[class!="mdr"] ## remove TB to discuss separately
 ggplot(data = DRI.melt, aes(class, value, color=variable, shape=variable)) +
   geom_point(position=position_jitter(h=0.1, w=0.1), alpha = 0.5, size = 2.5) +
   facet_grid(who.region ~ syndrome)+
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        text = element_text(size = 15))+
   xlab("Resistance Exposure") +
   ylab("Excess Hospital Cost per Case (2019 USD)") +
-  scale_color_brewer(palette="Dark2")+
-  ggtitle("DRI")
+  scale_color_brewer(palette="Dark2")
 
 #### MAP PLOTS #######
 ###### PLOTS ################
