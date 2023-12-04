@@ -479,7 +479,7 @@ save(costing.sample, file="cost_per_case/outputs/costing.sample.RData")
   
   outputs.los.sig <- outputs[los.sig.flag=="SIG"]
   
-  outputs.los.sig.gram <- outputs.los.sig[gram.stain!="tb"]
+  outputs.los.sig.gram <- outputs.los.sig
   paper.gram <- outputs.los.sig.gram %>% 
     group_by(who.region, AMR_or_DRI) %>%
     filter(AV_weighted_costing.los == max(AV_weighted_costing.los))
@@ -488,8 +488,8 @@ save(costing.sample, file="cost_per_case/outputs/costing.sample.RData")
     mutate_if(is.numeric, round) %>%
     mutate_if(is.numeric,funs(prettyNum(., big.mark=",")))
   
-  paper.gram$result <- paste0(paper.gram$AV_weighted_costing.los, " (", paper.gram$LOW_weighted_costing.both,
-                              " - ",paper.gram$HIGH_weighted_costing.both, ")")
+  paper.gram$result <- paste0(paper.gram$AV_weighted_costing.los, " (", paper.gram$LOW_weighted_costing.los,
+                              " - ",paper.gram$HIGH_weighted_costing.los, ")")
   
   write.csv(paper.gram, file="cost_per_case/outputs/topcosts.csv")
   

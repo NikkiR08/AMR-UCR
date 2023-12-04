@@ -58,7 +58,8 @@ AMR.melt <- AMR.melt[class!="mdr"] ## remove TB to discuss separately
 ggplot(data = AMR.melt, aes(class, value, color=variable, shape=variable)) +
   geom_point(position=position_jitter(h=0.1, w=0.1), alpha = 0.5, size = 2.5) +
   facet_grid(who.region ~ syndrome)+
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        text = element_text(size = 15) )+
   xlab("Resistance Exposure") +
   ylab("Excess Hospital Cost per Case (2019 USD)") +
   scale_color_brewer(palette="Dark2")
@@ -78,11 +79,11 @@ DRI.melt <- DRI.melt[class!="mdr"] ## remove TB to discuss separately
 ggplot(data = DRI.melt, aes(class, value, color=variable, shape=variable)) +
   geom_point(position=position_jitter(h=0.1, w=0.1), alpha = 0.5, size = 2.5) +
   facet_grid(who.region ~ syndrome)+
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        text = element_text(size = 15))+
   xlab("Resistance Exposure") +
   ylab("Excess Hospital Cost per Case (2019 USD)") +
-  scale_color_brewer(palette="Dark2")+
-  ggtitle("DRI")
+  scale_color_brewer(palette="Dark2")
 
 #### MAP PLOTS #######
 ###### PLOTS ################
@@ -90,19 +91,29 @@ ggplot(data = DRI.melt, aes(class, value, color=variable, shape=variable)) +
 #### add code to log numerical columns for plots
 load("cost_per_case/outputs/scenario2_results_4plot.RData")
 
-sc2.results.sum <-  sc2.results.long.keep[, lapply(.SD, mean, na.rm=TRUE),
+### AMR
+sc2.results.long.keep <- sc2.results.long.keep[AMR_or_DRI=="AMR"]
+
+### keep significant ones
+sc2.results.long.keep.sig <- sc2.results.long.keep[`Low 95% UI Bound - Across Both`>=0]
+nrow(sc2.results.long.keep.sig)
+
+sc2.results.long.keep.sig.los <- sc2.results.long.keep[`Low 95% UI Bound - from Excess LOS`>=0]
+nrow(sc2.results.long.keep.sig.los)
+
+
+sc2.results.sum <-  sc2.results.long.keep.sig[, lapply(.SD, median, na.rm=TRUE),
             by = c("Country (ISO3 Code)",
                    "AMR_or_DRI"),
             .SDcols=c("Mean Cost - Across Both")]
 
-### just doing AMR not DRI
-sc2.results.sum <- sc2.results.sum[AMR_or_DRI=="AMR"]
 
-sc2.results.sum.los <- sc2.results.long.keep[, lapply(.SD, mean, na.rm=TRUE),
+sc2.results.sum.los <- sc2.results.long.keep.sig.los[, lapply(.SD, median, na.rm=TRUE),
                                              by = c("Country (ISO3 Code)",
                                                     "AMR_or_DRI"),
                                              .SDcols=c("Mean Cost - from Excess LOS")]
-sc2.results.sum.sc2 <- sc2.results.long.keep[, lapply(.SD, mean, na.rm=TRUE),
+
+sc2.results.sum.sc2 <- sc2.results.long.keep.sig.los[, lapply(.SD, median, na.rm=TRUE),
                                              by = c("Country (ISO3 Code)",
                                                     "AMR_or_DRI"),
                                              .SDcols=c("Scenario 2 Mean Cost")]
@@ -132,17 +143,40 @@ mapping_function <- function(x, y){
   
   do.call( addMapLegend, c(theMap,
                            legendWidth=1, legendMar = 2,
-                           legendIntervals='data',
+                           legendIntervals='page',
                            legendLabels='all'))
   
   print(labs)
 }
 
-### need to separate out across AMR and DRI 
+
 mapping_function(joinData1, "Mean Cost - Across Both")
 mapping_function(joinDatalos, "Mean Cost - from Excess LOS")
 mapping_function(joinData2, "Scenario 2 Mean Cost")
+### !!! note changed headers to be less confusing post-R script
+### as this is the median of means
 
+#### DRI
+load("cost_per_case/outputs/scenario2_results_4plot.RData")
+
+sc2.results.long.keep <- sc2.results.long.keep[AMR_or_DRI=="DRI"]
+
+### keep significant ones
+sc2.results.long.keep.sig <- sc2.results.long.keep[`Low 95% UI Bound - Across Both`>=0]
+nrow(sc2.results.long.keep.sig)
+
+
+sc2.results.sum <-  sc2.results.long.keep.sig[, lapply(.SD, median, na.rm=TRUE),
+                                              by = c("Country (ISO3 Code)",
+                                                     "AMR_or_DRI"),
+                                              .SDcols=c("Mean Cost - Across Both")]
+
+joinData1 <- joinCountryData2Map( sc2.results.sum ,
+                                  joinCode = "ISO3",
+                                  nameJoinColumn = "Country (ISO3 Code)")
+
+### need to separate out across AMR and DRI 
+mapping_function(joinData1, "Mean Cost - Across Both")
 
 
 ####******************* PLots not in use currently******************** ####
@@ -235,3 +269,59 @@ mapping_function(joinData2, "Scenario 2 Mean Cost")
 #                 position = position_dodge(width = 0.9, preserve = "single")) +
 #   xlab("WHO Region")+
 #   ylab("Excess Hospital Cost per Case (Scenario 1)")
+
+###### geographical spread of inputs #####
+# #save data
+load("cost_per_case/outputs/los_est_DRI.RData")
+load("cost_per_case/outputs/costing_est_DRI.RData")
+
+dri <- costing.est
+dril <- los.est
+# #save data
+load("cost_per_case/outputs/los_est_AMR.RData")
+load("cost_per_case/outputs/costing_est_AMR.RData")
+
+all <- list(dri, dril,costing.est,los.est)
+all <- rbindlist(all)
+all[ , flag :=1]
+
+evidence_heatmap <- all %>% 
+  group_by(who.region, class) %>% 
+  summarise(`Number of studies`=sum(flag)) %>%
+  as.data.table
+
+evidence_heatmap[who.region=="PAHO",who.region:="AMRO"]
+
+## remove if no WHO region specified
+evidence_heatmap <- evidence_heatmap[!is.na(who.region)]
+
+ ggplot(data = evidence_heatmap, mapping = aes(x = class,
+                                                              y = who.region,
+                                                              fill = `Number of studies`))+
+  geom_tile() + scale_fill_viridis_c(direction=-1) +
+   ylab("WHO Region")+ xlab("Antibiotic class")+
+   theme(text = element_text(size = 20))
+ 
+
+ ## by income group
+ evidence_heatmap <- all %>% 
+   group_by(Income.group, class) %>% 
+   summarise(`Number of studies`=sum(flag)) %>%
+   as.data.table
+ # make a factor variable
+ evidence_heatmap$Income.group <- as.factor(evidence_heatmap$Income.group)
+ 
+ # check the current levels
+ levels(evidence_heatmap$Income.group)
+ 
+ # reorder the levels
+ evidence_heatmap$Income.group <- factor( evidence_heatmap$Income.group, 
+                                          levels = levels(evidence_heatmap$Income.group)[c(1, 3, 2)])
+ 
+ ggplot(data = evidence_heatmap, mapping = aes(x = class,
+                                               y = Income.group,
+                                               fill = `Number of studies`))+
+   geom_tile() + scale_fill_viridis_c(direction=-1) +
+   ylab("Income group")+ xlab("Antibiotic class")+
+   theme(text = element_text(size = 20))
+ 

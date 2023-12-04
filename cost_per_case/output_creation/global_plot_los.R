@@ -158,10 +158,10 @@ ggplot(temp_slides_global2, aes(x=interaction(Exposure_Group), y=mean_cost, fill
                 width=.2,
                 position=position_dodge(.9)) +
   xlab("Resistance & Bacterial Exposure") +
-  ylab("Hospital Cost per Case associated with LOS (2019 USD)") +
-  ggtitle("Global Averages") +
+  ylab("Hospital Cost per Case (2019 USD)")  +
   scale_fill_viridis_d()+
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        text = element_text(size = 20))+
   scale_y_continuous(breaks=seq(-5000,30000,5000))
 
 ##################### AMR #################################################
@@ -320,8 +320,8 @@ ggplot(temp_slides_global2, aes(x=interaction(Exposure_Group), y=mean_cost, fill
                 width=.2,
                 position=position_dodge(.9)) +
   xlab("Resistance & Bacterial Exposure") +
-  ylab("Hospital Cost per Case associated with LOS (2019 USD)") +
-  ggtitle("Global Averages") +
+  ylab("Hospital Cost per Case (2019 USD)") +
   scale_fill_viridis_d()+
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        text = element_text(size = 20))+
   scale_y_continuous(breaks=seq(-5000,30000,5000))
