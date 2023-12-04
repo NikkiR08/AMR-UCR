@@ -471,7 +471,7 @@ versus antimicrobial-susceptible organisms. Clin Infect Dis. 2012;
 wozniak_26,"Neidell MJ, Cohen B, Furuya Y, Hill J, Jeon CY, Glied S, et al. Costs of
 healthcare- and community-associated infections with antimicrobialresistant
 versus antimicrobial-susceptible organisms. Clin Infect Dis. 2012;
-55(6):807–15.",Klebsiella pneumoniae,kpn,carbapenems,INF,Neidell,2012,2006-2008,Retrospective cohort study,USA,137,583,0,AMR,2008,USD,excess,95ci,11.8,-10.5,34.2,,,,,,,,,,,,"community associated infections, censored models",1,62,FALSE,FALSE,FALSE
+55(6):807–15.",Klebsiella pneumoniae,kpn,carbapenems,INF,Neidell,2012,2006-2008,Retrospective cohort study,USA,137,583,0,AMR,2008,USD,excess,95ci,11800,-10500,34200,,,,,,,,,,,,"community associated infections, censored models",1,62,FALSE,FALSE,FALSE
 wozniak_26,"Neidell MJ, Cohen B, Furuya Y, Hill J, Jeon CY, Glied S, et al. Costs of
 healthcare- and community-associated infections with antimicrobialresistant
 versus antimicrobial-susceptible organisms. Clin Infect Dis. 2012;
@@ -479,7 +479,7 @@ versus antimicrobial-susceptible organisms. Clin Infect Dis. 2012;
 wozniak_26,"Neidell MJ, Cohen B, Furuya Y, Hill J, Jeon CY, Glied S, et al. Costs of
 healthcare- and community-associated infections with antimicrobialresistant
 versus antimicrobial-susceptible organisms. Clin Infect Dis. 2012;
-55(6):807–15.",Enterococcus faecium,efa,vancomycin,INF,Neidell,2012,2006-2008,Retrospective cohort study,USA,92,429,0,AMR,2008,USD,excess,95ci,80.8,54.9,106.7,,,,,,,,,,,,"community associated infections, censored models",1,63,FALSE,FALSE,FALSE
+55(6):807–15.",Enterococcus faecium,efa,vancomycin,INF,Neidell,2012,2006-2008,Retrospective cohort study,USA,92,429,0,AMR,2008,USD,excess,95ci,80800,54900,106700,,,,,,,,,,,,"community associated infections, censored models",1,63,FALSE,FALSE,FALSE
 zhen_50,"Nelson RE, Samore MH, Jones M, Greene T, Stevens VW, Liu CF, et al.
 Reducing time-dependent bias in estimates of the attributable cost of
 health care-associated methicillin-resistant Staphylococcus aureus infections:
