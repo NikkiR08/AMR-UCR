@@ -5,7 +5,7 @@
 library(Rilostat)
 library(wbstats)
 library(data.table)
-library(tabulizer)
+# library(tabulizer)
 library(dplyr)
 library(countrycode)
 
