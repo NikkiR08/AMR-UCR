@@ -168,6 +168,8 @@ load("cost_per_case/outputs/DRI_Results_Table.RData")
 DRI <-results
 DRI$AMR_or_DRI <- "DRI"
 
+
+setnames(DRI, "World Health Region", "World Health Organization Region")
 results.long <- rbind(AMR,DRI)
 
 sc2.results.long <- merge(results.long, av.adj, 
