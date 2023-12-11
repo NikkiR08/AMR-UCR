@@ -21,9 +21,10 @@ DRI <- results
 
 AMR$AMR_or_DRI <- "AMR"
 DRI$AMR_or_DRI <- "DRI"
+  setnames(DRI, "World Health Region", "World Health Organization Region")
 results.long <- rbind(AMR,DRI)
-setnames(results.long, "World Health Region", "World Health Organization Region")
-### !!! might have an error if rerun everything as have tried to correct for this earlier on in code now
+# setnames(results.long, "World Health Region", "World Health Organization Region")
+# ### !!! might have an error if rerun everything as have tried to correct for this earlier on in code now
 
 save(results.long, file="cost_per_case/outputs/results_AMRandDRI.RData")
 
