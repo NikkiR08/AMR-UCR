@@ -8,7 +8,7 @@ library(maptools)
 library(rworldmap)
 library(dplyr)
 
-##### level of evidence - FIGURE 2 ######
+##### level of evidence ######
 
 ## total across regions
 
@@ -177,6 +177,25 @@ joinData1 <- joinCountryData2Map( sc2.results.sum ,
 
 ### need to separate out across AMR and DRI 
 mapping_function(joinData1, "Mean Cost - Across Both")
+
+## excess LOS based DRI
+load("cost_per_case/outputs/scenario2_results_4plot.RData")
+sc2.results.long.keep.sig <- sc2.results.long.keep[`Low 95% UI Bound - from Excess LOS`>=0]
+nrow(sc2.results.long.keep.sig)
+
+
+sc2.results.sum <-  sc2.results.long.keep.sig[, lapply(.SD, median, na.rm=TRUE),
+                                              by = c("Country (ISO3 Code)",
+                                                     "AMR_or_DRI"),
+                                              .SDcols=c("Mean Cost - from Excess LOS")]
+
+joinData1 <- joinCountryData2Map( sc2.results.sum ,
+                                  joinCode = "ISO3",
+                                  nameJoinColumn = "Country (ISO3 Code)")
+
+### need to separate out across AMR and DRI 
+mapping_function(joinData1, "Mean Cost - from Excess LOS")
+
 
 
 ####******************* PLots not in use currently******************** ####
