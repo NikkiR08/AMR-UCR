@@ -1,6 +1,6 @@
 # The Antimicrobial Resistance Unit Cost Repository [The AMR-UCR]
 
-> This is the repo (1) for the journal paper [link to be added once paper is on preprint]
+> This is the repo (1) for the paper: Naylor, Nichola R. and Hasso-Agopsowicz, Mateusz and Kim, Chaelin and Ma, Yixuan and Frost, Isabel and Abbas, Kaja and Aguilar, Gisela and Fuller, Naomi M. and Robotham, Julie V. and Jit, Mark, The Global Economic Burden of Antibiotic Resistant Infections and the Potential Impact of Bacterial Vaccines: A Modelling Study. Available at SSRN: https://ssrn.com/abstract=4676946 or http://dx.doi.org/10.2139/ssrn.4676946
 
 
 ## Description
