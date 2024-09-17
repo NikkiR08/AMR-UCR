@@ -2,6 +2,7 @@
 
 > This is the repo (1) for the paper: Naylor, Nichola R. and Hasso-Agopsowicz, Mateusz and Kim, Chaelin and Ma, Yixuan and Frost, Isabel and Abbas, Kaja and Aguilar, Gisela and Fuller, Naomi M. and Robotham, Julie V. and Jit, Mark, The Global Economic Burden of Antibiotic Resistant Infections and the Potential Impact of Bacterial Vaccines: A Modelling Study. Available at SSRN: https://ssrn.com/abstract=4676946 or http://dx.doi.org/10.2139/ssrn.4676946
 
+> This work feeds into repo (2), which combines the outputs of this repository with epidemiology data, the combination work can be found here: https://github.com/NikkiR08/VAF_AMR_EconBurden 
 
 ## Description
 
