@@ -57,7 +57,10 @@ load("cost_per_case/outputs/scenario2_results_4plot.RData")
 
 # Select relevant data
 sc2.results.long.keep <- sc2.results.long.keep[AMR_or_DRI == "DRI"]
-sc2.results.long.keep.sig <- sc2.results.long.keep[`Low 95% UI Bound - from Excess LOS` >= 0]
+# sc2.results.long.keep.sig <- sc2.results.long.keep[`Low 95% UI Bound - from Excess LOS` >= 0]
+sc2.results.long.keep.sig <- sc2.results.long.keep[`Low 95% UI Bound - from Excess LOS` >= 0| 
+                                                     (`Low 95% UI Bound - from Excess LOS` < 0 &
+                                                     `High 95% UI Bound - from Excess LOS`<0)]
 
 sc2.results.sum <- sc2.results.long.keep.sig[, lapply(.SD, median, na.rm = TRUE),
                                              by = c("Country (ISO3 Code)", "AMR_or_DRI"),
@@ -80,7 +83,10 @@ mapping_function_1(joinData1, "Mean Cost - from Excess LOS")
 load("cost_per_case/outputs/scenario2_results_4plot.RData")
 
 sc2.results.long.keep <- sc2.results.long.keep[AMR_or_DRI == "DRI"]
-sc2.results.long.keep.sig <- sc2.results.long.keep[`Low 95% UI Bound - Across Both` >= 0]
+# sc2.results.long.keep.sig <- sc2.results.long.keep[`Low 95% UI Bound - Across Both` >= 0]
+sc2.results.long.keep.sig <- sc2.results.long.keep[`Low 95% UI Bound - Across Both` >= 0|
+                                                     (`Low 95% UI Bound - Across Both` < 0 &
+                                                     `High 95% UI Bound - Across Both`<0)]
 
 sc2.results.sum <- sc2.results.long.keep.sig[, lapply(.SD, median, na.rm = TRUE),
                                              by = c("Country (ISO3 Code)", "AMR_or_DRI"),
