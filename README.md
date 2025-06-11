@@ -23,7 +23,7 @@ Folder | Description
 ## How to Cite this Code
 
 Nichola R. Naylor, The Antimicrobial Resistance Unit Cost Repository (AMR-UCR). GitHub (https://github.com/NikkiR08/AMR-UCR/tree/main) [Access Date: ]
-Or alternatively use: Nichola Naylor, & Nichola Naylor. (2025). NikkiR08/AMR-UCR: Publication Version (v1.0). Zenodo. https://doi.org/10.5281/zenodo.15640860
+Or alternatively use: Nichola Naylor (2025). NikkiR08/AMR-UCR: Publication Version (v1.0). Zenodo. https://doi.org/10.5281/zenodo.15640860
 
 
 ## 👂 Further information & Feedback
