@@ -8,8 +8,6 @@
 
 This repo uses evidence synthesis, collation and analyses to compile unit costs of antimicrobial resistance (associated and attributable burden). An inverse variance meta-analysis with random effects is used to estimate excess hospital costs per case. Average values across key literature sources are utilised for antibiotic unit cost estimation, whilst international databases are consulted for economic data. Productivity losses are estimated through human capital and production function approaches. Inflation and exchange rate data are used to preserve local currency units and local economic shifts throughout, where possible. All cost results are then presented in 2019 USD.
 
-Note the accompanying paper is going through review processes and therefore this repository is subject to change until publication.
-
 ## Contents
 
 Folder | Description
@@ -25,6 +23,7 @@ Folder | Description
 ## How to Cite this Code
 
 Nichola R. Naylor, The Antimicrobial Resistance Unit Cost Repository (AMR-UCR). GitHub (https://github.com/NikkiR08/AMR-UCR/tree/main) [Access Date: ]
+Or alternatively use: Nichola Naylor, & Nichola Naylor. (2025). NikkiR08/AMR-UCR: Publication Version (v1.0). Zenodo. https://doi.org/10.5281/zenodo.15640860
 
 
 ## 👂 Further information & Feedback
